@@ -1,0 +1,45 @@
+# Local environments, tools and machine state
+.venv*/
+.cache/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.DS_Store
+.idea/
+.vscode/
+approach.md
+.codex/
+.agents/
+
+# Credentials and transient outputs
+.env
+.env.*
+*.pem
+*.key
+*.log
+MUJOCO_LOG.TXT
+build/
+dist/
+*.egg-info/
+
+# Models are acquired separately. Only the portable integrity manifest ships.
+models/*
+!models/flyvis_0000_000.manifest.json
+
+# Original/downloaded videos and generated experiments stay local.
+inputs/
+results/*
+!results/hybrid_flight_run01/
+results/hybrid_flight_run01/*
+!results/hybrid_flight_run01/source_patch.png
+!results/hybrid_flight_run01/provenance.json
+!results/hybrid_flight_run01/readout.json
+!results/hybrid_flight_run01/selection_frozen.json
+*.zip
+*.tar
+*.tar.gz
+*.onnx
+*.pt
+*.pth

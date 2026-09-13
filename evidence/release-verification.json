@@ -1,0 +1,154 @@
+{
+  "verified_utc": "2026-09-13T20:55:12.365510+00:00",
+  "scope": "Prepublication checks on a separate curated checkout with newly created Python3.12 virtual environment and published requirements. Original 104 experimental Python files are unchanged.",
+  "environment": {
+    "platform": "macOS Apple ARM64",
+    "python": "3.12.13",
+    "requirements": "requirements-research.txt including requirements-test.txt",
+    "fresh_install": true,
+    "pip_check": "No broken requirements found"
+  },
+  "tests": {
+    "command": "FLIGHT_RENDER_TESTS=1 python -m unittest discover -s tests -v",
+    "passed": 515,
+    "skipped": 0,
+    "seconds": 25.176,
+    "original_tests": 498,
+    "new_model_setup_tests": 17
+  },
+  "model_setup": {
+    "flyvis_archive_sha256": "71c78d4070556a536b13b23ee3139cd2788aa2a9d07d430a223b4edead281db1",
+    "flyvis_verified_files": 5,
+    "yolox_tiny_download_verified": true,
+    "yolox_tiny_sha256": "427cc366d34e27ff7a03e2899b5e3671425c262ea2291f88bb942bc1cc70b0f7",
+    "weights_in_git": false
+  },
+  "actual_simulation_smoke": {
+    "case": "approach_left",
+    "passed": true,
+    "actual_yolo_calls": 92,
+    "actual_flyvis_observations": 92,
+    "physics_ticks": 2000,
+    "duration_s": 10,
+    "episode_wall_s": 19.879325916001108,
+    "score": {
+      "name": "approach_left",
+      "kind": "normal",
+      "duration_s": 10.0,
+      "passed": true,
+      "outcome_scope": "controlled motor-flight fixture",
+      "gates": {
+        "valid_duration": true,
+        "complete_tick_count": true,
+        "finite_valid_states": true,
+        "complete_tick_clock": true,
+        "state_continuity": true,
+        "complete_contact_truth": true,
+        "no_aircraft_contacts": true,
+        "bounded_altitude": true,
+        "bounded_tilt": true,
+        "bounded_speed": true,
+        "bounded_motor_forces": true,
+        "causal_observation_clock": true,
+        "capture_anchored_candidates": true,
+        "no_future_or_expired_command_application": true,
+        "depth_gate_never_increases_forward_request": true,
+        "fixed_target_identity": true,
+        "episode_receipt_matches_trace": true,
+        "normal_genuine_translation": true,
+        "normal_target_retention": true,
+        "normal_approximate_photo_overlap": true,
+        "normal_complete_tail_observations": true,
+        "normal_tail_centered": true,
+        "normal_tail_surface_standoff": true
+      },
+      "failures": [],
+      "metrics": {
+        "tick_count": 2000,
+        "expected_tick_count": 2000,
+        "observation_count": 92,
+        "contact_count": 0,
+        "horizontal_translation_m": 1.5762029768760433,
+        "horizontal_path_length_m": 1.5768761279772803,
+        "maximum_speed_m_s": 0.5019791159183276,
+        "maximum_tilt_rad": 0.09821249479825991,
+        "maximum_altitude_error_m": 0.0017061293869562455,
+        "valid_target_observations": 92,
+        "valid_target_fraction": 1.0,
+        "selected_track_ids": [
+          1
+        ],
+        "active_overlap_hits": 92,
+        "active_overlap_fraction": 1.0,
+        "mean_active_iou": 0.9040103936850591,
+        "tail_observation_count": 19,
+        "tail_mean_abs_horizontal_center": 0.007405340671539388,
+        "tail_mean_surface_standoff_error_m": 0.0013135769025937926,
+        "discarded_after_episode_count": 1,
+        "guardian_reasons": {
+          "hold_clear": 84,
+          "clear": 1916
+        },
+        "candidate_reasons": {
+          "neural_bearing_and_registered_depth": 91,
+          "discarded": 1
+        },
+        "maximum_inference_wall_s": 0.25699383299797773,
+        "whole_wall_s": 19.879325916001108,
+        "minimum_planar_obstacle_surface_clearance_m": null
+      },
+      "thresholds": {
+        "altitude_m": 1.1,
+        "altitude_tolerance_m": 0.12,
+        "maximum_tilt_rad": 0.3,
+        "maximum_speed_m_s": 0.65,
+        "maximum_motor_force_n": 5.0,
+        "normal_minimum_translation_m": 0.6,
+        "normal_target_fraction": 0.85,
+        "active_iou_threshold": 0.5,
+        "active_iou_fraction": 0.8,
+        "tail_mean_horizontal_center_error": 0.1,
+        "tail_standoff_error_m": 0.6,
+        "desired_surface_optical_z_m": 3.5,
+        "minimum_prefault_speed_m_s": 0.08,
+        "minimum_prefault_target_fraction": 0.8,
+        "settled_speed_m_s": 0.08,
+        "event_settle_s": 2.0,
+        "ablation_maximum_translation_m": 0.04
+      },
+      "tracking_scope": "Capture-aligned overlap against approximate projected photograph foreground; not real-person benchmark accuracy.",
+      "timing_scope": "Measured-delay offline simulation. Discarded final inference is scored only as capture-time tracking, never as applied guidance.",
+      "obstacle_clearance_scope": "Evaluation-only horizontal AABB surface distance minus 0.32 m vehicle radius; controller receives no truth."
+    },
+    "exported_preview": {
+      "path": "flight_preview.mp4",
+      "width": 1280,
+      "height": 720,
+      "fps": 10,
+      "decoded_frames": 100,
+      "duration_s": 10.0
+    },
+    "raw_outputs_in_public_repo": false
+  },
+  "payload_audit_before_this_receipt": {
+    "files": 139,
+    "bytes": 4071290,
+    "binary_files": [
+      "assets/flight-demo.mp4",
+      "assets/flight-demo.png",
+      "results/hybrid_flight_run01/source_patch.png"
+    ],
+    "secret_signature_scan": "No matches in staged text for private keys, AWS/GitHub/OpenAI token signatures",
+    "private_user_paths": "No /Users/<name>/ or /home/<name>/ paths in staged text",
+    "symlinks": 0,
+    "model_weights": 0,
+    "independent_review": "Separate reviewer inspected staged139files, licenses/media notices and the new model installer; all17installer tests passed independently."
+  },
+  "limits": [
+    "Controlled photograph fixture with ideal state/depth",
+    "No physical aircraft or PX4 integration",
+    "No general aerial recognition accuracy claim",
+    "No achieved concurrent real-time onboard execution",
+    "GitHub CI is verified separately after publication"
+  ]
+}

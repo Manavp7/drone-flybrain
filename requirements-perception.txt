@@ -1,0 +1,4 @@
+# Initial CPU runtime pins for Python 3.10-3.12; native runtime still needs validation.
+# Source releases are linked in docs/MODELS_AND_CAPABILITIES.md.
+numpy==1.26.4
+opencv-python-headless==4.10.0.84

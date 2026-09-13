@@ -1,0 +1,20 @@
+{
+  "software_version": "0.3.1",
+  "sha256": "1b78d9663e29e3991f9b72893e50fe359c92291a6b4c6696766d1ab8891bf0fc",
+  "harness_sha256": "cd2cc34b74e341321349d749257573335d1d6ed0bdc8bba7dd5dcaf874dccd06",
+  "validation_sha256": "42022e9680961b4c201bf1c7fb164084f6063d8fab85a60a122d4a4b079c99ed",
+  "frozen_utc": "2026-09-12T17:37:34.634784+00:00",
+  "main_seeds": [
+    1200000,
+    1201999
+  ],
+  "holdout_seeds": [
+    3200000,
+    3200499
+  ],
+  "prior_layouts_are_development": [
+    2200000,
+    2200499
+  ],
+  "recording_policy": "immutable_per_trial_receipts"
+}

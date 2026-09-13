@@ -1,0 +1,33 @@
+{
+  "frozen_utc": "2026-09-13T18:32:03.656439+00:00",
+  "readout_sha256": "0b69cf817f881cb1cd9064f50cb7deb32a22edb3c53ee06dad78245f0c4a898d",
+  "definition_sha256": "5ea5701a8585cf18e94992c1f65f3395fa1c52fb5904aa615c79b100c3d2b26a",
+  "source_hashes": {
+    "experiments/hybrid_demo.py": "1c4a9198e11f9b4c2b59e310f36ccc0963ffffe10c93c0dac60961f434f2b9a2",
+    "experiments/hybrid_control.py": "f640550d8972b999c016330ff276909bb10d57142df10a011a2ce5658c1713cf",
+    "experiments/hybrid_flyvis.py": "8492d7656dda670b320542292c44d91e72c9f5bce4bf921075e42324084e6349",
+    "experiments/hybrid_scene.py": "aeb806ed8a21570627803ffff5337c7039102a949756153e415693e0d8e085c3",
+    "experiments/hybrid_target.py": "ee8c06710e9dbf9c43f6e873991941d315404856e4fbb0d0d7015ef9e65e91bc",
+    "experiments/runtime.py": "b7f4486786fcfd8483cf58bb7cedb1e7807a086f5e6b2549f0dba59b57e6f68f",
+    "perception/detector.py": "b90410e3e1a191cb97a409b3d414614785ad7f64be83e83ecfbed2d809be6757",
+    "perception/pipeline.py": "30ea57c56263dd3bf54851b864e965c1791ed3bc74af01ca1fc4048f6b152959",
+    "flybrain_sim/geometry.py": "0d4c86ba30bb6bc2555c3fc19255289494d6b78f375235b2109c50a7805a72c2",
+    "flybrain_sim/physics.py": "59db9a6144368938c486b3a6777f93a3e90641ae22c29c16cc80dc04482e7dbc",
+    "flybrain_sim/contracts.py": "305418c4c77981dea32f1ce66d21b4efa48e0d135f19aba3463ba88c84e75c25",
+    "flybrain_sim/research_model.py": "5148fa9e706f33ba8e943b2f4fab4005560d0de363ff2ceb7073d2a2bf0035a0"
+  },
+  "validation": {
+    "all_neural_valid": true,
+    "max_abs_error": [
+      0.05004571494437285,
+      0.050800053722808824,
+      0.04555503350773221
+    ],
+    "mean_abs_error": [
+      0.011013426203584342,
+      0.006945533995780076,
+      0.03404280219347592
+    ],
+    "passed": true
+  }
+}

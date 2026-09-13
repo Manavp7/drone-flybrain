@@ -1,0 +1,31 @@
+Drone Flybrain
+Copyright 2026 Manavp7
+
+Project software is licensed under the Apache License, Version 2.0.
+See LICENSE for the complete license text. Third-party materials retain
+their own licenses and attribution notices.
+
+The YOLOX detector interface follows preprocessing, decoding and COCO class
+contracts from YOLOX by Megvii-BaseDetection.
+Copyright (c) 2021-2022 Megvii Inc. All rights reserved.
+YOLOX source is licensed under the Apache License, Version 2.0.
+See LICENSES/YOLOX-Apache-2.0.txt and THIRD_PARTY_NOTICES.md.
+
+Flyvis is a separately installed dependency by the Turaga Lab and contributors.
+Copyright (c) 2023 Janne K. Lappalainen, Fabian D. Tschopp, Mason McGill,
+Jakob H. Macke, Srinivas C. Turaga.
+Its source code is licensed under the MIT License; a copy of the pinned
+upstream notice is in LICENSES/Flyvis-MIT.txt. No pretrained Flyvis or YOLOX
+checkpoint is included. The software licenses do not establish separate
+checkpoint redistribution rights.
+
+The included demonstration media use a photograph derived from:
+Sabana Grande Caracas. People walking on the Boulevard of Sabana Grande,
+famous in Caracas, Venezuela.webm
+by Vicente Quintero / QuinteroP, licensed under CC BY 3.0.
+The photograph was extracted, cropped, projected into simulated views,
+resized and annotated. No original audio is included.
+See assets/ATTRIBUTION.md for the source URL, complete attribution and
+the media license. No endorsement by the original creator is implied.
+
+This NOTICE is informational and does not modify any license terms.

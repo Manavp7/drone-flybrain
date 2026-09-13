@@ -1,0 +1,5 @@
+# Python 3.12; unit tests and native MuJoCo physics, without learned weights.
+-r requirements-perception.txt
+-r requirements-flight-sim.txt
+scipy==1.17.1
+pillow==12.3.0

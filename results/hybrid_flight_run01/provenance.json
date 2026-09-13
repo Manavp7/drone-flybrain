@@ -1,0 +1,42 @@
+{
+  "video": {
+    "title": "Sabana Grande Caracas pedestrian boulevard",
+    "author": "Vicente Quintero / QuinteroP",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Sabana_Grande_Caracas._People_walking_on_the_Boulevard_of_Sabana_Grande,_famous_in_Caracas,_Venezuela.webm",
+    "direct_url": "https://upload.wikimedia.org/wikipedia/commons/5/51/Sabana_Grande_Caracas._People_walking_on_the_Boulevard_of_Sabana_Grande%2C_famous_in_Caracas%2C_Venezuela.webm",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/",
+    "sha256": "f0d7162bf49253c66b408684b789def060d1574f562fe8c456b9fa7562711a07",
+    "sha1": "020c7bf941fed3bb47d6a8dafd2ef89fc8c740ff",
+    "bytes": 16878095,
+    "downloaded_utc": "2026-09-13T16:02:07.393518+00:00",
+    "changes_for_preview": "Sampled source frames, resized, muted audio, added model boxes/labels and caption; no endorsement implied"
+  },
+  "crop": {
+    "source_sequence": 315,
+    "crop_xyxy": [
+      1113,
+      416,
+      1322,
+      959
+    ],
+    "person_bbox_source_xyxy": [
+      1128,
+      431,
+      1307,
+      944
+    ],
+    "source_image_hw": [
+      1080,
+      1920
+    ],
+    "patch_image_hw": [
+      543,
+      209
+    ],
+    "representation": "unsegmented source photo crop on a camera-facing billboard"
+  },
+  "yolo_sha256": "c5c2d13e59ae883e6af3b45daea64af4833a4951c92d116ec270d9ddbe998063",
+  "flyvis_manifest_sha256": "5ff05f525193f6259ecd98d122c30af339a75aa0b16ef17386da2e256d76e8c1",
+  "changes": "Cropped and projected photo into synthetic views; annotated and muted preview; no endorsement"
+}

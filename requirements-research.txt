@@ -1,0 +1,6 @@
+# Optional actual YOLO/Flyvis inference. Model weights are acquired separately.
+-r requirements-test.txt
+torch==2.5.1
+torchvision==0.20.1
+flyvis==1.2.0
+datamate==1.0.0

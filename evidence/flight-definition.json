@@ -1,0 +1,157 @@
+{
+  "frozen_utc": "2026-09-13T20:26:42.499237+00:00",
+  "specs": [
+    {
+      "name": "approach_left",
+      "kind": "normal",
+      "duration_s": 10.0,
+      "target": [
+        5.3,
+        0.6,
+        0.95
+      ]
+    },
+    {
+      "name": "approach_right",
+      "kind": "normal",
+      "duration_s": 10.0,
+      "target": [
+        5.2,
+        -0.8,
+        0.95
+      ]
+    },
+    {
+      "name": "moving_target",
+      "kind": "normal",
+      "duration_s": 12.0,
+      "target": [
+        4.9,
+        0.2,
+        0.95
+      ],
+      "moving": true
+    },
+    {
+      "name": "target_loss",
+      "kind": "target_loss",
+      "duration_s": 8.0,
+      "target": [
+        5.0,
+        0.0,
+        0.95
+      ],
+      "event_s": 3.5
+    },
+    {
+      "name": "obstacle_stop",
+      "kind": "obstacle_stop",
+      "duration_s": 8.0,
+      "target": [
+        5.0,
+        0.0,
+        0.95
+      ],
+      "event_s": 3.5
+    },
+    {
+      "name": "depth_loss",
+      "kind": "depth_loss",
+      "duration_s": 8.0,
+      "target": [
+        5.0,
+        0.0,
+        0.95
+      ],
+      "event_s": 3.5
+    },
+    {
+      "name": "stale_depth",
+      "kind": "stale_depth",
+      "duration_s": 8.0,
+      "target": [
+        5.0,
+        0.0,
+        0.95
+      ],
+      "event_s": 3.5
+    },
+    {
+      "name": "delayed_inference",
+      "kind": "delayed_inference",
+      "duration_s": 8.0,
+      "target": [
+        5.0,
+        0.0,
+        0.95
+      ],
+      "event_s": 3.5
+    },
+    {
+      "name": "zero_neural_features",
+      "kind": "ablation",
+      "duration_s": 8.0,
+      "target": [
+        5.0,
+        0.7,
+        0.95
+      ],
+      "ablation": true
+    }
+  ],
+  "development": false,
+  "physics_dt_s": 0.005,
+  "depth_period_s": 0.05,
+  "maximum_observation_age_s": 0.65,
+  "maximum_command_capture_age_s": 0.9,
+  "requested_speed_cap_m_s": 0.45,
+  "source_hashes": {
+    "experiments/flight_contracts.py": "d55ff03107f6bc3b88cf3df8489fc4948a8d428552b644b56d6e78853a302412",
+    "experiments/flight_world.py": "2a4487dac128094fdeb04fb69dad099dc7ecc9341ca1317fcd0e027426e086b3",
+    "experiments/flight_autopilot.py": "2a0dec28da786ce4b91949379a002423526e45de4cdeab5d6d0f977f8bd518ad",
+    "experiments/flight_guidance.py": "6ca773e1fefa2d3d7eedc1e1e615fa81c985c255c32d77e0b5d32b3d4c3d9b99",
+    "experiments/flight_safety.py": "78fbaffd85c7583dc938ab064b4e10f4cc65a6614e11b2419dc2760c4c273170",
+    "experiments/flight_tracking.py": "c02ab409a36c36afd0862a22c8758aa7fdc12b7d38d95711882243e9d7e487d4",
+    "experiments/flight_vision.py": "e5048acadb2a2c2d2ef7b7df669bb8ecc93b3d654adcec7d092d7a947273fed0",
+    "experiments/flight_demo.py": "d72b47e2d535177b0428e21edaf4f3aaea423d0166263fee693ce764a5f03a16",
+    "experiments/hybrid_flyvis.py": "8492d7656dda670b320542292c44d91e72c9f5bce4bf921075e42324084e6349",
+    "experiments/hybrid_target.py": "ee8c06710e9dbf9c43f6e873991941d315404856e4fbb0d0d7015ef9e65e91bc",
+    "experiments/hybrid_control.py": "f640550d8972b999c016330ff276909bb10d57142df10a011a2ce5658c1713cf",
+    "experiments/hybrid_video.py": "5efb530d2f6527c265a65a7e5675f18f188cd930cbe16d1446d81c56c0f29632",
+    "experiments/runtime.py": "b7f4486786fcfd8483cf58bb7cedb1e7807a086f5e6b2549f0dba59b57e6f68f",
+    "perception/detector.py": "b90410e3e1a191cb97a409b3d414614785ad7f64be83e83ecfbed2d809be6757",
+    "perception/pipeline.py": "30ea57c56263dd3bf54851b864e965c1791ed3bc74af01ca1fc4048f6b152959",
+    "flybrain_sim/research_model.py": "5148fa9e706f33ba8e943b2f4fab4005560d0de363ff2ceb7073d2a2bf0035a0",
+    "experiments/flight_report.py": "71b52b7dffdf5f786f2afecfed8583b8ccc1b69cfc5cf9147d31f55d89eab02e"
+  },
+  "detector_model": "models/yolox_tiny_official/yolox_tiny.onnx",
+  "detector_sha256": "427cc366d34e27ff7a03e2899b5e3671425c262ea2291f88bb942bc1cc70b0f7",
+  "detector_confidence": 0.5,
+  "detector_input_size": 416,
+  "flyvis_manifest_sha256": "5ff05f525193f6259ecd98d122c30af339a75aa0b16ef17386da2e256d76e8c1",
+  "source_patch_sha256": "1e63815dde4a1372e1c023d07055f867020db922430c7f43ae55f1713a9ab777",
+  "acceptance_criteria": {
+    "altitude_m": 1.1,
+    "altitude_tolerance_m": 0.12,
+    "maximum_tilt_rad": 0.3,
+    "maximum_speed_m_s": 0.65,
+    "maximum_motor_force_n": 5.0,
+    "normal_minimum_translation_m": 0.6,
+    "normal_target_fraction": 0.85,
+    "active_iou_threshold": 0.5,
+    "active_iou_fraction": 0.8,
+    "tail_mean_horizontal_center_error": 0.1,
+    "tail_standoff_error_m": 0.6,
+    "desired_surface_optical_z_m": 3.5,
+    "minimum_prefault_speed_m_s": 0.08,
+    "minimum_prefault_target_fraction": 0.8,
+    "settled_speed_m_s": 0.08,
+    "event_settle_s": 2.0,
+    "ablation_maximum_translation_m": 0.04
+  },
+  "mode": "offline_six_dof_measured_inference_delay",
+  "physical_control_authority": false,
+  "acceptance_source": "experiments/flight_report.py; frozen before final held-out runs",
+  "source_representation": "Fixed vertical unsegmented photograph; ideal enclosed room and ideal state/depth sensors",
+  "publication_note": "Public copy changes only the detector file location to a repository-relative path; original local raw manifest is not included."
+}

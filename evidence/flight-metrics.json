@@ -1,0 +1,19 @@
+{
+  "observations": 732,
+  "yolo_calls": 732,
+  "flyvis_observations": 732,
+  "neural_steps": 3660,
+  "physics_ticks": 16000,
+  "depth_events": 1600,
+  "fresh_depth_frames": 1420,
+  "episode_wall_s": 140.24989200098935,
+  "measured_inference_seconds": {
+    "min": 0.08374720899882959,
+    "median": 0.09115616650160518,
+    "p95": 0.11159350640227783,
+    "max": 0.6681440839965944
+  },
+  "normal_observations": 312,
+  "normal_valid_observations": 312,
+  "maximum_altitude_error_m": 0.0017038210517610342
+}

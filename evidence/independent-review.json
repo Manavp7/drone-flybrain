@@ -1,0 +1,242 @@
+{
+  "passed": true,
+  "cases": {
+    "approach_left": {
+      "captures": 95,
+      "reprojections": 185,
+      "anchors_created": 182,
+      "actual_detections": 182,
+      "valid_selected_targets": 95,
+      "lost_selected_targets": 0,
+      "finite_activity_values": 4338555,
+      "maximum_reprojection_error_px": 0.0,
+      "maximum_neural_feature_error": 6.505213034913027e-19,
+      "maximum_retinal_error": 5.822915297160058e-07,
+      "maximum_decoded_error": 1.3877787807814457e-17,
+      "maximum_heading_error": 9.71445146547012e-17,
+      "exact_masks": 95,
+      "exact_supplied_feature_rows": 95,
+      "neural_valid_rows": 95,
+      "all_observed_detection_track_ids": [
+        1,
+        2
+      ],
+      "fixed_selected_target_id": 1
+    },
+    "approach_right": {
+      "captures": 99,
+      "reprojections": 193,
+      "anchors_created": 189,
+      "actual_detections": 189,
+      "valid_selected_targets": 99,
+      "lost_selected_targets": 0,
+      "finite_activity_values": 4521231,
+      "maximum_reprojection_error_px": 0.0,
+      "maximum_neural_feature_error": 7.318364664277155e-19,
+      "maximum_retinal_error": 5.822915297160058e-07,
+      "maximum_decoded_error": 1.3877787807814457e-17,
+      "maximum_heading_error": 0.0,
+      "exact_masks": 99,
+      "exact_supplied_feature_rows": 99,
+      "neural_valid_rows": 99,
+      "all_observed_detection_track_ids": [
+        1,
+        2
+      ],
+      "fixed_selected_target_id": 1
+    },
+    "moving_target": {
+      "captures": 118,
+      "reprojections": 234,
+      "anchors_created": 232,
+      "actual_detections": 232,
+      "valid_selected_targets": 118,
+      "lost_selected_targets": 0,
+      "finite_activity_values": 5388942,
+      "maximum_reprojection_error_px": 0.0,
+      "maximum_neural_feature_error": 6.2341624917916505e-19,
+      "maximum_retinal_error": 5.822915297160058e-07,
+      "maximum_decoded_error": 6.938893903907228e-18,
+      "maximum_heading_error": 2.0469737016526324e-16,
+      "exact_masks": 118,
+      "exact_supplied_feature_rows": 118,
+      "neural_valid_rows": 118,
+      "all_observed_detection_track_ids": [
+        1,
+        2
+      ],
+      "fixed_selected_target_id": 1
+    },
+    "target_loss": {
+      "captures": 79,
+      "reprojections": 90,
+      "anchors_created": 70,
+      "actual_detections": 70,
+      "valid_selected_targets": 35,
+      "lost_selected_targets": 44,
+      "finite_activity_values": 3607851,
+      "maximum_reprojection_error_px": 0.0,
+      "maximum_neural_feature_error": 8.673617379884035e-19,
+      "maximum_retinal_error": 5.822915297160058e-07,
+      "maximum_decoded_error": 6.938893903907228e-18,
+      "maximum_heading_error": 0.0,
+      "exact_masks": 79,
+      "exact_supplied_feature_rows": 79,
+      "neural_valid_rows": 36,
+      "all_observed_detection_track_ids": [
+        1,
+        2
+      ],
+      "fixed_selected_target_id": 1
+    },
+    "obstacle_stop": {
+      "captures": 66,
+      "reprojections": 92,
+      "anchors_created": 70,
+      "actual_detections": 70,
+      "valid_selected_targets": 35,
+      "lost_selected_targets": 31,
+      "finite_activity_values": 3014154,
+      "maximum_reprojection_error_px": 0.0,
+      "maximum_neural_feature_error": 8.673617379884035e-19,
+      "maximum_retinal_error": 5.822915297160058e-07,
+      "maximum_decoded_error": 3.469446951953614e-18,
+      "maximum_heading_error": 0.0,
+      "exact_masks": 66,
+      "exact_supplied_feature_rows": 66,
+      "neural_valid_rows": 36,
+      "all_observed_detection_track_ids": [
+        1,
+        2
+      ],
+      "fixed_selected_target_id": 1
+    },
+    "depth_loss": {
+      "captures": 78,
+      "reprojections": 154,
+      "anchors_created": 155,
+      "actual_detections": 155,
+      "valid_selected_targets": 78,
+      "lost_selected_targets": 0,
+      "finite_activity_values": 3562182,
+      "maximum_reprojection_error_px": 0.0,
+      "maximum_neural_feature_error": 6.505213034913027e-19,
+      "maximum_retinal_error": 5.822915297160058e-07,
+      "maximum_decoded_error": 3.469446951953614e-18,
+      "maximum_heading_error": 0.0,
+      "exact_masks": 78,
+      "exact_supplied_feature_rows": 78,
+      "neural_valid_rows": 78,
+      "all_observed_detection_track_ids": [
+        1,
+        2
+      ],
+      "fixed_selected_target_id": 1
+    },
+    "stale_depth": {
+      "captures": 79,
+      "reprojections": 156,
+      "anchors_created": 158,
+      "actual_detections": 158,
+      "valid_selected_targets": 79,
+      "lost_selected_targets": 0,
+      "finite_activity_values": 3607851,
+      "maximum_reprojection_error_px": 0.0,
+      "maximum_neural_feature_error": 5.149960319306146e-19,
+      "maximum_retinal_error": 5.822915297160058e-07,
+      "maximum_decoded_error": 6.938893903907228e-18,
+      "maximum_heading_error": 0.0,
+      "exact_masks": 79,
+      "exact_supplied_feature_rows": 79,
+      "neural_valid_rows": 79,
+      "all_observed_detection_track_ids": [
+        1,
+        2
+      ],
+      "fixed_selected_target_id": 1
+    },
+    "delayed_inference": {
+      "captures": 38,
+      "reprojections": 74,
+      "anchors_created": 76,
+      "actual_detections": 76,
+      "valid_selected_targets": 38,
+      "lost_selected_targets": 0,
+      "finite_activity_values": 1735422,
+      "maximum_reprojection_error_px": 0.0,
+      "maximum_neural_feature_error": 4.0657581468206416e-19,
+      "maximum_retinal_error": 5.822915297160058e-07,
+      "maximum_decoded_error": 3.469446951953614e-18,
+      "maximum_heading_error": 0.0,
+      "exact_masks": 38,
+      "exact_supplied_feature_rows": 38,
+      "neural_valid_rows": 38,
+      "all_observed_detection_track_ids": [
+        1,
+        2
+      ],
+      "fixed_selected_target_id": 1
+    },
+    "zero_neural_features": {
+      "captures": 80,
+      "reprojections": 79,
+      "anchors_created": 80,
+      "actual_detections": 80,
+      "valid_selected_targets": 80,
+      "lost_selected_targets": 0,
+      "finite_activity_values": 3653520,
+      "maximum_reprojection_error_px": 0.0,
+      "maximum_neural_feature_error": 4.87890977618477e-19,
+      "maximum_retinal_error": 2.2982175534869143e-07,
+      "maximum_decoded_error": 0.0,
+      "maximum_heading_error": 0.0,
+      "exact_masks": 80,
+      "exact_supplied_feature_rows": 80,
+      "neural_valid_rows": 80,
+      "all_observed_detection_track_ids": [
+        1
+      ],
+      "fixed_selected_target_id": 1
+    }
+  },
+  "scope": "Independent source and saved-array reconstruction; no runtime tracker, guidance, report, simulator or model imports.",
+  "not_independently_certified": [
+    "flight_report.py was authored by this reviewer",
+    "YOLO/Flyvis forward inference was not rerun",
+    "MuJoCo motor physics and depth guardian were checked separately by the coordinator",
+    "Identity remains temporary geometric/color association in a photograph fixture, not real-world identity accuracy"
+  ],
+  "source_review": {
+    "target_truth_input_to_tracking_vision_guidance": false,
+    "heading_inputs": "Eight reconstructed L2 neural features, frozen ridge readout and measured camera calibration/pose",
+    "yolo_geometry_role": "Target selection, neural salience rectangle and reject-only training-envelope check",
+    "depth_role": "Camera-motion association anchors and engineered metric standoff; conventional safety/stabilization remain separate",
+    "timing": "Measured capture plus inference delay, offline replay of intervening physics; no concurrent realtime claim"
+  },
+  "exact_planned_case_count": 9,
+  "frozen_runtime_sources": 17,
+  "totals": {
+    "captures": 732,
+    "reprojections": 1257,
+    "anchors_created": 1212,
+    "actual_detections": 1212,
+    "finite_activity_values": 33429708,
+    "valid_selected_targets": 657,
+    "lost_selected_targets": 75,
+    "exact_masks": 732,
+    "exact_supplied_feature_rows": 732
+  },
+  "maximum_errors": {
+    "maximum_reprojection_error_px": 0.0,
+    "maximum_neural_feature_error": 8.673617379884035e-19,
+    "maximum_retinal_error": 5.822915297160058e-07,
+    "maximum_decoded_error": 1.3877787807814457e-17,
+    "maximum_heading_error": 2.0469737016526324e-16
+  },
+  "obstacle_positive_requests_blocked_by_depth": 27,
+  "obstacle_intervention_interval_s": [
+    3.4999999999999476,
+    3.629999999999945
+  ],
+  "wall_s": 4.471068250000826
+}

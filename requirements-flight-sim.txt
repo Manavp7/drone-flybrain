@@ -1,0 +1,8 @@
+# Optional native simulator runtime for the existing, tested perception/Flyvis
+# environment. Install with --no-deps --target .cache/mujoco_runtime so the
+# historical inference environment and its NumPy/Torch pins remain unchanged.
+mujoco==3.2.7
+absl-py==2.3.1
+etils==1.13.0
+glfw==2.9.0
+PyOpenGL==3.1.10
