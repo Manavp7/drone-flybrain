@@ -1,6 +1,6 @@
 # Model roles and capabilities
 
-The current connected experiment uses YOLOX-tiny for recognition, the actual recurrent Flyvis visual network for neural cue processing, a learned readout for bearing, registered depth for standoff/stopping, and a conventional autopilot for stability. [Current results](MOTOR_FLIGHT_TEST.md) and [model setup](MODEL_SETUP.md) describe the tested configuration.
+The current connected experiment, **Mantis**, uses YOLOX-tiny for recognition, the actual recurrent Flyvis visual network for neural cue processing, a learned readout for bearing, registered depth for standoff/stopping, and a conventional autopilot for stability. [Mantis 2.1](MANTIS_V2_1.md) covers tracking recovery, independent depth-braking checks and broader neural calibration. [V2 results](MANTIS_V2.md) preserve the original animated-target failures; [original motor-flight results](MOTOR_FLIGHT_TEST.md) preserve V1. [Model setup](MODEL_SETUP.md) describes the shared pinned runtime.
 
 | Component | Output | Boundary |
 |---|---|---|

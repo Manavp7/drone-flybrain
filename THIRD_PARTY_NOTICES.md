@@ -5,6 +5,13 @@ Manavp7. Third-party source, media and separately acquired artifacts retain
 their own terms. This repository does not include pretrained checkpoints,
 downloaded source videos, Python environments or dependency distributions.
 
+## Mantis walking actor
+
+The Mantis V2 animated character is separately covered by
+[Cesium Man attribution](assets/mantis_actor/ATTRIBUTION.md), including its
+CC BY 4.0 license and original trademark notice. This media is not covered by
+the project's Apache-2.0 software license.
+
 ## YOLOX
 
 The project's `perception/detector.py` implements the input preprocessing,

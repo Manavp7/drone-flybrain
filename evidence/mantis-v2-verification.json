@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "project": "Mantis",
+  "source_run": "mantis_run02",
+  "independent_evidence_verification_passed": true,
+  "operational_acceptance_passed": false,
+  "operational_cases_passed": 8,
+  "operational_cases_total": 12,
+  "verification_started_utc": "2026-09-14T05:40:11.629682+00:00",
+  "verification_finished_utc": "2026-09-14T05:42:34.363140+00:00",
+  "verifier_sha256": "a6fd9a24fdd5dbe18dece3be3ddab99c213117caf4a260a19b05a2a920d71520",
+  "original_native_receipt_sha256": "1ce763b24f3b97cd27e7efc0a5ea656fd56fa3237202199db26aeeba1cb68272",
+  "checks": 1536325,
+  "failure_count": 0,
+  "verification_wall_s": 142.73223308399974,
+  "artifact_files_verified": 834,
+  "counts": {
+    "physics_ticks": 22800,
+    "safety_rerenders": 2280,
+    "guardian_replayed_ticks": 22800,
+    "primary_rerenders": 36,
+    "saved_foreground_depth_reconstructions": 591,
+    "observations": 720
+  },
+  "benchmark_streams": 10,
+  "benchmark_observations": 495,
+  "independent_math": [
+    "full activity to features",
+    "YOLO rectangle to BoxEye mean retina",
+    "frozen linear readout to bearing",
+    "matched direct/alpha-beta outputs and seeded perturbations",
+    "capture/completion/release clocks",
+    "command authority and conventional autopilot rotor targets",
+    "mesh projection to evaluator truth",
+    "matched-subset RMSE and coverage"
+  ],
+  "frozen_implementation_replay": [
+    "MuJoCo motor physics",
+    "actor animation and ideal RGB-D rendering",
+    "foreground surface extraction",
+    "depth guardian"
+  ],
+  "maximum_nonzero_errors": {
+    "benchmark_neural_model_clock": 8.881784197001252e-16,
+    "benchmark_neural_response_clock": 8.881784197001252e-16,
+    "neural_model_stimulus_clock": 8.881784197001252e-16,
+    "neural_model_response_clock": 8.881784197001252e-16,
+    "activity_to_frame_features": 3.903127820947816e-18,
+    "activity_to_record_features": 3.903127820947816e-18,
+    "cue_to_retina": 5.822915297160058e-07,
+    "independent_neural_readout.heading_world_rad": 1.0408340855860843e-16,
+    "independent_neural_readout.decoded": 2.7755575615628914e-17,
+    "independent_controller_estimate.decoded": 2.7755575615628914e-17,
+    "independent_release.estimate.decoded": 2.7755575615628914e-17,
+    "independent_autopilot_motor_targets": 4.440892098500626e-16
+  },
+  "limitations": [
+    "YOLO and recurrent Flyvis dynamics are not re-executed by this verifier.",
+    "Comparison streams store neural features, not full neuron activity; full activity reconstruction covers closed-loop captures.",
+    "Actor geometry/animation, MuJoCo and safety replay reuse frozen runtime implementations; they are not independently implemented engines.",
+    "Ideal state/depth, prescribed actors, approximate capsule contacts; no real-world or real-time flight claim.",
+    "No tracker anchor history is saved; current observed depth surfaces and selected detections are reconstructed, not every internal anchor.",
+    "Compact evidence receipt; raw captures and original verification artifact remain local.",
+    "Saved Flyvis cell bindings are used; the connectome itself was not rebuilt."
+  ],
+  "post_validation_presentation_change": {
+    "annotated_utc": "2026-09-14T05:47:34.390431+00:00",
+    "audit_sha256": "669d4edd814f4ab8effaf3dc4c05be8b332ab2e38379c4fcdcdbf9071a37ed3c",
+    "original_native_receipt_sha256": "1ce763b24f3b97cd27e7efc0a5ea656fd56fa3237202199db26aeeba1cb68272",
+    "scope": "After completed native replay, presentation CSS and waiting text changed only; no physics or model rerun",
+    "current_html_matches_frozen": false,
+    "frozen_html_snapshot_unchanged": true,
+    "presentation_inverse_patch_exact": true,
+    "raw_artifacts_unchanged": 834,
+    "other_frozen_runtime_sources_unchanged": 24,
+    "videos_unchanged": 12,
+    "passed_refers_to_original_frozen_replay": true
+  },
+  "presentation_hashes": {
+    "template": {
+      "before_sha256": "83f45a708f9d0e2d34d5b29f0662aac5960793c08ae0eab3a73cd0230a7dd7e5",
+      "after_sha256": "d4fddcdbe2d6f8b4122a37eb7400aa919839a475919c21589fdadab47be0f3ff",
+      "inverse_patch_exact": true
+    },
+    "report": {
+      "before_sha256": "6512d7e6d7dab0392a64b1e219e38264dfd0f9c3fe4e70f533060894a7c34eab",
+      "after_sha256": "95be278d1de4d027fdaa18e2e889634116e8b025895e87368c6d0bc59ae73647",
+      "inverse_patch_exact": true
+    }
+  },
+  "public_summary_sha256": "30e9dba34e7f07ea51ed070f066d27ca176ac0f6288a808e86bbca951203502c"
+}

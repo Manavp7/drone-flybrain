@@ -1,0 +1,19 @@
+{
+  "asset": "Cesium Man",
+  "creator": "Cesium",
+  "copyright_year": 2017,
+  "license": "CC-BY-4.0",
+  "upstream_repository": "https://github.com/KhronosGroup/glTF-Sample-Assets",
+  "upstream_revision": "90d7ede14c7e280af263824604b427a1ca02cb66",
+  "upstream_path": "Models/CesiumMan/glTF-Binary/CesiumMan.glb",
+  "sha256": "b7001eaeea8254bd44773bcd247e78696d94169388fbb2a1800fc69434e777d9",
+  "bytes": 438044,
+  "vertices": 3273,
+  "triangles": 4672,
+  "bones": 19,
+  "animation_duration_s": 2.0,
+  "initial_pose_height_m": 1.8,
+  "default_appearance": "plain clothing materials from fixed rig influences; source logo not rendered",
+  "collision": "separate invisible capsule, radius 0.3m and full height1.8m; approximate, not anatomical",
+  "runtime_dependencies_added": []
+}

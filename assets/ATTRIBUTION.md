@@ -37,3 +37,11 @@ That original video is not bundled.
 The software has a separate [Apache-2.0 license](../LICENSE). Its license does
 not replace the media's attribution requirements. Preserve this attribution
 and the CC BY 3.0 license information when sharing the demonstration media.
+
+## Mantis V2 preview
+
+`mantis-v2-preview.png` is a frame from the recorded Mantis V2 walking trial.
+It shows the adapted **Cesium Man**, © 2017 Cesium, under **CC BY 4.0**.
+Its source, coordinate/height/skinning/clothing changes and license are recorded
+in [the actor attribution](mantis_actor/ATTRIBUTION.md). It is separate from the
+CC BY 3.0 photograph and V1 media described above.

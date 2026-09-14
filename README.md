@@ -1,14 +1,39 @@
-# Drone FlyBrain
+# Mantis
 
 [![Tests](https://github.com/Manavp7/drone-flybrain/actions/workflows/tests.yml/badge.svg)](https://github.com/Manavp7/drone-flybrain/actions/workflows/tests.yml)
 
 An experimental drone simulator combining **YOLO person tracking, a recurrent Flyvis visual neural network, depth-based stopping and four-motor flight physics**.
 
+**Mantis** is the project name. Flyvis remains the credited upstream visual neural model.
+
+## Mantis 2.1
+
+The new experiment replaces the photograph with an **animated, skinned 3D actor** and compares **Mantis Neural**, **Direct YOLO** and **Alpha-beta** guidance. Each controller flies its own motor-driven simulation. A separate benchmark feeds identical recorded detections to all three estimators, with clean input, seeded jitter and brief gaps.
+
+The offline replay lab includes controller/case selection, synchronized camera and overview video, scrubbing, motor telemetry, actual neural features and comparison metrics. See [Mantis 2.1](docs/MANTIS_V2_1.md) for methodology, fixes and measured results. The actor is stylized; this is not real-human or hardware validation.
+
+Mantis 2.1 retains bounded association memory across detector delays while keeping result freshness and command expiry unchanged. Its obstacle test requires fresh person guidance and paired depth captures that isolate the barrier's braking effect. A broader neural readout calibration improves held-out synthetic cue reconstruction; it does not establish a neural advantage over conventional guidance.
+
+The frozen nominal and shifted-path batches passed **36/36 operational trials**, including all six depth-braking trials and twelve delay/recovery trials. The native software suite passed **686 tests**. Neural guidance still did not beat the strongest conventional estimator in any of the **20 matched bearing comparisons**; [complete results and limits](docs/MANTIS_V2_1.md) preserve that outcome.
+
+The preserved [original V2 suite](docs/MANTIS_V2.md) passed **8/12** operational trials and **614 software tests**. Its filtered tracking loss and three unproven depth-braking trials remain recorded as failures. They are not regraded by the new evaluation.
+
+[![Mantis V2 animated actor and motor-flight replay](assets/mantis-v2-preview.png)](docs/MANTIS_V2.md)
+
+After the model setup below, run:
+
+```bash
+python -u -m experiments.mantis_flight --output results/mantis_run
+python -u -m experiments.mantis_flight --validation-fixture --output results/mantis_validation
+python -m experiments.mantis_report --run results/mantis_run
+python -m experiments.mantis_report --serve results/mantis_run/report --port 8874
+```
+
+Open `http://127.0.0.1:8874` for the recorded flight lab. The server stays on localhost. Every run/export needs a new output directory. A short probe can use `--development --case walk --method mantis_neural --duration 4 --skip-benchmark`; shortened runs are not full acceptance trials.
+
 YOLO locates the target. A target cue drives the actual Flyvis network, whose neural activity feeds a frozen learned readout for visual guidance. A conventional autopilot stabilizes the simulated aircraft. Movement changes the next camera image, closing the loop.
 
-[![Simulation preview](assets/flight-demo.png)](assets/flight-demo.mp4)
-
-[Watch the 80-second demo](assets/flight-demo.mp4) · [Measured results](docs/MOTOR_FLIGHT_TEST.md) · [Model setup](docs/MODEL_SETUP.md) · [Media attribution](assets/ATTRIBUTION.md)
+[Watch the V1 80-second demo](assets/flight-demo.mp4) · [V1 measured results](docs/MOTOR_FLIGHT_TEST.md) · [Model setup](docs/MODEL_SETUP.md) · [Media attribution](assets/ATTRIBUTION.md)
 
 ## What works
 
@@ -21,9 +46,11 @@ YOLO locates the target. A target cue drives the actual Flyvis network, whose ne
 | Stabilization and physics | Conventional autopilot, four rotor forces, motor lag and MuJoCo six-DOF dynamics |
 | Timing | Capture-anchored deadlines; earlier commands remain active while simulated time advances through measured inference delay |
 
-This is a **research simulation**, using a photographed target and ideal depth/state sensors. Flyvis is a visual-network component, not a whole fly motor brain. Physical aircraft, real-time onboard execution, PX4 integration, general aerial person recognition and route planning are not demonstrated.
+This is a **research simulation**, using ideal depth/state sensors. V1 uses a photograph; V2 uses a stylized animated actor. Flyvis is a visual-network component, not a whole fly motor brain. Physical aircraft, real-time onboard execution, PX4 integration, general aerial person recognition and route planning are not demonstrated.
 
-## Recorded results
+## Recorded V1 results
+
+[![V1 photograph-based simulation preview](assets/flight-demo.png)](assets/flight-demo.mp4)
 
 The predeclared nine-scenario run passed all gates: left/right approach, moving target, target loss, obstacle stop, missing depth, stale depth, delayed inference and zero-neural-feature ablation.
 
@@ -50,7 +77,7 @@ python -m pip install -r requirements-test.txt
 python -m unittest discover -s tests -v
 ```
 
-The public release adds 17 model-setup checks; all **515 tests passed** in a fresh native-rendering environment. Three camera-rendering tests are skipped by default. With a working native OpenGL context, enable them:
+The original public release added 17 model-setup checks and passed **515 tests** in a fresh native-rendering environment. The current Mantis 2.1 suite passed **686 tests** locally. Camera-rendering tests are skipped by default. With a working native OpenGL context, enable them:
 
 ```bash
 FLIGHT_RENDER_TESTS=1 python -m unittest discover -s tests -v
@@ -58,7 +85,7 @@ FLIGHT_RENDER_TESTS=1 python -m unittest discover -s tests -v
 
 On a headless Linux machine, native graphics need a suitable display or EGL setup. CI uses a virtual X display. The hardware-free tests check contracts and generated fixtures; they do not repeat trained-model inference.
 
-## Run actual YOLO + Flyvis flight
+## Model setup and original V1 flight
 
 Install `ffmpeg` separately for the exported video (`ffprobe` is also required by recorded-video tools). Install the optional neural runtime, acquire the upstream model artifacts, and verify them as described in [model setup](docs/MODEL_SETUP.md):
 
@@ -91,6 +118,7 @@ Every output directory must be new. Export can resume from completed saved obser
 | Path | Purpose |
 |---|---|
 | `experiments/flight_*.py` | Connected motor-flight fixture, tracking, guidance, safety and reporting |
+| `experiments/mantis_*.py` | V2 animated actor, foreground depth, controller comparison and replay lab |
 | `experiments/hybrid_*.py` | Neural readout, target cue and earlier hybrid/video experiments |
 | `perception/` | YOLOX, short-term tracking, registered depth and video/image interfaces |
 | `flybrain_sim/`, `stress/`, `validation/` | Preserved earlier navigation and evaluation software |
@@ -104,5 +132,7 @@ The earlier experiment tools are retained for research continuity. Some require 
 ## License and credits
 
 Project software is licensed under **Apache-2.0**; see [LICENSE](LICENSE) and [NOTICE](NOTICE). The photograph, demo screenshot and video contain **CC BY 3.0** media by Vicente Quintero / QuinteroP, with modifications and attribution documented in [assets/ATTRIBUTION.md](assets/ATTRIBUTION.md).
+
+The V2 actor adapts Cesium Man under **CC BY 4.0**; its source, changes and separate trademark notice are documented in [actor attribution](assets/mantis_actor/ATTRIBUTION.md).
 
 YOLOX, Flyvis and MuJoCo are upstream projects with their own notices and artifact terms. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). No model-weight redistribution license is implied by this repository's code license.

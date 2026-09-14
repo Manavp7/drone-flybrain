@@ -1,0 +1,1234 @@
+{
+  "project": "Mantis",
+  "version": 2,
+  "source_run": "mantis_run02",
+  "frozen_utc": "2026-09-14T05:29:30.959369+00:00",
+  "execution_completed": true,
+  "all_operational_gates_passed": false,
+  "passed_case_controller_runs": 8,
+  "total_case_controller_runs": 12,
+  "simulated_flight_seconds": 114.0,
+  "summed_episode_wall_seconds": 272.85426258499956,
+  "flight_yolo_calls": 720,
+  "flight_neural_observations": 720,
+  "physics_steps": 22800,
+  "additional_matched_benchmark_neural_observations": 495,
+  "cases": [
+    {
+      "case": "walk",
+      "method": "mantis_neural",
+      "passed": true,
+      "gates": {
+        "valid_duration": true,
+        "complete_tick_count": true,
+        "finite_valid_states": true,
+        "complete_tick_clock": true,
+        "state_continuity": true,
+        "complete_contact_truth": true,
+        "no_aircraft_contacts": true,
+        "bounded_altitude": true,
+        "bounded_tilt": true,
+        "bounded_speed": true,
+        "bounded_motor_forces": true,
+        "causal_observation_clock": true,
+        "capture_anchored_candidates": true,
+        "no_future_or_expired_command_application": true,
+        "depth_gate_never_increases_forward_request": true,
+        "fixed_target_identity": true,
+        "episode_receipt_matches_trace": true,
+        "completed": true,
+        "full_physics_coverage": true,
+        "actual_perception": true,
+        "translated": true,
+        "full_geometric_truth": true,
+        "tracked": true,
+        "geometric_overlap": true,
+        "complete_tail": true,
+        "tail_centered": true
+      },
+      "metrics": {
+        "translation_m": 1.6750703638204512,
+        "observations": 57,
+        "target_observations": 53,
+        "geometric_truth_observations": 57,
+        "overlap_matches": 53,
+        "target_fraction": 0.9298245614035088,
+        "geometric_overlap_fraction": 0.9298245614035088,
+        "tail_mean_center_error": 0.02723268276223771,
+        "aircraft_contact_ticks": 0,
+        "tail_target_fraction": 1.0,
+        "maximum_tail_tracking_gap_s": 0.6449999999999374,
+        "max_speed_m_s": 0.4719366036422524,
+        "max_altitude_error_m": 0.003948976071794563
+      }
+    },
+    {
+      "case": "walk",
+      "method": "direct_yolo",
+      "passed": true,
+      "gates": {
+        "valid_duration": true,
+        "complete_tick_count": true,
+        "finite_valid_states": true,
+        "complete_tick_clock": true,
+        "state_continuity": true,
+        "complete_contact_truth": true,
+        "no_aircraft_contacts": true,
+        "bounded_altitude": true,
+        "bounded_tilt": true,
+        "bounded_speed": true,
+        "bounded_motor_forces": true,
+        "causal_observation_clock": true,
+        "capture_anchored_candidates": true,
+        "no_future_or_expired_command_application": true,
+        "depth_gate_never_increases_forward_request": true,
+        "fixed_target_identity": true,
+        "episode_receipt_matches_trace": true,
+        "completed": true,
+        "full_physics_coverage": true,
+        "actual_perception": true,
+        "translated": true,
+        "full_geometric_truth": true,
+        "tracked": true,
+        "geometric_overlap": true,
+        "complete_tail": true,
+        "tail_centered": true
+      },
+      "metrics": {
+        "translation_m": 1.6612030170250327,
+        "observations": 69,
+        "target_observations": 64,
+        "geometric_truth_observations": 69,
+        "overlap_matches": 64,
+        "target_fraction": 0.927536231884058,
+        "geometric_overlap_fraction": 0.927536231884058,
+        "tail_mean_center_error": 0.03204832887038209,
+        "aircraft_contact_ticks": 0,
+        "tail_target_fraction": 1.0,
+        "maximum_tail_tracking_gap_s": 0.18500000000002892,
+        "max_speed_m_s": 0.5019556330805812,
+        "max_altitude_error_m": 0.0016996109083715627
+      }
+    },
+    {
+      "case": "walk",
+      "method": "alpha_beta",
+      "passed": false,
+      "gates": {
+        "valid_duration": true,
+        "complete_tick_count": true,
+        "finite_valid_states": true,
+        "complete_tick_clock": true,
+        "state_continuity": true,
+        "complete_contact_truth": true,
+        "no_aircraft_contacts": true,
+        "bounded_altitude": true,
+        "bounded_tilt": true,
+        "bounded_speed": true,
+        "bounded_motor_forces": true,
+        "causal_observation_clock": true,
+        "capture_anchored_candidates": true,
+        "no_future_or_expired_command_application": true,
+        "depth_gate_never_increases_forward_request": true,
+        "fixed_target_identity": true,
+        "episode_receipt_matches_trace": true,
+        "completed": true,
+        "full_physics_coverage": true,
+        "actual_perception": true,
+        "translated": true,
+        "full_geometric_truth": true,
+        "tracked": true,
+        "geometric_overlap": true,
+        "complete_tail": false,
+        "tail_centered": false
+      },
+      "metrics": {
+        "translation_m": 1.4482290698654945,
+        "observations": 59,
+        "target_observations": 51,
+        "geometric_truth_observations": 59,
+        "overlap_matches": 51,
+        "target_fraction": 0.864406779661017,
+        "geometric_overlap_fraction": 0.864406779661017,
+        "tail_mean_center_error": null,
+        "aircraft_contact_ticks": 0,
+        "tail_target_fraction": 0.0,
+        "maximum_tail_tracking_gap_s": 2.0,
+        "max_speed_m_s": 0.5020189171072844,
+        "max_altitude_error_m": 0.0017055242747670007
+      }
+    },
+    {
+      "case": "turn",
+      "method": "mantis_neural",
+      "passed": true,
+      "gates": {
+        "valid_duration": true,
+        "complete_tick_count": true,
+        "finite_valid_states": true,
+        "complete_tick_clock": true,
+        "state_continuity": true,
+        "complete_contact_truth": true,
+        "no_aircraft_contacts": true,
+        "bounded_altitude": true,
+        "bounded_tilt": true,
+        "bounded_speed": true,
+        "bounded_motor_forces": true,
+        "causal_observation_clock": true,
+        "capture_anchored_candidates": true,
+        "no_future_or_expired_command_application": true,
+        "depth_gate_never_increases_forward_request": true,
+        "fixed_target_identity": true,
+        "episode_receipt_matches_trace": true,
+        "completed": true,
+        "full_physics_coverage": true,
+        "actual_perception": true,
+        "translated": true,
+        "full_geometric_truth": true,
+        "tracked": true,
+        "geometric_overlap": true,
+        "complete_tail": true,
+        "tail_centered": true
+      },
+      "metrics": {
+        "translation_m": 1.4112249060086473,
+        "observations": 42,
+        "target_observations": 40,
+        "geometric_truth_observations": 42,
+        "overlap_matches": 40,
+        "target_fraction": 0.9523809523809523,
+        "geometric_overlap_fraction": 0.9523809523809523,
+        "tail_mean_center_error": 0.09066219041999596,
+        "aircraft_contact_ticks": 0,
+        "tail_target_fraction": 1.0,
+        "maximum_tail_tracking_gap_s": 0.44999999999992113,
+        "max_speed_m_s": 0.5020025584551101,
+        "max_altitude_error_m": 0.002257937729631232
+      }
+    },
+    {
+      "case": "turn",
+      "method": "direct_yolo",
+      "passed": true,
+      "gates": {
+        "valid_duration": true,
+        "complete_tick_count": true,
+        "finite_valid_states": true,
+        "complete_tick_clock": true,
+        "state_continuity": true,
+        "complete_contact_truth": true,
+        "no_aircraft_contacts": true,
+        "bounded_altitude": true,
+        "bounded_tilt": true,
+        "bounded_speed": true,
+        "bounded_motor_forces": true,
+        "causal_observation_clock": true,
+        "capture_anchored_candidates": true,
+        "no_future_or_expired_command_application": true,
+        "depth_gate_never_increases_forward_request": true,
+        "fixed_target_identity": true,
+        "episode_receipt_matches_trace": true,
+        "completed": true,
+        "full_physics_coverage": true,
+        "actual_perception": true,
+        "translated": true,
+        "full_geometric_truth": true,
+        "tracked": true,
+        "geometric_overlap": true,
+        "complete_tail": true,
+        "tail_centered": true
+      },
+      "metrics": {
+        "translation_m": 1.3978019321478348,
+        "observations": 64,
+        "target_observations": 64,
+        "geometric_truth_observations": 64,
+        "overlap_matches": 64,
+        "target_fraction": 1.0,
+        "geometric_overlap_fraction": 1.0,
+        "tail_mean_center_error": 0.0696915359892084,
+        "aircraft_contact_ticks": 0,
+        "tail_target_fraction": 1.0,
+        "maximum_tail_tracking_gap_s": 0.18000000000002814,
+        "max_speed_m_s": 0.5020270095270081,
+        "max_altitude_error_m": 0.0016952172950710498
+      }
+    },
+    {
+      "case": "turn",
+      "method": "alpha_beta",
+      "passed": true,
+      "gates": {
+        "valid_duration": true,
+        "complete_tick_count": true,
+        "finite_valid_states": true,
+        "complete_tick_clock": true,
+        "state_continuity": true,
+        "complete_contact_truth": true,
+        "no_aircraft_contacts": true,
+        "bounded_altitude": true,
+        "bounded_tilt": true,
+        "bounded_speed": true,
+        "bounded_motor_forces": true,
+        "causal_observation_clock": true,
+        "capture_anchored_candidates": true,
+        "no_future_or_expired_command_application": true,
+        "depth_gate_never_increases_forward_request": true,
+        "fixed_target_identity": true,
+        "episode_receipt_matches_trace": true,
+        "completed": true,
+        "full_physics_coverage": true,
+        "actual_perception": true,
+        "translated": true,
+        "full_geometric_truth": true,
+        "tracked": true,
+        "geometric_overlap": true,
+        "complete_tail": true,
+        "tail_centered": true
+      },
+      "metrics": {
+        "translation_m": 1.389999145198998,
+        "observations": 62,
+        "target_observations": 61,
+        "geometric_truth_observations": 62,
+        "overlap_matches": 61,
+        "target_fraction": 0.9838709677419355,
+        "geometric_overlap_fraction": 0.9838709677419355,
+        "tail_mean_center_error": 0.10274053474406268,
+        "aircraft_contact_ticks": 0,
+        "tail_target_fraction": 1.0,
+        "maximum_tail_tracking_gap_s": 0.3550000000000555,
+        "max_speed_m_s": 0.5019805411090145,
+        "max_altitude_error_m": 0.0016944192536043623
+      }
+    },
+    {
+      "case": "brief_loss",
+      "method": "mantis_neural",
+      "passed": true,
+      "gates": {
+        "valid_duration": true,
+        "complete_tick_count": true,
+        "finite_valid_states": true,
+        "complete_tick_clock": true,
+        "state_continuity": true,
+        "complete_contact_truth": true,
+        "no_aircraft_contacts": true,
+        "bounded_altitude": true,
+        "bounded_tilt": true,
+        "bounded_speed": true,
+        "bounded_motor_forces": true,
+        "causal_observation_clock": true,
+        "capture_anchored_candidates": true,
+        "no_future_or_expired_command_application": true,
+        "depth_gate_never_increases_forward_request": true,
+        "fixed_target_identity": true,
+        "episode_receipt_matches_trace": true,
+        "completed": true,
+        "full_physics_coverage": true,
+        "actual_perception": true,
+        "translated": true,
+        "full_geometric_truth": true,
+        "tracked": true,
+        "geometric_overlap": true,
+        "complete_tail": true,
+        "tail_centered": true,
+        "hidden_actor_not_reported": true,
+        "selected_id_recovered": true
+      },
+      "metrics": {
+        "translation_m": 1.6593690723264811,
+        "observations": 52,
+        "target_observations": 49,
+        "geometric_truth_observations": 50,
+        "overlap_matches": 49,
+        "target_fraction": 0.9423076923076923,
+        "geometric_overlap_fraction": 0.98,
+        "tail_mean_center_error": 0.03522711017957101,
+        "aircraft_contact_ticks": 0,
+        "tail_target_fraction": 1.0,
+        "maximum_tail_tracking_gap_s": 0.1900000000000297,
+        "max_speed_m_s": 0.4640761197203867,
+        "max_altitude_error_m": 0.0040675353526409275,
+        "first_recovery_s": 4.1599999999999335
+      }
+    },
+    {
+      "case": "brief_loss",
+      "method": "direct_yolo",
+      "passed": true,
+      "gates": {
+        "valid_duration": true,
+        "complete_tick_count": true,
+        "finite_valid_states": true,
+        "complete_tick_clock": true,
+        "state_continuity": true,
+        "complete_contact_truth": true,
+        "no_aircraft_contacts": true,
+        "bounded_altitude": true,
+        "bounded_tilt": true,
+        "bounded_speed": true,
+        "bounded_motor_forces": true,
+        "causal_observation_clock": true,
+        "capture_anchored_candidates": true,
+        "no_future_or_expired_command_application": true,
+        "depth_gate_never_increases_forward_request": true,
+        "fixed_target_identity": true,
+        "episode_receipt_matches_trace": true,
+        "completed": true,
+        "full_physics_coverage": true,
+        "actual_perception": true,
+        "translated": true,
+        "full_geometric_truth": true,
+        "tracked": true,
+        "geometric_overlap": true,
+        "complete_tail": true,
+        "tail_centered": true,
+        "hidden_actor_not_reported": true,
+        "selected_id_recovered": true
+      },
+      "metrics": {
+        "translation_m": 1.6642963275666225,
+        "observations": 71,
+        "target_observations": 67,
+        "geometric_truth_observations": 68,
+        "overlap_matches": 67,
+        "target_fraction": 0.9436619718309859,
+        "geometric_overlap_fraction": 0.9852941176470589,
+        "tail_mean_center_error": 0.03262820358459769,
+        "aircraft_contact_ticks": 0,
+        "tail_target_fraction": 1.0,
+        "maximum_tail_tracking_gap_s": 0.15500000000002423,
+        "max_speed_m_s": 0.502036128764594,
+        "max_altitude_error_m": 0.0017065110794807214,
+        "first_recovery_s": 4.0199999999999365
+      }
+    },
+    {
+      "case": "brief_loss",
+      "method": "alpha_beta",
+      "passed": true,
+      "gates": {
+        "valid_duration": true,
+        "complete_tick_count": true,
+        "finite_valid_states": true,
+        "complete_tick_clock": true,
+        "state_continuity": true,
+        "complete_contact_truth": true,
+        "no_aircraft_contacts": true,
+        "bounded_altitude": true,
+        "bounded_tilt": true,
+        "bounded_speed": true,
+        "bounded_motor_forces": true,
+        "causal_observation_clock": true,
+        "capture_anchored_candidates": true,
+        "no_future_or_expired_command_application": true,
+        "depth_gate_never_increases_forward_request": true,
+        "fixed_target_identity": true,
+        "episode_receipt_matches_trace": true,
+        "completed": true,
+        "full_physics_coverage": true,
+        "actual_perception": true,
+        "translated": true,
+        "full_geometric_truth": true,
+        "tracked": true,
+        "geometric_overlap": true,
+        "complete_tail": true,
+        "tail_centered": true,
+        "hidden_actor_not_reported": true,
+        "selected_id_recovered": true
+      },
+      "metrics": {
+        "translation_m": 1.6617892251101323,
+        "observations": 74,
+        "target_observations": 68,
+        "geometric_truth_observations": 70,
+        "overlap_matches": 68,
+        "target_fraction": 0.918918918918919,
+        "geometric_overlap_fraction": 0.9714285714285714,
+        "tail_mean_center_error": 0.03444935664152488,
+        "aircraft_contact_ticks": 0,
+        "tail_target_fraction": 1.0,
+        "maximum_tail_tracking_gap_s": 0.1650000000000258,
+        "max_speed_m_s": 0.502025073419465,
+        "max_altitude_error_m": 0.0017056431717750176,
+        "first_recovery_s": 4.084999999999935
+      }
+    },
+    {
+      "case": "obstacle",
+      "method": "mantis_neural",
+      "passed": false,
+      "gates": {
+        "valid_duration": true,
+        "complete_tick_count": true,
+        "finite_valid_states": true,
+        "complete_tick_clock": true,
+        "state_continuity": true,
+        "complete_contact_truth": true,
+        "no_aircraft_contacts": true,
+        "bounded_altitude": true,
+        "bounded_tilt": true,
+        "bounded_speed": true,
+        "bounded_motor_forces": true,
+        "causal_observation_clock": true,
+        "capture_anchored_candidates": true,
+        "no_future_or_expired_command_application": true,
+        "depth_gate_never_increases_forward_request": true,
+        "fixed_target_identity": true,
+        "episode_receipt_matches_trace": true,
+        "completed": true,
+        "full_physics_coverage": true,
+        "actual_perception": true,
+        "moving_before_obstacle": true,
+        "declared_obstacle_present": true,
+        "positive_obstacle_clearance": true,
+        "stopped_after_obstacle": true,
+        "no_settled_forward_authority": true,
+        "depth_independently_braked": false
+      },
+      "metrics": {
+        "translation_m": 1.0540467994816318,
+        "observations": 58,
+        "target_observations": 24,
+        "geometric_truth_observations": 58,
+        "overlap_matches": 24,
+        "target_fraction": 0.41379310344827586,
+        "geometric_overlap_fraction": 0.41379310344827586,
+        "tail_mean_center_error": null,
+        "aircraft_contact_ticks": 0,
+        "tail_target_fraction": 0.0,
+        "maximum_tail_tracking_gap_s": 2.0,
+        "max_speed_m_s": 0.4877805730991118,
+        "max_altitude_error_m": 0.004249321062646194,
+        "depth_override_ticks": 0,
+        "max_settled_speed_m_s": 0.0012596986413694598,
+        "minimum_planar_obstacle_clearance_m": 0.37073033591943066
+      }
+    },
+    {
+      "case": "obstacle",
+      "method": "direct_yolo",
+      "passed": false,
+      "gates": {
+        "valid_duration": true,
+        "complete_tick_count": true,
+        "finite_valid_states": true,
+        "complete_tick_clock": true,
+        "state_continuity": true,
+        "complete_contact_truth": true,
+        "no_aircraft_contacts": true,
+        "bounded_altitude": true,
+        "bounded_tilt": true,
+        "bounded_speed": true,
+        "bounded_motor_forces": true,
+        "causal_observation_clock": true,
+        "capture_anchored_candidates": true,
+        "no_future_or_expired_command_application": true,
+        "depth_gate_never_increases_forward_request": true,
+        "fixed_target_identity": true,
+        "episode_receipt_matches_trace": true,
+        "completed": true,
+        "full_physics_coverage": true,
+        "actual_perception": true,
+        "moving_before_obstacle": true,
+        "declared_obstacle_present": true,
+        "positive_obstacle_clearance": true,
+        "stopped_after_obstacle": true,
+        "no_settled_forward_authority": true,
+        "depth_independently_braked": false
+      },
+      "metrics": {
+        "translation_m": 1.0407664730217676,
+        "observations": 55,
+        "target_observations": 24,
+        "geometric_truth_observations": 55,
+        "overlap_matches": 24,
+        "target_fraction": 0.43636363636363634,
+        "geometric_overlap_fraction": 0.43636363636363634,
+        "tail_mean_center_error": null,
+        "aircraft_contact_ticks": 0,
+        "tail_target_fraction": 0.0,
+        "maximum_tail_tracking_gap_s": 2.0,
+        "max_speed_m_s": 0.46251689405459423,
+        "max_altitude_error_m": 0.004484883181706589,
+        "depth_override_ticks": 0,
+        "max_settled_speed_m_s": 0.0013738485844144938,
+        "minimum_planar_obstacle_clearance_m": 0.38352946384456715
+      }
+    },
+    {
+      "case": "obstacle",
+      "method": "alpha_beta",
+      "passed": false,
+      "gates": {
+        "valid_duration": true,
+        "complete_tick_count": true,
+        "finite_valid_states": true,
+        "complete_tick_clock": true,
+        "state_continuity": true,
+        "complete_contact_truth": true,
+        "no_aircraft_contacts": true,
+        "bounded_altitude": true,
+        "bounded_tilt": true,
+        "bounded_speed": true,
+        "bounded_motor_forces": true,
+        "causal_observation_clock": true,
+        "capture_anchored_candidates": true,
+        "no_future_or_expired_command_application": true,
+        "depth_gate_never_increases_forward_request": true,
+        "fixed_target_identity": true,
+        "episode_receipt_matches_trace": true,
+        "completed": true,
+        "full_physics_coverage": true,
+        "actual_perception": true,
+        "moving_before_obstacle": true,
+        "declared_obstacle_present": true,
+        "positive_obstacle_clearance": true,
+        "stopped_after_obstacle": true,
+        "no_settled_forward_authority": true,
+        "depth_independently_braked": false
+      },
+      "metrics": {
+        "translation_m": 1.0626758194731047,
+        "observations": 57,
+        "target_observations": 26,
+        "geometric_truth_observations": 57,
+        "overlap_matches": 26,
+        "target_fraction": 0.45614035087719296,
+        "geometric_overlap_fraction": 0.45614035087719296,
+        "tail_mean_center_error": null,
+        "aircraft_contact_ticks": 0,
+        "tail_target_fraction": 0.0,
+        "maximum_tail_tracking_gap_s": 2.0,
+        "max_speed_m_s": 0.5015396923864123,
+        "max_altitude_error_m": 0.0025324446760197628,
+        "depth_override_ticks": 0,
+        "max_settled_speed_m_s": 0.001294671438311346,
+        "minimum_planar_obstacle_clearance_m": 0.3619378194983431
+      }
+    }
+  ],
+  "benchmarks": [
+    {
+      "case": "walk",
+      "source_method": "mantis_neural",
+      "variant": "clean",
+      "seed": 27101,
+      "input_sha256": "595f64ee60472e4899b1e5043ed8f87956ca09c8177a2e34c46e04d9c3dbcfee",
+      "score": {
+        "recorded_count": 57,
+        "truth_available_count": 57,
+        "truth_unavailable_count": 0,
+        "shared_eligible_count": 53,
+        "shared_eligible_truth_count": 53,
+        "matched_count": 53,
+        "unmatched_truth_count": 4,
+        "shared_missing_reasons": {
+          "target_not_observed": 4
+        },
+        "methods": {
+          "mantis_neural": {
+            "matched_capture_rmse_rad": 0.005447861133343199,
+            "matched_capture_mean_abs_rad": 0.004016391405721137,
+            "matched_capture_max_abs_rad": 0.014961548884296239,
+            "truth_prediction_count": 53,
+            "full_truth_coverage": 0.9298245614035088,
+            "eligible_truth_coverage": 1.0
+          },
+          "direct_yolo": {
+            "matched_capture_rmse_rad": 0.00536277506877383,
+            "matched_capture_mean_abs_rad": 0.003423851430861538,
+            "matched_capture_max_abs_rad": 0.02409639439370359,
+            "truth_prediction_count": 53,
+            "full_truth_coverage": 0.9298245614035088,
+            "eligible_truth_coverage": 1.0
+          },
+          "alpha_beta": {
+            "matched_capture_rmse_rad": 0.005048860299600587,
+            "matched_capture_mean_abs_rad": 0.004255438328650913,
+            "matched_capture_max_abs_rad": 0.012258285037778371,
+            "truth_prediction_count": 53,
+            "full_truth_coverage": 0.9298245614035088,
+            "eligible_truth_coverage": 1.0
+          }
+        },
+        "neural_improvement_over_stronger_baseline_fraction": -0.07902790136106108,
+        "score_clock": "capture_time_s",
+        "completion_time_accuracy_evaluated": false,
+        "neural_coverage_at_least_baselines": true,
+        "automatic_winner_or_superiority_test": false
+      },
+      "timing": {
+        "neural_reset_wall_s": 0.381174290999752,
+        "per_method_wall_s": {
+          "mantis_neural": 3.5125457539993477,
+          "direct_yolo": 0.0008652040005472372,
+          "alpha_beta": 0.0014327060011964932
+        },
+        "detector_wall_s": 5.147442252999554,
+        "completion_times_are_offline_per_observation": true,
+        "achieved_real_time": false
+      }
+    },
+    {
+      "case": "walk",
+      "source_method": "mantis_neural",
+      "variant": "noise",
+      "seed": 27101,
+      "input_sha256": "595f64ee60472e4899b1e5043ed8f87956ca09c8177a2e34c46e04d9c3dbcfee",
+      "score": {
+        "recorded_count": 57,
+        "truth_available_count": 57,
+        "truth_unavailable_count": 0,
+        "shared_eligible_count": 53,
+        "shared_eligible_truth_count": 53,
+        "matched_count": 53,
+        "unmatched_truth_count": 4,
+        "shared_missing_reasons": {
+          "target_not_observed": 4
+        },
+        "methods": {
+          "mantis_neural": {
+            "matched_capture_rmse_rad": 0.01457626540251716,
+            "matched_capture_mean_abs_rad": 0.012542901716878857,
+            "matched_capture_max_abs_rad": 0.03396899268386555,
+            "truth_prediction_count": 53,
+            "full_truth_coverage": 0.9298245614035088,
+            "eligible_truth_coverage": 1.0
+          },
+          "direct_yolo": {
+            "matched_capture_rmse_rad": 0.015590747003616413,
+            "matched_capture_mean_abs_rad": 0.013428619467794762,
+            "matched_capture_max_abs_rad": 0.031242808719674553,
+            "truth_prediction_count": 53,
+            "full_truth_coverage": 0.9298245614035088,
+            "eligible_truth_coverage": 1.0
+          },
+          "alpha_beta": {
+            "matched_capture_rmse_rad": 0.011116745241755722,
+            "matched_capture_mean_abs_rad": 0.009315556943921862,
+            "matched_capture_max_abs_rad": 0.02837501945336518,
+            "truth_prediction_count": 53,
+            "full_truth_coverage": 0.9298245614035088,
+            "eligible_truth_coverage": 1.0
+          }
+        },
+        "neural_improvement_over_stronger_baseline_fraction": -0.3111990142372876,
+        "score_clock": "capture_time_s",
+        "completion_time_accuracy_evaluated": false,
+        "neural_coverage_at_least_baselines": true,
+        "automatic_winner_or_superiority_test": false
+      },
+      "timing": {
+        "neural_reset_wall_s": 0.5050508330000412,
+        "per_method_wall_s": {
+          "mantis_neural": 3.485762790998251,
+          "direct_yolo": 0.0009635029996388766,
+          "alpha_beta": 0.0015706730014244386
+        },
+        "detector_wall_s": 5.147442252999554,
+        "completion_times_are_offline_per_observation": true,
+        "achieved_real_time": false
+      }
+    },
+    {
+      "case": "walk",
+      "source_method": "mantis_neural",
+      "variant": "noise",
+      "seed": 27102,
+      "input_sha256": "595f64ee60472e4899b1e5043ed8f87956ca09c8177a2e34c46e04d9c3dbcfee",
+      "score": {
+        "recorded_count": 57,
+        "truth_available_count": 57,
+        "truth_unavailable_count": 0,
+        "shared_eligible_count": 53,
+        "shared_eligible_truth_count": 53,
+        "matched_count": 53,
+        "unmatched_truth_count": 4,
+        "shared_missing_reasons": {
+          "target_not_observed": 4
+        },
+        "methods": {
+          "mantis_neural": {
+            "matched_capture_rmse_rad": 0.014691703168128447,
+            "matched_capture_mean_abs_rad": 0.012138673214897333,
+            "matched_capture_max_abs_rad": 0.03595992108055901,
+            "truth_prediction_count": 53,
+            "full_truth_coverage": 0.9298245614035088,
+            "eligible_truth_coverage": 1.0
+          },
+          "direct_yolo": {
+            "matched_capture_rmse_rad": 0.014342971181606242,
+            "matched_capture_mean_abs_rad": 0.011175953389812537,
+            "matched_capture_max_abs_rad": 0.03610048271606914,
+            "truth_prediction_count": 53,
+            "full_truth_coverage": 0.9298245614035088,
+            "eligible_truth_coverage": 1.0
+          },
+          "alpha_beta": {
+            "matched_capture_rmse_rad": 0.012722778863534049,
+            "matched_capture_mean_abs_rad": 0.010161268116637942,
+            "matched_capture_max_abs_rad": 0.03532944879684674,
+            "truth_prediction_count": 53,
+            "full_truth_coverage": 0.9298245614035088,
+            "eligible_truth_coverage": 1.0
+          }
+        },
+        "neural_improvement_over_stronger_baseline_fraction": -0.15475583799052872,
+        "score_clock": "capture_time_s",
+        "completion_time_accuracy_evaluated": false,
+        "neural_coverage_at_least_baselines": true,
+        "automatic_winner_or_superiority_test": false
+      },
+      "timing": {
+        "neural_reset_wall_s": 0.40533095799992225,
+        "per_method_wall_s": {
+          "mantis_neural": 3.6009725050012094,
+          "direct_yolo": 0.0009864130024652695,
+          "alpha_beta": 0.0015946650009937002
+        },
+        "detector_wall_s": 5.147442252999554,
+        "completion_times_are_offline_per_observation": true,
+        "achieved_real_time": false
+      }
+    },
+    {
+      "case": "walk",
+      "source_method": "mantis_neural",
+      "variant": "noise",
+      "seed": 27103,
+      "input_sha256": "595f64ee60472e4899b1e5043ed8f87956ca09c8177a2e34c46e04d9c3dbcfee",
+      "score": {
+        "recorded_count": 57,
+        "truth_available_count": 57,
+        "truth_unavailable_count": 0,
+        "shared_eligible_count": 53,
+        "shared_eligible_truth_count": 53,
+        "matched_count": 53,
+        "unmatched_truth_count": 4,
+        "shared_missing_reasons": {
+          "target_not_observed": 4
+        },
+        "methods": {
+          "mantis_neural": {
+            "matched_capture_rmse_rad": 0.016883796471538755,
+            "matched_capture_mean_abs_rad": 0.01336596793887043,
+            "matched_capture_max_abs_rad": 0.041199335113523805,
+            "truth_prediction_count": 53,
+            "full_truth_coverage": 0.9298245614035088,
+            "eligible_truth_coverage": 1.0
+          },
+          "direct_yolo": {
+            "matched_capture_rmse_rad": 0.016596972032958877,
+            "matched_capture_mean_abs_rad": 0.013403572873565021,
+            "matched_capture_max_abs_rad": 0.040035948924779685,
+            "truth_prediction_count": 53,
+            "full_truth_coverage": 0.9298245614035088,
+            "eligible_truth_coverage": 1.0
+          },
+          "alpha_beta": {
+            "matched_capture_rmse_rad": 0.011700358137773086,
+            "matched_capture_mean_abs_rad": 0.009473743802627542,
+            "matched_capture_max_abs_rad": 0.029612584408980958,
+            "truth_prediction_count": 53,
+            "full_truth_coverage": 0.9298245614035088,
+            "eligible_truth_coverage": 1.0
+          }
+        },
+        "neural_improvement_over_stronger_baseline_fraction": -0.44301535668652847,
+        "score_clock": "capture_time_s",
+        "completion_time_accuracy_evaluated": false,
+        "neural_coverage_at_least_baselines": true,
+        "automatic_winner_or_superiority_test": false
+      },
+      "timing": {
+        "neural_reset_wall_s": 0.5202974169997105,
+        "per_method_wall_s": {
+          "mantis_neural": 3.5186497040003815,
+          "direct_yolo": 0.0009998759987865924,
+          "alpha_beta": 0.00163045899989811
+        },
+        "detector_wall_s": 5.147442252999554,
+        "completion_times_are_offline_per_observation": true,
+        "achieved_real_time": false
+      }
+    },
+    {
+      "case": "walk",
+      "source_method": "mantis_neural",
+      "variant": "gaps",
+      "seed": 27101,
+      "input_sha256": "595f64ee60472e4899b1e5043ed8f87956ca09c8177a2e34c46e04d9c3dbcfee",
+      "score": {
+        "recorded_count": 57,
+        "truth_available_count": 57,
+        "truth_unavailable_count": 0,
+        "shared_eligible_count": 45,
+        "shared_eligible_truth_count": 45,
+        "matched_count": 45,
+        "unmatched_truth_count": 12,
+        "shared_missing_reasons": {
+          "target_not_observed": 4,
+          "injected_measurement_gap": 8
+        },
+        "methods": {
+          "mantis_neural": {
+            "matched_capture_rmse_rad": 0.005543712484860187,
+            "matched_capture_mean_abs_rad": 0.003983173514917531,
+            "matched_capture_max_abs_rad": 0.014961555285165407,
+            "truth_prediction_count": 45,
+            "full_truth_coverage": 0.7894736842105263,
+            "eligible_truth_coverage": 1.0
+          },
+          "direct_yolo": {
+            "matched_capture_rmse_rad": 0.005709518552339219,
+            "matched_capture_mean_abs_rad": 0.003606524829405543,
+            "matched_capture_max_abs_rad": 0.02409639439370359,
+            "truth_prediction_count": 45,
+            "full_truth_coverage": 0.7894736842105263,
+            "eligible_truth_coverage": 1.0
+          },
+          "alpha_beta": {
+            "matched_capture_rmse_rad": 0.005188739154780479,
+            "matched_capture_mean_abs_rad": 0.004191789323751255,
+            "matched_capture_max_abs_rad": 0.01312465603160895,
+            "truth_prediction_count": 45,
+            "full_truth_coverage": 0.7894736842105263,
+            "eligible_truth_coverage": 1.0
+          }
+        },
+        "neural_improvement_over_stronger_baseline_fraction": -0.06841225189604394,
+        "score_clock": "capture_time_s",
+        "completion_time_accuracy_evaluated": false,
+        "neural_coverage_at_least_baselines": true,
+        "automatic_winner_or_superiority_test": false
+      },
+      "timing": {
+        "neural_reset_wall_s": 0.5825285830001121,
+        "per_method_wall_s": {
+          "mantis_neural": 3.7222771659999125,
+          "direct_yolo": 0.0008853350013851014,
+          "alpha_beta": 0.0014528760025314114
+        },
+        "detector_wall_s": 5.147442252999554,
+        "completion_times_are_offline_per_observation": true,
+        "achieved_real_time": false
+      }
+    },
+    {
+      "case": "turn",
+      "source_method": "mantis_neural",
+      "variant": "clean",
+      "seed": 27101,
+      "input_sha256": "5d327b12e7c6004c086e9ccbec240236d62e0d4867acb1448c3a335db5bb66d5",
+      "score": {
+        "recorded_count": 42,
+        "truth_available_count": 42,
+        "truth_unavailable_count": 0,
+        "shared_eligible_count": 40,
+        "shared_eligible_truth_count": 40,
+        "matched_count": 40,
+        "unmatched_truth_count": 2,
+        "shared_missing_reasons": {
+          "target_not_observed": 2
+        },
+        "methods": {
+          "mantis_neural": {
+            "matched_capture_rmse_rad": 0.008410868684010813,
+            "matched_capture_mean_abs_rad": 0.006461352400674303,
+            "matched_capture_max_abs_rad": 0.02214721817357823,
+            "truth_prediction_count": 40,
+            "full_truth_coverage": 0.9523809523809523,
+            "eligible_truth_coverage": 1.0
+          },
+          "direct_yolo": {
+            "matched_capture_rmse_rad": 0.004797847424488565,
+            "matched_capture_mean_abs_rad": 0.003725361997653409,
+            "matched_capture_max_abs_rad": 0.017599330166528038,
+            "truth_prediction_count": 40,
+            "full_truth_coverage": 0.9523809523809523,
+            "eligible_truth_coverage": 1.0
+          },
+          "alpha_beta": {
+            "matched_capture_rmse_rad": 0.007601059502739227,
+            "matched_capture_mean_abs_rad": 0.005911368229810277,
+            "matched_capture_max_abs_rad": 0.017599330166528038,
+            "truth_prediction_count": 40,
+            "full_truth_coverage": 0.9523809523809523,
+            "eligible_truth_coverage": 1.0
+          }
+        },
+        "neural_improvement_over_stronger_baseline_fraction": -0.7530504703174017,
+        "score_clock": "capture_time_s",
+        "completion_time_accuracy_evaluated": false,
+        "neural_coverage_at_least_baselines": true,
+        "automatic_winner_or_superiority_test": false
+      },
+      "timing": {
+        "neural_reset_wall_s": 0.40560745799984943,
+        "per_method_wall_s": {
+          "mantis_neural": 2.6413353739999366,
+          "direct_yolo": 0.000709999999799038,
+          "alpha_beta": 0.0011630889998741623
+        },
+        "detector_wall_s": 5.148415875999035,
+        "completion_times_are_offline_per_observation": true,
+        "achieved_real_time": false
+      }
+    },
+    {
+      "case": "turn",
+      "source_method": "mantis_neural",
+      "variant": "noise",
+      "seed": 27101,
+      "input_sha256": "5d327b12e7c6004c086e9ccbec240236d62e0d4867acb1448c3a335db5bb66d5",
+      "score": {
+        "recorded_count": 42,
+        "truth_available_count": 42,
+        "truth_unavailable_count": 0,
+        "shared_eligible_count": 40,
+        "shared_eligible_truth_count": 40,
+        "matched_count": 40,
+        "unmatched_truth_count": 2,
+        "shared_missing_reasons": {
+          "target_not_observed": 2
+        },
+        "methods": {
+          "mantis_neural": {
+            "matched_capture_rmse_rad": 0.015563518628926404,
+            "matched_capture_mean_abs_rad": 0.012965115250563486,
+            "matched_capture_max_abs_rad": 0.030252261577596418,
+            "truth_prediction_count": 40,
+            "full_truth_coverage": 0.9523809523809523,
+            "eligible_truth_coverage": 1.0
+          },
+          "direct_yolo": {
+            "matched_capture_rmse_rad": 0.015216393317573755,
+            "matched_capture_mean_abs_rad": 0.012317169090908565,
+            "matched_capture_max_abs_rad": 0.038537349289251566,
+            "truth_prediction_count": 40,
+            "full_truth_coverage": 0.9523809523809523,
+            "eligible_truth_coverage": 1.0
+          },
+          "alpha_beta": {
+            "matched_capture_rmse_rad": 0.01222025691972397,
+            "matched_capture_mean_abs_rad": 0.00973259152718029,
+            "matched_capture_max_abs_rad": 0.038537349289251566,
+            "truth_prediction_count": 40,
+            "full_truth_coverage": 0.9523809523809523,
+            "eligible_truth_coverage": 1.0
+          }
+        },
+        "neural_improvement_over_stronger_baseline_fraction": -0.27358358593969334,
+        "score_clock": "capture_time_s",
+        "completion_time_accuracy_evaluated": false,
+        "neural_coverage_at_least_baselines": true,
+        "automatic_winner_or_superiority_test": false
+      },
+      "timing": {
+        "neural_reset_wall_s": 0.4036848329997156,
+        "per_method_wall_s": {
+          "mantis_neural": 2.566987498999424,
+          "direct_yolo": 0.0007212139989860589,
+          "alpha_beta": 0.0011526300008881663
+        },
+        "detector_wall_s": 5.148415875999035,
+        "completion_times_are_offline_per_observation": true,
+        "achieved_real_time": false
+      }
+    },
+    {
+      "case": "turn",
+      "source_method": "mantis_neural",
+      "variant": "noise",
+      "seed": 27102,
+      "input_sha256": "5d327b12e7c6004c086e9ccbec240236d62e0d4867acb1448c3a335db5bb66d5",
+      "score": {
+        "recorded_count": 42,
+        "truth_available_count": 42,
+        "truth_unavailable_count": 0,
+        "shared_eligible_count": 40,
+        "shared_eligible_truth_count": 40,
+        "matched_count": 40,
+        "unmatched_truth_count": 2,
+        "shared_missing_reasons": {
+          "target_not_observed": 2
+        },
+        "methods": {
+          "mantis_neural": {
+            "matched_capture_rmse_rad": 0.013474971394910017,
+            "matched_capture_mean_abs_rad": 0.010907218107713789,
+            "matched_capture_max_abs_rad": 0.03077370810513491,
+            "truth_prediction_count": 40,
+            "full_truth_coverage": 0.9523809523809523,
+            "eligible_truth_coverage": 1.0
+          },
+          "direct_yolo": {
+            "matched_capture_rmse_rad": 0.012743306207015236,
+            "matched_capture_mean_abs_rad": 0.009960766610814686,
+            "matched_capture_max_abs_rad": 0.03341353130648228,
+            "truth_prediction_count": 40,
+            "full_truth_coverage": 0.9523809523809523,
+            "eligible_truth_coverage": 1.0
+          },
+          "alpha_beta": {
+            "matched_capture_rmse_rad": 0.01162470307435975,
+            "matched_capture_mean_abs_rad": 0.00939337109327506,
+            "matched_capture_max_abs_rad": 0.03341353130648228,
+            "truth_prediction_count": 40,
+            "full_truth_coverage": 0.9523809523809523,
+            "eligible_truth_coverage": 1.0
+          }
+        },
+        "neural_improvement_over_stronger_baseline_fraction": -0.1591669317241613,
+        "score_clock": "capture_time_s",
+        "completion_time_accuracy_evaluated": false,
+        "neural_coverage_at_least_baselines": true,
+        "automatic_winner_or_superiority_test": false
+      },
+      "timing": {
+        "neural_reset_wall_s": 0.459256374999768,
+        "per_method_wall_s": {
+          "mantis_neural": 2.8663798770012363,
+          "direct_yolo": 0.0008364170021195605,
+          "alpha_beta": 0.0013567080031862133
+        },
+        "detector_wall_s": 5.148415875999035,
+        "completion_times_are_offline_per_observation": true,
+        "achieved_real_time": false
+      }
+    },
+    {
+      "case": "turn",
+      "source_method": "mantis_neural",
+      "variant": "noise",
+      "seed": 27103,
+      "input_sha256": "5d327b12e7c6004c086e9ccbec240236d62e0d4867acb1448c3a335db5bb66d5",
+      "score": {
+        "recorded_count": 42,
+        "truth_available_count": 42,
+        "truth_unavailable_count": 0,
+        "shared_eligible_count": 40,
+        "shared_eligible_truth_count": 40,
+        "matched_count": 40,
+        "unmatched_truth_count": 2,
+        "shared_missing_reasons": {
+          "target_not_observed": 2
+        },
+        "methods": {
+          "mantis_neural": {
+            "matched_capture_rmse_rad": 0.015390998543147377,
+            "matched_capture_mean_abs_rad": 0.012415398158867597,
+            "matched_capture_max_abs_rad": 0.0350059097606068,
+            "truth_prediction_count": 40,
+            "full_truth_coverage": 0.9523809523809523,
+            "eligible_truth_coverage": 1.0
+          },
+          "direct_yolo": {
+            "matched_capture_rmse_rad": 0.015790883798295484,
+            "matched_capture_mean_abs_rad": 0.013521686228894613,
+            "matched_capture_max_abs_rad": 0.0295390747854829,
+            "truth_prediction_count": 40,
+            "full_truth_coverage": 0.9523809523809523,
+            "eligible_truth_coverage": 1.0
+          },
+          "alpha_beta": {
+            "matched_capture_rmse_rad": 0.012753691357598749,
+            "matched_capture_mean_abs_rad": 0.010035339361023165,
+            "matched_capture_max_abs_rad": 0.03182815587151433,
+            "truth_prediction_count": 40,
+            "full_truth_coverage": 0.9523809523809523,
+            "eligible_truth_coverage": 1.0
+          }
+        },
+        "neural_improvement_over_stronger_baseline_fraction": -0.20678775356887558,
+        "score_clock": "capture_time_s",
+        "completion_time_accuracy_evaluated": false,
+        "neural_coverage_at_least_baselines": true,
+        "automatic_winner_or_superiority_test": false
+      },
+      "timing": {
+        "neural_reset_wall_s": 0.540572124999926,
+        "per_method_wall_s": {
+          "mantis_neural": 2.6502382920002674,
+          "direct_yolo": 0.0007556629984719621,
+          "alpha_beta": 0.001204626999424363
+        },
+        "detector_wall_s": 5.148415875999035,
+        "completion_times_are_offline_per_observation": true,
+        "achieved_real_time": false
+      }
+    },
+    {
+      "case": "turn",
+      "source_method": "mantis_neural",
+      "variant": "gaps",
+      "seed": 27101,
+      "input_sha256": "5d327b12e7c6004c086e9ccbec240236d62e0d4867acb1448c3a335db5bb66d5",
+      "score": {
+        "recorded_count": 42,
+        "truth_available_count": 42,
+        "truth_unavailable_count": 0,
+        "shared_eligible_count": 32,
+        "shared_eligible_truth_count": 32,
+        "matched_count": 32,
+        "unmatched_truth_count": 10,
+        "shared_missing_reasons": {
+          "target_not_observed": 2,
+          "injected_measurement_gap": 8
+        },
+        "methods": {
+          "mantis_neural": {
+            "matched_capture_rmse_rad": 0.008963080510741921,
+            "matched_capture_mean_abs_rad": 0.0069062318677711315,
+            "matched_capture_max_abs_rad": 0.02214742052691676,
+            "truth_prediction_count": 32,
+            "full_truth_coverage": 0.7619047619047619,
+            "eligible_truth_coverage": 1.0
+          },
+          "direct_yolo": {
+            "matched_capture_rmse_rad": 0.004957937062845694,
+            "matched_capture_mean_abs_rad": 0.0036826016312250937,
+            "matched_capture_max_abs_rad": 0.017599330166528038,
+            "truth_prediction_count": 32,
+            "full_truth_coverage": 0.7619047619047619,
+            "eligible_truth_coverage": 1.0
+          },
+          "alpha_beta": {
+            "matched_capture_rmse_rad": 0.006581426830537161,
+            "matched_capture_mean_abs_rad": 0.004860290471562903,
+            "matched_capture_max_abs_rad": 0.017599330166528038,
+            "truth_prediction_count": 32,
+            "full_truth_coverage": 0.7619047619047619,
+            "eligible_truth_coverage": 1.0
+          }
+        },
+        "neural_improvement_over_stronger_baseline_fraction": -0.8078245845253642,
+        "score_clock": "capture_time_s",
+        "completion_time_accuracy_evaluated": false,
+        "neural_coverage_at_least_baselines": true,
+        "automatic_winner_or_superiority_test": false
+      },
+      "timing": {
+        "neural_reset_wall_s": 0.5721825420000641,
+        "per_method_wall_s": {
+          "mantis_neural": 2.571377460001713,
+          "direct_yolo": 0.0006065440006750578,
+          "alpha_beta": 0.0009960849988601694
+        },
+        "detector_wall_s": 5.148415875999035,
+        "completion_times_are_offline_per_observation": true,
+        "achieved_real_time": false
+      }
+    }
+  ],
+  "limits": [
+    "Stylized animated actor, prescribed gait, ideal state/depth and approximate collision capsule.",
+    "All flight modes compute the full neural pipeline; timing does not compare optimized controller throughput.",
+    "Same-input benchmark uses Mantis Neural camera trajectories and capture-time geometric mesh truth.",
+    "No statistical superiority or real-world generalization claim.",
+    "Mantis Neural did not beat the stronger conventional baseline in any of the ten matched comparisons.",
+    "Raw capture and activity evidence remains local; this is a compact subset."
+  ]
+}

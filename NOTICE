@@ -1,4 +1,4 @@
-Drone Flybrain
+Mantis (formerly Drone Flybrain)
 Copyright 2026 Manavp7
 
 Project software is licensed under the Apache License, Version 2.0.
@@ -29,3 +29,9 @@ See assets/ATTRIBUTION.md for the source URL, complete attribution and
 the media license. No endorsement by the original creator is implied.
 
 This NOTICE is informational and does not modify any license terms.
+
+The Mantis V2 walking actor adapts Cesium Man, Copyright 2017 Cesium,
+licensed under Creative Commons Attribution 4.0 International. Original asset,
+license metadata and the separate Cesium logo trademark notice are retained in
+assets/mantis_actor/. Runtime changes include coordinate/height conversion,
+native skinning and plain clothing materials. See its ATTRIBUTION.md.

@@ -1,6 +1,26 @@
 # Public evidence subset
 
-These records were copied from the completed local motor-flight experiment. They are a compact publication subset, not the full raw run.
+These records are a compact evidence subset covering the original V1 release and the Mantis V2 and 2.1 evaluations. The full raw runs are not bundled.
+
+## Mantis 2.1
+
+- [`mantis-v2.1-summary.json`](mantis-v2.1-summary.json): two frozen batches with 36 actual-model flights, 20 matched-input bearing comparisons, the broader synthetic readout calibration and its separate verification.
+- [`mantis-v2.1-verification.json`](mantis-v2.1-verification.json): separate saved-evidence reconstruction, native physics/depth replay, media validation and actual browser checks, with each verifier's independence and reuse limits stated.
+
+**All 36 operational trials passed.** This includes six visibility-preserving obstacle trials that independently demonstrated depth braking, plus twelve delay/recovery trials. The 686-test native software suite passed. Neural guidance still did not beat the stronger conventional baseline in any of the twenty matched comparisons; improved synthetic cue decoding is not a claim of conventional-controller superiority.
+
+Full RGB-D captures, neural activity, traces, calibrated-cue recordings and 36 replay videos remain local. The original failed V2 run and first failed remediation probe are preserved. See [Mantis 2.1](../docs/MANTIS_V2_1.md) for precise mechanisms, test changes, reproduction and limitations.
+
+## Mantis V2
+
+- [`mantis-v2-summary.json`](mantis-v2-summary.json): twelve actual-model flights, ten matched-input bearing comparisons, counts and timing from the frozen `mantis_run02`.
+- [`mantis-v2-verification.json`](mantis-v2-verification.json): separate reconstruction of neural readouts, controller math, benchmark scores and clocks, plus frozen-implementation replay of all 22,800 motor-physics steps and depth decisions. All 834 raw artifact hashes were checked. The verifier did not rerun YOLO or the recurrent neural dynamics; its other limits are recorded in the receipt.
+
+**Eight of twelve** operational cases passed. One filtered walking run lost its target at the end. All three obstacle runs stopped, but target loss prevented them from demonstrating independent depth braking. Neural bearing estimates did not beat the stronger conventional baseline in any of the ten comparisons. Passing evidence verification does not turn these experimental failures into passes.
+
+The complete RGB-D captures, neural arrays, motor traces, twelve replay videos and detailed verification artifacts remain local. A later narrow-screen CSS and waiting-text change is explicitly distinguished from the frozen runtime in the receipt. See [Mantis V2](../docs/MANTIS_V2.md) for reproduction and limitations, and [actor attribution](../assets/mantis_actor/ATTRIBUTION.md) for the CC BY 4.0 animated asset.
+
+## Original motor-flight experiment (V1)
 
 - `flight-summary.json`: all nine scenario scores and the predeclared acceptance criteria.
 - `flight-metrics.json`: aggregate timing, inference, physics and observation counts.
