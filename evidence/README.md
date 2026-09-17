@@ -31,3 +31,9 @@ The complete RGB-D captures, neural arrays, motor traces, twelve replay videos a
 The original raw run contained 2,247 files. It included RGB-D frames, all neural activity arrays, camera poses, commands and complete physics traces. A coordinator replay verified all 16,000 motor-physics steps and safety decisions; the separate neural/tracker review is preserved here. Those large raw arrays, downloaded model weights and source videos are not published. Historical local source-lock hashes are not presented as a complete downloadable archive.
 
 The demo video and screenshot are in [`assets/`](../assets/ATTRIBUTION.md), with their CC BY 3.0 attribution. Scores use approximate projected photograph bounds and do not constitute a general person-tracking benchmark.
+
+## Interactive Studio development
+
+[Studio checks](mantis_studio/README.md) preserve bounded recordings, selected-person
+checks, unresolved integrated detours and the negative raw-motion result. These
+development trials do not replace or regrade the earlier frozen suites.

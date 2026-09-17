@@ -1,0 +1,47 @@
+{
+  "manifest_sha256": "86004101adc92e65bff8ba1e583fc9fd2551a7eec2560e601497e756af8e1594",
+  "checkpoint_sha256": "d8a57a022aa18ca338599be713af9db29b89cde4b00098ffe42b78f0d583e46a",
+  "decoder": "official pretrained DecoderGAVP flow; strict checkpoint load; eval",
+  "neural_input": "camera luminance; center-square crop; 391-square bilinear antialiased resize",
+  "integration_dt_s": 0.02,
+  "warmup_s": 0.5,
+  "maximum_frame_gap_s": 0.65,
+  "temporal_resampling": "causal previous-image zero-order hold; first new stimulus at or after capture",
+  "unit_transfer_assumption": "interior BoxEye sum: [right,up] * (436*24/169), invert y to right/down; not calibrated physical speed",
+  "decoder_axes": [
+    "right",
+    "up"
+  ],
+  "nominal_velocity_axes": [
+    "right",
+    "down"
+  ],
+  "control_authority": false,
+  "fitting": false,
+  "device": "cpu",
+  "packages": {
+    "numpy": {
+      "available": true,
+      "version": "1.26.4"
+    },
+    "torch": {
+      "available": true,
+      "version": "2.5.1"
+    },
+    "torchvision": {
+      "available": true,
+      "version": "0.20.1"
+    },
+    "flyvis": {
+      "available": true,
+      "version": "1.2.0"
+    },
+    "datamate": {
+      "available": true,
+      "version": "1.0.0"
+    }
+  },
+  "definition_sha256": "ef7e195b743e27ae2f2980542886ec854c86eb9213ef96971c71c47e1aa2bce4",
+  "implementation_sha256": "0b1f9bddd0b77677e9bb303a598f3cfa35e9d9e2e7278150f6e71173256a3663",
+  "limitation": "Synthetic global translation; no natural-video, obstacle avoidance or flight benefit established"
+}

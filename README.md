@@ -6,6 +6,34 @@ An experimental drone simulator combining **YOLO person tracking, a recurrent Fl
 
 **Mantis** is the project name. Flyvis remains the credited upstream visual neural model.
 
+## Interactive Flight Studio
+
+The new local studio runs simulations from the browser: choose a detected person,
+pause/resume, change follow distance and target motion, and watch camera, neural
+and motor telemetry. Two-person scenes stop on ambiguous selection. A bounded
+depth planner can attempt short detours around an offset obstacle.
+
+```bash
+# After installing the existing research runtime, models and ffmpeg below:
+python -m experiments.mantis_studio
+```
+
+Open [Mantis Studio](http://127.0.0.1:8875). Compact videos/results are the default;
+raw research arrays are optional. Recording has a per-run limit and the studio
+defaults to a 256 MiB total budget without deleting old runs.
+
+An independent raw-camera Flyvis arm can measure motion or experimentally reduce
+speed alongside YOLO guidance. Its frozen motion benchmark **did not outperform
+conventional optical flow**. Integrated detours also remain unreliable: the
+latest actual-model trial stopped at its attempt limit before completing a route.
+See the [development evidence](evidence/mantis_studio/README.md) for failures and
+limits. [Studio guide](docs/MANTIS_STUDIO.md) ·
+[Motion methodology and evidence](docs/MANTIS_MOTION.md).
+
+The combined native suite passed **787 tests**. All **28 videos** from fourteen
+development runs decoded successfully; these software/media checks do not turn
+the unresolved tracking, detour or neural-motion results into successful trials.
+
 ## Mantis 2.1
 
 The new experiment replaces the photograph with an **animated, skinned 3D actor** and compares **Mantis Neural**, **Direct YOLO** and **Alpha-beta** guidance. Each controller flies its own motor-driven simulation. A separate benchmark feeds identical recorded detections to all three estimators, with clean input, seeded jitter and brief gaps.
@@ -46,7 +74,7 @@ YOLO locates the target. A target cue drives the actual Flyvis network, whose ne
 | Stabilization and physics | Conventional autopilot, four rotor forces, motor lag and MuJoCo six-DOF dynamics |
 | Timing | Capture-anchored deadlines; earlier commands remain active while simulated time advances through measured inference delay |
 
-This is a **research simulation**, using ideal depth/state sensors. V1 uses a photograph; V2 uses a stylized animated actor. Flyvis is a visual-network component, not a whole fly motor brain. Physical aircraft, real-time onboard execution, PX4 integration, general aerial person recognition and route planning are not demonstrated.
+This is a **research simulation**, using ideal depth/state sensors. V1 uses a photograph; V2 and Studio use stylized animated actors. Flyvis is a visual-network component, not a whole fly motor brain. Physical aircraft, real-time onboard execution, PX4 integration, general aerial person recognition and general route planning are not demonstrated.
 
 ## Recorded V1 results
 
@@ -77,7 +105,7 @@ python -m pip install -r requirements-test.txt
 python -m unittest discover -s tests -v
 ```
 
-The original public release added 17 model-setup checks and passed **515 tests** in a fresh native-rendering environment. The current Mantis 2.1 suite passed **686 tests** locally. Camera-rendering tests are skipped by default. With a working native OpenGL context, enable them:
+The original public release added 17 model-setup checks and passed **515 tests** in a fresh native-rendering environment. The preserved Mantis 2.1 suite passed **686 tests** locally; the current suite including Studio passed **787 tests**. Camera-rendering tests are skipped by default. With a working native OpenGL context, enable them:
 
 ```bash
 FLIGHT_RENDER_TESTS=1 python -m unittest discover -s tests -v
@@ -118,7 +146,7 @@ Every output directory must be new. Export can resume from completed saved obser
 | Path | Purpose |
 |---|---|
 | `experiments/flight_*.py` | Connected motor-flight fixture, tracking, guidance, safety and reporting |
-| `experiments/mantis_*.py` | V2 animated actor, foreground depth, controller comparison and replay lab |
+| `experiments/mantis_*.py` | Animated actors, controller comparison, replay lab and interactive Studio |
 | `experiments/hybrid_*.py` | Neural readout, target cue and earlier hybrid/video experiments |
 | `perception/` | YOLOX, short-term tracking, registered depth and video/image interfaces |
 | `flybrain_sim/`, `stress/`, `validation/` | Preserved earlier navigation and evaluation software |

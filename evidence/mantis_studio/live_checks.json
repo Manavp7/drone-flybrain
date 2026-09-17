@@ -1,0 +1,942 @@
+{
+  "schema": "mantis-studio-development-checks-v1",
+  "trials": [
+    {
+      "run_id": "run-20260917T120914-5a6b4f9e",
+      "config": {
+        "scenario": "walk",
+        "method": "mantis_neural",
+        "duration_s": 30.0,
+        "follow_distance_m": 3.5,
+        "target_speed": 0.08,
+        "detours": false,
+        "motion_mode": "off",
+        "recording": "compact",
+        "max_recording_mb": 16
+      },
+      "phase": "interrupted",
+      "receipt_status": "interrupted",
+      "final_sim_s": 20.405000000000225,
+      "statistics": {
+        "observations": 107,
+        "wrong_person_observations": 0,
+        "evaluated_selected_observations": 2,
+        "unscorable_selected_observations": 0,
+        "holds": 105,
+        "motion_speed_reductions": 0,
+        "contacts": 0,
+        "actual_yolo_calls": 107,
+        "actual_flyvis_observations": 107,
+        "selected_actor_reference": "blue",
+        "detours_completed": 0
+      },
+      "bytes": 1334224,
+      "max_bytes": 16777216,
+      "saved_samples": 107,
+      "raw_frames": 0,
+      "max_saved_speed_m_s": 6.666422087575362e-15,
+      "final_saved_position": [
+        -1.9770086430823553e-15,
+        2.4714907385918006e-15,
+        1.1
+      ],
+      "final_vehicle": null,
+      "selection_reasons": [
+        "observed",
+        "selected_appearance_changed",
+        "selection_required"
+      ],
+      "navigation_reasons": [
+        "detours_disabled",
+        "no_fresh_selected_target"
+      ],
+      "artifact_sha256": {
+        "camera.mp4": "2653b45f4c8e9d58c547986c12ab3478cf7600d6e9ef7068202c9651f777e56c",
+        "overview.mp4": "6af1ca24065cd17325107972ada9ad89a89ec8cbafb1ea5027492586e22f5d80",
+        "telemetry.jsonl": "95aef766269d5869fe1ccac863da87312cc6f81e59ddd9bbc5d49ba3169c6841",
+        "summary.json": "dcaae7374be14dc663f9011c8a1d9fd04dd3ac81e6e86493855c477582176da7",
+        "provenance.json": "32a0ae72e5bfa5873627b3d0cdb10e56153e601c140c3a28e6c87f10bbecb53f"
+      }
+    },
+    {
+      "run_id": "run-20260917T121723-78ed256c",
+      "config": {
+        "scenario": "stationary",
+        "method": "mantis_neural",
+        "duration_s": 12.0,
+        "follow_distance_m": 2.5,
+        "target_speed": 0.08,
+        "detours": false,
+        "motion_mode": "off",
+        "recording": "compact",
+        "max_recording_mb": 16
+      },
+      "phase": "completed",
+      "receipt_status": "completed",
+      "final_sim_s": 12.095000000000491,
+      "statistics": {
+        "observations": 64,
+        "wrong_person_observations": 0,
+        "evaluated_selected_observations": 23,
+        "unscorable_selected_observations": 0,
+        "holds": 41,
+        "motion_speed_reductions": 0,
+        "contacts": 0,
+        "actual_yolo_calls": 64,
+        "actual_flyvis_observations": 64,
+        "selected_actor_reference": "blue",
+        "detours_completed": 0
+      },
+      "bytes": 919475,
+      "max_bytes": 16777216,
+      "saved_samples": 64,
+      "raw_frames": 0,
+      "max_saved_speed_m_s": 0.501758969687713,
+      "final_saved_position": [
+        1.759320198507912,
+        -0.29648368385683066,
+        1.09999998464087
+      ],
+      "final_vehicle": null,
+      "selection_reasons": [
+        "observed",
+        "selected_person_lost",
+        "selection_required"
+      ],
+      "navigation_reasons": [
+        "depth_unknown_reverse_motion",
+        "detours_disabled",
+        "no_fresh_selected_target"
+      ],
+      "artifact_sha256": {
+        "camera.mp4": "894345933fc2b19258a280a12ed1f5d95985863354ed41902f6c6e293c77c4e3",
+        "overview.mp4": "a721c200f6770ed2b9c482e0c6a349d51096b7d7398a9d2a51292d3238a213a2",
+        "telemetry.jsonl": "fe126cb12d91d48066f7fba7019e67affcd4f13668f82a10a417bde17a1be2e8",
+        "summary.json": "4cb2afad56111ed4d54636326acf3cd2b4020123ebcdc5e5fa78fb843bfa53bc",
+        "provenance.json": "33a7a3cc315be2617d89eac20126a94c54dd880c3502b976abc156b3799eb412"
+      }
+    },
+    {
+      "run_id": "run-20260917T121853-75a9b0c8",
+      "config": {
+        "scenario": "detour",
+        "method": "mantis_neural",
+        "duration_s": 25.0,
+        "follow_distance_m": 2.5,
+        "target_speed": 0.08,
+        "detours": true,
+        "motion_mode": "off",
+        "recording": "compact",
+        "max_recording_mb": 16
+      },
+      "phase": "interrupted",
+      "receipt_status": "interrupted",
+      "final_sim_s": 18.595000000000585,
+      "statistics": {
+        "observations": 106,
+        "wrong_person_observations": 0,
+        "evaluated_selected_observations": 105,
+        "unscorable_selected_observations": 0,
+        "holds": 1,
+        "motion_speed_reductions": 0,
+        "contacts": 0,
+        "actual_yolo_calls": 106,
+        "actual_flyvis_observations": 106,
+        "selected_actor_reference": "orange",
+        "detours_completed": 0
+      },
+      "bytes": 1333013,
+      "max_bytes": 16777216,
+      "saved_samples": 106,
+      "raw_frames": 0,
+      "max_saved_speed_m_s": 2.5957052872138476e-15,
+      "final_saved_position": [
+        3.766629621036302e-15,
+        8.919837675633791e-15,
+        1.1
+      ],
+      "final_vehicle": null,
+      "selection_reasons": [
+        "observed",
+        "selection_required"
+      ],
+      "navigation_reasons": [
+        "direct_unknown_outside_field_of_view",
+        "no_fresh_selected_target"
+      ],
+      "artifact_sha256": {
+        "camera.mp4": "b44870a7cd4f3b97e314dce7f3317180cdc0b0b27e4db34a7b1e198b31b748b5",
+        "overview.mp4": "0f5efdc819f7777bb7658f4917a3b30c646135255dd82ae1ff1571975f6ff508",
+        "telemetry.jsonl": "fac4d109d98a2a7b5bbdea0a2fd2bcf209b6d1967342772cefe0e6e8ca044029",
+        "summary.json": "ad6aeea75677119d23ec8d896de9521b6c194a5025af1507ff93cbd9042b2ff2",
+        "provenance.json": "5a08acea5967af6af36e583e07f9b580950d596dbfb7777c41a4a272f7e47d0c"
+      }
+    },
+    {
+      "run_id": "run-20260917T122028-f27d4fe1",
+      "config": {
+        "scenario": "detour",
+        "method": "mantis_neural",
+        "duration_s": 25.0,
+        "follow_distance_m": 2.5,
+        "target_speed": 0.08,
+        "detours": true,
+        "motion_mode": "off",
+        "recording": "compact",
+        "max_recording_mb": 16
+      },
+      "phase": "completed",
+      "receipt_status": "completed",
+      "final_sim_s": 25.24999999999926,
+      "statistics": {
+        "observations": 88,
+        "wrong_person_observations": 0,
+        "evaluated_selected_observations": 5,
+        "unscorable_selected_observations": 0,
+        "holds": 83,
+        "motion_speed_reductions": 0,
+        "contacts": 0,
+        "actual_yolo_calls": 88,
+        "actual_flyvis_observations": 88,
+        "selected_actor_reference": "blue",
+        "detours_completed": 0
+      },
+      "bytes": 1473260,
+      "max_bytes": 16777216,
+      "saved_samples": 88,
+      "raw_frames": 0,
+      "max_saved_speed_m_s": 0.1356689814330173,
+      "final_saved_position": [
+        0.2132849027434205,
+        -0.03495703588316365,
+        1.0999999999999908
+      ],
+      "final_vehicle": null,
+      "selection_reasons": [
+        "observed",
+        "perception_unavailable",
+        "selection_required"
+      ],
+      "navigation_reasons": [
+        "depth_unknown_reverse_motion",
+        "no_fresh_selected_target",
+        "observed_detour",
+        "turn_in_place"
+      ],
+      "artifact_sha256": {
+        "camera.mp4": "6533a08553272c12bc2960fd69e393a62c817fdfe14e35b5b59aa00e7063091e",
+        "overview.mp4": "6bef998c020bac533fb6ce97a4f2b968228a8ebb9dc5b8514a95b0235bf51cdd",
+        "telemetry.jsonl": "c32cf122d21d19d009e677798434968ecdc2fd465666143b319ea3205c634a61",
+        "summary.json": "170140c59dbd44434863e266742a7fa5870a6fc06a5af3b1aab6e091a824fd72",
+        "provenance.json": "adc101d77022df205e3584be93e2a63b78df568dd53030ad299722f6e004ced1"
+      }
+    },
+    {
+      "run_id": "run-20260917T122240-b9ba02a2",
+      "config": {
+        "scenario": "crossing",
+        "method": "mantis_neural",
+        "duration_s": 16.0,
+        "follow_distance_m": 3.5,
+        "target_speed": 0.12,
+        "detours": false,
+        "motion_mode": "off",
+        "recording": "compact",
+        "max_recording_mb": 16
+      },
+      "phase": "completed",
+      "receipt_status": "completed",
+      "final_sim_s": 16.040000000001093,
+      "statistics": {
+        "observations": 90,
+        "wrong_person_observations": 0,
+        "evaluated_selected_observations": 23,
+        "unscorable_selected_observations": 0,
+        "holds": 67,
+        "motion_speed_reductions": 0,
+        "contacts": 0,
+        "actual_yolo_calls": 90,
+        "actual_flyvis_observations": 90,
+        "selected_actor_reference": "orange",
+        "detours_completed": 0
+      },
+      "bytes": 1201625,
+      "max_bytes": 16777216,
+      "saved_samples": 90,
+      "raw_frames": 0,
+      "max_saved_speed_m_s": 0.4651162840047261,
+      "final_saved_position": [
+        1.8320021714721757,
+        0.1451409132597545,
+        1.1000000000115995
+      ],
+      "final_vehicle": null,
+      "selection_reasons": [
+        "observed",
+        "selected_person_lost",
+        "selection_required"
+      ],
+      "navigation_reasons": [
+        "depth_unknown_reverse_motion",
+        "detours_disabled",
+        "no_fresh_selected_target"
+      ],
+      "artifact_sha256": {
+        "camera.mp4": "0870767acd27024c21afc9a26095ec7c2d588afcc17d6d38268b35d40dc6067e",
+        "overview.mp4": "e94d3d854d81d00fa063e8908bc3630e548ec17b0b420c2dcab6312bf159eb0f",
+        "telemetry.jsonl": "cf85d6507800a0990fb01889bcb8f81449b4967544f3e3b8165163b5d469c6f2",
+        "summary.json": "20ce9d4afb39220d68e929b3d0bfea5dfb8fd228e0434bc4d97134ed9ad8fe31",
+        "provenance.json": "bdfde0e1e50bf5e676b71125124daebb50d816af39449f44e11d0b9d30735f6f"
+      }
+    },
+    {
+      "run_id": "run-20260917T122352-025502ae",
+      "config": {
+        "scenario": "detour",
+        "method": "mantis_neural",
+        "duration_s": 25.0,
+        "follow_distance_m": 2.5,
+        "target_speed": 0.08,
+        "detours": true,
+        "motion_mode": "off",
+        "recording": "compact",
+        "max_recording_mb": 16
+      },
+      "phase": "completed",
+      "receipt_status": "completed",
+      "final_sim_s": 25.00999999999931,
+      "statistics": {
+        "observations": 100,
+        "wrong_person_observations": 0,
+        "evaluated_selected_observations": 4,
+        "unscorable_selected_observations": 0,
+        "holds": 96,
+        "motion_speed_reductions": 0,
+        "contacts": 0,
+        "actual_yolo_calls": 100,
+        "actual_flyvis_observations": 100,
+        "selected_actor_reference": "blue",
+        "detours_completed": 0
+      },
+      "bytes": 1569583,
+      "max_bytes": 16777216,
+      "saved_samples": 100,
+      "raw_frames": 0,
+      "max_saved_speed_m_s": 0.0828063939770691,
+      "final_saved_position": [
+        0.10232437474292334,
+        -0.015270451761641195,
+        1.0999999999999923
+      ],
+      "final_vehicle": {
+        "position": [
+          0.10232437474292334,
+          -0.015270451761641195,
+          1.0999999999999923
+        ],
+        "speed_m_s": 5.852611807518573e-15,
+        "yaw_rad": -0.1718843190766216,
+        "motor_forces": [
+          1.962000000000002,
+          1.9620000000000024,
+          1.9620000000000022,
+          1.9620000000000017
+        ]
+      },
+      "selection_reasons": [
+        "observed",
+        "perception_unavailable",
+        "selection_required"
+      ],
+      "navigation_reasons": [
+        "no_fresh_selected_target",
+        "turn_in_place"
+      ],
+      "artifact_sha256": {
+        "camera.mp4": "3d2714ddcf992b9435b580a9cd8c808629bb3348203737fd134bb6d6e2cca1e1",
+        "overview.mp4": "674b153577f44e2d5c887c5e6e84aca4861dd286d17851f76587d1e72583923e",
+        "telemetry.jsonl": "eca16764e726f13f4071a6e29d8bb22c663420db5277916647a5f254230207df",
+        "summary.json": "b71121f8022c041f35196f8c62d04545b6431f5d35d3ac00d471bd24c5ecf272",
+        "provenance.json": "6a012c57184fd7d09ade5ace81b197a48d4128c217bab97d60fb64b6f56bc7a6"
+      }
+    },
+    {
+      "run_id": "run-20260917T122546-9a776b46",
+      "config": {
+        "scenario": "stationary",
+        "method": "mantis_neural",
+        "duration_s": 5.0,
+        "follow_distance_m": 2.5,
+        "target_speed": 0.08,
+        "detours": false,
+        "motion_mode": "observe",
+        "recording": "compact",
+        "max_recording_mb": 16
+      },
+      "phase": "completed",
+      "receipt_status": "completed",
+      "final_sim_s": 5.374999999999908,
+      "statistics": {
+        "observations": 4,
+        "wrong_person_observations": 0,
+        "evaluated_selected_observations": 0,
+        "unscorable_selected_observations": 0,
+        "holds": 4,
+        "motion_speed_reductions": 0,
+        "contacts": 0,
+        "actual_yolo_calls": 4,
+        "actual_flyvis_observations": 4,
+        "selected_actor_reference": null,
+        "detours_completed": 0
+      },
+      "bytes": 160666,
+      "max_bytes": 16777216,
+      "saved_samples": 4,
+      "raw_frames": 0,
+      "max_saved_speed_m_s": 2.324114011685761e-15,
+      "final_saved_position": [
+        5.533583700610701e-16,
+        3.332973685015435e-15,
+        1.1
+      ],
+      "final_vehicle": {
+        "position": [
+          5.533583700610701e-16,
+          3.332973685015435e-15,
+          1.1
+        ],
+        "speed_m_s": 1.930685378978616e-15,
+        "yaw_rad": 2.5055280271165796e-17,
+        "motor_forces": [
+          1.9620000000000006,
+          1.9620000000000006,
+          1.9619999999999995,
+          1.9619999999999997
+        ]
+      },
+      "selection_reasons": [
+        "selection_required"
+      ],
+      "navigation_reasons": [
+        "no_fresh_selected_target"
+      ],
+      "artifact_sha256": {
+        "camera.mp4": "7fa0345af6db5b9c99ab8fc825910dee4fbe2e824cee678a9d1b2bcd8364a134",
+        "overview.mp4": "637353b2802cb8d115e93747c729fb174c4a8a667eac4b5164ea55f4770d26ba",
+        "telemetry.jsonl": "64a17888c2a3593e0329f2a9551b46fa2eb772ac8a4717f7e2567c882e21d640",
+        "summary.json": "8f259b1eab171cebff37bccd4745ce401b8c4f2fea81d7e483db84e6b4c1c4b0",
+        "provenance.json": "df9b4bea63a7dede1e554c8c1b192dc09795b866e20c9304719f6877becf01df"
+      }
+    },
+    {
+      "run_id": "run-20260917T122736-79229b52",
+      "config": {
+        "scenario": "stationary",
+        "method": "mantis_neural",
+        "duration_s": 5.0,
+        "follow_distance_m": 2.5,
+        "target_speed": 0.08,
+        "detours": false,
+        "motion_mode": "brake",
+        "recording": "compact",
+        "max_recording_mb": 16
+      },
+      "phase": "completed",
+      "receipt_status": "completed",
+      "final_sim_s": 5.769999999999899,
+      "statistics": {
+        "observations": 4,
+        "wrong_person_observations": 0,
+        "evaluated_selected_observations": 0,
+        "unscorable_selected_observations": 0,
+        "holds": 4,
+        "motion_speed_reductions": 0,
+        "contacts": 0,
+        "actual_yolo_calls": 4,
+        "actual_flyvis_observations": 4,
+        "selected_actor_reference": null,
+        "detours_completed": 0
+      },
+      "bytes": 145506,
+      "max_bytes": 16777216,
+      "saved_samples": 4,
+      "raw_frames": 0,
+      "max_saved_speed_m_s": 2.1130934452082983e-15,
+      "final_saved_position": [
+        1.3210008205226245e-15,
+        3.567166241787105e-15,
+        1.1
+      ],
+      "final_vehicle": {
+        "position": [
+          1.3210008205226245e-15,
+          3.567166241787105e-15,
+          1.1
+        ],
+        "speed_m_s": 9.414957238613576e-16,
+        "yaw_rad": -7.721752305021419e-18,
+        "motor_forces": [
+          1.9619999999999997,
+          1.9619999999999997,
+          1.9620000000000006,
+          1.9620000000000006
+        ]
+      },
+      "selection_reasons": [
+        "selection_required"
+      ],
+      "navigation_reasons": [
+        "no_fresh_selected_target"
+      ],
+      "artifact_sha256": {
+        "camera.mp4": "ce41ac6c8de748c8fa063d666a318e6d8c5cdffb96de713e5383371246f43b58",
+        "overview.mp4": "8ecac5c29307dc6db8a1d4fd0d756b0f382094193074e5f94802b7b3a310377f",
+        "telemetry.jsonl": "375cd70b6d25673591278fd2d59a7dd291dbecf2131fdcf1f392cce259cf11f7",
+        "summary.json": "7f2d0841aa3f967795d8ebe2bb970c5d2af4dee0f0e30284e767cf642e6dc7de",
+        "provenance.json": "a89e74cb98175258e2382d7d1a13f902f752a0ecffa3426ad03fa403bd205c72"
+      }
+    },
+    {
+      "run_id": "run-20260917T122950-4563aba8",
+      "config": {
+        "scenario": "stationary",
+        "method": "mantis_neural",
+        "duration_s": 5.0,
+        "follow_distance_m": 2.5,
+        "target_speed": 0.08,
+        "detours": false,
+        "motion_mode": "observe",
+        "recording": "compact",
+        "max_recording_mb": 16
+      },
+      "phase": "completed",
+      "receipt_status": "completed",
+      "final_sim_s": 5.689999999999901,
+      "statistics": {
+        "observations": 4,
+        "wrong_person_observations": 0,
+        "evaluated_selected_observations": 1,
+        "unscorable_selected_observations": 0,
+        "holds": 3,
+        "motion_speed_reductions": 0,
+        "contacts": 0,
+        "actual_yolo_calls": 4,
+        "actual_flyvis_observations": 4,
+        "selected_actor_reference": "orange",
+        "detours_completed": 0
+      },
+      "bytes": 207231,
+      "max_bytes": 16777216,
+      "saved_samples": 4,
+      "raw_frames": 0,
+      "max_saved_speed_m_s": 2.119618861226005e-15,
+      "final_saved_position": [
+        1.239594878263203e-15,
+        3.5068812501970556e-15,
+        1.1
+      ],
+      "final_vehicle": {
+        "position": [
+          1.239594878263203e-15,
+          3.5068812501970556e-15,
+          1.1
+        ],
+        "speed_m_s": 1.634127611788224e-15,
+        "yaw_rad": -2.509572410984769e-18,
+        "motor_forces": [
+          1.9619999999999997,
+          1.9619999999999997,
+          1.9620000000000006,
+          1.9620000000000006
+        ]
+      },
+      "selection_reasons": [
+        "observed",
+        "selected_person_lost",
+        "selection_required"
+      ],
+      "navigation_reasons": [
+        "no_fresh_selected_target"
+      ],
+      "artifact_sha256": {
+        "camera.mp4": "cf14cc40b1078e6d4ae24a52c53d01efaa6da24d4e6f8bed02cb33cdd5eba08c",
+        "overview.mp4": "7376010911bf6cbae273b21f3aa87271ab9440033d2466d4a10160ec389ef20d",
+        "telemetry.jsonl": "1bc2808c6857eaffef816104d3b734f646d8ac6903bfe7010e2cc8c9af1c834f",
+        "summary.json": "1730af05d6c857f3abbfce8ba1f96b61424e33cad75ab13b20b8d724bbd9a32c",
+        "provenance.json": "6f7ad0c726bff1371ad9abd817c093ef79d36ceaee1ce3ca794423fd518d7093"
+      }
+    },
+    {
+      "run_id": "run-20260917T123101-eed4f239",
+      "config": {
+        "scenario": "stationary",
+        "method": "mantis_neural",
+        "duration_s": 5.0,
+        "follow_distance_m": 2.5,
+        "target_speed": 0.08,
+        "detours": false,
+        "motion_mode": "brake",
+        "recording": "compact",
+        "max_recording_mb": 16
+      },
+      "phase": "completed",
+      "receipt_status": "completed",
+      "final_sim_s": 5.3799999999999075,
+      "statistics": {
+        "observations": 4,
+        "wrong_person_observations": 0,
+        "evaluated_selected_observations": 1,
+        "unscorable_selected_observations": 0,
+        "holds": 3,
+        "motion_speed_reductions": 0,
+        "contacts": 0,
+        "actual_yolo_calls": 4,
+        "actual_flyvis_observations": 4,
+        "selected_actor_reference": "orange",
+        "detours_completed": 0
+      },
+      "bytes": 204925,
+      "max_bytes": 16777216,
+      "saved_samples": 4,
+      "raw_frames": 0,
+      "max_saved_speed_m_s": 2.1725938656262003e-15,
+      "final_saved_position": [
+        5.62988190920215e-16,
+        3.3344437194818725e-15,
+        1.1
+      ],
+      "final_vehicle": {
+        "position": [
+          5.62988190920215e-16,
+          3.3344437194818725e-15,
+          1.1
+        ],
+        "speed_m_s": 1.96973459694556e-15,
+        "yaw_rad": 2.456799396858752e-17,
+        "motor_forces": [
+          1.9620000000000006,
+          1.9620000000000006,
+          1.9619999999999995,
+          1.9619999999999997
+        ]
+      },
+      "selection_reasons": [
+        "observed",
+        "selected_person_lost",
+        "selection_required"
+      ],
+      "navigation_reasons": [
+        "no_fresh_selected_target"
+      ],
+      "artifact_sha256": {
+        "camera.mp4": "a16b34c8ff73d1ac65830545aab37aee476fbdee6cae7cd47ee142ef1239fc0b",
+        "overview.mp4": "087b693f09e9975d3ccb09eba467893903317ead758e752b1c9760f20d57f1b0",
+        "telemetry.jsonl": "5ba156c1fa0fa4a38d6644519a5e164b181dfc973218c913702f1865c70b62cb",
+        "summary.json": "17f9cafe3a07f6c1e7c16f8c7f386418998f75e63130e1e0946a85aa2e3aac80",
+        "provenance.json": "bf802f6578b82b94fafe00c6d810ec470ad7b3a123c76dbc4680a491ce709308"
+      }
+    },
+    {
+      "run_id": "run-20260917T123249-a865af18",
+      "config": {
+        "scenario": "detour",
+        "method": "mantis_neural",
+        "duration_s": 25.0,
+        "follow_distance_m": 2.5,
+        "target_speed": 0.08,
+        "detours": true,
+        "motion_mode": "off",
+        "recording": "compact",
+        "max_recording_mb": 16
+      },
+      "phase": "completed",
+      "receipt_status": "completed",
+      "final_sim_s": 25.0549999999993,
+      "statistics": {
+        "observations": 113,
+        "wrong_person_observations": 0,
+        "evaluated_selected_observations": 112,
+        "unscorable_selected_observations": 0,
+        "holds": 1,
+        "motion_speed_reductions": 0,
+        "contacts": 0,
+        "actual_yolo_calls": 113,
+        "actual_flyvis_observations": 113,
+        "selected_actor_reference": "blue",
+        "detours_completed": 0
+      },
+      "bytes": 1823144,
+      "max_bytes": 16777216,
+      "saved_samples": 113,
+      "raw_frames": 0,
+      "max_saved_speed_m_s": 0.33298043258291304,
+      "final_saved_position": [
+        1.1816400626447414,
+        -0.2074722412218599,
+        1.0999999999999963
+      ],
+      "final_vehicle": {
+        "position": [
+          1.1816400626447414,
+          -0.2074722412218599,
+          1.0999999999999963
+        ],
+        "speed_m_s": 6.215047326481026e-15,
+        "yaw_rad": -0.17790386919651818,
+        "motor_forces": [
+          1.962,
+          1.9619999999999997,
+          1.9619999999999997,
+          1.9620000000000004
+        ]
+      },
+      "selection_reasons": [
+        "observed",
+        "selection_required"
+      ],
+      "navigation_reasons": [
+        "depth_unknown_reverse_motion",
+        "detour_time_limit",
+        "no_fresh_selected_target",
+        "observed_detour",
+        "selected_target_left_detour_view",
+        "stop_before_rejoining",
+        "turn_in_place",
+        "turn_to_selected_target"
+      ],
+      "artifact_sha256": {
+        "camera.mp4": "eb21defc5590866178f1c2a43e932953a6f289edaeb24a571b3b61c3c02093c8",
+        "overview.mp4": "427ed8a4add48f0889026b2d472154705df4c753d1499f12706e7a51b722cc0d",
+        "telemetry.jsonl": "4a932cae9d884564a3e432c5d0402bee4d694bb7c108f2b2f243fb748ab8242f",
+        "summary.json": "69f0cbe68f21f9028ccd4b7309d1fa493b10efd47e8b45634c6b0094e7d18f59",
+        "provenance.json": "a3f21b7af3e5e348648b35bc45c45308012eb29b0bc23d889cc87dcfca40a09a"
+      }
+    },
+    {
+      "run_id": "run-20260917T123649-82aa1cad",
+      "config": {
+        "scenario": "detour",
+        "method": "mantis_neural",
+        "duration_s": 25.0,
+        "follow_distance_m": 2.5,
+        "target_speed": 0.08,
+        "detours": true,
+        "motion_mode": "off",
+        "recording": "compact",
+        "max_recording_mb": 16
+      },
+      "phase": "completed",
+      "receipt_status": "completed",
+      "final_sim_s": 25.219999999999267,
+      "statistics": {
+        "observations": 100,
+        "wrong_person_observations": 0,
+        "evaluated_selected_observations": 99,
+        "unscorable_selected_observations": 0,
+        "holds": 1,
+        "motion_speed_reductions": 0,
+        "contacts": 0,
+        "actual_yolo_calls": 100,
+        "actual_flyvis_observations": 100,
+        "selected_actor_reference": "blue",
+        "detours_completed": 0
+      },
+      "bytes": 1594274,
+      "max_bytes": 16777216,
+      "saved_samples": 100,
+      "raw_frames": 0,
+      "max_saved_speed_m_s": 0.3331066829481337,
+      "final_saved_position": [
+        0.39705338259916556,
+        -0.06262333959349904,
+        1.0999999999999934
+      ],
+      "final_vehicle": {
+        "position": [
+          0.39705338259916556,
+          -0.06262333959349904,
+          1.0999999999999934
+        ],
+        "speed_m_s": 6.463381595826805e-15,
+        "yaw_rad": -0.1651979118506002,
+        "motor_forces": [
+          1.962000000000002,
+          1.9620000000000013,
+          1.9620000000000009,
+          1.962000000000001
+        ]
+      },
+      "selection_reasons": [
+        "observed",
+        "selection_required"
+      ],
+      "navigation_reasons": [
+        "depth_unknown_reverse_motion",
+        "direct_unknown_outside_field_of_view",
+        "no_fresh_selected_target",
+        "observed_detour",
+        "turn_in_place"
+      ],
+      "artifact_sha256": {
+        "camera.mp4": "70011a80904daeb5206f2338e8a6fe3cdfd68c1539c0003f1904ecb8ef669008",
+        "overview.mp4": "c7612f8b4cc3156c80a6241068a3afd58fb8f8bb7ec4ee860bac67e7c2c54142",
+        "telemetry.jsonl": "9ac43a535369236a621e85f632c156ef8a8cc11f37a54dae9d722692ae72dfe1",
+        "summary.json": "0580be69b9fb1c6af21e0af3a28f24c90e995bd8af4ce2b0d84382c812f0ac75",
+        "provenance.json": "bead94f73bcca313b1d38104cce22cd27161c016c4694e407008264be9b54dbd"
+      }
+    },
+    {
+      "run_id": "run-20260917T123853-57697e97",
+      "config": {
+        "scenario": "stationary",
+        "method": "mantis_neural",
+        "duration_s": 90.0,
+        "follow_distance_m": 5.0,
+        "target_speed": 0.2,
+        "detours": false,
+        "motion_mode": "off",
+        "recording": "full-research",
+        "max_recording_mb": 16
+      },
+      "phase": "budget-exhausted",
+      "receipt_status": "budget-exhausted",
+      "final_sim_s": 16.195000000001063,
+      "statistics": {
+        "observations": 43,
+        "wrong_person_observations": 0,
+        "evaluated_selected_observations": 40,
+        "unscorable_selected_observations": 0,
+        "holds": 3,
+        "motion_speed_reductions": 0,
+        "contacts": 0,
+        "actual_yolo_calls": 43,
+        "actual_flyvis_observations": 43,
+        "selected_actor_reference": "blue",
+        "detours_completed": 0
+      },
+      "bytes": 16659487,
+      "max_bytes": 16777216,
+      "saved_samples": 42,
+      "raw_frames": 42,
+      "max_saved_speed_m_s": 8.064163709512582e-15,
+      "final_saved_position": [
+        2.7306955578833715e-16,
+        2.906474409182078e-15,
+        1.1
+      ],
+      "final_vehicle": {
+        "position": [
+          1.9754228584972267e-16,
+          2.875088240547549e-15,
+          1.1
+        ],
+        "speed_m_s": 1.7320555986979667e-15,
+        "yaw_rad": -0.17131339330891723,
+        "motor_forces": [
+          1.9620000005393132,
+          1.9619999994606843,
+          1.9620000005393134,
+          1.9619999994606843
+        ]
+      },
+      "selection_reasons": [
+        "observed",
+        "selection_required"
+      ],
+      "navigation_reasons": [
+        "detours_disabled",
+        "no_fresh_selected_target"
+      ],
+      "artifact_sha256": {
+        "camera.mp4": "a1a1fd9dbd98275cb565bedffb1e49158355abd737914b20cacbff6bd6d39286",
+        "overview.mp4": "f486f5d81f8e8801db5f750a006fb267b8ff1ece772935c321f9e5cf97e3b143",
+        "telemetry.jsonl": "cdd8516f22b5fa4ba24387789bf18572a61abba16eeb7735c29a045dafa9abb7",
+        "summary.json": "73a272b9c7fa54e99edc56283c8617854172f8590a7cc08f30b335af877e58f3",
+        "provenance.json": "638f0636932c93387078b541cec02be6277d1172cba986376a03b17bb0f260fc"
+      }
+    },
+    {
+      "run_id": "run-20260917T124128-22d662e7",
+      "config": {
+        "scenario": "detour",
+        "method": "mantis_neural",
+        "duration_s": 25.0,
+        "follow_distance_m": 2.5,
+        "target_speed": 0.08,
+        "detours": true,
+        "motion_mode": "off",
+        "recording": "compact",
+        "max_recording_mb": 16
+      },
+      "phase": "completed",
+      "receipt_status": "completed",
+      "final_sim_s": 25.24999999999926,
+      "statistics": {
+        "observations": 114,
+        "wrong_person_observations": 0,
+        "evaluated_selected_observations": 113,
+        "unscorable_selected_observations": 0,
+        "holds": 1,
+        "motion_speed_reductions": 0,
+        "contacts": 0,
+        "actual_yolo_calls": 114,
+        "actual_flyvis_observations": 114,
+        "selected_actor_reference": "blue",
+        "detours_completed": 0
+      },
+      "bytes": 1881731,
+      "max_bytes": 16777216,
+      "saved_samples": 114,
+      "raw_frames": 0,
+      "max_saved_speed_m_s": 0.33450919940529844,
+      "final_saved_position": [
+        1.9688070988698185,
+        -0.25327473015293245,
+        1.0999999999999572
+      ],
+      "final_vehicle": {
+        "position": [
+          1.9688070988698185,
+          -0.25327473015293245,
+          1.0999999999999572
+        ],
+        "speed_m_s": 1.3600256483046038e-12,
+        "yaw_rad": -0.09861601080527373,
+        "motor_forces": [
+          1.9620000000002604,
+          1.9620000000002606,
+          1.9620000000005378,
+          1.9620000000005378
+        ]
+      },
+      "selection_reasons": [
+        "observed",
+        "selection_required"
+      ],
+      "navigation_reasons": [
+        "depth_unknown_reverse_motion",
+        "detour_time_limit",
+        "no_fresh_selected_target",
+        "observed_detour",
+        "stop_before_rejoining",
+        "turn_in_place",
+        "turn_to_selected_target"
+      ],
+      "artifact_sha256": {
+        "camera.mp4": "ee3ea4b5b006c4f820c0cd569bb1d4b2f5e1d526df9b00ea8c49ecb7964d6c41",
+        "overview.mp4": "c6843545108e5e5624cd800a7aeab232ddec38fe92ee92f11f2dc1fbf4ca04dd",
+        "telemetry.jsonl": "bf1aa2153bfd42fcd0f38e1467e31c44b80caefe4d166bfd23776b9d57b3d469",
+        "summary.json": "5e3388f8fedc3fddf778eb18ce0be797b447d73274c37fc9c57af397d6ae3e9d",
+        "provenance.json": "814981c74ef4ae7d874d959229531ebdbff477d1c67629d55b6223f977607978"
+      }
+    }
+  ],
+  "physical_flight": false,
+  "real_time": false,
+  "notes": [
+    "Development checks during implementation; not a predeclared acceptance suite.",
+    "Completed means simulation ended; use detours_completed and tracking measures for task success.",
+    "Snapshots preserve source hashes at each run; earlier failures are retained.",
+    "Budget-exhausted recordings omit the final rejected observation and subsequent braking telemetry; final summary retains endpoint."
+  ]
+}

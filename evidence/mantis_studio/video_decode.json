@@ -1,0 +1,118 @@
+{
+  "videos": [
+    {
+      "path": "results/studio/run-20260917T120914-5a6b4f9e/capture/camera.mp4",
+      "decode": "passed"
+    },
+    {
+      "path": "results/studio/run-20260917T120914-5a6b4f9e/capture/overview.mp4",
+      "decode": "passed"
+    },
+    {
+      "path": "results/studio/run-20260917T121723-78ed256c/capture/camera.mp4",
+      "decode": "passed"
+    },
+    {
+      "path": "results/studio/run-20260917T121723-78ed256c/capture/overview.mp4",
+      "decode": "passed"
+    },
+    {
+      "path": "results/studio/run-20260917T121853-75a9b0c8/capture/camera.mp4",
+      "decode": "passed"
+    },
+    {
+      "path": "results/studio/run-20260917T121853-75a9b0c8/capture/overview.mp4",
+      "decode": "passed"
+    },
+    {
+      "path": "results/studio/run-20260917T122028-f27d4fe1/capture/camera.mp4",
+      "decode": "passed"
+    },
+    {
+      "path": "results/studio/run-20260917T122028-f27d4fe1/capture/overview.mp4",
+      "decode": "passed"
+    },
+    {
+      "path": "results/studio/run-20260917T122240-b9ba02a2/capture/camera.mp4",
+      "decode": "passed"
+    },
+    {
+      "path": "results/studio/run-20260917T122240-b9ba02a2/capture/overview.mp4",
+      "decode": "passed"
+    },
+    {
+      "path": "results/studio/run-20260917T122352-025502ae/capture/camera.mp4",
+      "decode": "passed"
+    },
+    {
+      "path": "results/studio/run-20260917T122352-025502ae/capture/overview.mp4",
+      "decode": "passed"
+    },
+    {
+      "path": "results/studio/run-20260917T122546-9a776b46/capture/camera.mp4",
+      "decode": "passed"
+    },
+    {
+      "path": "results/studio/run-20260917T122546-9a776b46/capture/overview.mp4",
+      "decode": "passed"
+    },
+    {
+      "path": "results/studio/run-20260917T122736-79229b52/capture/camera.mp4",
+      "decode": "passed"
+    },
+    {
+      "path": "results/studio/run-20260917T122736-79229b52/capture/overview.mp4",
+      "decode": "passed"
+    },
+    {
+      "path": "results/studio/run-20260917T122950-4563aba8/capture/camera.mp4",
+      "decode": "passed"
+    },
+    {
+      "path": "results/studio/run-20260917T122950-4563aba8/capture/overview.mp4",
+      "decode": "passed"
+    },
+    {
+      "path": "results/studio/run-20260917T123101-eed4f239/capture/camera.mp4",
+      "decode": "passed"
+    },
+    {
+      "path": "results/studio/run-20260917T123101-eed4f239/capture/overview.mp4",
+      "decode": "passed"
+    },
+    {
+      "path": "results/studio/run-20260917T123249-a865af18/capture/camera.mp4",
+      "decode": "passed"
+    },
+    {
+      "path": "results/studio/run-20260917T123249-a865af18/capture/overview.mp4",
+      "decode": "passed"
+    },
+    {
+      "path": "results/studio/run-20260917T123649-82aa1cad/capture/camera.mp4",
+      "decode": "passed"
+    },
+    {
+      "path": "results/studio/run-20260917T123649-82aa1cad/capture/overview.mp4",
+      "decode": "passed"
+    },
+    {
+      "path": "results/studio/run-20260917T123853-57697e97/capture/camera.mp4",
+      "decode": "passed"
+    },
+    {
+      "path": "results/studio/run-20260917T123853-57697e97/capture/overview.mp4",
+      "decode": "passed"
+    },
+    {
+      "path": "results/studio/run-20260917T124128-22d662e7/capture/camera.mp4",
+      "decode": "passed"
+    },
+    {
+      "path": "results/studio/run-20260917T124128-22d662e7/capture/overview.mp4",
+      "decode": "passed"
+    }
+  ],
+  "decoder": "ffmpeg",
+  "errors": 0
+}

@@ -1,0 +1,143 @@
+{
+  "schema": "mantis-raw-motion-benchmark-v1",
+  "duration_s": 1.2,
+  "capture_dt_s": 0.1,
+  "integration_dt_s": 0.02,
+  "warmup_s": 0.5,
+  "fitting": false,
+  "parameter_search": false,
+  "train_seeds": [
+    1701
+  ],
+  "heldout_seeds": [
+    2909
+  ],
+  "velocity_axes": [
+    "right",
+    "down"
+  ],
+  "reference": "known constant whole-texture translation, 391-square pixel/s",
+  "metrics": "post-warmup vector RMSE and directional cosine; no lag optimization",
+  "cases": [
+    {
+      "name": "train_stationary_1701",
+      "split": "train",
+      "seed": 1701,
+      "motion": "stationary",
+      "velocity_px_s": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "train_left_1701",
+      "split": "train",
+      "seed": 1701,
+      "motion": "left",
+      "velocity_px_s": [
+        -24.0,
+        0.0
+      ]
+    },
+    {
+      "name": "train_right_1701",
+      "split": "train",
+      "seed": 1701,
+      "motion": "right",
+      "velocity_px_s": [
+        24.0,
+        0.0
+      ]
+    },
+    {
+      "name": "train_up_1701",
+      "split": "train",
+      "seed": 1701,
+      "motion": "up",
+      "velocity_px_s": [
+        0.0,
+        -24.0
+      ]
+    },
+    {
+      "name": "train_down_1701",
+      "split": "train",
+      "seed": 1701,
+      "motion": "down",
+      "velocity_px_s": [
+        0.0,
+        24.0
+      ]
+    },
+    {
+      "name": "train_diagonal_1701",
+      "split": "train",
+      "seed": 1701,
+      "motion": "diagonal",
+      "velocity_px_s": [
+        18.0,
+        -18.0
+      ]
+    },
+    {
+      "name": "heldout_stationary_2909",
+      "split": "heldout",
+      "seed": 2909,
+      "motion": "stationary",
+      "velocity_px_s": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "heldout_left_2909",
+      "split": "heldout",
+      "seed": 2909,
+      "motion": "left",
+      "velocity_px_s": [
+        -24.0,
+        0.0
+      ]
+    },
+    {
+      "name": "heldout_right_2909",
+      "split": "heldout",
+      "seed": 2909,
+      "motion": "right",
+      "velocity_px_s": [
+        24.0,
+        0.0
+      ]
+    },
+    {
+      "name": "heldout_up_2909",
+      "split": "heldout",
+      "seed": 2909,
+      "motion": "up",
+      "velocity_px_s": [
+        0.0,
+        -24.0
+      ]
+    },
+    {
+      "name": "heldout_down_2909",
+      "split": "heldout",
+      "seed": 2909,
+      "motion": "down",
+      "velocity_px_s": [
+        0.0,
+        24.0
+      ]
+    },
+    {
+      "name": "heldout_diagonal_2909",
+      "split": "heldout",
+      "seed": 2909,
+      "motion": "diagonal",
+      "velocity_px_s": [
+        18.0,
+        -18.0
+      ]
+    }
+  ]
+}
