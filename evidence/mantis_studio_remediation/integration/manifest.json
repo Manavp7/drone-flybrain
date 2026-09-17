@@ -1,0 +1,41 @@
+{
+  "schema": "mantis-studio-remediation-evidence-v1",
+  "files": {
+    "studio_remediation_probe01/definition.json": "a4b430d9d1ba8bc26dea80db33670e8c1275cb0322011f7e19138dfb1b803fe7",
+    "studio_remediation_probe01/summary.json": "bb85cb31cb1b7ecbfc57aafdb584f3af70ed7baf9339e0e89750ab38df25564d",
+    "studio_remediation_probe01/detour_neural_a.json": "7b52c235d223e9d56d1daceb270def0249b9b4da4d84876334445312c0b34256",
+    "live/run-20260917T140752-de857206/observations.jsonl": "c94935ce8e804f42d12a489da88b1ef254d552798c146210463a32e0f689a2bb",
+    "live/run-20260917T140752-de857206/provenance.json": "0ae6aa7d2149fe3505448f1d3aa89ddeccde16256ae82c6a080a9ecead63cb9b",
+    "studio_remediation_probe01/motion_observe.json": "a45f1239e0fe934fabfedeeb1ee70abd9afe7ffc87f299fc798d0bd4d35fcbb2",
+    "live/run-20260917T140917-8bd2a0a4/observations.jsonl": "72671c6810e7281ad35be76859ab74786564b73ac32d703e2a74c70916fdb720",
+    "live/run-20260917T140917-8bd2a0a4/provenance.json": "77ac1b4cddc46d42c005c687ca564d3c76aa1bdda5306d7393cd89172078bc3d",
+    "studio_remediation_probe01/motion_brake.json": "ae1a2b2f0f73bf746bf56e8a0ab3687a2f240f14459443faf3d84b8135968e40",
+    "live/run-20260917T141016-055ddcf1/observations.jsonl": "afc5b0ce72cd2c70ae740230ea0e0e4f1ed2cafe19e83d5bd485fee3f1b843be",
+    "live/run-20260917T141016-055ddcf1/provenance.json": "f1d914986cf50b3b7e43564561f99f016cd5ac809b8b7fcd891c0d51eb4e1520",
+    "studio_remediation_validation01/definition.json": "894c2220313b74ec6cf730a23fbd151bc0ac1408721d42cdd73245b1ff8c95c8",
+    "studio_remediation_validation01/summary.json": "18ca8e3cfdf87bb10aed0af28f12f9359a36bcf242ebe22d58a2361f5416b8db",
+    "studio_remediation_validation01/detour_neural_a.json": "9e8a43827682805896c3292060379d92a9bcbe2a1eea4b4f26a685aebac36561",
+    "live/run-20260917T142141-8f1eff35/observations.jsonl": "964bd19b4f6ca75702a1385a16c74ba8648898de73f6676d537cd5b1180a55f9",
+    "live/run-20260917T142141-8f1eff35/provenance.json": "7bc6175c25e61f64e927d887a892bf41e88332de8439ed04535aca2f9ce94737",
+    "studio_remediation_validation01/detour_neural_b.json": "087bbd2603c8411806d08b0c0d8447773089fdf6ba891c7f47ed0759720eba4f",
+    "live/run-20260917T142254-12055b3a/observations.jsonl": "139a43347c2d7b9a3e74542023ab23c3be18df47d5e2fb42a137413ba15980c6",
+    "live/run-20260917T142254-12055b3a/provenance.json": "7bc6175c25e61f64e927d887a892bf41e88332de8439ed04535aca2f9ce94737",
+    "studio_remediation_validation01/detour_direct.json": "42062ddaeee5658d794b328e7c2bd737f260f362dd62b562d30b5199eb8c5086",
+    "live/run-20260917T142417-72d3f2bc/observations.jsonl": "23a8f8150fa8a088485b1f81a530dba9fc01779b250ff832cfe74083959a8ad7",
+    "live/run-20260917T142417-72d3f2bc/provenance.json": "032e8bfb27a9a711d1d58af8ae7cb0002c2bec8e07a1136b8eac0d17521c7f59",
+    "studio_remediation_validation01/motion_observe.json": "63a98b310657a673214b7e2503622a9803bd0aa4dfb0191e5bed10eb69c75d87",
+    "live/run-20260917T142534-95f5cb19/observations.jsonl": "e08cd42da51093efd890aac0b9d624693263ec76446123656dd19a7921071cc0",
+    "live/run-20260917T142534-95f5cb19/provenance.json": "367bff3d8f0a1e85b209eafe2adf2c13ade4097675873f96021f3d9b0444504c",
+    "studio_remediation_validation01/motion_brake.json": "379c14b7fe8c73927667259e53c2e789542f61350d50066a735beaf743064811",
+    "live/run-20260917T142625-a844abc0/observations.jsonl": "10abae87c8f4045b63cdbe48e1950800498c904abce3256db0de252b49b4dfa9",
+    "live/run-20260917T142625-a844abc0/provenance.json": "47ded14f6ea7bf0cf335303b249478f0735e36ab3fa2cedf2ee2efdb283132d4",
+    "frozen_score.py": "dd83b43b86a8ee0b0abfedb83919d9f7981479000315188fab78692ab1f497c3"
+  },
+  "note": "Probe failures are copied unchanged. Final score recomputation uses frozen implementation; no independent physics/model rerun.",
+  "full_tests": {
+    "tests": 821,
+    "seconds": 58.985,
+    "native_rendering": true,
+    "status": "passed"
+  }
+}

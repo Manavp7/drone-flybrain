@@ -23,16 +23,19 @@ raw research arrays are optional. Recording has a per-run limit and the studio
 defaults to a 256 MiB total budget without deleting old runs.
 
 An independent raw-camera Flyvis arm can measure motion or experimentally reduce
-speed alongside YOLO guidance. Its frozen motion benchmark **did not outperform
-conventional optical flow**. Integrated detours also remain unreliable: the
-latest actual-model trial stopped at its attempt limit before completing a route.
-See the [development evidence](evidence/mantis_studio/README.md) for failures and
-limits. [Studio guide](docs/MANTIS_STUDIO.md) ·
+speed alongside YOLO guidance. The latest controlled checks passed **3/3 obstacle
+detours** and both raw-motion modes: fresh neural output reached the controller,
+and the brake reduced a command that depth safety would otherwise allow.
+Its frozen motion benchmark still **did not outperform conventional optical
+flow**; runtime fixes preserve the same neural outputs. See the
+[remediation evidence](evidence/mantis_studio_remediation/README.md) for results
+and the preserved failures. [Studio guide](docs/MANTIS_STUDIO.md) ·
 [Motion methodology and evidence](docs/MANTIS_MOTION.md).
 
-The combined native suite passed **787 tests**. All **28 videos** from fourteen
-development runs decoded successfully; these software/media checks do not turn
-the unresolved tracking, detour or neural-motion results into successful trials.
+The combined native suite passed **821 tests**. All **16 new videos** from the
+three failed probes and five final trials decoded successfully; the earlier
+28-video check remains preserved. These controlled fixtures do not establish
+general navigation, identity recognition, neural superiority or physical flight.
 
 ## Mantis 2.1
 
@@ -105,7 +108,7 @@ python -m pip install -r requirements-test.txt
 python -m unittest discover -s tests -v
 ```
 
-The original public release added 17 model-setup checks and passed **515 tests** in a fresh native-rendering environment. The preserved Mantis 2.1 suite passed **686 tests** locally; the current suite including Studio passed **787 tests**. Camera-rendering tests are skipped by default. With a working native OpenGL context, enable them:
+The original public release added 17 model-setup checks and passed **515 tests** in a fresh native-rendering environment. The preserved Mantis 2.1 suite passed **686 tests** locally; the current suite including Studio passed **821 tests**. Camera-rendering tests are skipped by default. With a working native OpenGL context, enable them:
 
 ```bash
 FLIGHT_RENDER_TESTS=1 python -m unittest discover -s tests -v

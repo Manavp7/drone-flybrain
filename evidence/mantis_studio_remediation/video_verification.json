@@ -1,0 +1,231 @@
+{
+  "status": "passed",
+  "videos": 16,
+  "scope": "Full decode of the three preserved failed probes and five final validation trials; not correctness of rendered content.",
+  "files": [
+    {
+      "batch": "studio_remediation_probe01",
+      "case": "detour_neural_a",
+      "path": "results/studio/run-20260917T140752-de857206/capture/camera.mp4",
+      "bytes": 641409,
+      "sha256": "8a91c39f849d6aada59c8b27f2ac4cddb9e8872356fed9396c881d5bda4493d9",
+      "decode": "passed",
+      "video": {
+        "width": 392,
+        "height": 392,
+        "duration": "25.100000",
+        "nb_read_frames": "251"
+      }
+    },
+    {
+      "batch": "studio_remediation_probe01",
+      "case": "detour_neural_a",
+      "path": "results/studio/run-20260917T140752-de857206/capture/overview.mp4",
+      "bytes": 667625,
+      "sha256": "2c9e1a0566a8561a2da7cd04e393119663b4355d2220c7568bcf6a73799bd4f6",
+      "decode": "passed",
+      "video": {
+        "width": 640,
+        "height": 480,
+        "duration": "25.100000",
+        "nb_read_frames": "251"
+      }
+    },
+    {
+      "batch": "studio_remediation_probe01",
+      "case": "motion_observe",
+      "path": "results/studio/run-20260917T140917-8bd2a0a4/capture/camera.mp4",
+      "bytes": 210295,
+      "sha256": "c18309a46530e5ba68d85203368a202545677e9e6a4c2c2519760b7d4ebd65d6",
+      "decode": "passed",
+      "video": {
+        "width": 392,
+        "height": 392,
+        "duration": "10.100000",
+        "nb_read_frames": "101"
+      }
+    },
+    {
+      "batch": "studio_remediation_probe01",
+      "case": "motion_observe",
+      "path": "results/studio/run-20260917T140917-8bd2a0a4/capture/overview.mp4",
+      "bytes": 225567,
+      "sha256": "60a516d3827e71a27fb73980152ad7618bc201121391ffec8633225f030885b2",
+      "decode": "passed",
+      "video": {
+        "width": 640,
+        "height": 480,
+        "duration": "10.100000",
+        "nb_read_frames": "101"
+      }
+    },
+    {
+      "batch": "studio_remediation_probe01",
+      "case": "motion_brake",
+      "path": "results/studio/run-20260917T141016-055ddcf1/capture/camera.mp4",
+      "bytes": 185502,
+      "sha256": "015514c50049c30539377f7d046d3d3bf6713530d3f1056a9661a69408e06372",
+      "decode": "passed",
+      "video": {
+        "width": 392,
+        "height": 392,
+        "duration": "10.200000",
+        "nb_read_frames": "102"
+      }
+    },
+    {
+      "batch": "studio_remediation_probe01",
+      "case": "motion_brake",
+      "path": "results/studio/run-20260917T141016-055ddcf1/capture/overview.mp4",
+      "bytes": 223935,
+      "sha256": "8e23730b5d7c6a66af69a412de92ccf23a5d9fc4abb262bcb1f8cc2fe1cd9a0e",
+      "decode": "passed",
+      "video": {
+        "width": 640,
+        "height": 480,
+        "duration": "10.200000",
+        "nb_read_frames": "102"
+      }
+    },
+    {
+      "batch": "studio_remediation_validation01",
+      "case": "detour_neural_a",
+      "path": "results/studio/run-20260917T142141-8f1eff35/capture/camera.mp4",
+      "bytes": 735276,
+      "sha256": "76f76561c0f9f524db53de0f738bad19127b139c6e40efc39453b5108e31c26b",
+      "decode": "passed",
+      "video": {
+        "width": 392,
+        "height": 392,
+        "duration": "25.100000",
+        "nb_read_frames": "251"
+      }
+    },
+    {
+      "batch": "studio_remediation_validation01",
+      "case": "detour_neural_a",
+      "path": "results/studio/run-20260917T142141-8f1eff35/capture/overview.mp4",
+      "bytes": 692277,
+      "sha256": "bd3df5b14a0dddac4c79ee01d9a0494e85c1a460fd0f6b03326005c7450ec09c",
+      "decode": "passed",
+      "video": {
+        "width": 640,
+        "height": 480,
+        "duration": "25.100000",
+        "nb_read_frames": "251"
+      }
+    },
+    {
+      "batch": "studio_remediation_validation01",
+      "case": "detour_neural_b",
+      "path": "results/studio/run-20260917T142254-12055b3a/capture/camera.mp4",
+      "bytes": 690962,
+      "sha256": "a0749c70478d96f0fd389008755005014c8a4ec688bb5822d1257ab19280ffb4",
+      "decode": "passed",
+      "video": {
+        "width": 392,
+        "height": 392,
+        "duration": "25.100000",
+        "nb_read_frames": "251"
+      }
+    },
+    {
+      "batch": "studio_remediation_validation01",
+      "case": "detour_neural_b",
+      "path": "results/studio/run-20260917T142254-12055b3a/capture/overview.mp4",
+      "bytes": 670751,
+      "sha256": "edbcd31a1f6199c9de6bf33578f2aff419f35db796e928988347608c5875c0b1",
+      "decode": "passed",
+      "video": {
+        "width": 640,
+        "height": 480,
+        "duration": "25.100000",
+        "nb_read_frames": "251"
+      }
+    },
+    {
+      "batch": "studio_remediation_validation01",
+      "case": "detour_direct",
+      "path": "results/studio/run-20260917T142417-72d3f2bc/capture/camera.mp4",
+      "bytes": 728879,
+      "sha256": "44c5564262f06989dde4636387458f5db6292d7952c5158dfb9cd8bbd8d8766b",
+      "decode": "passed",
+      "video": {
+        "width": 392,
+        "height": 392,
+        "duration": "25.200000",
+        "nb_read_frames": "252"
+      }
+    },
+    {
+      "batch": "studio_remediation_validation01",
+      "case": "detour_direct",
+      "path": "results/studio/run-20260917T142417-72d3f2bc/capture/overview.mp4",
+      "bytes": 694977,
+      "sha256": "f7aa1fcfd6f1a0c87ac26e5c20deee32a822dca346815a6ceb1705aaf5f87b08",
+      "decode": "passed",
+      "video": {
+        "width": 640,
+        "height": 480,
+        "duration": "25.200000",
+        "nb_read_frames": "252"
+      }
+    },
+    {
+      "batch": "studio_remediation_validation01",
+      "case": "motion_observe",
+      "path": "results/studio/run-20260917T142534-95f5cb19/capture/camera.mp4",
+      "bytes": 241018,
+      "sha256": "2d3de900f80e6965cab2a03c44ff1243db08518154ae3b4435523a376b627ff0",
+      "decode": "passed",
+      "video": {
+        "width": 392,
+        "height": 392,
+        "duration": "10.200000",
+        "nb_read_frames": "102"
+      }
+    },
+    {
+      "batch": "studio_remediation_validation01",
+      "case": "motion_observe",
+      "path": "results/studio/run-20260917T142534-95f5cb19/capture/overview.mp4",
+      "bytes": 241249,
+      "sha256": "508d0eef42981a6b82e27c5428e781e89116634355a0c3cdc967659f2124f412",
+      "decode": "passed",
+      "video": {
+        "width": 640,
+        "height": 480,
+        "duration": "10.200000",
+        "nb_read_frames": "102"
+      }
+    },
+    {
+      "batch": "studio_remediation_validation01",
+      "case": "motion_brake",
+      "path": "results/studio/run-20260917T142625-a844abc0/capture/camera.mp4",
+      "bytes": 208098,
+      "sha256": "4c6e2cd8fe92198e47a267415afc9a7b7048c7b4d6f23c76a06a9cc2aaaea384",
+      "decode": "passed",
+      "video": {
+        "width": 392,
+        "height": 392,
+        "duration": "10.300000",
+        "nb_read_frames": "103"
+      }
+    },
+    {
+      "batch": "studio_remediation_validation01",
+      "case": "motion_brake",
+      "path": "results/studio/run-20260917T142625-a844abc0/capture/overview.mp4",
+      "bytes": 243012,
+      "sha256": "9fb9cded42a64aa391e7bb66c2370a560c965b838b526a18cb86eb562df934b4",
+      "decode": "passed",
+      "video": {
+        "width": 640,
+        "height": 480,
+        "duration": "10.300000",
+        "nb_read_frames": "103"
+      }
+    }
+  ]
+}

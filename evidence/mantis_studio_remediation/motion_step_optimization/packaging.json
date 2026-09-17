@@ -1,0 +1,60 @@
+{
+  "schema": "mantis-motion-step-optimization-evidence-v1",
+  "description": "Original measured receipt unchanged; all three source snapshots preserved; runner made portable.",
+  "files": {
+    "README.md": "a0582ef07e1d6ddc15be233476bff6dd1c725d041576e1b4b4ea44c621711bdf",
+    "mantis_motion_before.py": "0b1f9bddd0b77677e9bb303a598f3cfa35e9d9e2e7278150f6e71173256a3663",
+    "mantis_motion_stage1.py": "e686e31bc45209a3ae8181effa30f5258071a422e9aba1f2eb4f5f21f00d5b26",
+    "mantis_motion_stage2.py": "aca841a9b3662724408e55295e1f14e2e8d029ce524e128d585dc13ff85d1b61",
+    "profile_step_equivalence.json": "76e257aba95239ec67002acc22aa2881ad1ed5e8214ccce2856f6c3970e1ba32",
+    "profile_step_equivalence.py": "5468c34988c7803ee729953bf1f1e3ec6fd37ed9feb05eb13b5eea79c5f2c83e",
+    "verify.py": "cb290b348dbe4acc28858ea994888bd72b2b9e909dbd4edab9d5986a0169de18"
+  },
+  "measured_source_hashes": {
+    "original": "0b1f9bddd0b77677e9bb303a598f3cfa35e9d9e2e7278150f6e71173256a3663",
+    "stage1": "e686e31bc45209a3ae8181effa30f5258071a422e9aba1f2eb4f5f21f00d5b26",
+    "stage2": "aca841a9b3662724408e55295e1f14e2e8d029ce524e128d585dc13ff85d1b61"
+  },
+  "supporting_source_hashes": {
+    "experiments/runtime.py": "b7f4486786fcfd8483cf58bb7cedb1e7807a086f5e6b2549f0dba59b57e6f68f",
+    "experiments/compare_flow.py": "9c7b13ed0429f380e82be9dead91bd85885a0edf08c9d2cb17b769f5478ae736",
+    "experiments/fly_tracking_core.py": "b33a76fe4f5decc959bc40fdebd3c74d121379558be003bfdd323c43ea57b057",
+    "flybrain_sim/research_model.py": "5148fa9e706f33ba8e943b2f4fab4005560d0de363ff2ceb7073d2a2bf0035a0"
+  },
+  "installed_flyvis_source_hashes": {
+    "network/network.py": "eb172be7db1727a2b1af9f4211c2e1a8655004e8602a4db677e56702a3dfeb43",
+    "network/dynamics.py": "e77d9e049661321798f213b9c7e98b58945214ad94ab11c5c1ee930bfaacbc86",
+    "network/stimulus.py": "bed184c91e3c5908f6b6853929cb5996af7165580bc5bc6a6b65e51c25c827b0",
+    "utils/tensor_utils.py": "d5c9e640d311b251ea4a7dc069f059984c35939cee9b83a8da02f26d8d75550f",
+    "utils/nn_utils.py": "b25fb53eea4b04193f52ea99d44e6c55aa47306ec581c0c7ffe178d21599ec4a",
+    "task/decoder.py": "9d0b7911006dc93510a0bc5d5e4c57548319f5c55d207df8d641546a3e38baca",
+    "datasets/rendering/eye.py": "7be1a81423bdf3b9bb8a9a3a106fd949a57786ce798cc55cf7b06b4140f901cf"
+  },
+  "model_manifest_sha256": "86004101adc92e65bff8ba1e583fc9fd2551a7eec2560e601497e756af8e1594",
+  "checkpoint_sha256": "d8a57a022aa18ca338599be713af9db29b89cde4b00098ffe42b78f0d583e46a",
+  "installed_runtime_versions": {
+    "numpy": {
+      "available": true,
+      "version": "1.26.4"
+    },
+    "torch": {
+      "available": true,
+      "version": "2.5.1"
+    },
+    "torchvision": {
+      "available": true,
+      "version": "0.20.1"
+    },
+    "flyvis": {
+      "available": true,
+      "version": "1.2.0"
+    },
+    "datamate": {
+      "available": true,
+      "version": "1.0.0"
+    }
+  },
+  "no_accuracy_change": true,
+  "no_deadline_or_warmup_change": true,
+  "calibration_or_parameter_search": false
+}

@@ -1,0 +1,130 @@
+{
+  "passed": false,
+  "cases": 3,
+  "outcomes": [
+    {
+      "case": "detour_neural_a",
+      "run_id": "run-20260917T140752-de857206",
+      "passed": false,
+      "gates": {
+        "completed": true,
+        "contacts_absent": true,
+        "no_wrong_person": true,
+        "selected_observations": true,
+        "actual_models": true,
+        "detour_recorded": true,
+        "center_passed_obstacle": false,
+        "clearance": true,
+        "following_resumed": false,
+        "observed_authority": true
+      },
+      "metrics": {
+        "maximum_center_x_m": 1.8443951134730698,
+        "minimum_hull_clearance_m": 0.31148724204549855,
+        "resumed_observations": 1,
+        "resumed_translation_m": 0.0182706436177685,
+        "detour_completion_events": [
+          {
+            "command_sequence": 59,
+            "position": [
+              1.658572183473565,
+              -0.24531906646462118,
+              1.0996948644143856
+            ],
+            "selected_track": 2,
+            "sim_s": 12.400000000000539,
+            "source_capture_time_s": 12.09000000000049
+          }
+        ]
+      }
+    },
+    {
+      "case": "motion_observe",
+      "run_id": "run-20260917T140917-8bd2a0a4",
+      "passed": false,
+      "gates": {
+        "completed": true,
+        "contacts_absent": true,
+        "no_wrong_person": true,
+        "selected_observations": true,
+        "actual_models": true,
+        "fresh_motion": false,
+        "steady_freshness": false
+      },
+      "metrics": {
+        "motion_observations": 18,
+        "fresh_motion_observations": 5,
+        "steady_fresh_fraction": 0.3125,
+        "gap_resets": 5,
+        "valid_speed_reduction_ticks": 0,
+        "latency_s": [
+          0.6521571249977569,
+          0.5402600410016021,
+          0.5204232910036808,
+          0.4409220000015921,
+          0.45396262500435114,
+          0.42211970800417475,
+          0.8777417500023148,
+          0.21419879200402647,
+          0.6466396660034661,
+          1.0811024170034216,
+          0.3409977080009412,
+          0.7525841660026344,
+          0.24713495900505222,
+          0.48624125000060303,
+          0.5823735000012675,
+          0.7757970000020578,
+          0.2556896250025602,
+          0.4379481249998207
+        ]
+      }
+    },
+    {
+      "case": "motion_brake",
+      "run_id": "run-20260917T141016-055ddcf1",
+      "passed": false,
+      "gates": {
+        "completed": true,
+        "contacts_absent": true,
+        "no_wrong_person": true,
+        "selected_observations": true,
+        "actual_models": true,
+        "fresh_motion": true,
+        "steady_freshness": false,
+        "valid_motion_changes_request": true,
+        "translation_remains_possible": true
+      },
+      "metrics": {
+        "motion_observations": 22,
+        "fresh_motion_observations": 14,
+        "steady_fresh_fraction": 0.7,
+        "gap_resets": 3,
+        "valid_speed_reduction_ticks": 488,
+        "latency_s": [
+          0.8524501659994712,
+          0.20227908300148556,
+          0.68335483300325,
+          0.1640144170014537,
+          0.421324208000442,
+          0.5041322079996462,
+          0.6762519580006483,
+          0.147744750000129,
+          0.4478912920021685,
+          0.4295941669988679,
+          0.5414127499971073,
+          0.6409255830003531,
+          0.5031328749973909,
+          0.4134739159999299,
+          0.4016245000020717,
+          0.45067083399771946,
+          0.3868842079973547,
+          0.3957404589964426,
+          0.4118660829990404,
+          0.37831474999984493,
+          0.38791800000035437,
+          0.39221854199422523
+        ]
+      }
+    }
+  ]
+}

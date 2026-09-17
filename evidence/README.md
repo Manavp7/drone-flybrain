@@ -34,6 +34,10 @@ The demo video and screenshot are in [`assets/`](../assets/ATTRIBUTION.md), with
 
 ## Interactive Studio development
 
-[Studio checks](mantis_studio/README.md) preserve bounded recordings, selected-person
-checks, unresolved integrated detours and the negative raw-motion result. These
-development trials do not replace or regrade the earlier frozen suites.
+[Initial Studio checks](mantis_studio/README.md) preserve bounded recordings,
+selected-person checks, the initial failed integrated detours and the negative
+raw-motion result. [Studio remediation](mantis_studio_remediation/README.md)
+records the subsequent 3/3 controlled detours, both passing raw-motion modes,
+bit-exact runtime optimization checks and 821 passing native software tests.
+The earlier failures and lack of demonstrated neural superiority remain intact.
+These development trials do not replace or regrade the earlier frozen suites.

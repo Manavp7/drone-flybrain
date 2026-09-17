@@ -12,7 +12,7 @@ import time
 import numpy as np
 
 from experiments.flight_contracts import (ROOT, PHYSICS_DT, ALTITUDE_M,
-    MAX_SPEED_M_S, COMMAND_MAX_CAPTURE_AGE_S, MAX_OBSERVATION_AGE_S)
+    MAX_SPEED_M_S, COMMAND_MAX_CAPTURE_AGE_S, MAX_OBSERVATION_AGE_S, VEHICLE_RADIUS_M)
 from experiments.mantis_studio_config import validate_config
 
 
@@ -75,6 +75,7 @@ def run_session(folder, config):
     from experiments.flight_guidance import release, active_request, physical_completion
     from experiments.flight_safety import DepthGuardian
     from experiments.mantis_vision import MantisVision
+    from experiments.mantis_studio_vision import StudioPersonRetryDetector
     from experiments.mantis_arena import ArenaWorld, evaluate_selection
     from experiments.mantis_selection import SelectionGuard
     from experiments.mantis_navigation import DetourNavigator
@@ -91,7 +92,15 @@ def run_session(folder, config):
     statistics = dict(observations=0, wrong_person_observations=0, evaluated_selected_observations=0,
                       unscorable_selected_observations=0, holds=0, motion_speed_reductions=0,
                       contacts=0, actual_yolo_calls=0, actual_flyvis_observations=0,
-                      selected_actor_reference=None, detours_completed=0)
+                      detector_retry_frames=0, detector_retry_person_frames=0,
+                      selected_actor_reference=None, detours_completed=0,
+                      detour_completion_events=[], detour_events_omitted=0, positive_forward_ticks=0,
+                      minimum_obstacle_hull_clearance_m=None,
+                      motion_observations=0, motion_fresh_observations=0,
+                      motion_gap_resets=0, motion_deadline_misses=0,
+                      motion_valid_brake_ticks=0, motion_valid_speed_reductions=0,
+                      motion_unavailable_hold_ticks=0, motion_depth_approved_reductions=0,
+                      motion_brake_pairs=[])
     started = time.monotonic()
     phase, failure = 'loading', None
     last_telemetry, motion_result = {}, None
@@ -111,6 +120,8 @@ def run_session(folder, config):
     message = None
     try:
         vision = MantisVision()
+        vision.detector = StudioPersonRetryDetector(vision.detector)
+        vision.pipeline.detector = vision.detector
         guard = SelectionGuard()
         vision.bridge = guard
         motion = None
@@ -128,6 +139,7 @@ def run_session(folder, config):
                 sources=source_hashes, model_manifest_sha256=model_hash,
                 physical_control_authority=False, real_time=False,
                 selection='Camera detections and fixed clothing anchor; truth used only for scoring',
+                detection_retry='One same-frame horizontal-flip pass only after zero primary persons; unchanged thresholds and total deadline',
                 motion_brake='Optional uncalibrated image-motion speed reduction; no steering; depth gate remains final'))
 
         def publish(extra=None):
@@ -193,6 +205,7 @@ def run_session(folder, config):
             end_tick = round(completion/PHYSICS_DT)
             while tick < end_tick:
                 state = world.state()
+                motion_pair_request = None
                 request = active_request(None if braking else command, state)
                 if request['sequence'] is not None:
                     z = command['estimate']['surface_optical_z_m']
@@ -202,18 +215,61 @@ def run_session(folder, config):
                     fixture()
                     latest_depth = world.capture(safety=True)
                     navigation = planner.update(latest_depth, state, request, enabled=config['detours'])
+                    if planner.completed > statistics['detours_completed']:
+                        if len(statistics['detour_completion_events']) < 16:
+                            statistics['detour_completion_events'].append(dict(
+                                sim_s=float(state.time_s), position=state.position.tolist(),
+                                selected_track=guard.status().get('track_id'),
+                                command_sequence=request['sequence'],
+                                source_capture_time_s=command['capture_time_s'] if command else None))
+                        else:
+                            statistics['detour_events_omitted'] += 1
+                        statistics['detours_completed'] = planner.completed
                 if request['sequence'] is None:
                     forward, yaw = 0., state.yaw
                 else:
                     forward, yaw = navigation['forward_speed'], navigation['yaw_target']
                     if config['motion_mode'] == 'brake':
                         scale = motion_brake_scale(motion_result, state.time_s)
+                        if scale > 0:
+                            statistics['motion_valid_brake_ticks'] += 1
+                            if forward > 0 and scale < .999:
+                                statistics['motion_valid_speed_reductions'] += 1
+                        elif forward > 0:
+                            statistics['motion_unavailable_hold_ticks'] += 1
                         if forward > 0 and scale < .999:
                             statistics['motion_speed_reductions'] += 1
+                            if scale > 0 and tick % 10 == 0:
+                                motion_pair_request = float(forward)
                         forward *= scale
                 final_safety = safety.check(latest_depth, state, forward, state.time_s)
+                if motion_pair_request is not None:
+                    # Evaluator-only paired depth query. Neither this result nor
+                    # the comparison can alter the actual motor command below.
+                    reference = safety.check(latest_depth, state, motion_pair_request, state.time_s)
+                    if reference['forward_speed'] > final_safety['forward_speed']+1e-6:
+                        statistics['motion_depth_approved_reductions'] += 1
+                        if len(statistics['motion_brake_pairs']) < 32:
+                            statistics['motion_brake_pairs'].append(dict(
+                                sim_s=float(state.time_s), motion_capture_time_s=motion_result['capture_time_s'],
+                                motion_available_time_s=motion_result['available_time_s'],
+                                command_sequence=request['sequence'], command_capture_time_s=command['capture_time_s'],
+                                depth_capture_time_s=float(latest_depth.capture_time_s),
+                                depth_approved_unscaled_speed=reference['forward_speed'],
+                                actual_forward_speed=final_safety['forward_speed'],
+                                scale=scale, evaluator_only=True))
+                statistics['positive_forward_ticks'] += final_safety['forward_speed'] > 0
                 world.step(pilot.command(state, final_safety['forward_speed'], yaw, ALTITUDE_M))
-                statistics['contacts'] += bool(world.truth()['contacts'])
+                truth = world.truth()
+                statistics['contacts'] += bool(truth['contacts'])
+                # Evaluation only, after motor authority has been applied. This
+                # known fixture geometry never feeds perception or navigation.
+                if truth['obstacle_enabled']:
+                    delta = np.maximum(np.abs(world.state().position[:2]
+                        - np.asarray(truth['obstacle_position'][:2])) - [.10, .25], 0.)
+                    clearance = float(np.linalg.norm(delta)-VEHICLE_RADIUS_M)
+                    previous = statistics['minimum_obstacle_hull_clearance_m']
+                    statistics['minimum_obstacle_hull_clearance_m'] = clearance if previous is None else min(previous, clearance)
                 tick += 1
             statistics['detours_completed'] = planner.completed
 
@@ -243,7 +299,9 @@ def run_session(folder, config):
             if pending_neural_reset:
                 vision.brain.reset()
                 pending_neural_reset = False
+            vision.detector.last_receipt = None
             bundle = vision.process(frame)
+            detection_receipt = vision.detector.last_receipt
             # Obtain the explicit selection preview before optional research
             # work. On a slow CPU that work can exceed a camera deadline; it
             # must not consume the entire run before the user can select.
@@ -254,6 +312,11 @@ def run_session(folder, config):
             advance(completion, braking=phase == 'stopping')
             if pending_motion is not None:
                 motion_result = dict(pending_motion, available_time_s=completion)
+                statistics['motion_observations'] += 1
+                statistics['motion_gap_resets'] += bool(motion_result['gap_reset'])
+                fresh_motion = motion_brake_scale(motion_result, completion) > 0
+                statistics['motion_fresh_observations'] += fresh_motion
+                statistics['motion_deadline_misses'] += completion-frame.capture_time_s > MAX_OBSERVATION_AGE_S
             command = release(candidate, world.state(), completion, bundle['sequence'])
             if command['valid']:
                 # Reuse the measured depth; interactive standoff never alters
@@ -272,7 +335,9 @@ def run_session(folder, config):
             else:
                 statistics['holds'] += 1
             statistics['observations'] += 1
-            statistics['actual_yolo_calls'] += bool(bundle['detections'].get('inference_executed'))
+            statistics['actual_yolo_calls'] += detection_receipt['backend_calls'] if detection_receipt else 0
+            statistics['detector_retry_frames'] += bool(detection_receipt and detection_receipt['retry_attempted'])
+            statistics['detector_retry_person_frames'] += bool(detection_receipt and detection_receipt['used_retry'])
             statistics['actual_flyvis_observations'] += 1
             last_telemetry = dict(frame=dict(sequence=bundle['sequence'], capture_time_s=float(frame.capture_time_s),
                 width=frame.rgb.shape[1], height=frame.rgb.shape[0]),
@@ -282,7 +347,7 @@ def run_session(folder, config):
                 evaluation=evaluation, neural_features=plain(bundle['neural']['features']),
                 motion=motion_result, inference_wall_s=elapsed, completed_time_s=completion,
                 detector_status=bundle['detections'].get('status'),
-                detector_reason=bundle['detections'].get('reason'))
+                detector_reason=bundle['detections'].get('reason'), detector_receipt=detection_receipt)
             for name, image in [('camera', frame.rgb), ('overview', overview)]:
                 okay, jpeg = cv2.imencode('.jpg', cv2.cvtColor(image, cv2.COLOR_RGB2BGR), [cv2.IMWRITE_JPEG_QUALITY, 82])
                 if not okay:

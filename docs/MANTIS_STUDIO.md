@@ -173,9 +173,10 @@ not receive actor positions, obstacle coordinates or an occupancy map.
 It first brakes, tests small alternate headings against a longer depth horizon,
 then turns in place. Every moving step still depends on the unchanged final
 `DepthGuardian` check along the actual aircraft heading. Rejoining also brakes
-before turning. If the old camera view cannot certify the target route, the
-aircraft can inspect it while stationary; translation requires a new clear
-depth view. Brief braking drift receives zero movement authority until the
+before turning. An unobservable target route alone does not trigger repeated
+inspection: the aircraft continues only along its separately certified detour
+corridor until the target route is observed clear or the early view limit
+requires inspection. Turning is stationary and translation requires clear depth. Brief braking drift receives zero movement authority until the
 existing gate accepts the measured velocity again.
 
 Attempts are bounded to 14 seconds and 2 metres, with small heading changes that
@@ -186,11 +187,14 @@ passed inside these constraints correctly produces a hold.
 
 For the deliberately offset development fixture, choose **Offset obstacle**,
 enable detours, select the person nearest the camera centre, and use a **2.5 m** follow distance. The browser applies those
-settings when selecting that scene. The isolated depth planner completes this controlled fixture. The final
-actual-YOLO/Flyvis development trial retained 113 scored observations without
-wrong-person matches but hit its 14-second attempt limit: zero completed
-detours. Reliable integrated detour completion remains unresolved; this is not
-general obstacle navigation. See the [development evidence](../evidence/mantis_studio/README.md).
+settings when selecting that scene. The latest actual-model batch completed
+**3/3 controlled detours**: two neural-guidance repeats and one direct-YOLO
+baseline. Each physically passed the barrier and resumed fresh selected-person
+following, with 24/30/30 resumed observations and minimum hull clearances of
+0.286/0.259/0.308 m. There were no contacts or wrong-person samples.
+The earlier time-limit failures and a later lost-detection probe remain recorded
+unchanged. These are repeated checks of one offset fixture, not general obstacle
+navigation. See the [remediation evidence](../evidence/mantis_studio_remediation/README.md).
 
 ## Raw-camera Flyvis motion experiment
 
@@ -204,9 +208,17 @@ uncalibrated for this scene. Image motion includes camera motion.
 experimental: a fixed neural-motion magnitude rule can reduce forward speed,
 never add speed or steering. Invalid, warming-up or stale motion information
 holds forward motion; the depth stop gate remains final. The extra model work
-can increase inference latency and reduce available guidance. On the development
-Mac, live raw-motion processing exceeded the freshness window and repeatedly
-reset warm-up; these short runs did not establish usable motion control. Keep
+can increase inference latency and reduce available guidance. The initial
+development runs exceeded the freshness window and repeatedly reset warm-up.
+The current backend loads its decoder before camera processing, clones its
+fixed initial state on resets, and reuses frozen parameters for the identical
+official neural update. See the [runtime comparisons](MANTIS_MOTION.md#runtime-optimization-2026-09-17)
+and the separate integration receipts for measured outcomes. The final connected
+trials produced 27/28 fresh outputs in observe mode and 30/31 in brake mode; both
+had 100% freshness after the declared startup period and no gap resets. Same-tick
+paired depth checks confirmed that valid neural motion reduced a forward command
+the depth gate would otherwise allow. This proves the connection and its declared
+effect, not a control-quality improvement. Keep
 this arm off for ordinary interactive flights. The first selection preview
 is presented before the optional research computation starts.
 
@@ -256,15 +268,30 @@ The implementation separates responsibilities:
 - `mantis_arena.py`: two-actor fixture and evaluator-only geometry.
 - `mantis_selection.py`: observation-only explicit selection and latched holds.
 - `mantis_navigation.py`: bounded depth-based detour proposals.
+- `mantis_studio_vision.py`: bounded same-frame person-detection retry.
 - `mantis_recording.py`: streaming recorder with a byte budget.
 - `mantis_motion.py`: independent raw-camera neural motion diagnostic and benchmark.
+- `mantis_studio_checks.py`: frozen controlled integration checks and scoring.
 
 ## Evidence boundary
 
-Component tests and separate native rendering/motor checks support the new
-software pieces. A local navigation probe completed a short detour using actual
-motors and rendered depth with an observed colour cue; that isolated check did
-not run the YOLO/Flyvis target pipeline. It cannot establish full studio
-integration, general person tracking, neural advantage, real-time performance
-or physical flight readiness. Use the actual saved session receipts and current
-validation results for any stronger claim.
+The current native software suite passed 821 tests. Five frozen integration
+cases also passed with actual YOLO/Flyvis and motor-driven simulation. Compact
+receipts preserve the scoring inputs, source hashes, failed probes and successful
+trials; a model-free verifier recomputes the final scores. It reuses the frozen
+scorer and recorded physics summaries, so it is not an independent physics or
+learned-model rerun. General person tracking, neural advantage, real-time
+performance and physical flight readiness remain unestablished.
+
+
+## Reproducible Studio checks
+
+With Studio running and no active simulation, launch checks into a new output folder:
+
+```bash
+python -m experiments.mantis_studio_checks --output results/studio_checks_new
+```
+
+The runner saves its cases, thresholds and source hashes before starting. It selects the current person nearest the camera centre once, never automatically reselects, and preserves every failed run. Detour checks require observed route completion, post-completion passage beyond the fixture barrier, resumed fresh following, no contacts/wrong-person samples and the declared hull clearance. Motion checks distinguish warmed fresh output from gap resets and compare the valid brake against the unchanged depth gate on the same tick. These controlled operational checks do not establish neural accuracy superiority or general navigation.
+
+A Studio-only detector wrapper makes at most one extra horizontal-flip inference when the original frame contains no detected person. Its boxes are mapped back to the same camera coordinates; thresholds, tracking/appearance checks and total capture deadline are unchanged. Telemetry distinguishes actual backend calls, retries and accepted observations. Failure or ambiguity still stops the aircraft.

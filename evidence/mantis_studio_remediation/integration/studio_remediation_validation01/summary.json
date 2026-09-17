@@ -1,0 +1,227 @@
+{
+  "passed": true,
+  "cases": 5,
+  "outcomes": [
+    {
+      "case": "detour_neural_a",
+      "run_id": "run-20260917T142141-8f1eff35",
+      "passed": true,
+      "gates": {
+        "ordered_observations": true,
+        "completed": true,
+        "contacts_absent": true,
+        "no_wrong_person": true,
+        "selected_observations": true,
+        "actual_models": true,
+        "detour_recorded": true,
+        "center_passed_obstacle": true,
+        "clearance": true,
+        "following_resumed": true,
+        "observed_authority": true
+      },
+      "metrics": {
+        "maximum_center_x_m": 2.418445162360362,
+        "minimum_hull_clearance_m": 0.28591387293688925,
+        "resumed_observations": 24,
+        "resumed_translation_m": 0.7309361103328136,
+        "detour_completion_events": [
+          {
+            "command_sequence": 82,
+            "position": [
+              1.6900650359152016,
+              -0.24356223687971315,
+              1.099665531306244
+            ],
+            "selected_track": 2,
+            "sim_s": 12.250000000000515,
+            "source_capture_time_s": 12.055000000000485
+          }
+        ]
+      }
+    },
+    {
+      "case": "detour_neural_b",
+      "run_id": "run-20260917T142254-12055b3a",
+      "passed": true,
+      "gates": {
+        "ordered_observations": true,
+        "completed": true,
+        "contacts_absent": true,
+        "no_wrong_person": true,
+        "selected_observations": true,
+        "actual_models": true,
+        "detour_recorded": true,
+        "center_passed_obstacle": true,
+        "clearance": true,
+        "following_resumed": true,
+        "observed_authority": true
+      },
+      "metrics": {
+        "maximum_center_x_m": 2.4172086629290077,
+        "minimum_hull_clearance_m": 0.2594483756927855,
+        "resumed_observations": 30,
+        "resumed_translation_m": 0.9085779857296805,
+        "detour_completion_events": [
+          {
+            "command_sequence": 68,
+            "position": [
+              1.5111484353169358,
+              -0.2251312183411633,
+              1.0996656507744802
+            ],
+            "selected_track": 2,
+            "sim_s": 12.1500000000005,
+            "source_capture_time_s": 11.90000000000046
+          }
+        ]
+      }
+    },
+    {
+      "case": "detour_direct",
+      "run_id": "run-20260917T142417-72d3f2bc",
+      "passed": true,
+      "gates": {
+        "ordered_observations": true,
+        "completed": true,
+        "contacts_absent": true,
+        "no_wrong_person": true,
+        "selected_observations": true,
+        "actual_models": true,
+        "detour_recorded": true,
+        "center_passed_obstacle": true,
+        "clearance": true,
+        "following_resumed": true,
+        "observed_authority": true
+      },
+      "metrics": {
+        "maximum_center_x_m": 2.419891548221151,
+        "minimum_hull_clearance_m": 0.3079565631258318,
+        "resumed_observations": 30,
+        "resumed_translation_m": 0.6744016064322722,
+        "detour_completion_events": [
+          {
+            "command_sequence": 76,
+            "position": [
+              1.7480915042397076,
+              -0.26163661132159866,
+              1.0996653283684192
+            ],
+            "selected_track": 2,
+            "sim_s": 12.250000000000515,
+            "source_capture_time_s": 12.09000000000049
+          }
+        ]
+      }
+    },
+    {
+      "case": "motion_observe",
+      "run_id": "run-20260917T142534-95f5cb19",
+      "passed": true,
+      "gates": {
+        "ordered_observations": true,
+        "completed": true,
+        "contacts_absent": true,
+        "no_wrong_person": true,
+        "selected_observations": true,
+        "actual_models": true,
+        "fresh_motion": true,
+        "steady_freshness": true
+      },
+      "metrics": {
+        "motion_observations": 28,
+        "fresh_motion_observations": 27,
+        "steady_fresh_fraction": 1.0,
+        "gap_resets": 0,
+        "valid_speed_reduction_ticks": 0,
+        "latency_s": [
+          0.6368271670071408,
+          0.5124660409928765,
+          0.3637261249969015,
+          0.44934079100494273,
+          0.34383254100976046,
+          0.3478201249963604,
+          0.31632862499100156,
+          0.3171040000015637,
+          0.6421349169977475,
+          0.42097887500131037,
+          0.32062099999166094,
+          0.30660125000576954,
+          0.386697958005243,
+          0.30321025000012014,
+          0.305446458994993,
+          0.2958088329905877,
+          0.2931124590104446,
+          0.2972949579998385,
+          0.30794329100172035,
+          0.3017094169917982,
+          0.31273283300106414,
+          0.30028716700326186,
+          0.30946591700194404,
+          0.3089175420027459,
+          0.3131314589991234,
+          0.29644225000811275,
+          0.2944162909989245,
+          0.2906977919919882
+        ]
+      }
+    },
+    {
+      "case": "motion_brake",
+      "run_id": "run-20260917T142625-a844abc0",
+      "passed": true,
+      "gates": {
+        "ordered_observations": true,
+        "completed": true,
+        "contacts_absent": true,
+        "no_wrong_person": true,
+        "selected_observations": true,
+        "actual_models": true,
+        "fresh_motion": true,
+        "steady_freshness": true,
+        "valid_motion_changes_request": true,
+        "independent_depth_approved_reduction": true,
+        "translation_remains_possible": true
+      },
+      "metrics": {
+        "motion_observations": 31,
+        "fresh_motion_observations": 30,
+        "steady_fresh_fraction": 1.0,
+        "gap_resets": 0,
+        "valid_speed_reduction_ticks": 1594,
+        "latency_s": [
+          0.6026501250016736,
+          0.45874804200138897,
+          0.3647908339917194,
+          0.3072931249917019,
+          0.31997587499790825,
+          0.3262834579945775,
+          0.326905791007448,
+          0.2998024160042405,
+          0.30211679100466426,
+          0.3046240419935202,
+          0.3030997089954326,
+          0.30921162498998456,
+          0.30037549999542534,
+          0.2926272920012707,
+          0.29732129200419877,
+          0.3103382499975851,
+          0.28710341699479613,
+          0.30140870799368713,
+          0.29058775000157766,
+          0.3067799999989802,
+          0.2878508330031764,
+          0.29856720799580216,
+          0.3973447079915786,
+          0.3118340830114903,
+          0.2882911670021713,
+          0.3107143340021139,
+          0.31082991599396337,
+          0.3068664999882458,
+          0.3106274169986136,
+          0.2966266250004992,
+          0.29392687500512693
+        ]
+      }
+    }
+  ]
+}

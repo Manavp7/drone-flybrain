@@ -1,0 +1,195 @@
+{
+  "case": "motion_brake",
+  "run_id": "run-20260917T141016-055ddcf1",
+  "config": {
+    "scenario": "stationary",
+    "method": "mantis_neural",
+    "duration_s": 10.0,
+    "follow_distance_m": 2.5,
+    "target_speed": 0.08,
+    "detours": false,
+    "motion_mode": "brake",
+    "recording": "compact",
+    "max_recording_mb": 16
+  },
+  "outcome": {
+    "passed": false,
+    "gates": {
+      "completed": true,
+      "contacts_absent": true,
+      "no_wrong_person": true,
+      "selected_observations": true,
+      "actual_models": true,
+      "fresh_motion": true,
+      "steady_freshness": false,
+      "valid_motion_changes_request": true,
+      "translation_remains_possible": true
+    },
+    "metrics": {
+      "motion_observations": 22,
+      "fresh_motion_observations": 14,
+      "steady_fresh_fraction": 0.7,
+      "gap_resets": 3,
+      "valid_speed_reduction_ticks": 488,
+      "latency_s": [
+        0.8524501659994712,
+        0.20227908300148556,
+        0.68335483300325,
+        0.1640144170014537,
+        0.421324208000442,
+        0.5041322079996462,
+        0.6762519580006483,
+        0.147744750000129,
+        0.4478912920021685,
+        0.4295941669988679,
+        0.5414127499971073,
+        0.6409255830003531,
+        0.5031328749973909,
+        0.4134739159999299,
+        0.4016245000020717,
+        0.45067083399771946,
+        0.3868842079973547,
+        0.3957404589964426,
+        0.4118660829990404,
+        0.37831474999984493,
+        0.38791800000035437,
+        0.39221854199422523
+      ]
+    }
+  },
+  "summary": {
+    "bytes": 568316,
+    "complete": true,
+    "error": null,
+    "fps": 10,
+    "last_observation_time_s": 10.105,
+    "max_bytes": 16777216,
+    "observations": 23,
+    "paths": {
+      "credits": "CREDITS.txt",
+      "provenance": "provenance.json",
+      "summary": "summary.json",
+      "telemetry": "telemetry.jsonl"
+    },
+    "profile": "compact",
+    "raw_capture_complete": false,
+    "raw_frames": 0,
+    "schema": "mantis-session-v1",
+    "simulation_end_s": 10.10500000000018,
+    "status": "completed",
+    "summary": {
+      "duration_s": 10.10500000000018,
+      "failure": null,
+      "final_safety": {
+        "coverage": 1.0,
+        "forward_speed": 0.0,
+        "metadata": {
+          "all_pixels_inspected": true,
+          "allowed_reverse_or_side_drift_m_s": 0.03,
+          "allowed_vertical_drift_m_s": 0.08,
+          "braking_accel_m_s2": 0.35,
+          "braking_transient_margin_m": 0.15,
+          "camera_position_in_current_heading_m": [
+            0.24999990520813234,
+            2.7578960372176427e-18,
+            -0.00021770605139836974
+          ],
+          "clearance_scope": "observed forward prism; no sides or rear authority",
+          "considered_speed_m_s": 0.06464032344879435,
+          "current_footprint_assumed_initially_free": true,
+          "depth_age_s": 0.0,
+          "expanded_radius_m": 0.52,
+          "level_velocity_m_s": [
+            0.06463981713263191,
+            0.0002556401108704672,
+            1.0235153874019677e-05
+          ],
+          "max_depth_age_s": 0.1,
+          "max_sensor_optical_depth_m": 20.0,
+          "mode": "registered_depth_forward_stop_only",
+          "observed_blockage": false,
+          "observed_tube_pixels": 20,
+          "reaction_allowance_s": 0.1,
+          "requested_speed_clamped_m_s": 0.0,
+          "required_forward_interval_m": [
+            0.52,
+            0.6856651505395546
+          ],
+          "required_max_optical_z_m": 0.43611771914454267,
+          "required_pixels": 10000,
+          "scene_truth_used": false,
+          "sensor_period_s": 0.05,
+          "state_age_s": 0.0,
+          "stopping_formula": "speed*(max(depth_age,state_age)+sensor_period+reaction_allowance)+speed^2/(2*braking_accel)+braking_transient_margin",
+          "total_pixels": 36864,
+          "total_reaction_s": 0.15000000000000002,
+          "valid_required_pixels": 10000
+        },
+        "minimum_clearance_m": 4.878305260465742,
+        "reason": "hold_clear",
+        "stopping_distance_m": 0.1656651505395545,
+        "valid_clearance": true
+      },
+      "final_vehicle": {
+        "motor_forces": [
+          1.970089583052115,
+          1.9673070641585944,
+          1.9565794256897626,
+          1.9538771058400843
+        ],
+        "position": [
+          0.19943023912086222,
+          0.03154223494406099,
+          1.0999158384212888
+        ],
+        "speed_m_s": 0.06467269668150734,
+        "yaw_rad": 0.15585740368682152
+      },
+      "physical_flight": false,
+      "real_time": false,
+      "statistics": {
+        "actual_flyvis_observations": 23,
+        "actual_yolo_calls": 23,
+        "contacts": 0,
+        "detour_completion_events": [],
+        "detour_events_omitted": 0,
+        "detours_completed": 0,
+        "evaluated_selected_observations": 22,
+        "holds": 1,
+        "minimum_obstacle_hull_clearance_m": null,
+        "motion_deadline_misses": 3,
+        "motion_fresh_observations": 14,
+        "motion_gap_resets": 3,
+        "motion_observations": 22,
+        "motion_speed_reductions": 1406,
+        "motion_unavailable_hold_ticks": 918,
+        "motion_valid_brake_ticks": 511,
+        "motion_valid_speed_reductions": 488,
+        "observations": 23,
+        "positive_forward_ticks": 488,
+        "selected_actor_reference": "orange",
+        "unscorable_selected_observations": 0,
+        "wrong_person_observations": 0
+      },
+      "status": "completed",
+      "wall_s": 50.52853883399803
+    },
+    "videos": {
+      "camera": {
+        "duration_s": 10.2,
+        "frames": 102,
+        "path": "camera.mp4"
+      },
+      "overview": {
+        "duration_s": 10.2,
+        "frames": 102,
+        "path": "overview.mp4"
+      }
+    }
+  },
+  "source_artifacts": {
+    "summary.json": "5d54356363a14de8c9756f79be3981cbd6516654ff67b3cce07f0f6ad6f04d62",
+    "telemetry.jsonl": "31ad137f90c61d421f0a498879ddc0e0e42ec39ec92270d4a75b5caa4dfadb63",
+    "provenance.json": "f1d914986cf50b3b7e43564561f99f016cd5ac809b8b7fcd891c0d51eb4e1520"
+  }
+}

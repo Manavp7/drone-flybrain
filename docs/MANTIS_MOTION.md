@@ -49,3 +49,12 @@ The frozen 12-case suite completed using the actual official pretrained network 
 The neural decoder did not beat either baseline. Its mean directional cosine on moving held-out rows was −0.1728; on the stationary held-out texture it still produced about 5.33 nominal pixels/s of vector error. No tuning or sign correction followed this result. The software pathway runs, but this experiment supplies no evidence that its raw-motion signal should improve flight control.
 
 The pretrained network and decoder are upstream [Flyvis](https://github.com/TuragaLab/flyvis), rather than original Mantis model weights. Contributor and dependency notices are retained in [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md#flyvis) and [LICENSES/Flyvis-MIT.txt](../LICENSES/Flyvis-MIT.txt).
+
+
+## Runtime optimization, 2026-09-17
+
+The original Studio runs placed lazy decoder construction inside the first camera call. Its delay then caused repeated gap resets, each recomputing the same blank initial state. The current backend constructs/evaluates the official decoder during loading and restores separately cloned node/edge tensors for each reset. Frozen parameters are prepared once; every neural timestep still calls the same official update in the same order. Training mode or mutated parameters are rejected rather than using a stale parameter cache.
+
+The [startup comparison](../evidence/mantis_studio_remediation/motion_optimization/README.md) measured first-camera processing of 2.152 seconds before and 0.0455 seconds after. The [step-loop comparison](../evidence/mantis_studio_remediation/motion_step_optimization/README.md) measured median processing for long camera intervals of 0.391 seconds before and 0.302 seconds after the second optimization. These are ordered local CPU measurements, with initialization work moved into loading; they are not universal latency guarantees.
+
+Full dynamic neuron states, decoder outputs, reset values and causal clocks matched bit for bit in the recorded comparisons, including repeated 0.45/0.55-second camera intervals and a gap reset. No model weights, retinal preprocessing, timestep, warmup, deadline or decoder output calibration changed. Consequently the earlier negative accuracy result remains valid. Connected Studio outcomes are reported separately from these equivalent-computation checks.

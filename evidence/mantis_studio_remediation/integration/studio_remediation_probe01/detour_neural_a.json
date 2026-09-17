@@ -1,0 +1,196 @@
+{
+  "case": "detour_neural_a",
+  "run_id": "run-20260917T140752-de857206",
+  "config": {
+    "scenario": "detour",
+    "method": "mantis_neural",
+    "duration_s": 25.0,
+    "follow_distance_m": 2.5,
+    "target_speed": 0.08,
+    "detours": true,
+    "motion_mode": "off",
+    "recording": "compact",
+    "max_recording_mb": 16
+  },
+  "outcome": {
+    "passed": false,
+    "gates": {
+      "completed": true,
+      "contacts_absent": true,
+      "no_wrong_person": true,
+      "selected_observations": true,
+      "actual_models": true,
+      "detour_recorded": true,
+      "center_passed_obstacle": false,
+      "clearance": true,
+      "following_resumed": false,
+      "observed_authority": true
+    },
+    "metrics": {
+      "maximum_center_x_m": 1.8443951134730698,
+      "minimum_hull_clearance_m": 0.31148724204549855,
+      "resumed_observations": 1,
+      "resumed_translation_m": 0.0182706436177685,
+      "detour_completion_events": [
+        {
+          "command_sequence": 59,
+          "position": [
+            1.658572183473565,
+            -0.24531906646462118,
+            1.0996948644143856
+          ],
+          "selected_track": 2,
+          "sim_s": 12.400000000000539,
+          "source_capture_time_s": 12.09000000000049
+        }
+      ]
+    }
+  },
+  "summary": {
+    "bytes": 1879527,
+    "complete": true,
+    "error": null,
+    "fps": 10,
+    "last_observation_time_s": 25.07,
+    "max_bytes": 16777216,
+    "observations": 117,
+    "paths": {
+      "credits": "CREDITS.txt",
+      "provenance": "provenance.json",
+      "summary": "summary.json",
+      "telemetry": "telemetry.jsonl"
+    },
+    "profile": "compact",
+    "raw_capture_complete": false,
+    "raw_frames": 0,
+    "schema": "mantis-session-v1",
+    "simulation_end_s": 25.069999999999297,
+    "status": "completed",
+    "summary": {
+      "duration_s": 25.069999999999297,
+      "failure": null,
+      "final_safety": {
+        "coverage": 1.0,
+        "forward_speed": 0.0,
+        "metadata": {
+          "all_pixels_inspected": true,
+          "allowed_reverse_or_side_drift_m_s": 0.03,
+          "allowed_vertical_drift_m_s": 0.08,
+          "braking_accel_m_s2": 0.35,
+          "braking_transient_margin_m": 0.15,
+          "camera_position_in_current_heading_m": [
+            0.24999999999999936,
+            -4.84076141139184e-17,
+            3.086420008457935e-14
+          ],
+          "clearance_scope": "observed forward prism; no sides or rear authority",
+          "considered_speed_m_s": 1.808858887940601e-13,
+          "current_footprint_assumed_initially_free": true,
+          "depth_age_s": 0.014999999999997016,
+          "expanded_radius_m": 0.52,
+          "level_velocity_m_s": [
+            1.83860982300443e-14,
+            1.809663617280347e-15,
+            1.7993993796343415e-13
+          ],
+          "max_depth_age_s": 0.1,
+          "max_sensor_optical_depth_m": 20.0,
+          "mode": "registered_depth_forward_stop_only",
+          "observed_blockage": false,
+          "observed_tube_pixels": 29,
+          "reaction_allowance_s": 0.1,
+          "requested_speed_clamped_m_s": 0.0,
+          "required_forward_interval_m": [
+            0.52,
+            0.6700000000000299
+          ],
+          "required_max_optical_z_m": 0.42000000000009957,
+          "required_pixels": 10000,
+          "scene_truth_used": false,
+          "sensor_period_s": 0.05,
+          "state_age_s": 0.0,
+          "stopping_formula": "speed*(max(depth_age,state_age)+sensor_period+reaction_allowance)+speed^2/(2*braking_accel)+braking_transient_margin",
+          "total_pixels": 36864,
+          "total_reaction_s": 0.16499999999999704,
+          "valid_required_pixels": 10000
+        },
+        "minimum_clearance_m": 2.6972529697417387,
+        "reason": "hold_clear",
+        "stopping_distance_m": 0.15000000000002983,
+        "valid_clearance": true
+      },
+      "final_vehicle": {
+        "motor_forces": [
+          1.9620000000000049,
+          1.962000000000005,
+          1.9619999999999909,
+          1.9619999999999904
+        ],
+        "position": [
+          1.8304026738158359,
+          -0.2305685857010373,
+          1.099999999999871
+        ],
+        "speed_m_s": 1.8023621814044285e-13,
+        "yaw_rad": 0.10146169401968426
+      },
+      "physical_flight": false,
+      "real_time": false,
+      "statistics": {
+        "actual_flyvis_observations": 117,
+        "actual_yolo_calls": 117,
+        "contacts": 0,
+        "detour_completion_events": [
+          {
+            "command_sequence": 59,
+            "position": [
+              1.658572183473565,
+              -0.24531906646462118,
+              1.0996948644143856
+            ],
+            "selected_track": 2,
+            "sim_s": 12.400000000000539,
+            "source_capture_time_s": 12.09000000000049
+          }
+        ],
+        "detour_events_omitted": 0,
+        "detours_completed": 1,
+        "evaluated_selected_observations": 61,
+        "holds": 56,
+        "minimum_obstacle_hull_clearance_m": 0.31148724204549855,
+        "motion_deadline_misses": 0,
+        "motion_fresh_observations": 0,
+        "motion_gap_resets": 0,
+        "motion_observations": 0,
+        "motion_speed_reductions": 0,
+        "motion_unavailable_hold_ticks": 0,
+        "motion_valid_brake_ticks": 0,
+        "motion_valid_speed_reductions": 0,
+        "observations": 117,
+        "positive_forward_ticks": 1233,
+        "selected_actor_reference": "blue",
+        "unscorable_selected_observations": 0,
+        "wrong_person_observations": 0
+      },
+      "status": "completed",
+      "wall_s": 82.28739162500278
+    },
+    "videos": {
+      "camera": {
+        "duration_s": 25.1,
+        "frames": 251,
+        "path": "camera.mp4"
+      },
+      "overview": {
+        "duration_s": 25.1,
+        "frames": 251,
+        "path": "overview.mp4"
+      }
+    }
+  },
+  "source_artifacts": {
+    "summary.json": "883ab2f7d8af7218f6953b03aca21c1898440d3e73f41ce62e31844e236b5cf1",
+    "telemetry.jsonl": "95b2174994250c17b380b9c0cb1eaf26b543eb8a281bd33599ba0596f701ed1b",
+    "provenance.json": "0ae6aa7d2149fe3505448f1d3aa89ddeccde16256ae82c6a080a9ecead63cb9b"
+  }
+}

@@ -78,12 +78,6 @@ class _MotionBackend:
         self.adapter = VideoFlyvisAdapter(manifest)
         self._blank_state = None
         self._decoder_warmed = False
-        network = self.adapter.network
-        if network.training or any(parameter.requires_grad for parameter in network.parameters()):
-            raise ValueError('Raw motion requires a frozen evaluation network')
-        with self.adapter.torch.inference_mode():
-            self._frozen_params = network._param_api()
-        self._parameter_signature = self._parameters_signature()
         types = self.adapter.network.connectome.nodes.type[:].astype(str)
         self.population_indices = {name: np.flatnonzero(types == name) for name in POPULATIONS}
         if any(len(indices) == 0 for indices in self.population_indices.values()):
@@ -98,8 +92,7 @@ class _MotionBackend:
             unit_transfer_assumption=TRANSFER, decoder_axes=['right', 'up'],
             nominal_velocity_axes=['right', 'down'], control_authority=False,
             fitting=False, device=str(self.adapter.device), packages=self.adapter.runtime,
-            runtime_optimizations=['eager_official_decoder_warmup', 'exact_cloned_blank_state_reset',
-                                   'cached_frozen_parameter_api', 'official_single_state_step_loop'])
+            runtime_optimizations=['eager_official_decoder_warmup', 'exact_cloned_blank_state_reset'])
 
     def _clone_state(self, state):
         """Copy dynamic tensors and rebuild their official source/target views.
@@ -147,27 +140,16 @@ class _MotionBackend:
             gray = np.rint(np.clip(tensor.cpu().numpy()[0, 0], 0, 1)*255).astype(np.uint8)
         return gray, retina, transform
 
-    def _parameters_signature(self):
-        return tuple((id(parameter), parameter._version, parameter.requires_grad)
-                     for parameter in self.adapter.network.parameters())
-
     def advance(self, retina, steps):
-        adapter, network = self.adapter, self.adapter.network
-        if isinstance(steps, bool) or not isinstance(steps, int) or steps < 1:
-            raise ValueError('Neural integration needs a positive integer step count')
-        if network.training or self._parameters_signature() != self._parameter_signature:
-            raise ValueError('Frozen neural parameters changed after initialization')
+        adapter = self.adapter
+        # Bound temporary network states; never accumulate all session activity.
         with adapter.torch.inference_mode():
-            # Use the official input mapping once for this held retinal image.
-            # simulate() repeats it across N frames and rebuilds the frozen
-            # parameter API for every chunk; both operations are redundant here.
-            network.stimulus.zero(1, 1)
-            network.stimulus.add_input(retina)
-            frame = network.stimulus()[:, 0]
-            for _ in range(steps):
-                # Preserve the upstream Euler update and scatter-add ordering.
-                # Only its final state is retained; no integration step is skipped.
-                self.state = network._next_state(self._frozen_params, self.state, frame, DT)
+            while steps:
+                count = min(steps, 5)
+                states = adapter.network.simulate(retina.repeat(1, count, 1, 1), DT,
+                                                   initial_state=self.state, as_states=True)
+                self.state = states[-1]
+                steps -= count
             activity = self.state.nodes.activity.detach().cpu().numpy()[0].copy()
         if activity.shape != (45669,) or not np.isfinite(activity).all():
             raise ValueError('Flyvis returned invalid neural activity')

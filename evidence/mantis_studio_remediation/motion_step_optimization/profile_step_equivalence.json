@@ -1,0 +1,699 @@
+{
+  "status": "passed",
+  "definitions": {
+    "times_s": [
+      0.0,
+      0.1,
+      0.55,
+      1.1,
+      1.55,
+      2.1,
+      2.55,
+      3.1,
+      3.55,
+      4.1,
+      4.8,
+      5.25,
+      5.8
+    ],
+    "texture_seed": 20271,
+    "velocity_px_s": [
+      6.0,
+      -4.0
+    ],
+    "frame_sha256": [
+      "42247a4e2ebcde85781b3b3c1284c25081395a636edacf392634de6e1587288a",
+      "1a44fcdb14f560476a6de281338a2aac7ad80afaa65bdc0e29dd7d3309e9ee68",
+      "0b1e0e09626a6b0f035cc3de8c9359509676faed92869fb5e80f79c9c2ab531b",
+      "6279f8360110dc5ebb5d537f1f94c6b8008bb4322375082f8c3010716cec5c06",
+      "7350474957ed165eb0f22ab15330ebb0ac3bf225028e9e4d1fa83d944999a048",
+      "b865b97516d27d2563c3dac1382d924cdc8f435ab92ea66a3f2a8773a107a805",
+      "fedd7a78244a48d31cf8386b0cf3b1e705905ffbd2a65b8a14df6c74b89a2490",
+      "a5a78cf189e260bb34d68e210cc7c8f4b971105d6d3ce02e00b6c8941c73a74a",
+      "da3f4061b0cfd1786da46417e2f60bc3c14c7a8d3004ba8c17a60a1af84399bc",
+      "4c19726ba6c27dd56e0c5a124eb81101954fe1ae58e1f209406c6ae0f486db38",
+      "957cf9fdf555bad01d5235796e3e4b3a8ed0f0795cb0637ad5be56eec48d7fc0",
+      "307d6f8aa5d249e8a7112e16670fe0771126ff5cc8b801f5f43767854a4dd963",
+      "dae2a80f9fef393758fc9ba75b38f501c8df9bb94dc1732716955913d74b434f"
+    ],
+    "heldout_tuning": false,
+    "purpose": "Exact recurrence/decoder preservation and steady compute latency; not accuracy evaluation"
+  },
+  "source_hashes": {
+    "original": "0b1f9bddd0b77677e9bb303a598f3cfa35e9d9e2e7278150f6e71173256a3663",
+    "stage1": "e686e31bc45209a3ae8181effa30f5258071a422e9aba1f2eb4f5f21f00d5b26",
+    "stage2": "aca841a9b3662724408e55295e1f14e2e8d029ce524e128d585dc13ff85d1b61"
+  },
+  "measurements": {
+    "original": {
+      "initialization_s": 21.458970749998116,
+      "first_capture_s": 2.2795835839933716,
+      "ordinary_capture_median_s": 0.33679158400627784,
+      "long_gap_capture_median_s": 0.33813195900438586,
+      "long_gap_neural_median_s": 0.2880634795074002,
+      "gap_reset_capture_s": [
+        0.4966319579980336
+      ],
+      "explicit_reset_s": [
+        0.4470991249982035,
+        0.44297308300156146,
+        0.5037044999917271,
+        0.4730767500004731
+      ],
+      "explicit_reset_median_s": 0.4600879374993383,
+      "all_capture_s": [
+        2.2795835839933716,
+        0.1922973750042729,
+        0.29349750000983477,
+        0.40268816699972376,
+        0.29866366599162575,
+        0.39651400000730064,
+        0.33679158400627784,
+        0.3673567080113571,
+        0.32612774999870453,
+        0.33969449999858625,
+        0.4966319579980336,
+        0.32259133299521636,
+        0.3394723340024939
+      ],
+      "neural_capture_s": [
+        2.279529082996305,
+        0.06949895899742842,
+        0.24129950000497047,
+        0.3527228750026552,
+        0.24576095899101347,
+        0.3447569999989355,
+        0.2865063750068657,
+        0.31484533300681505,
+        0.2761217079969356,
+        0.29271737500675954,
+        0.030355334005434997,
+        0.2739339160034433,
+        0.28962058400793467
+      ],
+      "conventional_capture_s": [
+        2.500019036233425e-07,
+        0.12278029200388119,
+        0.052179165999405086,
+        0.04994899999292102,
+        0.05288337501406204,
+        0.051736374996835366,
+        0.05026895798800979,
+        0.05249554100737441,
+        0.049990583007456735,
+        0.04695904099207837,
+        2.9199873097240925e-07,
+        0.048604708004859276,
+        0.04983712499961257
+      ],
+      "valid_observations": 9,
+      "gap_resets": 1
+    },
+    "stage1": {
+      "initialization_s": 9.252040709005087,
+      "first_capture_s": 0.07509737499640323,
+      "ordinary_capture_median_s": 0.37284079199889675,
+      "long_gap_capture_median_s": 0.391081875503005,
+      "long_gap_neural_median_s": 0.3354340209989459,
+      "gap_reset_capture_s": [
+        0.052586208999855444
+      ],
+      "explicit_reset_s": [
+        8.833300671540201e-05,
+        5.562500155065209e-05,
+        4.875000740867108e-05,
+        5.6667005992494524e-05
+      ],
+      "explicit_reset_median_s": 5.6146003771573305e-05,
+      "all_capture_s": [
+        0.07509737499640323,
+        0.18218012500437908,
+        0.34912787498615216,
+        0.37284079199889675,
+        0.2946221250022063,
+        0.3699332910036901,
+        0.3409884170105215,
+        0.40932295900711324,
+        0.48835525001049973,
+        0.4678023750020657,
+        0.052586208999855444,
+        0.4499289170053089,
+        0.4965782079962082
+      ],
+      "neural_capture_s": [
+        0.07505904100253247,
+        0.06721374999324325,
+        0.29442354099592194,
+        0.3248849999945378,
+        0.24624920799396932,
+        0.3202963749936316,
+        0.28483758300717454,
+        0.34598304200335406,
+        0.41474799999559764,
+        0.4039188330061734,
+        0.05246287499903701,
+        0.37626216700300574,
+        0.42844754199904855
+      ],
+      "conventional_capture_s": [
+        2.0899460650980473e-07,
+        0.11494112500804476,
+        0.054684332993929274,
+        0.04794058299739845,
+        0.04835641600948293,
+        0.04962050000904128,
+        0.05613308399915695,
+        0.06332287499390077,
+        0.07358900000690483,
+        0.06385900000168476,
+        2.9099464882165194e-07,
+        0.07363983399409335,
+        0.06810745899565518
+      ],
+      "valid_observations": 9,
+      "gap_resets": 1
+    },
+    "stage2": {
+      "initialization_s": 9.793260666992865,
+      "first_capture_s": 0.04521845799172297,
+      "ordinary_capture_median_s": 0.3007356250018347,
+      "long_gap_capture_median_s": 0.3018076874941471,
+      "long_gap_neural_median_s": 0.2517342294959235,
+      "gap_reset_capture_s": [
+        0.022741291002603248
+      ],
+      "explicit_reset_s": [
+        6.4957988797687e-05,
+        3.8124999264255166e-05,
+        3.441600711084902e-05,
+        3.199999628122896e-05
+      ],
+      "explicit_reset_median_s": 3.6270503187552094e-05,
+      "all_capture_s": [
+        0.04521845799172297,
+        0.11422129199490882,
+        0.2506953749980312,
+        0.4103690000047209,
+        0.28777208300016355,
+        0.3007356250018347,
+        0.2874976670136675,
+        0.3738117500033695,
+        0.3466305000038119,
+        0.3204035410017241,
+        0.022741291002603248,
+        0.27418866600783076,
+        0.3028797499864595
+      ],
+      "neural_capture_s": [
+        0.045191375000285916,
+        0.049137834008433856,
+        0.1986174170015147,
+        0.3484483329957584,
+        0.2380189999967115,
+        0.2509022919985,
+        0.23246995800582226,
+        0.3130178749997867,
+        0.29263054199691396,
+        0.2696180830098456,
+        0.02263949999178294,
+        0.22441200001048855,
+        0.252566166993347
+      ],
+      "conventional_capture_s": [
+        5.409965524449944e-07,
+        0.06505591700260993,
+        0.052061416005017236,
+        0.06190341699402779,
+        0.04973066700040363,
+        0.049816958999144845,
+        0.055010500000207685,
+        0.0607752089999849,
+        0.053969707994838245,
+        0.05076899999403395,
+        2.500019036233425e-07,
+        0.04975966700294521,
+        0.05029775000002701
+      ],
+      "valid_observations": 9,
+      "gap_resets": 1
+    }
+  },
+  "equivalence": {
+    "original_vs_stage2": {
+      "full_dynamic_states_exact": true,
+      "full_decoder_fields_exact": true,
+      "restored_initial_states_exact": true,
+      "max_activity_abs_difference": 0.0,
+      "max_flow_abs_difference": 0.0,
+      "max_reset_abs_difference": 0.0,
+      "clock_validity_population_summaries_exact": true
+    },
+    "stage1_vs_stage2": {
+      "full_dynamic_states_exact": true,
+      "full_decoder_fields_exact": true,
+      "restored_initial_states_exact": true,
+      "max_activity_abs_difference": 0.0,
+      "max_flow_abs_difference": 0.0,
+      "max_reset_abs_difference": 0.0,
+      "clock_validity_population_summaries_exact": true
+    }
+  },
+  "output_digests": [
+    {
+      "capture_time_s": 0.0,
+      "states": {
+        "nodes.activity": {
+          "shape": [
+            1,
+            45669
+          ],
+          "dtype": "float32",
+          "sha256": "8cb5f1f351752db8af1f24ce81a5c9ef4091ff765479791fcf508572bbbabd76"
+        }
+      },
+      "flow": {
+        "shape": [
+          2,
+          721
+        ],
+        "dtype": "float32",
+        "sha256": "006591ef1c44122c06ff23972b632fc76f357786379ca0569dc6b5b696677251"
+      }
+    },
+    {
+      "capture_time_s": 0.1,
+      "states": {
+        "nodes.activity": {
+          "shape": [
+            1,
+            45669
+          ],
+          "dtype": "float32",
+          "sha256": "fe4d8a4e9960e86e989d289f557b98353137ecbc07cad1ef0b18febe962a27ff"
+        }
+      },
+      "flow": {
+        "shape": [
+          2,
+          721
+        ],
+        "dtype": "float32",
+        "sha256": "f8c2c579a8e35538764b6405c3d8e3c6edb8eb267e94717de22d35bc3850343b"
+      }
+    },
+    {
+      "capture_time_s": 0.55,
+      "states": {
+        "nodes.activity": {
+          "shape": [
+            1,
+            45669
+          ],
+          "dtype": "float32",
+          "sha256": "864f59f91b1619465390bd1a19c20137b816c1a56f4f4860ea663753f7debd8a"
+        }
+      },
+      "flow": {
+        "shape": [
+          2,
+          721
+        ],
+        "dtype": "float32",
+        "sha256": "994e56f558603553456f5f7fccbe673ed61ac598934c0783364747d4199d4dc7"
+      }
+    },
+    {
+      "capture_time_s": 1.1,
+      "states": {
+        "nodes.activity": {
+          "shape": [
+            1,
+            45669
+          ],
+          "dtype": "float32",
+          "sha256": "721fb1fe81ec9d09c4fc99342320ae01e7c25f28bfa055e742fa86254d640ffe"
+        }
+      },
+      "flow": {
+        "shape": [
+          2,
+          721
+        ],
+        "dtype": "float32",
+        "sha256": "1af3d31166bdc3893a8b1251fcf240405d36a4bd7d5f2587419cb276c96295c0"
+      }
+    },
+    {
+      "capture_time_s": 1.55,
+      "states": {
+        "nodes.activity": {
+          "shape": [
+            1,
+            45669
+          ],
+          "dtype": "float32",
+          "sha256": "f646b44aca1e747f8d58f4fddfbb0ca6c34fc4d2ff722f4c08319f37c8432da0"
+        }
+      },
+      "flow": {
+        "shape": [
+          2,
+          721
+        ],
+        "dtype": "float32",
+        "sha256": "e095c94d507caef7e34c9884ef6a875809efdf9c04a7068e1a16f2f88b03f864"
+      }
+    },
+    {
+      "capture_time_s": 2.1,
+      "states": {
+        "nodes.activity": {
+          "shape": [
+            1,
+            45669
+          ],
+          "dtype": "float32",
+          "sha256": "8ae6a4c6bed095de6402501415a5fd2fecf9c0ab5b722f084046bb7185cc41ff"
+        }
+      },
+      "flow": {
+        "shape": [
+          2,
+          721
+        ],
+        "dtype": "float32",
+        "sha256": "f2a501e53bf61fe5281123eca4e353d4368e9d5fa874d97baaf1d213be9d2b6c"
+      }
+    },
+    {
+      "capture_time_s": 2.55,
+      "states": {
+        "nodes.activity": {
+          "shape": [
+            1,
+            45669
+          ],
+          "dtype": "float32",
+          "sha256": "d27165588fef9a0cb9725f1f8a83ca3324f91407c9e12128e032573a88b6fb35"
+        }
+      },
+      "flow": {
+        "shape": [
+          2,
+          721
+        ],
+        "dtype": "float32",
+        "sha256": "bdcc545bca85132134117228f1be20c5352e8300b4b013ae2003a210410f039b"
+      }
+    },
+    {
+      "capture_time_s": 3.1,
+      "states": {
+        "nodes.activity": {
+          "shape": [
+            1,
+            45669
+          ],
+          "dtype": "float32",
+          "sha256": "2f571e9e9b417e6170ecbf83f1de6810266f8ec74664afe183a2d1a3f7be670a"
+        }
+      },
+      "flow": {
+        "shape": [
+          2,
+          721
+        ],
+        "dtype": "float32",
+        "sha256": "bbb2c273a6d7e1a2e3ac2d899341fb45d26f1491396d30d1a029e48240f74148"
+      }
+    },
+    {
+      "capture_time_s": 3.55,
+      "states": {
+        "nodes.activity": {
+          "shape": [
+            1,
+            45669
+          ],
+          "dtype": "float32",
+          "sha256": "94e5fec36dbbbe80ee0aa6e9d42867a0e337525f5000ad0b9a4d35fa1644e6f9"
+        }
+      },
+      "flow": {
+        "shape": [
+          2,
+          721
+        ],
+        "dtype": "float32",
+        "sha256": "9c0bb15abad73e47adcea4b453e7d873d0ae13daa39547f455223f398acfa5c3"
+      }
+    },
+    {
+      "capture_time_s": 4.1,
+      "states": {
+        "nodes.activity": {
+          "shape": [
+            1,
+            45669
+          ],
+          "dtype": "float32",
+          "sha256": "68dc44600fcc980e43e6342fdb1643c7b32b78063e5b8f667d6313c9048fd002"
+        }
+      },
+      "flow": {
+        "shape": [
+          2,
+          721
+        ],
+        "dtype": "float32",
+        "sha256": "3ada8096e08c8d514900e7880a1410cfdb5f35c77d73d9ee862fc5cdb88803bc"
+      }
+    },
+    {
+      "capture_time_s": 4.8,
+      "states": {
+        "nodes.activity": {
+          "shape": [
+            1,
+            45669
+          ],
+          "dtype": "float32",
+          "sha256": "462b6044038f4bd3be1cf4d6e4e725891d26ebed0a1f0cabdc8e1324dff92760"
+        }
+      },
+      "flow": {
+        "shape": [
+          2,
+          721
+        ],
+        "dtype": "float32",
+        "sha256": "006591ef1c44122c06ff23972b632fc76f357786379ca0569dc6b5b696677251"
+      }
+    },
+    {
+      "capture_time_s": 5.25,
+      "states": {
+        "nodes.activity": {
+          "shape": [
+            1,
+            45669
+          ],
+          "dtype": "float32",
+          "sha256": "e995fe2ecefd6740e68ff765f918600541671e19d074a912f2624a45d7600391"
+        }
+      },
+      "flow": {
+        "shape": [
+          2,
+          721
+        ],
+        "dtype": "float32",
+        "sha256": "da067eea93982652ba9a5e3d75e3e3ac559c417f669c25242eef5fc92fb9b6c8"
+      }
+    },
+    {
+      "capture_time_s": 5.8,
+      "states": {
+        "nodes.activity": {
+          "shape": [
+            1,
+            45669
+          ],
+          "dtype": "float32",
+          "sha256": "dfb805e1ee65aed73dfe5e85b49187c6343ed10ded339e536ca8d03351cd7e25"
+        }
+      },
+      "flow": {
+        "shape": [
+          2,
+          721
+        ],
+        "dtype": "float32",
+        "sha256": "c2f8e91b02c15935c330e2e1cf16f5e9d5d743074205c9bf99f436d11f6c1c92"
+      }
+    }
+  ],
+  "clock_status": [
+    {
+      "capture_time_s": 0.0,
+      "stimulus_time_s": 0.0,
+      "response_time_s": 0.02,
+      "valid": false,
+      "gap_reset": false,
+      "status": "warming-up"
+    },
+    {
+      "capture_time_s": 0.1,
+      "stimulus_time_s": 0.1,
+      "response_time_s": 0.12,
+      "valid": false,
+      "gap_reset": false,
+      "status": "warming-up"
+    },
+    {
+      "capture_time_s": 0.55,
+      "stimulus_time_s": 0.56,
+      "response_time_s": 0.58,
+      "valid": true,
+      "gap_reset": false,
+      "status": "ok"
+    },
+    {
+      "capture_time_s": 1.1,
+      "stimulus_time_s": 1.1,
+      "response_time_s": 1.12,
+      "valid": true,
+      "gap_reset": false,
+      "status": "ok"
+    },
+    {
+      "capture_time_s": 1.55,
+      "stimulus_time_s": 1.56,
+      "response_time_s": 1.58,
+      "valid": true,
+      "gap_reset": false,
+      "status": "ok"
+    },
+    {
+      "capture_time_s": 2.1,
+      "stimulus_time_s": 2.1,
+      "response_time_s": 2.12,
+      "valid": true,
+      "gap_reset": false,
+      "status": "ok"
+    },
+    {
+      "capture_time_s": 2.55,
+      "stimulus_time_s": 2.56,
+      "response_time_s": 2.58,
+      "valid": true,
+      "gap_reset": false,
+      "status": "ok"
+    },
+    {
+      "capture_time_s": 3.1,
+      "stimulus_time_s": 3.1,
+      "response_time_s": 3.12,
+      "valid": true,
+      "gap_reset": false,
+      "status": "ok"
+    },
+    {
+      "capture_time_s": 3.55,
+      "stimulus_time_s": 3.56,
+      "response_time_s": 3.58,
+      "valid": true,
+      "gap_reset": false,
+      "status": "ok"
+    },
+    {
+      "capture_time_s": 4.1,
+      "stimulus_time_s": 4.1,
+      "response_time_s": 4.12,
+      "valid": true,
+      "gap_reset": false,
+      "status": "ok"
+    },
+    {
+      "capture_time_s": 4.8,
+      "stimulus_time_s": 4.8,
+      "response_time_s": 4.819999999999999,
+      "valid": false,
+      "gap_reset": true,
+      "status": "gap-reset"
+    },
+    {
+      "capture_time_s": 5.25,
+      "stimulus_time_s": 5.26,
+      "response_time_s": 5.279999999999999,
+      "valid": false,
+      "gap_reset": false,
+      "status": "warming-up"
+    },
+    {
+      "capture_time_s": 5.8,
+      "stimulus_time_s": 5.8,
+      "response_time_s": 5.82,
+      "valid": true,
+      "gap_reset": false,
+      "status": "ok"
+    }
+  ],
+  "provenance": {
+    "manifest_sha256": "86004101adc92e65bff8ba1e583fc9fd2551a7eec2560e601497e756af8e1594",
+    "checkpoint_sha256": "d8a57a022aa18ca338599be713af9db29b89cde4b00098ffe42b78f0d583e46a",
+    "decoder": "official pretrained DecoderGAVP flow; strict checkpoint load; eval",
+    "neural_input": "camera luminance; center-square crop; 391-square bilinear antialiased resize",
+    "integration_dt_s": 0.02,
+    "warmup_s": 0.5,
+    "maximum_frame_gap_s": 0.65,
+    "temporal_resampling": "causal previous-image zero-order hold; first new stimulus at or after capture",
+    "unit_transfer_assumption": "interior BoxEye sum: [right,up] * (436*24/169), invert y to right/down; not calibrated physical speed",
+    "decoder_axes": [
+      "right",
+      "up"
+    ],
+    "nominal_velocity_axes": [
+      "right",
+      "down"
+    ],
+    "control_authority": false,
+    "fitting": false,
+    "device": "cpu",
+    "packages": {
+      "numpy": {
+        "available": true,
+        "version": "1.26.4"
+      },
+      "torch": {
+        "available": true,
+        "version": "2.5.1"
+      },
+      "torchvision": {
+        "available": true,
+        "version": "0.20.1"
+      },
+      "flyvis": {
+        "available": true,
+        "version": "1.2.0"
+      },
+      "datamate": {
+        "available": true,
+        "version": "1.0.0"
+      }
+    },
+    "runtime_optimizations": [
+      "eager_official_decoder_warmup",
+      "exact_cloned_blank_state_reset",
+      "cached_frozen_parameter_api",
+      "official_single_state_step_loop"
+    ]
+  },
+  "limitations": [
+    "One serialized local CPU sequence, original then stage1 then stage2; cache/order affects timings.",
+    "Intervals are supplied camera timestamps; timings exclude YOLO, target guidance, rendering, recording, and integration scheduling.",
+    "Initialization moves decoder setup out of capture time and must finish before accepting camera frames.",
+    "Exact output preservation cannot improve prior negative neural accuracy scores.",
+    "Raw arrays are checked in memory and omitted from compact receipt; rerunner recreates and compares all arrays."
+  ]
+}

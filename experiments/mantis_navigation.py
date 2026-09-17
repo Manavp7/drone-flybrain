@@ -194,7 +194,14 @@ class DetourNavigator:
                 # turning waits for measured near-zero velocity below.
                 stopped = replace(state, velocity=np.zeros(3))
                 rejoin = self._probe_heading(depth, stopped, target_heading, speed)
-                if approaching_view_limit or rejoin['reason'] in ('clear', 'unknown_outside_field_of_view'):
+                # An unobserved target corridor is not evidence that the
+                # obstacle has been passed. Turning to inspect it after every
+                # short segment can repeatedly rediscover the same blockage
+                # and exhaust the attempt without making useful progress.
+                # Continue only the separately certified detour corridor;
+                # inspect the target route once it is clear in current depth,
+                # or stop early to preserve the selected-target view bound.
+                if approaching_view_limit or rejoin['reason'] == 'clear':
                     self.phase = 'rejoining'
                     return self._result(depth, state, 0., state.yaw, 'stop_before_rejoining',
                                         detour_distance_m=distance)

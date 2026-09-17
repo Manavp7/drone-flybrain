@@ -1,5 +1,7 @@
 """Raw camera motion timing, units and frozen evaluation without heavy inference."""
 import json
+from contextlib import nullcontext
+from types import SimpleNamespace
 from pathlib import Path
 from tempfile import TemporaryDirectory
 import unittest
@@ -8,7 +10,7 @@ from unittest.mock import patch
 import numpy as np
 
 from experiments.mantis_motion import (DT, POPULATIONS, RawMotionExperiment, benchmark_definition,
-    calculate_pixel_flow, score_vectors, summarize_flow, translated_texture, run_benchmark)
+    calculate_pixel_flow, score_vectors, summarize_flow, translated_texture, run_benchmark, _MotionBackend)
 
 
 def centers():
@@ -50,7 +52,137 @@ def image(value=50):
     return np.full((391, 391, 3), value, np.uint8)
 
 
+class Tensor:
+    def __init__(self, data):
+        self.data = np.asarray(data)
+
+    def clone(self):
+        return Tensor(self.data.copy())
+
+    def __getitem__(self, index):
+        return Tensor(self.data[index])
+
+    def detach(self):
+        return self
+
+    def cpu(self):
+        return self
+
+    def numpy(self):
+        return self.data
+
+
+class Namespace(dict):
+    def __getattr__(self, key):
+        return self[key]
+
+
+class ResetNetwork:
+    def __init__(self):
+        self.fade_calls = 0
+
+    def _state_api(self, state):
+        state['sources'] = Namespace(activity=state.nodes.activity)
+        state['targets'] = Namespace(activity=state.nodes.activity)
+        return state
+
+    def fade_in_state(self, seconds, dt, retina):
+        self.fade_calls += 1
+        return self._state_api(Namespace(nodes=Namespace(activity=Tensor(np.full((1, 45669), .5, np.float32))),
+                                        edges=Namespace(example=Tensor(np.array([1., 2.], np.float32)))))
+
+
+def reset_backend():
+    backend = object.__new__(_MotionBackend)
+    decoder_inputs = []
+    backend.adapter = SimpleNamespace(
+        network=ResetNetwork(), device='test',
+        torch=SimpleNamespace(inference_mode=nullcontext, float32=np.float32,
+                              full=lambda shape, value, **kwargs: Tensor(np.full(shape, value, np.float32))),
+        eye=lambda value: Tensor(np.full((1, 1, 1, 721), .5, np.float32)),
+        decode_flow=lambda activity: decoder_inputs.append(activity.copy()))
+    backend._blank_state = None
+    backend._decoder_warmed = False
+    return backend, decoder_inputs
+
+
 class RawMotionTests(unittest.TestCase):
+    def test_decoder_warms_during_initialization_without_advancing_camera_state(self):
+        backend, decoded = reset_backend()
+        backend.reset()
+        self.assertEqual(backend.adapter.network.fade_calls, 1)
+        self.assertEqual(len(decoded), 1)
+        np.testing.assert_array_equal(decoded[0], np.full((1, 45669), .5, np.float32))
+        backend.reset()
+        self.assertEqual(backend.adapter.network.fade_calls, 1)
+        self.assertEqual(len(decoded), 1)
+
+    def test_cached_reset_clones_all_dynamic_tensors_and_rebinds_views(self):
+        backend, _ = reset_backend()
+        backend.reset()
+        first = backend.state
+        first.nodes.activity.data[:] = 99.
+        first.edges.example.data[:] = -2.
+        backend.reset()
+        restored = backend.state
+        np.testing.assert_array_equal(restored.nodes.activity.data, np.full((1, 45669), .5, np.float32))
+        np.testing.assert_array_equal(restored.edges.example.data, [1., 2.])
+        self.assertIsNot(first.nodes.activity, restored.nodes.activity)
+        self.assertIsNot(restored.nodes.activity, backend._blank_state.nodes.activity)
+        self.assertIs(restored.sources.activity, restored.nodes.activity)
+        self.assertIs(restored.targets.activity, restored.nodes.activity)
+        self.assertEqual(backend.adapter.network.fade_calls, 1)
+
+    def test_frozen_step_loop_reuses_parameters_and_preserves_every_step(self):
+        backend, _ = reset_backend()
+        backend.reset()
+        parameter = SimpleNamespace(_version=0, requires_grad=False)
+        network = backend.adapter.network
+        network.parameters = lambda: [parameter]
+        network.training = False
+        calls = []
+
+        class Stimulus:
+            def zero(self, batches, frames):
+                calls.append(('zero', batches, frames))
+
+            def add_input(self, retina):
+                self.retina = retina
+                calls.append(('input', id(retina)))
+
+            def __call__(self):
+                return Tensor(np.full((1, 1, 45669), float(self.retina.data.flat[0]), np.float32))
+
+        network.stimulus = Stimulus()
+        backend._frozen_params = object()
+        backend._parameter_signature = backend._parameters_signature()
+        updates = []
+
+        def next_state(params, state, frame, dt):
+            self.assertIs(params, backend._frozen_params)
+            self.assertEqual(dt, DT)
+            updates.append(frame.data.copy())
+            return network._state_api(Namespace(nodes=Namespace(
+                activity=Tensor(state.nodes.activity.data+frame.data*dt)), edges=Namespace()))
+
+        network._next_state = next_state
+        value = backend.advance(Tensor(np.array([.25], np.float32)), 28)
+        self.assertEqual(len(updates), 28)
+        self.assertEqual([item for item in calls if item[0] == 'zero'], [('zero', 1, 1)])
+        self.assertEqual(len([item for item in calls if item[0] == 'input']), 1)
+        expected = np.full((45669,), .5, np.float32)
+        for _ in range(28):
+            expected += np.float32(.25)*DT
+        np.testing.assert_array_equal(value, expected)
+        previous = value.copy()
+        parameter._version += 1
+        with self.assertRaisesRegex(ValueError, 'parameters changed'):
+            backend.advance(Tensor(np.array([.25], np.float32)), 1)
+        np.testing.assert_array_equal(backend.state.nodes.activity.data[0], previous)
+        for invalid in (True, 0, 1.5):
+            with self.assertRaises(ValueError):
+                backend.advance(Tensor(np.array([.25], np.float32)), invalid)
+
     def test_decoder_units_and_downward_image_axis_are_explicit(self):
         flow = np.repeat(np.array([[2.], [-3.]]), 721, axis=1)
         result = summarize_flow(flow, centers())

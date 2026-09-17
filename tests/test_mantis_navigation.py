@@ -174,6 +174,64 @@ class NavigationTests(unittest.TestCase):
         self.assertEqual(result['yaw_target'], moving.yaw)
         self.assertEqual(result['detours_completed'], 0)
 
+    def test_unknown_rejoin_view_does_not_interrupt_a_certified_corridor(self):
+        plan = self.navigator.update(sensor_frame(self.state), self.state, request())
+        yaw = plan['yaw_target']
+        turned = state_at(.1, yaw=yaw)
+        self.navigator.update(sensor_frame(turned), turned, request(1))
+        moving = state_at(2., (.60, -.11, 1.1), yaw, .3)
+        frame = sensor_frame(moving)
+        bearing = .04
+        inspection = self.navigator._probe_heading(
+            frame, replace(moving, velocity=np.zeros(3)), bearing, .3)
+        self.assertEqual(inspection['reason'], 'unknown_outside_field_of_view')
+        result = self.navigator.update(frame, moving, request(2, bearing))
+        self.assertEqual(result['phase'], 'passing', result)
+        self.assertEqual(result['reason'], 'observed_detour')
+        self.assertGreater(result['forward_speed'], 0.)
+        self.assertEqual(result['detours_completed'], 0)
+        self.assertEqual(self.navigator.started_s, 0.)
+
+    def test_finite_braking_and_turning_resume_and_physically_pass_fixed_barrier(self):
+        # An independent sensor fixture with finite acceleration/braking and
+        # yaw rate exposes the cost of unnecessary stop/inspect/turn cycles.
+        # The fixed box remains rendered after completion; success also needs
+        # resumed fresh guidance and translation beyond the obstacle, not just
+        # an incremented planner counter. This is not a learned-model trial.
+        position, yaw, speed = np.array([0., 0., 1.1]), 0., 0.
+        completed_at, resumed = None, False
+        box_min, box_max = np.array([1.9, .40]), np.array([2.1, .90])
+        for index in range(281):
+            now = index*.05
+            state = state_at(now, position, yaw, speed)
+            bearing = float(np.arctan2(-position[1], 5.3-position[0]) + .035)
+            # One unavailable interval must neither command translation nor
+            # renew the original fourteen-second attempt budget.
+            selected = request(None) if 1.8 <= now < 2.3 else request(
+                index, bearing, capture_time_s=now-.15 if now >= .15 else 0.,
+                valid_until_s=now+.70)
+            result = self.navigator.update(sensor_frame(state), state, selected)
+            if selected['sequence'] is None:
+                self.assertEqual(result['forward_speed'], 0.)
+                self.assertEqual(self.navigator.started_s, 0.)
+            if result['reason'] == 'detour_complete':
+                completed_at = now
+                self.assertEqual(result['forward_speed'], 0.)
+            if completed_at is not None and result['phase'] == 'following':
+                resumed |= result['forward_speed'] > 0
+            closest = np.clip(position[:2], box_min, box_max)
+            self.assertGreater(np.linalg.norm(position[:2]-closest), .52)
+            yaw += np.clip(wrap_angle(result['yaw_target']-yaw), -.25*.05, .25*.05)
+            speed += np.clip(result['forward_speed']-speed, -.35*.05, .6*.05)
+            position += .05*speed*np.array([np.cos(yaw), np.sin(yaw), 0.])
+            if resumed and position[0] > box_max[0]+.32:
+                break
+        self.assertIsNotNone(completed_at, result)
+        self.assertLess(completed_at, 14.)
+        self.assertEqual(self.navigator.completed, 1)
+        self.assertTrue(resumed)
+        self.assertGreater(position[0], box_max[0]+.32)
+
     def test_reverse_or_side_drift_and_bad_input_fail_closed(self):
         frame = sensor_frame(self.state, None)
         for selected in [request(speed=-.1), request(yaw=float('nan')), request(True),
@@ -193,7 +251,9 @@ class NavigationTests(unittest.TestCase):
         self.navigator.update(sensor_frame(turned), turned, request(1))
         position = [np.cos(heading)*.6, np.sin(heading)*.6, 1.1]
         stopped = state_at(2., position, heading)
-        bearing = float(np.arctan2(-position[1], 5.3-position[0]))
+        # Trigger the retained early view-bound inspection, rather than the
+        # removed inspection of an unknown corridor after .55 m.
+        bearing = float(heading+.24)
         self.assertEqual(self.navigator.update(sensor_frame(stopped), stopped,
                                               request(2, bearing))['phase'], 'rejoining')
         overshoot = replace(stopped, velocity=stopped.rotation[:, 0]*-.04)
@@ -217,7 +277,7 @@ class NavigationTests(unittest.TestCase):
             command_bearing = np.arctan2(-position[1], 5.3-position[0])
             output = self.navigator.update(sensor_frame(state), state,
                                            request(index, command_bearing))
-            if output['reason'] == 'target_route_still_blocked':
+            if output['phase'] == 'rejoining':
                 seen_inspection = True
                 self.assertEqual(output['forward_speed'], 0.)
                 self.assertTrue(np.allclose(self.navigator.origin, [0., 0., 1.1]))
@@ -232,6 +292,30 @@ class NavigationTests(unittest.TestCase):
         self.assertGreater(position[0], 1.)
         self.assertLess(position[1], -.15)
         self.assertEqual(output['forward_speed'], 0.)
+
+    def test_blocked_view_bound_inspection_reprobes_without_renewing_bounds(self):
+        plan = self.navigator.update(sensor_frame(self.state), self.state, request())
+        heading = plan['yaw_target']
+        turned = state_at(.1, yaw=heading)
+        self.navigator.update(sensor_frame(turned), turned, request(1))
+        bearing = heading+.24
+        position = (.1, -.02, 1.1)
+        near_limit = state_at(.3, position, heading)
+        result = self.navigator.update(sensor_frame(near_limit), near_limit, request(2, bearing))
+        self.assertEqual(result['phase'], 'rejoining')
+        facing = state_at(1., position, bearing)
+        result = self.navigator.update(sensor_frame(facing), facing, request(3, bearing))
+        self.assertEqual(result['phase'], 'braking')
+        self.assertEqual(result['reason'], 'target_route_still_blocked')
+        self.assertEqual(result['forward_speed'], 0.)
+        self.assertEqual(self.navigator.started_s, 0.)
+        np.testing.assert_array_equal(self.navigator.origin, self.state.position)
+        replanning = state_at(1.1, position, bearing)
+        result = self.navigator.update(sensor_frame(replanning), replanning, request(4, bearing))
+        self.assertEqual(result['phase'], 'turning')
+        self.assertEqual(self.navigator.started_s, 0.)
+        np.testing.assert_array_equal(self.navigator.origin, self.state.position)
+        self.assertEqual(self.navigator.attempts, 1)
 
     def test_distance_limit_stops_even_with_clear_current_depth(self):
         planned = self.navigator.update(sensor_frame(self.state), self.state, request())

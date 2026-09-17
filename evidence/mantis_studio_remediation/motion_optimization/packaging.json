@@ -1,0 +1,31 @@
+{
+  "schema": "mantis-motion-optimization-evidence-v1",
+  "description": "Original local receipt preserved byte-for-byte; runner paths made relative for reproduction.",
+  "files": {
+    "mantis_motion_before.py": "0b1f9bddd0b77677e9bb303a598f3cfa35e9d9e2e7278150f6e71173256a3663",
+    "profile_equivalence.py": "fe45e87a045c89f77366ae7577cabf29f01cb2d8f002e9fe86eb1678d01dc699",
+    "profile_equivalence.json": "b395e40fd9fbdac343562140ab003929008b6744065acf5f746c94bcd7138a1c"
+  },
+  "measured_source_hashes": {
+    "before": "0b1f9bddd0b77677e9bb303a598f3cfa35e9d9e2e7278150f6e71173256a3663",
+    "after": "e686e31bc45209a3ae8181effa30f5258071a422e9aba1f2eb4f5f21f00d5b26"
+  },
+  "supporting_source_hashes": {
+    "experiments/runtime.py": "b7f4486786fcfd8483cf58bb7cedb1e7807a086f5e6b2549f0dba59b57e6f68f",
+    "experiments/compare_flow.py": "9c7b13ed0429f380e82be9dead91bd85885a0edf08c9d2cb17b769f5478ae736",
+    "experiments/fly_tracking_core.py": "b33a76fe4f5decc959bc40fdebd3c74d121379558be003bfdd323c43ea57b057",
+    "flybrain_sim/research_model.py": "5148fa9e706f33ba8e943b2f4fab4005560d0de363ff2ceb7073d2a2bf0035a0"
+  },
+  "model_manifest_sha256": "86004101adc92e65bff8ba1e583fc9fd2551a7eec2560e601497e756af8e1594",
+  "checkpoint_sha256": "d8a57a022aa18ca338599be713af9db29b89cde4b00098ffe42b78f0d583e46a",
+  "installed_runtime_versions": {
+    "numpy": "1.26.4",
+    "torch": "2.5.1",
+    "torchvision": "0.20.1",
+    "flyvis": "1.2.0",
+    "datamate": "1.0.0"
+  },
+  "no_accuracy_change": true,
+  "no_deadline_or_warmup_change": true,
+  "calibration_or_parameter_search": false
+}
