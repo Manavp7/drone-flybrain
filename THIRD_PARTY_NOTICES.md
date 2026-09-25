@@ -5,6 +5,16 @@ Manavp7. Third-party source, media and separately acquired artifacts retain
 their own terms. This repository does not include pretrained checkpoints,
 downloaded source videos, Python environments or dependency distributions.
 
+## PX4
+
+The optional SIH integration downloads and builds
+[PX4-Autopilot v1.16.2](https://github.com/PX4/PX4-Autopilot/tree/v1.16.2)
+under its upstream BSD 3-Clause license. PX4 source, binaries and dependencies
+remain outside the versioned repository. The build recipe records the source
+pin, a simulator truth timestamp compatibility patch, optional reduced-noise
+sensor patches, board configuration and binary/startup hashes. See
+[the SIH integration](docs/PX4_SIH.md).
+
 ## Mantis walking actor
 
 The Mantis V2 animated character is separately covered by

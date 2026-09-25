@@ -6,9 +6,49 @@ An experimental drone simulator combining **YOLO person tracking, a recurrent Fl
 
 **Mantis** is the project name. Flyvis remains the credited upstream visual neural model.
 
+## PX4 flight-control experiment
+
+The optional [PX4/SIH integration](docs/PX4_SIH.md) connects the actual PX4
+autopilot to Mantis's YOLO/Flyvis guidance in local software simulation. PX4
+controls takeoff, flight and landing; an independent depth gate and expiring
+commands stop forward motion when perception goes stale. MuJoCo renders the
+camera views from SIH motion. Select **PX4 / SIH autopilot** in the browser
+Studio, or run bounded command-line missions. No physical drone or camera is
+required. Studio lets you select an observed person, view the live camera and
+telemetry, and request LAND; the default MuJoCo backend retains its broader
+interactive controls.
+
+The preserved controlled takeoff → selected-person follow → stalled-vision
+hold → landing test passed with **1% of stock simulated sensor noise** and
+ideal rendered RGB/depth. An experimental full-noise estimator calibration is
+available, but reliable full-noise flight remains unresolved. New CLI missions
+add walking, crossing and occlusion scenes, direct/filtered guidance comparisons,
+and separately scored recovery trials.
+
+A 30-second reduced-noise development recovery run passed, with 107 observations,
+93.65% correct-identity time coverage and zero wrong-person observations; a
+stricter retrospective audit confirmed the recovery. The later final recovery
+trial failed a source-clock freshness check after 3.56 seconds. Three browser
+trials displayed the live camera but stopped on source-clock freshness before
+person selection, so the complete PX4 browser workflow has not passed native
+acceptance.
+
+The declared 18-case comparison stopped after two source-clock failures:
+walking with neural guidance ran for 17.04 seconds and direct guidance for
+4.57 seconds. Neither completed its 60-second window; 16 cases were skipped,
+and no complete comparison pairs remain. These additions do not establish
+tracking robustness or a neural advantage. See the
+[upgrade evidence and failures](evidence/px4_upgrade/README.md),
+[current commands](docs/PX4_SIH.md) and
+[preserved earlier evidence](evidence/px4_sih/README.md).
+
+The combined software suite passed **966 tests** in **89.835 seconds** with
+native camera rendering enabled. These checks cover software behavior and
+controlled fixtures; the failed flight trials above remain unqualified.
+
 ## Interactive Flight Studio
 
-The new local studio runs simulations from the browser: choose a detected person,
+The default MuJoCo Studio backend runs simulations from the browser: choose a detected person,
 pause/resume, change follow distance and target motion, and watch camera, neural
 and motor telemetry. Two-person scenes stop on ambiguous selection. A bounded
 depth planner can attempt short detours around an offset obstacle.
@@ -32,7 +72,7 @@ flow**; runtime fixes preserve the same neural outputs. See the
 and the preserved failures. [Studio guide](docs/MANTIS_STUDIO.md) ·
 [Motion methodology and evidence](docs/MANTIS_MOTION.md).
 
-The combined native suite passed **821 tests**. All **16 new videos** from the
+The earlier MuJoCo Studio release passed **821 tests**. Its **16 videos** from
 three failed probes and five final trials decoded successfully; the earlier
 28-video check remains preserved. These controlled fixtures do not establish
 general navigation, identity recognition, neural superiority or physical flight.
@@ -74,10 +114,10 @@ YOLO locates the target. A target cue drives the actual Flyvis network, whose ne
 | Visual neural processing | Actual frozen Flyvis model: 45,669 neurons; eight readout features from 721 L2 cells |
 | Guidance | Neural bearing plus registered target-surface depth for standoff |
 | Safety | Wide-depth stopping gate; missing, stale or unsupported observations prevent forward movement |
-| Stabilization and physics | Conventional autopilot, four rotor forces, motor lag and MuJoCo six-DOF dynamics |
-| Timing | Capture-anchored deadlines; earlier commands remain active while simulated time advances through measured inference delay |
+| Stabilization and physics | Studio: conventional controller and MuJoCo motor dynamics. Optional PX4 experiment: actual PX4 control and SIH dynamics |
+| Timing | Capture-anchored deadlines; PX4 uses separate inference/control processes and conservative source-clock age bounds |
 
-This is a **research simulation**, using ideal depth/state sensors. V1 uses a photograph; V2 and Studio use stylized animated actors. Flyvis is a visual-network component, not a whole fly motor brain. Physical aircraft, real-time onboard execution, PX4 integration, general aerial person recognition and general route planning are not demonstrated.
+This is a **research simulation**, using ideal depth and simulated sensors. V1 uses a photograph; V2, Studio and the PX4 experiment use stylized actors. Flyvis is a visual-network component, not a whole fly motor brain. Physical aircraft, real-time onboard execution, general aerial person recognition and general route planning are not demonstrated. The PX4 scene has rendered geometry but no physical obstacle contacts.
 
 ## Recorded V1 results
 
@@ -108,7 +148,7 @@ python -m pip install -r requirements-test.txt
 python -m unittest discover -s tests -v
 ```
 
-The original public release added 17 model-setup checks and passed **515 tests** in a fresh native-rendering environment. The preserved Mantis 2.1 suite passed **686 tests** locally; the current suite including Studio passed **821 tests**. Camera-rendering tests are skipped by default. With a working native OpenGL context, enable them:
+The original public release added 17 model-setup checks and passed **515 tests** in a fresh native-rendering environment. The preserved Mantis 2.1 suite passed **686 tests** locally; the earlier MuJoCo Studio release passed **821 tests**. Those are historical counts, not results for the new PX4 additions. Camera-rendering tests are skipped by default. With a working native OpenGL context, enable them:
 
 ```bash
 FLIGHT_RENDER_TESTS=1 python -m unittest discover -s tests -v
@@ -151,6 +191,7 @@ Every output directory must be new. Export can resume from completed saved obser
 | `experiments/flight_*.py` | Connected motor-flight fixture, tracking, guidance, safety and reporting |
 | `experiments/mantis_*.py` | Animated actors, controller comparison, replay lab and interactive Studio |
 | `experiments/hybrid_*.py` | Neural readout, target cue and earlier hybrid/video experiments |
+| `experiments/px4_*.py`, `flybrain_sim/px4_sih.py`, `integrations/px4/` | Owned PX4/SIH simulation, camera adapter, separate YOLO/Flyvis worker and build recipe |
 | `perception/` | YOLOX, short-term tracking, registered depth and video/image interfaces |
 | `flybrain_sim/`, `stress/`, `validation/` | Preserved earlier navigation and evaluation software |
 | `integrations/gazebo/` | Observation-only ROS/Gazebo camera bridge; local flight integration remains unverified |

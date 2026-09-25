@@ -2,6 +2,15 @@
 
 These records are a compact evidence subset covering the original V1 release and the Mantis V2 and 2.1 evaluations. The full raw runs are not bundled.
 
+## PX4/SIH experiments
+
+[The original PX4 evidence](px4_sih/README.md) preserves one successful
+reduced-noise following/stalled-vision/landing trial and its earlier failures.
+[The upgrade investigation](px4_upgrade/README.md) adds a controlled turn/depth
+recovery, full-noise hover diagnostics, browser trials and an aborted comparison
+batch. Full-noise reliability and native timing remain unresolved; neither
+bundle demonstrates physical flight or a neural performance advantage.
+
 ## Mantis 2.1
 
 - [`mantis-v2.1-summary.json`](mantis-v2.1-summary.json): two frozen batches with 36 actual-model flights, 20 matched-input bearing comparisons, the broader synthetic readout calibration and its separate verification.

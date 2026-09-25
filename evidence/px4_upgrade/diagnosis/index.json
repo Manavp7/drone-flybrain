@@ -1,0 +1,85 @@
+{
+  "scope": "Original diagnosis receipts and traces; full source snapshots remain in local results",
+  "attempts": [
+    {
+      "run": "px4_normal_baro01",
+      "passed": false,
+      "error": "SitlError: Takeoff did not stabilize",
+      "estimator_profile": "baro",
+      "sensor_profile": "stock sensor noise",
+      "hover_metrics": null
+    },
+    {
+      "run": "px4_normal_settled01",
+      "passed": false,
+      "error": "SitlError: Estimator startup override did not apply: EKF2_REQ_GPS_H",
+      "estimator_profile": "baro_settled",
+      "sensor_profile": "stock sensor noise",
+      "hover_metrics": null
+    },
+    {
+      "run": "px4_normal_covariance01",
+      "passed": false,
+      "error": "SitlError: Takeoff did not stabilize",
+      "estimator_profile": "sih_covariance",
+      "sensor_profile": "stock sensor noise",
+      "hover_metrics": null
+    },
+    {
+      "run": "px4_normal_calibrated01",
+      "passed": false,
+      "error": "SitlError: Takeoff did not stabilize",
+      "estimator_profile": "sih_calibrated",
+      "sensor_profile": "stock sensor noise",
+      "hover_metrics": null
+    },
+    {
+      "run": "px4_normal_calibrated_settled01",
+      "passed": false,
+      "error": "SitlError: Takeoff did not stabilize",
+      "estimator_profile": "sih_calibrated_settled",
+      "sensor_profile": "stock sensor noise",
+      "hover_metrics": null
+    },
+    {
+      "run": "px4_normal_calibrated_settled02",
+      "passed": false,
+      "error": "SitlError: no_fresh_preceding_source_clock_receipt",
+      "estimator_profile": "sih_calibrated_settled",
+      "sensor_profile": "stock sensor noise",
+      "hover_metrics": {
+        "duration_s": 1.0689629169937689,
+        "estimated_position_error_max_m": 0.21351888303667185,
+        "estimated_speed_p95_m_s": 0.08158769115396038,
+        "truth_speed_p95_m_s": 0.1397641931527459,
+        "truth_altitude_range_m": 0.03699999999997772
+      }
+    },
+    {
+      "run": "px4_normal_velocity01",
+      "passed": true,
+      "error": null,
+      "estimator_profile": "sih_velocity_settled",
+      "sensor_profile": "stock sensor noise",
+      "hover_metrics": {
+        "duration_s": 19.99907783299568,
+        "estimated_position_error_max_m": 0.3779022596507269,
+        "estimated_speed_p95_m_s": 0.15115949871568804,
+        "truth_speed_p95_m_s": 0.23622023622035435,
+        "truth_altitude_range_m": 0.39400000000000546
+      }
+    },
+    {
+      "run": "px4_recovery_normal01",
+      "passed": false,
+      "error": "SitlError: Takeoff did not stabilize",
+      "estimator_profile": "sih_velocity_settled",
+      "sensor_profile": "stock sensor noise",
+      "hover_metrics": null
+    }
+  ],
+  "unexecuted_attempt": {
+    "name": "px4_normal_calibrated_settled03",
+    "reason": "Automatic approval review rejected unchanged repeat; no launch or measurements"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "passed": false,
+  "checks": {
+    "stable_takeoff": false,
+    "landed_disarmed": true
+  },
+  "fresh_neural_commands": 0,
+  "follow_displacement_m": 0.0,
+  "selected_depth_reduction_m": 0.0,
+  "advancing_ticks": 0,
+  "hold_ticks": 0,
+  "mode": "autopilot_smoke",
+  "error": "SitlError: Takeoff did not stabilize",
+  "session": "23e254b0-a43e-4a02-a538-a46b106baac2",
+  "actual_px4": true,
+  "limits": [
+    "simulation only",
+    "stylized stationary actors",
+    "ideal RGB and depth",
+    "no obstacle collision physics",
+    "no neural superiority claim"
+  ]
+}

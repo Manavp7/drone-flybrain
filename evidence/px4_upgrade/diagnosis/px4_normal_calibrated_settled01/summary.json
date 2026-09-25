@@ -1,0 +1,38 @@
+{
+  "passed": false,
+  "checks": {
+    "stable_takeoff": false,
+    "landed_disarmed": true
+  },
+  "fresh_neural_commands": 0,
+  "advancing_ticks": 0,
+  "follow_displacement_m": 0.0,
+  "selected_depth_reduction_m": 0.0,
+  "hold_ticks": 0,
+  "mode": "autopilot_smoke",
+  "error": "SitlError: Takeoff did not stabilize",
+  "session": "b9a5ea16-58b4-417e-9877-20f6b899f2e6",
+  "px4_sensor_profile": "stock sensor noise",
+  "estimator_profile": "sih_calibrated_settled",
+  "method": "neural",
+  "trajectory": "stationary",
+  "duration_s": 60.0,
+  "mission_config": {
+    "method": "neural",
+    "trajectory": "stationary",
+    "target_speed": 0.1,
+    "duration_s": 60.0,
+    "faults": false,
+    "recovery": false,
+    "scenario_phase": "starts at stable takeoff using SIH source time",
+    "noise_seed": "upstream SIH srand(1234); asynchronous sensor scheduling may vary"
+  },
+  "actual_px4": true,
+  "limits": [
+    "simulation only",
+    "stylized stationary actors",
+    "ideal RGB and depth",
+    "no obstacle collision physics",
+    "no neural superiority claim"
+  ]
+}

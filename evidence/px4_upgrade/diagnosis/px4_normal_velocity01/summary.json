@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "checks": {
+    "stable_takeoff": true,
+    "landed_disarmed": true
+  },
+  "fresh_neural_commands": 0,
+  "advancing_ticks": 0,
+  "follow_displacement_m": 0.0,
+  "selected_depth_reduction_m": 0.0,
+  "hold_ticks": 0,
+  "mode": "autopilot_smoke",
+  "error": null,
+  "session": "1592ba0b-4524-4298-bcca-6b2cfbec7070",
+  "px4_sensor_profile": "stock sensor noise",
+  "estimator_profile": "sih_velocity_settled",
+  "method": "neural",
+  "trajectory": "stationary",
+  "duration_s": 60.0,
+  "mission_config": {
+    "method": "neural",
+    "trajectory": "stationary",
+    "target_speed": 0.1,
+    "duration_s": 60.0,
+    "faults": false,
+    "recovery": false,
+    "scenario_phase": "starts at stable takeoff using SIH source time",
+    "noise_seed": "upstream SIH srand(1234); asynchronous sensor scheduling may vary"
+  },
+  "mission_start_s": 52800.915735333,
+  "mission_end_s": 52820.94458425,
+  "actual_px4": true,
+  "limits": [
+    "simulation only",
+    "stylized actors",
+    "ideal RGB and depth",
+    "no obstacle collision physics",
+    "no neural superiority claim"
+  ],
+  "hover_metrics": {
+    "duration_s": 19.99907783299568,
+    "estimated_position_error_max_m": 0.3779022596507269,
+    "estimated_speed_p95_m_s": 0.15115949871568804,
+    "truth_speed_p95_m_s": 0.23622023622035435,
+    "truth_altitude_range_m": 0.39400000000000546
+  }
+}

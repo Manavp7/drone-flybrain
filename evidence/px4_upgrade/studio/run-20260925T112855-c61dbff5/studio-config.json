@@ -1,0 +1,1 @@
+{"scenario":"stationary","method":"mantis_neural","duration_s":60.0,"follow_distance_m":3.5,"target_speed":0.0,"detours":false,"motion_mode":"off","recording":"compact","max_recording_mb":32,"backend":"px4_sih","low_noise_sensors":true}

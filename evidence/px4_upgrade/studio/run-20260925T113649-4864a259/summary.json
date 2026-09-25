@@ -1,0 +1,43 @@
+{
+  "passed": false,
+  "checks": {
+    "no_runtime_failure": false,
+    "operator_stop_or_window_complete": false,
+    "landed_if_armed": true
+  },
+  "evaluation_scope": "operator_demonstration",
+  "evaluation_note": "Explicit person switches are not a fixed-identity benchmark",
+  "tracking_success": null,
+  "operator_stopped": false,
+  "flight_started": true,
+  "observations": 34,
+  "accepted_selection_actions": 0,
+  "mode": "neural_follow",
+  "error": "SitlError: no_fresh_preceding_source_clock_receipt",
+  "session": "23344294-e9b3-4bf6-ad28-c9f33204242d",
+  "px4_sensor_profile": "1% stock GPS/baro/mag/IMU noise",
+  "estimator_profile": "stock",
+  "method": "neural",
+  "trajectory": "stationary",
+  "duration_s": 90.0,
+  "mission_config": {
+    "method": "neural",
+    "trajectory": "stationary",
+    "target_speed": 0.0,
+    "duration_s": 90.0,
+    "faults": false,
+    "recovery": false,
+    "scenario_phase": "starts at stable takeoff using SIH source time",
+    "noise_seed": "upstream SIH srand(1234); asynchronous sensor scheduling may vary"
+  },
+  "mission_start_s": 53549.229430208,
+  "mission_end_s": 53560.412231375,
+  "actual_px4": true,
+  "limits": [
+    "simulation only",
+    "stylized actors",
+    "ideal RGB and depth",
+    "no obstacle collision physics",
+    "no neural superiority claim"
+  ]
+}

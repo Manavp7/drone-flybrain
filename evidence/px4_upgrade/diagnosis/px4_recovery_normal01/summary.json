@@ -1,0 +1,128 @@
+{
+  "passed": false,
+  "safety_passed": false,
+  "tracking_success": false,
+  "checks": {
+    "stable_takeoff": false,
+    "landed_disarmed": true,
+    "mission_window_complete": false,
+    "no_runtime_failure": false,
+    "mission_sends_observed": false,
+    "send_evidence_valid": true,
+    "packet_evidence_valid": true,
+    "no_wrong_person": true
+  },
+  "tracking_checks": {
+    "explicit_identity_bound": false,
+    "forward_follow_observed": false,
+    "fresh_guidance_observed": false,
+    "tracking_policy_declared": true,
+    "correct_identity_time_coverage": false,
+    "required_recovery": false
+  },
+  "metrics": {
+    "observation_count": 0,
+    "input_observation_count": 0,
+    "selected_track": null,
+    "intended_actor": null,
+    "mission_duration_s": 71.62574129099812,
+    "tracking_loss_episodes": 1,
+    "tracking_losses": [
+      {
+        "start_s": 52923.878292,
+        "end_s": 52995.504033291,
+        "duration_s": 71.62574129099812
+      }
+    ],
+    "tracking_loss_duration_s": 71.62574129099812,
+    "tracking_available_fraction": 0.0,
+    "correct_identity_duration_fraction": 0.0,
+    "wrong_person_frames": 0,
+    "wrong_person_episodes": 0,
+    "identity_assessable_count": 0,
+    "identity_correct_count": 0,
+    "identity_ambiguous_count": 0,
+    "identity_unknown_count": 0,
+    "identity_unassessable_count": 0,
+    "identity_annotation_mismatch_count": 0,
+    "identity_correct_fraction": null,
+    "command_valid_count": 0,
+    "command_valid_fraction": null,
+    "latency_s": {
+      "p50": null,
+      "p95": null,
+      "maximum": null
+    },
+    "release_latency_s": {
+      "p50": null,
+      "p95": null,
+      "maximum": null
+    },
+    "physical_yaw_span_rad": null,
+    "positive_send_ticks": 0,
+    "unsafe_positive_send_ticks": 0,
+    "send_evidence_valid": true,
+    "invalid_send_indices": [],
+    "malformed_row_count": 0,
+    "packet_integrity_errors": [],
+    "flyvis_observation_calls": 0,
+    "flyvis_reported_total": 0,
+    "flyvis_guidance_commands": 0,
+    "flyvis_positive_send_ticks": 0,
+    "evaluation_scope": "offline projected-mesh association; occlusion/overlap may be unknown; warmup calls excluded"
+  },
+  "recovery": {
+    "passed": false,
+    "checks": {
+      "injected_depth_gap": false,
+      "stationary_memory_used": false,
+      "pose_turn_at_least_002_rad": false,
+      "gap_command_invalid": false,
+      "gap_zero_forward": false,
+      "same_selected_id_recovered": false,
+      "current_depth_valid_recovery": false,
+      "positive_recovery_send": false,
+      "recovered_within_1_2s": false,
+      "evaluator_identity_preserved": false
+    },
+    "gap_count": 0,
+    "gap_sequence": null,
+    "recovery_sequence": null,
+    "pose_turn_rad": null,
+    "recovery_delay_s": null,
+    "gap_send_ticks": 0
+  },
+  "tracking_policy": {
+    "min_correct_identity_duration_fraction": 0.8,
+    "require_recovery": true,
+    "unknown_identity_counts_as_correct": false
+  },
+  "mode": "neural_follow",
+  "error": "SitlError: Takeoff did not stabilize",
+  "session": "44b8addb-e593-498b-b908-6d05d633c08d",
+  "px4_sensor_profile": "stock sensor noise",
+  "estimator_profile": "sih_velocity_settled",
+  "method": "neural",
+  "trajectory": "stationary",
+  "duration_s": 30.0,
+  "mission_config": {
+    "method": "neural",
+    "trajectory": "stationary",
+    "target_speed": 0.1,
+    "duration_s": 30.0,
+    "faults": false,
+    "recovery": true,
+    "scenario_phase": "starts at stable takeoff using SIH source time",
+    "noise_seed": "upstream SIH srand(1234); asynchronous sensor scheduling may vary"
+  },
+  "mission_start_s": null,
+  "mission_end_s": 52995.504033291,
+  "actual_px4": true,
+  "limits": [
+    "simulation only",
+    "stylized actors",
+    "ideal RGB and depth",
+    "no obstacle collision physics",
+    "no neural superiority claim"
+  ]
+}

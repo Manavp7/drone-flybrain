@@ -1,0 +1,46 @@
+[
+  {
+    "event": "failure",
+    "elapsed_s": 2.6691190839992487,
+    "error": "SitlError: Estimator startup override did not apply: EKF2_REQ_GPS_H"
+  },
+  {
+    "event": "failure_clock_diagnostics",
+    "elapsed_s": 2.669413709001674,
+    "source_times": {
+      "attitude": 0.0,
+      "truth": 1.812,
+      "position": 1.788
+    },
+    "age_upper_bounds_s": {
+      "attitude": null,
+      "truth": 0.05491329199867323,
+      "position": 0.05491329199867323
+    },
+    "pending_sync": 0,
+    "clock_reset": false,
+    "recent_sync": [
+      [
+        1.624,
+        52166.903502666
+      ],
+      [
+        1.676,
+        52166.959521583
+      ],
+      [
+        1.724,
+        52167.016335166
+      ],
+      [
+        1.776,
+        52167.072216791
+      ],
+      [
+        1.824,
+        52167.126128541
+      ]
+    ],
+    "status": []
+  }
+]

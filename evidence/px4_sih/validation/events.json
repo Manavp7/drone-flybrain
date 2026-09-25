@@ -1,0 +1,517 @@
+[
+  {
+    "event": "vision_ready",
+    "elapsed_s": 14.946798082994064,
+    "model": {
+      "name": "Mantis shape-diverse neural readout",
+      "readout_sha256": "ea57f5b38d467f632a9b14e7403b6e1f8288dd86f5da5e47d5356a29fb573663",
+      "source_run": "mantis_calibration01",
+      "validation": {
+        "passed": true,
+        "gates": {
+          "horizontal_rmse_improved": true,
+          "other_axes_not_materially_worse": true,
+          "coverage_preserved": true,
+          "complete_neural_evidence": true,
+          "no_phase_grossly_regresses": true
+        },
+        "results": {
+          "heldout_grid": {
+            "observations": 480,
+            "neural_evidence_count": 480,
+            "methods": {
+              "original": {
+                "count": 480,
+                "rmse": [
+                  0.03173299488482807,
+                  0.020055542651072428,
+                  0.09432211391189849
+                ],
+                "mean_absolute": [
+                  0.024008985600020436,
+                  0.012749801070648771,
+                  0.07961849491705592
+                ],
+                "maximum_absolute": [
+                  0.1456574279612404,
+                  0.11195195128088463,
+                  0.1845280887015019
+                ],
+                "bias": [
+                  -0.007699617998291346,
+                  0.0003156740423881077,
+                  0.05072914163855989
+                ],
+                "available_count": 418,
+                "coverage": 0.8708333333333333
+              },
+              "calibrated": {
+                "count": 480,
+                "rmse": [
+                  0.025187244145947585,
+                  0.019511694568151754,
+                  0.02742767472050002
+                ],
+                "mean_absolute": [
+                  0.015881464734838032,
+                  0.01296387108050772,
+                  0.019573308398515017
+                ],
+                "maximum_absolute": [
+                  0.15560042156674703,
+                  0.11172457277803395,
+                  0.11462395473601994
+                ],
+                "bias": [
+                  0.00010586382126717876,
+                  -0.0007289667974416366,
+                  -0.001348688916196282
+                ],
+                "available_count": 480,
+                "coverage": 1.0
+              }
+            },
+            "rmse_change_fraction": [
+              0.2062758577511412,
+              0.027117096374931204,
+              0.7092126800071633
+            ]
+          },
+          "heldout_motion": {
+            "observations": 64,
+            "neural_evidence_count": 64,
+            "methods": {
+              "original": {
+                "count": 64,
+                "rmse": [
+                  0.015771301579927146,
+                  0.006301477362745381,
+                  0.08936517466550646
+                ],
+                "mean_absolute": [
+                  0.012417075236856392,
+                  0.005675565554461585,
+                  0.0784471273984308
+                ],
+                "maximum_absolute": [
+                  0.03801614480489285,
+                  0.01168562104484644,
+                  0.15832527420664133
+                ],
+                "bias": [
+                  -0.008260908706540407,
+                  0.00036177023933387165,
+                  0.04814771039019483
+                ],
+                "available_count": 58,
+                "coverage": 0.90625
+              },
+              "calibrated": {
+                "count": 64,
+                "rmse": [
+                  0.013963068676111641,
+                  0.005316493280391986,
+                  0.009409073386124928
+                ],
+                "mean_absolute": [
+                  0.012545675282677589,
+                  0.00470378246208431,
+                  0.007452869901974218
+                ],
+                "maximum_absolute": [
+                  0.023287783031465115,
+                  0.008869777315844207,
+                  0.02061989498282296
+                ],
+                "bias": [
+                  -0.0008422984972880289,
+                  0.0012324109067636956,
+                  -0.0029039530193014293
+                ],
+                "available_count": 64,
+                "coverage": 1.0
+              }
+            },
+            "rmse_change_fraction": [
+              0.1146533718001389,
+              0.15631002472160982,
+              0.8947120797184915
+            ]
+          },
+          "combined": {
+            "observations": 544,
+            "neural_evidence_count": 544,
+            "methods": {
+              "original": {
+                "count": 544,
+                "rmse": [
+                  0.030294837817355546,
+                  0.01896248478899877,
+                  0.09375254866437756
+                ],
+                "mean_absolute": [
+                  0.022645231439648198,
+                  0.011917538068744396,
+                  0.07948068697368826
+                ],
+                "maximum_absolute": [
+                  0.1456574279612404,
+                  0.11195195128088463,
+                  0.1845280887015019
+                ],
+                "bias": [
+                  -0.007765652199261821,
+                  0.000321097124381727,
+                  0.050425443844634606
+                ],
+                "available_count": 476,
+                "coverage": 0.875
+              },
+              "calibrated": {
+                "count": 544,
+                "rmse": [
+                  0.024139171958995446,
+                  0.018418538575566204,
+                  0.025965159272259106
+                ],
+                "mean_absolute": [
+                  0.015489018916936803,
+                  0.01199209594892849,
+                  0.01814737445774551
+                ],
+                "maximum_absolute": [
+                  0.15560042156674703,
+                  0.11172457277803395,
+                  0.11462395473601994
+                ],
+                "bias": [
+                  -5.684686798139734e-06,
+                  -0.0004982164792998329,
+                  -0.0015316611636204168
+                ],
+                "available_count": 544,
+                "coverage": 1.0
+              }
+            },
+            "rmse_change_fraction": [
+              0.2031919066697757,
+              0.028685386935584534,
+              0.7230458303036524
+            ]
+          }
+        },
+        "thresholds": {
+          "minimum_horizontal_rmse_reduction_fraction": 0.1,
+          "maximum_other_axis_rmse_multiplier": 1.25,
+          "maximum_other_axis_rmse_addition": 0.002,
+          "maximum_per_phase_axis_rmse_multiplier": 1.25,
+          "maximum_per_phase_axis_rmse_addition": 0.003,
+          "minimum_new_coverage_relative_to_original": 1.0,
+          "minimum_neural_evidence_fraction": 1.0
+        },
+        "units": "Normalized center coordinates x/y; height as a fraction of391pixels",
+        "error_denominator": "Every predeclared held-out observation, no selective abstention",
+        "direct_geometry_is_exact_box_reconstruction_oracle": true,
+        "neural_superiority_over_geometry_or_filter_evaluated": false,
+        "physical_flight_evaluated": false,
+        "completed_utc": "2026-09-14T06:17:53.589912+00:00",
+        "attempt": 1,
+        "original_readout_sha256": "0b69cf817f881cb1cd9064f50cb7deb32a22edb3c53ee06dad78245f0c4a898d",
+        "calibrated_readout_sha256": "ea57f5b38d467f632a9b14e7403b6e1f8288dd86f5da5e47d5356a29fb573663",
+        "observations": 1283,
+        "neural_steps": 6415
+      },
+      "fit_frozen": {
+        "frozen_utc": "2026-09-14T06:16:52.086251+00:00",
+        "trained_phase_names": [
+          "train_grid",
+          "train_motion"
+        ],
+        "ridge": 0.0001,
+        "training_observations": 739,
+        "training_artifact_hashes": {
+          "train_grid": "a6f6a6f11371353c09bac9ff5d2c1db869aafdca3f75062c029adab7201850c5",
+          "train_motion": "224abdc059ad622217bc58893825f501c5c77e0fcdf0cb1002017f6ca5fac76d"
+        },
+        "candidate_readout_sha256": "ea57f5b38d467f632a9b14e7403b6e1f8288dd86f5da5e47d5356a29fb573663",
+        "heldout_inference_started": false,
+        "prediction_inputs": [
+          "mean_x",
+          "mean_y",
+          "std_x",
+          "std_y",
+          "cov_xy",
+          "log1p_mass",
+          "mean_evidence",
+          "peak_evidence"
+        ]
+      },
+      "definition_sha256": "4b926d72190eb226a2966d4d913b659cb9dfdab22e64db05db5c8ddd47ecb62d",
+      "model_manifest_sha256": "86004101adc92e65bff8ba1e583fc9fd2551a7eec2560e601497e756af8e1594",
+      "prediction_inputs": "Eight actual neural features only; no target geometry or evaluator truth",
+      "training_scope": "Synthetic rectangle geometry; no recorded actor flight or benchmark data",
+      "no_advantage_over_conventional_methods_claimed": true
+    }
+  },
+  {
+    "event": "owned_px4_verified",
+    "elapsed_s": 17.47378645799472,
+    "pid": 28236,
+    "build": {
+      "px4_commit": "54f0455ffcd755534539a7cf33a09a20bf71d29d",
+      "profile": "px4_sitl_mantis",
+      "build_recipe_sha256": "0d05af3b60196bbf1b823680eaf7c05a47cb6289dc86613e618503579610e06b",
+      "binary_sha256": "6cab241638408462171d90e2c5211cecd61c6910150f746752c25c5b66f462a1",
+      "startup_tree_sha256": "1a267e74fc845051b74e790333c9bd78194c8fd6f8531f1b3fc4844a97744d25",
+      "overlay_sha256": "0448befccd6be884dd02075647ed8dd7968660363d56a9312bcaa7ecea1de3fd",
+      "truth_header_sha256": "526426b4cb6bc38a20076a84e33855e0595157b51914dff054d5f52ada2f7fba",
+      "timestamp_patch": "msg.time_usec = math::min(math::min(att.timestamp_sample, gpos.timestamp_sample), math::min(lpos.timestamp_sample, angular_velocity.timestamp_sample));",
+      "sensor_noise_patches": {
+        "src/modules/simulation/sensor_gps_sim/SensorGpsSim.cpp": {
+          "original_sha256": "c5ac246e2b4fa0073e2efab153145f3f8f0af28c336df7b200816978da451287",
+          "patched_sha256": "767e5c3ab63fd26b07c1ac417517de5d419e27c63047a4e8469d1e59e977190c"
+        },
+        "src/modules/simulation/sensor_baro_sim/SensorBaroSim.cpp": {
+          "original_sha256": "b818d54c968bcfc810291e9d594affb7ef7c10290fcdecd3338ebd46507af1d5",
+          "patched_sha256": "56aa5838c4a35ef1b70446c538bf9054d7590c392e8953efdbbd1d5d21c0786a"
+        },
+        "src/modules/simulation/sensor_mag_sim/SensorMagSim.cpp": {
+          "original_sha256": "edf78345a7edbcb649b60b2c92f4919f7f5c9e4330551f2fe88660d2cc6a2053",
+          "patched_sha256": "04cd268c6ff4b9762f54dfb3ee797424785c5aac63600bf20223be8db0fe3731"
+        },
+        "src/modules/simulation/simulator_sih/sih.cpp": {
+          "original_sha256": "aed62f325014cf284e861b4f3bb20e36f58e94af493143208232855dc5a5951b",
+          "patched_sha256": "6ccbd097b88a988f2d77e52207fc7ea40e830899f1afb6cb04978cd87a082857"
+        }
+      },
+      "sensor_mode_switch": "MANTIS_SIH_LOW_NOISE_SENSORS=1 gives 1% noise; absent means stock noise",
+      "submodules": [
+        "-f47ce7b5fbbb3aa43d33d2be1f6cd3746b13d5bf Tools/simulation/flightgear/flightgear_bridge",
+        "-70683dc759cbd3ebccfa78429b564f8b1fb5d149 Tools/simulation/gazebo-classic/sitl_gazebo-classic",
+        "-e05f4312d3f28aa621157610584a4870406cb6d3 Tools/simulation/gz",
+        "-66b764ada522893c05224950aa6268c809f8e48a Tools/simulation/jmavsim/jMAVSim",
+        "-68de2cc63ded9a0d6641d45e9eb3ed2b43454cba Tools/simulation/jsbsim/jsbsim_bridge",
+        "-85151aaf6ba8b24ce82b387e088452c63f7e2096 boards/modalai/voxl2/libfc-sensor-api",
+        "-e37940d8535f603a16b8f6f21c21edaf584218aa platforms/nuttx/NuttX/apps",
+        "-886acbbdb4f061e5c0ce1a76afbcfa7cb7df9849 platforms/nuttx/NuttX/nuttx",
+        "-c488af4e8807de80739aa48efd2ea51614dd8195 src/drivers/actuators/vertiq_io/iq-module-communication-cpp",
+        "-36a01e428b110ff84c8babe5b65667b5e3037d5e src/drivers/cyphal/legacy_data_types",
+        "-5c69d451ab0787a81dcb615692d707f2a286f5e5 src/drivers/cyphal/libcanard",
+        "-d0bd6516dac8ff61287fe49a9f2c75e7d4dc1b8e src/drivers/cyphal/public_regulated_data_types",
+        " 4cea5de87ce7e2a52e5289bd3639fd8eb770eafa src/drivers/gps/devices (4cea5de)",
+        "-993be80a62ec957c01fb41115b83663959a49f46 src/drivers/uavcan/libdronecan/dsdl",
+        "-19fdf2e5b383243ccdb1094edae0603cf11469e8 src/drivers/uavcan/libdronecan/libuavcan/dsdl_compiler/pydronecan",
+        "-314887ca403c2fb0a0316add22672102936ed36c src/lib/cdrstream/cyclonedds",
+        "-7790c70717e09c003711f6f65015666c223fc283 src/lib/cdrstream/rosidl",
+        "-673f5ce29015a9bba3c96792920a10601b5b0718 src/lib/crypto/libtomcrypt",
+        "-fd73d7630b9d3ed5a79d613ff680a549e9780de7 src/lib/crypto/libtommath",
+        "-baca5d31259c598540e4d1284bc8d8f793abf83a src/lib/crypto/monocypher",
+        " 9ef591c447fe0386d698bf6fb9a6d27e43988ee4 src/lib/events/libevents (9ef591c)",
+        " 052e6de72f67f1777198bce98f3de62f7f3c16a0 src/lib/heatshrink/heatshrink (heads/main)",
+        " 5bfd76d80281f6027134e854aafe6cb3dbfbe9e1 src/modules/mavlink/mavlink (5bfd76d)",
+        " 4960d4d20dcf9fc2981785355567fc5773416bc9 src/modules/mavlink/mavlink/pymavlink (4960d4d)",
+        "-711aef423edd1820347b866d1e4164832df35d04 src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client",
+        "-f093aa7955bb24dfa3e626de084583711e3bac5c src/modules/zenoh/zenoh-pico"
+      ]
+    },
+    "px4_sensor_profile": "1% stock GPS/baro/mag/IMU noise"
+  },
+  {
+    "event": "waiting_for_estimator",
+    "elapsed_s": 18.012726082997688,
+    "reason": "estimator_unhealthy",
+    "status": []
+  },
+  {
+    "event": "armed_offboard",
+    "elapsed_s": 22.13665824999771
+  },
+  {
+    "event": "takeoff_progress",
+    "elapsed_s": 22.137073915997462,
+    "sample": {
+      "elapsed_s": 0.0002012089971685782,
+      "position_ned": [
+        0.0006539222085848451,
+        -0.0014907283475622535,
+        0.00311279296875
+      ],
+      "target_ned": [
+        0.003116362728178501,
+        0.0003708678996190429,
+        -1.099267578125
+      ],
+      "velocity_ned": [
+        -0.00027179031167179346,
+        -0.0014687260845676064,
+        0.00035874531022273004
+      ],
+      "truth_altitude_m": 489.399,
+      "source_time_s": 5.356,
+      "stable": false
+    }
+  },
+  {
+    "event": "takeoff_progress",
+    "elapsed_s": 27.164007540995954,
+    "sample": {
+      "elapsed_s": 5.027138917001139,
+      "position_ned": [
+        0.008163719438016415,
+        0.0033427525777369738,
+        -0.58355712890625
+      ],
+      "target_ned": [
+        0.003116362728178501,
+        0.0003708678996190429,
+        -1.099267578125
+      ],
+      "velocity_ned": [
+        -0.0016242725541815162,
+        -0.000753417843952775,
+        -0.27263516187667847
+      ],
+      "truth_altitude_m": 490.003,
+      "source_time_s": 9.472,
+      "stable": false
+    }
+  },
+  {
+    "event": "stable_takeoff",
+    "elapsed_s": 31.370367624993378,
+    "position_ned": [
+      0.005650496110320091,
+      0.005834516137838364,
+      -1.0263671875
+    ]
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 32.22139412499382,
+    "valid": false,
+    "reason": "stale_perception_result",
+    "capture_age_s": 0.7721782919979887
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 32.60309354099445,
+    "valid": false,
+    "reason": "selected_person_unavailable",
+    "capture_age_s": 0.41505745900212787
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 32.905165832999046,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.35676754099404206
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 33.24394208299782,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.39160808399901725
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 33.59928070799651,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.39135941700078547
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 34.004046290996484,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.46183004199701827
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 34.3800350829988,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.42158520800148835
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 34.713706082999124,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.3651216669968562
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 35.006617374994676,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.32129479099967284
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 35.29265687499719,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.3129333749966463
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 35.56681337499322,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.328454916998453
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 35.81202408299578,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.29845108299923595
+  },
+  {
+    "event": "vision_stall_started",
+    "elapsed_s": 35.870559457995114,
+    "duration_s": 4.0,
+    "sent_speed": 0.45,
+    "command_sequence": 11,
+    "capture_time_s": 50711.277103583,
+    "expiry_s": 50712.177103583,
+    "following_metrics": {
+      "fresh_neural_commands": 10,
+      "advancing_ticks": 59,
+      "follow_displacement_m": 0.32929807602060784,
+      "selected_depth_reduction_m": 0.2248530387878418
+    }
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 36.05258150000009,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.29542504099663347
+  },
+  {
+    "event": "worker_stall_injected",
+    "elapsed_s": 36.0823739999978
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 40.23210016599478,
+    "valid": false,
+    "reason": "stale_perception_result",
+    "capture_age_s": 4.2339119169992045
+  },
+  {
+    "event": "mission_window_complete",
+    "elapsed_s": 41.87210624999716
+  },
+  {
+    "event": "land_requested",
+    "elapsed_s": 41.924971749998804
+  },
+  {
+    "event": "landed_disarmed",
+    "elapsed_s": 52.735797374996764
+  }
+]

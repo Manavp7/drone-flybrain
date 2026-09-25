@@ -1,0 +1,402 @@
+[
+  {
+    "event": "owned_px4_verified",
+    "elapsed_s": 2.672693583997898,
+    "pid": 96856,
+    "build": {
+      "px4_commit": "54f0455ffcd755534539a7cf33a09a20bf71d29d",
+      "profile": "px4_sitl_mantis",
+      "build_recipe_sha256": "0d05af3b60196bbf1b823680eaf7c05a47cb6289dc86613e618503579610e06b",
+      "binary_sha256": "6cab241638408462171d90e2c5211cecd61c6910150f746752c25c5b66f462a1",
+      "startup_tree_sha256": "1a267e74fc845051b74e790333c9bd78194c8fd6f8531f1b3fc4844a97744d25",
+      "overlay_sha256": "0448befccd6be884dd02075647ed8dd7968660363d56a9312bcaa7ecea1de3fd",
+      "truth_header_sha256": "526426b4cb6bc38a20076a84e33855e0595157b51914dff054d5f52ada2f7fba",
+      "timestamp_patch": "msg.time_usec = math::min(math::min(att.timestamp_sample, gpos.timestamp_sample), math::min(lpos.timestamp_sample, angular_velocity.timestamp_sample));",
+      "sensor_noise_patches": {
+        "src/modules/simulation/sensor_gps_sim/SensorGpsSim.cpp": {
+          "original_sha256": "c5ac246e2b4fa0073e2efab153145f3f8f0af28c336df7b200816978da451287",
+          "patched_sha256": "767e5c3ab63fd26b07c1ac417517de5d419e27c63047a4e8469d1e59e977190c"
+        },
+        "src/modules/simulation/sensor_baro_sim/SensorBaroSim.cpp": {
+          "original_sha256": "b818d54c968bcfc810291e9d594affb7ef7c10290fcdecd3338ebd46507af1d5",
+          "patched_sha256": "56aa5838c4a35ef1b70446c538bf9054d7590c392e8953efdbbd1d5d21c0786a"
+        },
+        "src/modules/simulation/sensor_mag_sim/SensorMagSim.cpp": {
+          "original_sha256": "edf78345a7edbcb649b60b2c92f4919f7f5c9e4330551f2fe88660d2cc6a2053",
+          "patched_sha256": "04cd268c6ff4b9762f54dfb3ee797424785c5aac63600bf20223be8db0fe3731"
+        },
+        "src/modules/simulation/simulator_sih/sih.cpp": {
+          "original_sha256": "aed62f325014cf284e861b4f3bb20e36f58e94af493143208232855dc5a5951b",
+          "patched_sha256": "6ccbd097b88a988f2d77e52207fc7ea40e830899f1afb6cb04978cd87a082857"
+        }
+      },
+      "sensor_mode_switch": "MANTIS_SIH_LOW_NOISE_SENSORS=1 gives 1% noise; absent means stock noise",
+      "submodules": [
+        "-f47ce7b5fbbb3aa43d33d2be1f6cd3746b13d5bf Tools/simulation/flightgear/flightgear_bridge",
+        "-70683dc759cbd3ebccfa78429b564f8b1fb5d149 Tools/simulation/gazebo-classic/sitl_gazebo-classic",
+        "-e05f4312d3f28aa621157610584a4870406cb6d3 Tools/simulation/gz",
+        "-66b764ada522893c05224950aa6268c809f8e48a Tools/simulation/jmavsim/jMAVSim",
+        "-68de2cc63ded9a0d6641d45e9eb3ed2b43454cba Tools/simulation/jsbsim/jsbsim_bridge",
+        "-85151aaf6ba8b24ce82b387e088452c63f7e2096 boards/modalai/voxl2/libfc-sensor-api",
+        "-e37940d8535f603a16b8f6f21c21edaf584218aa platforms/nuttx/NuttX/apps",
+        "-886acbbdb4f061e5c0ce1a76afbcfa7cb7df9849 platforms/nuttx/NuttX/nuttx",
+        "-c488af4e8807de80739aa48efd2ea51614dd8195 src/drivers/actuators/vertiq_io/iq-module-communication-cpp",
+        "-36a01e428b110ff84c8babe5b65667b5e3037d5e src/drivers/cyphal/legacy_data_types",
+        "-5c69d451ab0787a81dcb615692d707f2a286f5e5 src/drivers/cyphal/libcanard",
+        "-d0bd6516dac8ff61287fe49a9f2c75e7d4dc1b8e src/drivers/cyphal/public_regulated_data_types",
+        " 4cea5de87ce7e2a52e5289bd3639fd8eb770eafa src/drivers/gps/devices (4cea5de)",
+        "-993be80a62ec957c01fb41115b83663959a49f46 src/drivers/uavcan/libdronecan/dsdl",
+        "-19fdf2e5b383243ccdb1094edae0603cf11469e8 src/drivers/uavcan/libdronecan/libuavcan/dsdl_compiler/pydronecan",
+        "-314887ca403c2fb0a0316add22672102936ed36c src/lib/cdrstream/cyclonedds",
+        "-7790c70717e09c003711f6f65015666c223fc283 src/lib/cdrstream/rosidl",
+        "-673f5ce29015a9bba3c96792920a10601b5b0718 src/lib/crypto/libtomcrypt",
+        "-fd73d7630b9d3ed5a79d613ff680a549e9780de7 src/lib/crypto/libtommath",
+        "-baca5d31259c598540e4d1284bc8d8f793abf83a src/lib/crypto/monocypher",
+        " 9ef591c447fe0386d698bf6fb9a6d27e43988ee4 src/lib/events/libevents (9ef591c)",
+        " 052e6de72f67f1777198bce98f3de62f7f3c16a0 src/lib/heatshrink/heatshrink (heads/main)",
+        " 5bfd76d80281f6027134e854aafe6cb3dbfbe9e1 src/modules/mavlink/mavlink (5bfd76d)",
+        " 4960d4d20dcf9fc2981785355567fc5773416bc9 src/modules/mavlink/mavlink/pymavlink (4960d4d)",
+        "-711aef423edd1820347b866d1e4164832df35d04 src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client",
+        "-f093aa7955bb24dfa3e626de084583711e3bac5c src/modules/zenoh/zenoh-pico"
+      ]
+    },
+    "px4_sensor_profile": "stock sensor noise"
+  },
+  {
+    "event": "waiting_for_estimator",
+    "elapsed_s": 3.160199334000936,
+    "reason": "estimator_unhealthy",
+    "status": []
+  },
+  {
+    "event": "armed_offboard",
+    "elapsed_s": 5.472384250002506
+  },
+  {
+    "event": "takeoff_progress",
+    "elapsed_s": 5.472693625000829,
+    "sample": {
+      "elapsed_s": 4.900000203633681e-05,
+      "position_ned": [
+        0.10224391520023346,
+        -0.1117485985159874,
+        -0.000579833984375
+      ],
+      "target_ned": [
+        0.08445397019386292,
+        -0.012910518795251846,
+        -1.078851318359375
+      ],
+      "velocity_ned": [
+        0.00972625333815813,
+        -0.14441737532615662,
+        -0.06986711919307709
+      ],
+      "truth_altitude_m": 489.399,
+      "truth_velocity_ned": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "truth_lat_lon": [
+        47.3977432,
+        8.5455942
+      ],
+      "source_time_s": 4.328,
+      "stable": false
+    }
+  },
+  {
+    "event": "takeoff_progress",
+    "elapsed_s": 10.509049416999915,
+    "sample": {
+      "elapsed_s": 5.036551542005327,
+      "position_ned": [
+        0.044605717062950134,
+        -0.12678943574428558,
+        -0.568695068359375
+      ],
+      "target_ned": [
+        0.08445397019386292,
+        -0.012910518795251846,
+        -1.078851318359375
+      ],
+      "velocity_ned": [
+        -0.02468765527009964,
+        0.056336238980293274,
+        -0.1752442568540573
+      ],
+      "truth_altitude_m": 490.031,
+      "truth_velocity_ned": [
+        0.06,
+        -0.09,
+        -0.3
+      ],
+      "truth_lat_lon": [
+        47.3977435,
+        8.5455919
+      ],
+      "source_time_s": 8.808,
+      "stable": false
+    }
+  },
+  {
+    "event": "takeoff_progress",
+    "elapsed_s": 15.580422416998772,
+    "sample": {
+      "elapsed_s": 10.107930459002091,
+      "position_ned": [
+        0.17321166396141052,
+        0.027269454672932625,
+        -0.737030029296875
+      ],
+      "target_ned": [
+        0.08445397019386292,
+        -0.012910518795251846,
+        -1.078851318359375
+      ],
+      "velocity_ned": [
+        -0.09728261828422546,
+        -0.11863000690937042,
+        -0.2710109055042267
+      ],
+      "truth_altitude_m": 490.156,
+      "truth_velocity_ned": [
+        -0.09,
+        -0.22,
+        -0.28
+      ],
+      "truth_lat_lon": [
+        47.3977441,
+        8.5455943
+      ],
+      "source_time_s": 13.36,
+      "stable": false
+    }
+  },
+  {
+    "event": "takeoff_progress",
+    "elapsed_s": 20.68996283400338,
+    "sample": {
+      "elapsed_s": 15.21746733400505,
+      "position_ned": [
+        0.02518058940768242,
+        0.3311500549316406,
+        -0.95947265625
+      ],
+      "target_ned": [
+        0.08445397019386292,
+        -0.012910518795251846,
+        -1.078851318359375
+      ],
+      "velocity_ned": [
+        0.033248838037252426,
+        -0.09513850510120392,
+        -0.13635952770709991
+      ],
+      "truth_altitude_m": 490.417,
+      "truth_velocity_ned": [
+        0.0,
+        0.0,
+        -0.16
+      ],
+      "truth_lat_lon": [
+        47.3977424,
+        8.5455986
+      ],
+      "source_time_s": 17.92,
+      "stable": false
+    }
+  },
+  {
+    "event": "takeoff_progress",
+    "elapsed_s": 25.801374292001128,
+    "sample": {
+      "elapsed_s": 20.328852334001567,
+      "position_ned": [
+        0.008908162824809551,
+        -0.07561089843511581,
+        -1.179534912109375
+      ],
+      "target_ned": [
+        0.08445397019386292,
+        -0.012910518795251846,
+        -1.078851318359375
+      ],
+      "velocity_ned": [
+        0.0580950528383255,
+        -0.12959784269332886,
+        -0.013308262452483177
+      ],
+      "truth_altitude_m": 490.736,
+      "truth_velocity_ned": [
+        0.04,
+        0.0,
+        -0.15
+      ],
+      "truth_lat_lon": [
+        47.3977426,
+        8.5455933
+      ],
+      "source_time_s": 22.436,
+      "stable": false
+    }
+  },
+  {
+    "event": "takeoff_progress",
+    "elapsed_s": 30.853085000002466,
+    "sample": {
+      "elapsed_s": 25.380585416998656,
+      "position_ned": [
+        0.10557588189840317,
+        -0.06344999372959137,
+        -1.102020263671875
+      ],
+      "target_ned": [
+        0.08445397019386292,
+        -0.012910518795251846,
+        -1.078851318359375
+      ],
+      "velocity_ned": [
+        0.015523558482527733,
+        0.15551972389221191,
+        0.097788006067276
+      ],
+      "truth_altitude_m": 490.492,
+      "truth_velocity_ned": [
+        0.0,
+        0.17,
+        0.06
+      ],
+      "truth_lat_lon": [
+        47.3977432,
+        8.5455934
+      ],
+      "source_time_s": 26.92,
+      "stable": false
+    }
+  },
+  {
+    "event": "takeoff_progress",
+    "elapsed_s": 35.91572533400176,
+    "sample": {
+      "elapsed_s": 30.443220500004827,
+      "position_ned": [
+        -0.0038623951841145754,
+        0.14117252826690674,
+        -1.24755859375
+      ],
+      "target_ned": [
+        0.08445397019386292,
+        -0.012910518795251846,
+        -1.078851318359375
+      ],
+      "velocity_ned": [
+        0.11477555334568024,
+        -0.13535955548286438,
+        0.13106460869312286
+      ],
+      "truth_altitude_m": 490.63,
+      "truth_velocity_ned": [
+        0.09,
+        -0.04,
+        0.17
+      ],
+      "truth_lat_lon": [
+        47.397742099999995,
+        8.545596699999999
+      ],
+      "source_time_s": 31.44,
+      "stable": false
+    }
+  },
+  {
+    "event": "takeoff_progress",
+    "elapsed_s": 40.936547500001325,
+    "sample": {
+      "elapsed_s": 35.464050041999144,
+      "position_ned": [
+        0.17135027050971985,
+        -0.10454512387514114,
+        -0.89703369140625
+      ],
+      "target_ned": [
+        0.08445397019386292,
+        -0.012910518795251846,
+        -1.078851318359375
+      ],
+      "velocity_ned": [
+        -0.01243633683770895,
+        0.027917928993701935,
+        -0.08190955966711044
+      ],
+      "truth_altitude_m": 490.292,
+      "truth_velocity_ned": [
+        -0.1,
+        -0.05,
+        -0.14
+      ],
+      "truth_lat_lon": [
+        47.397743899999995,
+        8.5455925
+      ],
+      "source_time_s": 35.84,
+      "stable": false
+    }
+  },
+  {
+    "event": "failure",
+    "elapsed_s": 45.491921749999165,
+    "error": "SitlError: Takeoff did not stabilize"
+  },
+  {
+    "event": "failure_clock_diagnostics",
+    "elapsed_s": 45.49202408400015,
+    "source_times": {
+      "attitude": 39.908,
+      "truth": 39.92,
+      "position": 39.904
+    },
+    "age_upper_bounds_s": {
+      "attitude": 0.03147037499729777,
+      "truth": 0.03147037499729777,
+      "position": 0.03147037499729777
+    },
+    "pending_sync": 0,
+    "clock_reset": false,
+    "recent_sync": [
+      [
+        39.82,
+        52273.108082583
+      ],
+      [
+        39.844,
+        52273.138347916
+      ],
+      [
+        39.872,
+        52273.169484375
+      ],
+      [
+        39.896,
+        52273.195441208
+      ],
+      [
+        39.924,
+        52273.226030208
+      ]
+    ],
+    "status": [
+      "Armed by external command\t",
+      "Takeoff detected\t"
+    ]
+  },
+  {
+    "event": "land_requested",
+    "elapsed_s": 45.548396416998
+  },
+  {
+    "event": "landed_disarmed",
+    "elapsed_s": 56.11180529199919
+  }
+]

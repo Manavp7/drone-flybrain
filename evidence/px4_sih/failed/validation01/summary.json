@@ -1,0 +1,32 @@
+{
+  "passed": false,
+  "checks": {
+    "stable_takeoff": false,
+    "landed_disarmed": true,
+    "fresh_neural_commands": false,
+    "depth_approved_forward_commands": false,
+    "translated_at_least_30cm": false,
+    "selected_depth_reduced_20cm": false,
+    "advancing_at_stall": false,
+    "actual_worker_stall": false,
+    "delayed_output_rejected": false,
+    "stale_command_expired": false,
+    "stale_hold_slowdown": false
+  },
+  "fresh_neural_commands": 0,
+  "follow_displacement_m": 0.0,
+  "selected_depth_reduction_m": 0.0,
+  "advancing_ticks": 0,
+  "hold_ticks": 0,
+  "mode": "neural_follow",
+  "error": "SitlError: no_fresh_preceding_source_clock_receipt",
+  "session": "e61bf1c8-de44-4462-8951-776a2035d2b0",
+  "actual_px4": true,
+  "limits": [
+    "simulation only",
+    "stylized stationary actors",
+    "ideal RGB and depth",
+    "no obstacle collision physics",
+    "no neural superiority claim"
+  ]
+}

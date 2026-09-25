@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "model_family": "flyvis_visual_dmn",
+  "mode": "shadow_only",
+  "source_repository": "https://github.com/TuragaLab/flyvis",
+  "source_revision": "92b3845cc426dd309a1a0e1b3890156c42e14021",
+  "flyvis_version": "1.2.0",
+  "publication": "https://doi.org/10.1038/s41586-024-07939-3",
+  "model_dir": "flyvis_0000_000",
+  "checkpoint": "best_chkpt",
+  "files": {
+    "_meta.yaml": "2aa8a9505324c82bbb4011ee2f7c375b5f8b1bddde1a5281e038baecf91fc5dd",
+    "best_chkpt": "d8a57a022aa18ca338599be713af9db29b89cde4b00098ffe42b78f0d583e46a",
+    "chkpts/chkpt_00000": "d0e42857e738d0315897c2d50fde9eb3fb1a3fb1f071d55dfc13d53d72bccc3f",
+    "validation/loss.h5": "0e8484829430e76fde3b20e76e0369ceb2ac6e9cd22958a3a024a758e3c28025",
+    "validation_loss.h5": "7baba024c7363f57234771ad103acbdd9e8c107b75464f45f7d249be06248dff"
+  },
+  "weights_source": "https://drive.google.com/uc?export=download&id=13cJr2nMn89j-jBAd5RduYRJpBcXwoNrC",
+  "weights_license": "Separate weights license unspecified in official public research archive; source code MIT; local research inference only",
+  "weights_license_evidence": "https://turagalab.github.io/flyvis/examples/07_flyvision_providing_custom_stimuli/",
+  "provenance_level": "local_integrity_lock_with_declared_upstream_source",
+  "created_utc": "2026-09-13T14:27:23.589122+00:00"
+}

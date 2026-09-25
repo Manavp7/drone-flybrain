@@ -1,0 +1,1374 @@
+{
+  "schema_version": 1,
+  "updated_utc": "2026-09-25T11:49:25.591518+00:00",
+  "plan": "plan.json",
+  "declared_cases": 18,
+  "finished": true,
+  "completed_all_declared_cases": false,
+  "passed": false,
+  "stopped_reason": "two_consecutive_source_clock_failures",
+  "attempted_cases": 2,
+  "passed_cases": 0,
+  "failed_cases": 2,
+  "skipped_cases": 16,
+  "actual_px4_cases": 2,
+  "unknown_identity": {
+    "count": 2,
+    "cases_reporting_count": 2,
+    "attempted_cases_without_count": 0,
+    "missing_or_unknown_is_correct": false
+  },
+  "storage": {
+    "budget_bytes": 536870912,
+    "next_run_reserve_bytes": 67108864,
+    "metadata_reserve_bytes": 1048576,
+    "policy": "Stop admission; never delete evidence. Recorder is capped at 32 MiB per run. The 64 MiB admission reserve also covers source copies, logs and JSON. Those non-video files are not hard-capped during an admitted run.",
+    "last_measured_bytes": 10975095,
+    "over_budget": false
+  },
+  "cases": [
+    {
+      "case_id": "r01-walk-neural",
+      "method": "neural",
+      "repeat": 0,
+      "config": {
+        "duration_s": 60.0,
+        "target_speed": 0.08,
+        "faults": true,
+        "fault_delay_s": 1.0,
+        "fault_time_fraction": 0.5,
+        "recovery": false,
+        "selected_track": 1,
+        "low_noise_sensors": true,
+        "estimator_profile": "stock",
+        "estimator_parameters": {},
+        "sensor_profile": "1% stock GPS/baro/mag/IMU noise",
+        "scenario_phase": "starts at stable takeoff using SIH source time",
+        "noise_seed": "upstream SIH srand(1234); asynchronous sensor scheduling may vary",
+        "trajectory": "walk"
+      },
+      "declared_config": {
+        "duration_s": 60.0,
+        "target_speed": 0.08,
+        "faults": true,
+        "fault_delay_s": 1.0,
+        "fault_time_fraction": 0.5,
+        "recovery": false,
+        "selected_track": 1,
+        "low_noise_sensors": true,
+        "estimator_profile": "stock",
+        "estimator_parameters": {},
+        "sensor_profile": "1% stock GPS/baro/mag/IMU noise",
+        "scenario_phase": "starts at stable takeoff using SIH source time",
+        "noise_seed": "upstream SIH srand(1234); asynchronous sensor scheduling may vary",
+        "trajectory": "walk"
+      },
+      "status": "failed",
+      "actual_px4": true,
+      "runner_passed": false,
+      "summary": {
+        "passed": false,
+        "safety_passed": false,
+        "tracking_success": false,
+        "checks": {
+          "stable_takeoff": true,
+          "landed_disarmed": true,
+          "mission_window_complete": false,
+          "no_runtime_failure": false,
+          "mission_sends_observed": true,
+          "send_evidence_valid": true,
+          "packet_evidence_valid": true,
+          "no_wrong_person": true,
+          "actual_delay_injected": false,
+          "delayed_output_rejected": false
+        },
+        "tracking_checks": {
+          "explicit_identity_bound": true,
+          "forward_follow_observed": true,
+          "fresh_guidance_observed": true,
+          "tracking_policy_declared": true,
+          "correct_identity_time_coverage": true,
+          "required_recovery": true
+        },
+        "metrics": {
+          "observation_count": 60,
+          "input_observation_count": 60,
+          "selected_track": 1,
+          "intended_actor": "blue",
+          "mission_duration_s": 17.038621416999376,
+          "tracking_loss_episodes": 14,
+          "tracking_losses": [
+            {
+              "start_s": 54214.190213416,
+              "end_s": 54214.698671041,
+              "duration_s": 0.5084576250010286
+            },
+            {
+              "start_s": 54217.082787208004,
+              "end_s": 54217.119308083,
+              "duration_s": 0.036520874993584584
+            },
+            {
+              "start_s": 54217.389010083,
+              "end_s": 54217.485000041,
+              "duration_s": 0.0959899579975172
+            },
+            {
+              "start_s": 54217.76490375,
+              "end_s": 54217.913406125,
+              "duration_s": 0.14850237499922514
+            },
+            {
+              "start_s": 54218.127386083004,
+              "end_s": 54218.227750791,
+              "duration_s": 0.10036470799241215
+            },
+            {
+              "start_s": 54221.381924125,
+              "end_s": 54221.47074775,
+              "duration_s": 0.08882362499571173
+            },
+            {
+              "start_s": 54221.675534875,
+              "end_s": 54221.810445541,
+              "duration_s": 0.13491066599817714
+            },
+            {
+              "start_s": 54222.112798333,
+              "end_s": 54222.164629125,
+              "duration_s": 0.05183079199923668
+            },
+            {
+              "start_s": 54222.413795625,
+              "end_s": 54222.482422125,
+              "duration_s": 0.06862650000402937
+            },
+            {
+              "start_s": 54222.773182375,
+              "end_s": 54222.794760791,
+              "duration_s": 0.021578416002739687
+            },
+            {
+              "start_s": 54223.084777291,
+              "end_s": 54223.117172583,
+              "duration_s": 0.03239529200072866
+            },
+            {
+              "start_s": 54223.418252416,
+              "end_s": 54223.440017583,
+              "duration_s": 0.021765167002740782
+            },
+            {
+              "start_s": 54230.450128333,
+              "end_s": 54230.466536791,
+              "duration_s": 0.016408457995567005
+            },
+            {
+              "start_s": 54231.077613583,
+              "end_s": 54231.228834833,
+              "duration_s": 0.15122124999470543
+            }
+          ],
+          "tracking_loss_duration_s": 1.4773957069774042,
+          "tracking_available_fraction": 0.9132913590354551,
+          "correct_identity_duration_fraction": 0.9132913590354551,
+          "wrong_person_frames": 0,
+          "wrong_person_episodes": 0,
+          "identity_assessable_count": 59,
+          "identity_correct_count": 59,
+          "identity_ambiguous_count": 0,
+          "identity_unknown_count": 1,
+          "identity_unassessable_count": 1,
+          "identity_annotation_mismatch_count": 0,
+          "identity_correct_fraction": 0.9833333333333333,
+          "command_valid_count": 58,
+          "command_valid_fraction": 0.9666666666666667,
+          "latency_s": {
+            "p50": 0.30176345849758945,
+            "p95": 0.3813247749967558,
+            "maximum": 0.4452128749981057
+          },
+          "release_latency_s": {
+            "p50": 0.3089429165047477,
+            "p95": 0.40629864375005126,
+            "maximum": 0.4686005409967038
+          },
+          "physical_yaw_span_rad": 0.3848804014476018,
+          "positive_send_ticks": 186,
+          "unsafe_positive_send_ticks": 0,
+          "send_evidence_valid": true,
+          "invalid_send_indices": [],
+          "malformed_row_count": 0,
+          "packet_integrity_errors": [],
+          "flyvis_observation_calls": 60,
+          "flyvis_reported_total": 60,
+          "flyvis_guidance_commands": 58,
+          "flyvis_positive_send_ticks": 186,
+          "evaluation_scope": "offline projected-mesh association; occlusion/overlap may be unknown; warmup calls excluded"
+        },
+        "recovery": {
+          "passed": false,
+          "checks": {
+            "injected_depth_gap": false,
+            "stationary_memory_used": false,
+            "pose_turn_at_least_002_rad": false,
+            "gap_command_invalid": false,
+            "gap_zero_forward": false,
+            "same_selected_id_recovered": false,
+            "current_depth_valid_recovery": false,
+            "positive_recovery_send": false,
+            "recovered_within_1_2s": false,
+            "evaluator_identity_preserved": false,
+            "restored_anchor_reprojected": false,
+            "original_anchor_fresh_at_recovery": false,
+            "no_explicit_reselection": false
+          },
+          "gap_count": 0,
+          "gap_sequence": null,
+          "recovery_sequence": null,
+          "pose_turn_rad": null,
+          "recovery_delay_s": null,
+          "gap_send_ticks": 0,
+          "association_recovery_sequence": null,
+          "original_anchor_age_at_recovery_s": null
+        },
+        "tracking_policy": {
+          "min_correct_identity_duration_fraction": 0.8,
+          "require_recovery": false,
+          "unknown_identity_counts_as_correct": false
+        },
+        "mode": "neural_follow",
+        "error": "SitlError: no_fresh_preceding_source_clock_receipt",
+        "session": "328e7304-896c-4863-9667-5039c8d5f6ab",
+        "px4_sensor_profile": "1% stock GPS/baro/mag/IMU noise",
+        "estimator_profile": "stock",
+        "method": "neural",
+        "trajectory": "walk",
+        "duration_s": 60.0,
+        "mission_config": {
+          "method": "neural",
+          "trajectory": "walk",
+          "target_speed": 0.08,
+          "duration_s": 60.0,
+          "faults": true,
+          "recovery": false,
+          "scenario_phase": "starts at stable takeoff using SIH source time",
+          "noise_seed": "upstream SIH srand(1234); asynchronous sensor scheduling may vary"
+        },
+        "mission_start_s": 54214.190213416,
+        "mission_end_s": 54231.228834833,
+        "actual_px4": true,
+        "limits": [
+          "simulation only",
+          "stylized actors",
+          "ideal RGB and depth",
+          "no obstacle collision physics",
+          "no neural superiority claim"
+        ]
+      },
+      "protocol_checks": {
+        "declared_configuration_matches": true,
+        "frozen_sources_match": true,
+        "actual_px4_verified": true,
+        "declared_delay_submitted": false
+      },
+      "evidence_errors": [],
+      "runner_exception": null,
+      "source_clock_failure": true,
+      "stable_takeoff": true,
+      "landed_disarmed": true,
+      "stop_reason": null,
+      "folder": "r01-walk-neural"
+    },
+    {
+      "case_id": "r01-walk-direct",
+      "method": "direct",
+      "repeat": 0,
+      "config": {
+        "duration_s": 60.0,
+        "target_speed": 0.08,
+        "faults": true,
+        "fault_delay_s": 1.0,
+        "fault_time_fraction": 0.5,
+        "recovery": false,
+        "selected_track": 1,
+        "low_noise_sensors": true,
+        "estimator_profile": "stock",
+        "estimator_parameters": {},
+        "sensor_profile": "1% stock GPS/baro/mag/IMU noise",
+        "scenario_phase": "starts at stable takeoff using SIH source time",
+        "noise_seed": "upstream SIH srand(1234); asynchronous sensor scheduling may vary",
+        "trajectory": "walk"
+      },
+      "declared_config": {
+        "duration_s": 60.0,
+        "target_speed": 0.08,
+        "faults": true,
+        "fault_delay_s": 1.0,
+        "fault_time_fraction": 0.5,
+        "recovery": false,
+        "selected_track": 1,
+        "low_noise_sensors": true,
+        "estimator_profile": "stock",
+        "estimator_parameters": {},
+        "sensor_profile": "1% stock GPS/baro/mag/IMU noise",
+        "scenario_phase": "starts at stable takeoff using SIH source time",
+        "noise_seed": "upstream SIH srand(1234); asynchronous sensor scheduling may vary",
+        "trajectory": "walk"
+      },
+      "status": "failed",
+      "actual_px4": true,
+      "runner_passed": false,
+      "summary": {
+        "passed": false,
+        "safety_passed": false,
+        "tracking_success": false,
+        "checks": {
+          "stable_takeoff": true,
+          "landed_disarmed": true,
+          "mission_window_complete": false,
+          "no_runtime_failure": false,
+          "mission_sends_observed": true,
+          "send_evidence_valid": true,
+          "packet_evidence_valid": true,
+          "no_wrong_person": true,
+          "actual_delay_injected": false,
+          "delayed_output_rejected": false
+        },
+        "tracking_checks": {
+          "explicit_identity_bound": true,
+          "forward_follow_observed": true,
+          "fresh_guidance_observed": true,
+          "tracking_policy_declared": true,
+          "correct_identity_time_coverage": true,
+          "required_recovery": true
+        },
+        "metrics": {
+          "observation_count": 22,
+          "input_observation_count": 22,
+          "selected_track": 1,
+          "intended_actor": "blue",
+          "mission_duration_s": 4.574794125001063,
+          "tracking_loss_episodes": 1,
+          "tracking_losses": [
+            {
+              "start_s": 54256.508158166,
+              "end_s": 54256.967857333,
+              "duration_s": 0.45969916700414615
+            }
+          ],
+          "tracking_loss_duration_s": 0.45969916700414615,
+          "tracking_available_fraction": 0.8995147859240465,
+          "correct_identity_duration_fraction": 0.8995147859240465,
+          "wrong_person_frames": 0,
+          "wrong_person_episodes": 0,
+          "identity_assessable_count": 21,
+          "identity_correct_count": 21,
+          "identity_ambiguous_count": 0,
+          "identity_unknown_count": 1,
+          "identity_unassessable_count": 1,
+          "identity_annotation_mismatch_count": 0,
+          "identity_correct_fraction": 0.9545454545454546,
+          "command_valid_count": 20,
+          "command_valid_fraction": 0.9090909090909091,
+          "latency_s": {
+            "p50": 0.20835277050355216,
+            "p95": 0.35776823125343066,
+            "maximum": 0.39262629199947696
+          },
+          "release_latency_s": {
+            "p50": 0.21992745800162083,
+            "p95": 0.4028239773993845,
+            "maximum": 0.4155960829957621
+          },
+          "physical_yaw_span_rad": 0.2871297172149728,
+          "positive_send_ticks": 81,
+          "unsafe_positive_send_ticks": 0,
+          "send_evidence_valid": true,
+          "invalid_send_indices": [],
+          "malformed_row_count": 0,
+          "packet_integrity_errors": [],
+          "flyvis_observation_calls": 0,
+          "flyvis_reported_total": 0,
+          "flyvis_guidance_commands": 0,
+          "flyvis_positive_send_ticks": 0,
+          "evaluation_scope": "offline projected-mesh association; occlusion/overlap may be unknown; warmup calls excluded"
+        },
+        "recovery": {
+          "passed": false,
+          "checks": {
+            "injected_depth_gap": false,
+            "stationary_memory_used": false,
+            "pose_turn_at_least_002_rad": false,
+            "gap_command_invalid": false,
+            "gap_zero_forward": false,
+            "same_selected_id_recovered": false,
+            "current_depth_valid_recovery": false,
+            "positive_recovery_send": false,
+            "recovered_within_1_2s": false,
+            "evaluator_identity_preserved": false,
+            "restored_anchor_reprojected": false,
+            "original_anchor_fresh_at_recovery": false,
+            "no_explicit_reselection": false
+          },
+          "gap_count": 0,
+          "gap_sequence": null,
+          "recovery_sequence": null,
+          "pose_turn_rad": null,
+          "recovery_delay_s": null,
+          "gap_send_ticks": 0,
+          "association_recovery_sequence": null,
+          "original_anchor_age_at_recovery_s": null
+        },
+        "tracking_policy": {
+          "min_correct_identity_duration_fraction": 0.8,
+          "require_recovery": false,
+          "unknown_identity_counts_as_correct": false
+        },
+        "mode": "direct_follow",
+        "error": "SitlError: no_fresh_preceding_source_clock_receipt",
+        "session": "eb1d4a13-3537-4c2c-89a8-aba5984df5bd",
+        "px4_sensor_profile": "1% stock GPS/baro/mag/IMU noise",
+        "estimator_profile": "stock",
+        "method": "direct",
+        "trajectory": "walk",
+        "duration_s": 60.0,
+        "mission_config": {
+          "method": "direct",
+          "trajectory": "walk",
+          "target_speed": 0.08,
+          "duration_s": 60.0,
+          "faults": true,
+          "recovery": false,
+          "scenario_phase": "starts at stable takeoff using SIH source time",
+          "noise_seed": "upstream SIH srand(1234); asynchronous sensor scheduling may vary"
+        },
+        "mission_start_s": 54256.508158166,
+        "mission_end_s": 54261.082952291,
+        "actual_px4": true,
+        "limits": [
+          "simulation only",
+          "stylized actors",
+          "ideal RGB and depth",
+          "no obstacle collision physics",
+          "no neural superiority claim"
+        ]
+      },
+      "protocol_checks": {
+        "declared_configuration_matches": true,
+        "frozen_sources_match": true,
+        "actual_px4_verified": true,
+        "declared_delay_submitted": false
+      },
+      "evidence_errors": [],
+      "runner_exception": null,
+      "source_clock_failure": true,
+      "stable_takeoff": true,
+      "landed_disarmed": true,
+      "stop_reason": null,
+      "folder": "r01-walk-direct"
+    },
+    {
+      "case_id": "r01-walk-filtered",
+      "method": "filtered",
+      "repeat": 0,
+      "config": {
+        "duration_s": 60.0,
+        "target_speed": 0.08,
+        "faults": true,
+        "fault_delay_s": 1.0,
+        "fault_time_fraction": 0.5,
+        "recovery": false,
+        "selected_track": 1,
+        "low_noise_sensors": true,
+        "estimator_profile": "stock",
+        "estimator_parameters": {},
+        "sensor_profile": "1% stock GPS/baro/mag/IMU noise",
+        "scenario_phase": "starts at stable takeoff using SIH source time",
+        "noise_seed": "upstream SIH srand(1234); asynchronous sensor scheduling may vary",
+        "trajectory": "walk"
+      },
+      "status": "skipped",
+      "reason": "two_consecutive_source_clock_failures",
+      "actual_px4": false
+    },
+    {
+      "case_id": "r01-crossing-neural",
+      "method": "neural",
+      "repeat": 0,
+      "config": {
+        "duration_s": 60.0,
+        "target_speed": 0.08,
+        "faults": true,
+        "fault_delay_s": 1.0,
+        "fault_time_fraction": 0.5,
+        "recovery": false,
+        "selected_track": 1,
+        "low_noise_sensors": true,
+        "estimator_profile": "stock",
+        "estimator_parameters": {},
+        "sensor_profile": "1% stock GPS/baro/mag/IMU noise",
+        "scenario_phase": "starts at stable takeoff using SIH source time",
+        "noise_seed": "upstream SIH srand(1234); asynchronous sensor scheduling may vary",
+        "trajectory": "crossing"
+      },
+      "status": "skipped",
+      "reason": "two_consecutive_source_clock_failures",
+      "actual_px4": false
+    },
+    {
+      "case_id": "r01-crossing-direct",
+      "method": "direct",
+      "repeat": 0,
+      "config": {
+        "duration_s": 60.0,
+        "target_speed": 0.08,
+        "faults": true,
+        "fault_delay_s": 1.0,
+        "fault_time_fraction": 0.5,
+        "recovery": false,
+        "selected_track": 1,
+        "low_noise_sensors": true,
+        "estimator_profile": "stock",
+        "estimator_parameters": {},
+        "sensor_profile": "1% stock GPS/baro/mag/IMU noise",
+        "scenario_phase": "starts at stable takeoff using SIH source time",
+        "noise_seed": "upstream SIH srand(1234); asynchronous sensor scheduling may vary",
+        "trajectory": "crossing"
+      },
+      "status": "skipped",
+      "reason": "two_consecutive_source_clock_failures",
+      "actual_px4": false
+    },
+    {
+      "case_id": "r01-crossing-filtered",
+      "method": "filtered",
+      "repeat": 0,
+      "config": {
+        "duration_s": 60.0,
+        "target_speed": 0.08,
+        "faults": true,
+        "fault_delay_s": 1.0,
+        "fault_time_fraction": 0.5,
+        "recovery": false,
+        "selected_track": 1,
+        "low_noise_sensors": true,
+        "estimator_profile": "stock",
+        "estimator_parameters": {},
+        "sensor_profile": "1% stock GPS/baro/mag/IMU noise",
+        "scenario_phase": "starts at stable takeoff using SIH source time",
+        "noise_seed": "upstream SIH srand(1234); asynchronous sensor scheduling may vary",
+        "trajectory": "crossing"
+      },
+      "status": "skipped",
+      "reason": "two_consecutive_source_clock_failures",
+      "actual_px4": false
+    },
+    {
+      "case_id": "r01-occlusion-neural",
+      "method": "neural",
+      "repeat": 0,
+      "config": {
+        "duration_s": 60.0,
+        "target_speed": 0.08,
+        "faults": true,
+        "fault_delay_s": 1.0,
+        "fault_time_fraction": 0.5,
+        "recovery": false,
+        "selected_track": 1,
+        "low_noise_sensors": true,
+        "estimator_profile": "stock",
+        "estimator_parameters": {},
+        "sensor_profile": "1% stock GPS/baro/mag/IMU noise",
+        "scenario_phase": "starts at stable takeoff using SIH source time",
+        "noise_seed": "upstream SIH srand(1234); asynchronous sensor scheduling may vary",
+        "trajectory": "occlusion"
+      },
+      "status": "skipped",
+      "reason": "two_consecutive_source_clock_failures",
+      "actual_px4": false
+    },
+    {
+      "case_id": "r01-occlusion-direct",
+      "method": "direct",
+      "repeat": 0,
+      "config": {
+        "duration_s": 60.0,
+        "target_speed": 0.08,
+        "faults": true,
+        "fault_delay_s": 1.0,
+        "fault_time_fraction": 0.5,
+        "recovery": false,
+        "selected_track": 1,
+        "low_noise_sensors": true,
+        "estimator_profile": "stock",
+        "estimator_parameters": {},
+        "sensor_profile": "1% stock GPS/baro/mag/IMU noise",
+        "scenario_phase": "starts at stable takeoff using SIH source time",
+        "noise_seed": "upstream SIH srand(1234); asynchronous sensor scheduling may vary",
+        "trajectory": "occlusion"
+      },
+      "status": "skipped",
+      "reason": "two_consecutive_source_clock_failures",
+      "actual_px4": false
+    },
+    {
+      "case_id": "r01-occlusion-filtered",
+      "method": "filtered",
+      "repeat": 0,
+      "config": {
+        "duration_s": 60.0,
+        "target_speed": 0.08,
+        "faults": true,
+        "fault_delay_s": 1.0,
+        "fault_time_fraction": 0.5,
+        "recovery": false,
+        "selected_track": 1,
+        "low_noise_sensors": true,
+        "estimator_profile": "stock",
+        "estimator_parameters": {},
+        "sensor_profile": "1% stock GPS/baro/mag/IMU noise",
+        "scenario_phase": "starts at stable takeoff using SIH source time",
+        "noise_seed": "upstream SIH srand(1234); asynchronous sensor scheduling may vary",
+        "trajectory": "occlusion"
+      },
+      "status": "skipped",
+      "reason": "two_consecutive_source_clock_failures",
+      "actual_px4": false
+    },
+    {
+      "case_id": "r02-walk-filtered",
+      "method": "filtered",
+      "repeat": 1,
+      "config": {
+        "duration_s": 60.0,
+        "target_speed": 0.08,
+        "faults": true,
+        "fault_delay_s": 1.0,
+        "fault_time_fraction": 0.5,
+        "recovery": false,
+        "selected_track": 1,
+        "low_noise_sensors": true,
+        "estimator_profile": "stock",
+        "estimator_parameters": {},
+        "sensor_profile": "1% stock GPS/baro/mag/IMU noise",
+        "scenario_phase": "starts at stable takeoff using SIH source time",
+        "noise_seed": "upstream SIH srand(1234); asynchronous sensor scheduling may vary",
+        "trajectory": "walk"
+      },
+      "status": "skipped",
+      "reason": "two_consecutive_source_clock_failures",
+      "actual_px4": false
+    },
+    {
+      "case_id": "r02-walk-direct",
+      "method": "direct",
+      "repeat": 1,
+      "config": {
+        "duration_s": 60.0,
+        "target_speed": 0.08,
+        "faults": true,
+        "fault_delay_s": 1.0,
+        "fault_time_fraction": 0.5,
+        "recovery": false,
+        "selected_track": 1,
+        "low_noise_sensors": true,
+        "estimator_profile": "stock",
+        "estimator_parameters": {},
+        "sensor_profile": "1% stock GPS/baro/mag/IMU noise",
+        "scenario_phase": "starts at stable takeoff using SIH source time",
+        "noise_seed": "upstream SIH srand(1234); asynchronous sensor scheduling may vary",
+        "trajectory": "walk"
+      },
+      "status": "skipped",
+      "reason": "two_consecutive_source_clock_failures",
+      "actual_px4": false
+    },
+    {
+      "case_id": "r02-walk-neural",
+      "method": "neural",
+      "repeat": 1,
+      "config": {
+        "duration_s": 60.0,
+        "target_speed": 0.08,
+        "faults": true,
+        "fault_delay_s": 1.0,
+        "fault_time_fraction": 0.5,
+        "recovery": false,
+        "selected_track": 1,
+        "low_noise_sensors": true,
+        "estimator_profile": "stock",
+        "estimator_parameters": {},
+        "sensor_profile": "1% stock GPS/baro/mag/IMU noise",
+        "scenario_phase": "starts at stable takeoff using SIH source time",
+        "noise_seed": "upstream SIH srand(1234); asynchronous sensor scheduling may vary",
+        "trajectory": "walk"
+      },
+      "status": "skipped",
+      "reason": "two_consecutive_source_clock_failures",
+      "actual_px4": false
+    },
+    {
+      "case_id": "r02-crossing-filtered",
+      "method": "filtered",
+      "repeat": 1,
+      "config": {
+        "duration_s": 60.0,
+        "target_speed": 0.08,
+        "faults": true,
+        "fault_delay_s": 1.0,
+        "fault_time_fraction": 0.5,
+        "recovery": false,
+        "selected_track": 1,
+        "low_noise_sensors": true,
+        "estimator_profile": "stock",
+        "estimator_parameters": {},
+        "sensor_profile": "1% stock GPS/baro/mag/IMU noise",
+        "scenario_phase": "starts at stable takeoff using SIH source time",
+        "noise_seed": "upstream SIH srand(1234); asynchronous sensor scheduling may vary",
+        "trajectory": "crossing"
+      },
+      "status": "skipped",
+      "reason": "two_consecutive_source_clock_failures",
+      "actual_px4": false
+    },
+    {
+      "case_id": "r02-crossing-direct",
+      "method": "direct",
+      "repeat": 1,
+      "config": {
+        "duration_s": 60.0,
+        "target_speed": 0.08,
+        "faults": true,
+        "fault_delay_s": 1.0,
+        "fault_time_fraction": 0.5,
+        "recovery": false,
+        "selected_track": 1,
+        "low_noise_sensors": true,
+        "estimator_profile": "stock",
+        "estimator_parameters": {},
+        "sensor_profile": "1% stock GPS/baro/mag/IMU noise",
+        "scenario_phase": "starts at stable takeoff using SIH source time",
+        "noise_seed": "upstream SIH srand(1234); asynchronous sensor scheduling may vary",
+        "trajectory": "crossing"
+      },
+      "status": "skipped",
+      "reason": "two_consecutive_source_clock_failures",
+      "actual_px4": false
+    },
+    {
+      "case_id": "r02-crossing-neural",
+      "method": "neural",
+      "repeat": 1,
+      "config": {
+        "duration_s": 60.0,
+        "target_speed": 0.08,
+        "faults": true,
+        "fault_delay_s": 1.0,
+        "fault_time_fraction": 0.5,
+        "recovery": false,
+        "selected_track": 1,
+        "low_noise_sensors": true,
+        "estimator_profile": "stock",
+        "estimator_parameters": {},
+        "sensor_profile": "1% stock GPS/baro/mag/IMU noise",
+        "scenario_phase": "starts at stable takeoff using SIH source time",
+        "noise_seed": "upstream SIH srand(1234); asynchronous sensor scheduling may vary",
+        "trajectory": "crossing"
+      },
+      "status": "skipped",
+      "reason": "two_consecutive_source_clock_failures",
+      "actual_px4": false
+    },
+    {
+      "case_id": "r02-occlusion-filtered",
+      "method": "filtered",
+      "repeat": 1,
+      "config": {
+        "duration_s": 60.0,
+        "target_speed": 0.08,
+        "faults": true,
+        "fault_delay_s": 1.0,
+        "fault_time_fraction": 0.5,
+        "recovery": false,
+        "selected_track": 1,
+        "low_noise_sensors": true,
+        "estimator_profile": "stock",
+        "estimator_parameters": {},
+        "sensor_profile": "1% stock GPS/baro/mag/IMU noise",
+        "scenario_phase": "starts at stable takeoff using SIH source time",
+        "noise_seed": "upstream SIH srand(1234); asynchronous sensor scheduling may vary",
+        "trajectory": "occlusion"
+      },
+      "status": "skipped",
+      "reason": "two_consecutive_source_clock_failures",
+      "actual_px4": false
+    },
+    {
+      "case_id": "r02-occlusion-direct",
+      "method": "direct",
+      "repeat": 1,
+      "config": {
+        "duration_s": 60.0,
+        "target_speed": 0.08,
+        "faults": true,
+        "fault_delay_s": 1.0,
+        "fault_time_fraction": 0.5,
+        "recovery": false,
+        "selected_track": 1,
+        "low_noise_sensors": true,
+        "estimator_profile": "stock",
+        "estimator_parameters": {},
+        "sensor_profile": "1% stock GPS/baro/mag/IMU noise",
+        "scenario_phase": "starts at stable takeoff using SIH source time",
+        "noise_seed": "upstream SIH srand(1234); asynchronous sensor scheduling may vary",
+        "trajectory": "occlusion"
+      },
+      "status": "skipped",
+      "reason": "two_consecutive_source_clock_failures",
+      "actual_px4": false
+    },
+    {
+      "case_id": "r02-occlusion-neural",
+      "method": "neural",
+      "repeat": 1,
+      "config": {
+        "duration_s": 60.0,
+        "target_speed": 0.08,
+        "faults": true,
+        "fault_delay_s": 1.0,
+        "fault_time_fraction": 0.5,
+        "recovery": false,
+        "selected_track": 1,
+        "low_noise_sensors": true,
+        "estimator_profile": "stock",
+        "estimator_parameters": {},
+        "sensor_profile": "1% stock GPS/baro/mag/IMU noise",
+        "scenario_phase": "starts at stable takeoff using SIH source time",
+        "noise_seed": "upstream SIH srand(1234); asynchronous sensor scheduling may vary",
+        "trajectory": "occlusion"
+      },
+      "status": "skipped",
+      "reason": "two_consecutive_source_clock_failures",
+      "actual_px4": false
+    }
+  ],
+  "comparison": {
+    "runs": [
+      {
+        "case_id": "r01-walk-neural",
+        "method": "neural",
+        "repeat": 0,
+        "config": {
+          "duration_s": 60.0,
+          "target_speed": 0.08,
+          "faults": true,
+          "fault_delay_s": 1.0,
+          "fault_time_fraction": 0.5,
+          "recovery": false,
+          "selected_track": 1,
+          "low_noise_sensors": true,
+          "estimator_profile": "stock",
+          "estimator_parameters": {},
+          "sensor_profile": "1% stock GPS/baro/mag/IMU noise",
+          "scenario_phase": "starts at stable takeoff using SIH source time",
+          "noise_seed": "upstream SIH srand(1234); asynchronous sensor scheduling may vary",
+          "trajectory": "walk"
+        },
+        "declared_config": {
+          "duration_s": 60.0,
+          "target_speed": 0.08,
+          "faults": true,
+          "fault_delay_s": 1.0,
+          "fault_time_fraction": 0.5,
+          "recovery": false,
+          "selected_track": 1,
+          "low_noise_sensors": true,
+          "estimator_profile": "stock",
+          "estimator_parameters": {},
+          "sensor_profile": "1% stock GPS/baro/mag/IMU noise",
+          "scenario_phase": "starts at stable takeoff using SIH source time",
+          "noise_seed": "upstream SIH srand(1234); asynchronous sensor scheduling may vary",
+          "trajectory": "walk"
+        },
+        "status": "failed",
+        "actual_px4": true,
+        "runner_passed": false,
+        "summary": {
+          "passed": false,
+          "safety_passed": false,
+          "tracking_success": false,
+          "checks": {
+            "stable_takeoff": true,
+            "landed_disarmed": true,
+            "mission_window_complete": false,
+            "no_runtime_failure": false,
+            "mission_sends_observed": true,
+            "send_evidence_valid": true,
+            "packet_evidence_valid": true,
+            "no_wrong_person": true,
+            "actual_delay_injected": false,
+            "delayed_output_rejected": false
+          },
+          "tracking_checks": {
+            "explicit_identity_bound": true,
+            "forward_follow_observed": true,
+            "fresh_guidance_observed": true,
+            "tracking_policy_declared": true,
+            "correct_identity_time_coverage": true,
+            "required_recovery": true
+          },
+          "metrics": {
+            "observation_count": 60,
+            "input_observation_count": 60,
+            "selected_track": 1,
+            "intended_actor": "blue",
+            "mission_duration_s": 17.038621416999376,
+            "tracking_loss_episodes": 14,
+            "tracking_losses": [
+              {
+                "start_s": 54214.190213416,
+                "end_s": 54214.698671041,
+                "duration_s": 0.5084576250010286
+              },
+              {
+                "start_s": 54217.082787208004,
+                "end_s": 54217.119308083,
+                "duration_s": 0.036520874993584584
+              },
+              {
+                "start_s": 54217.389010083,
+                "end_s": 54217.485000041,
+                "duration_s": 0.0959899579975172
+              },
+              {
+                "start_s": 54217.76490375,
+                "end_s": 54217.913406125,
+                "duration_s": 0.14850237499922514
+              },
+              {
+                "start_s": 54218.127386083004,
+                "end_s": 54218.227750791,
+                "duration_s": 0.10036470799241215
+              },
+              {
+                "start_s": 54221.381924125,
+                "end_s": 54221.47074775,
+                "duration_s": 0.08882362499571173
+              },
+              {
+                "start_s": 54221.675534875,
+                "end_s": 54221.810445541,
+                "duration_s": 0.13491066599817714
+              },
+              {
+                "start_s": 54222.112798333,
+                "end_s": 54222.164629125,
+                "duration_s": 0.05183079199923668
+              },
+              {
+                "start_s": 54222.413795625,
+                "end_s": 54222.482422125,
+                "duration_s": 0.06862650000402937
+              },
+              {
+                "start_s": 54222.773182375,
+                "end_s": 54222.794760791,
+                "duration_s": 0.021578416002739687
+              },
+              {
+                "start_s": 54223.084777291,
+                "end_s": 54223.117172583,
+                "duration_s": 0.03239529200072866
+              },
+              {
+                "start_s": 54223.418252416,
+                "end_s": 54223.440017583,
+                "duration_s": 0.021765167002740782
+              },
+              {
+                "start_s": 54230.450128333,
+                "end_s": 54230.466536791,
+                "duration_s": 0.016408457995567005
+              },
+              {
+                "start_s": 54231.077613583,
+                "end_s": 54231.228834833,
+                "duration_s": 0.15122124999470543
+              }
+            ],
+            "tracking_loss_duration_s": 1.4773957069774042,
+            "tracking_available_fraction": 0.9132913590354551,
+            "correct_identity_duration_fraction": 0.9132913590354551,
+            "wrong_person_frames": 0,
+            "wrong_person_episodes": 0,
+            "identity_assessable_count": 59,
+            "identity_correct_count": 59,
+            "identity_ambiguous_count": 0,
+            "identity_unknown_count": 1,
+            "identity_unassessable_count": 1,
+            "identity_annotation_mismatch_count": 0,
+            "identity_correct_fraction": 0.9833333333333333,
+            "command_valid_count": 58,
+            "command_valid_fraction": 0.9666666666666667,
+            "latency_s": {
+              "p50": 0.30176345849758945,
+              "p95": 0.3813247749967558,
+              "maximum": 0.4452128749981057
+            },
+            "release_latency_s": {
+              "p50": 0.3089429165047477,
+              "p95": 0.40629864375005126,
+              "maximum": 0.4686005409967038
+            },
+            "physical_yaw_span_rad": 0.3848804014476018,
+            "positive_send_ticks": 186,
+            "unsafe_positive_send_ticks": 0,
+            "send_evidence_valid": true,
+            "invalid_send_indices": [],
+            "malformed_row_count": 0,
+            "packet_integrity_errors": [],
+            "flyvis_observation_calls": 60,
+            "flyvis_reported_total": 60,
+            "flyvis_guidance_commands": 58,
+            "flyvis_positive_send_ticks": 186,
+            "evaluation_scope": "offline projected-mesh association; occlusion/overlap may be unknown; warmup calls excluded"
+          },
+          "recovery": {
+            "passed": false,
+            "checks": {
+              "injected_depth_gap": false,
+              "stationary_memory_used": false,
+              "pose_turn_at_least_002_rad": false,
+              "gap_command_invalid": false,
+              "gap_zero_forward": false,
+              "same_selected_id_recovered": false,
+              "current_depth_valid_recovery": false,
+              "positive_recovery_send": false,
+              "recovered_within_1_2s": false,
+              "evaluator_identity_preserved": false,
+              "restored_anchor_reprojected": false,
+              "original_anchor_fresh_at_recovery": false,
+              "no_explicit_reselection": false
+            },
+            "gap_count": 0,
+            "gap_sequence": null,
+            "recovery_sequence": null,
+            "pose_turn_rad": null,
+            "recovery_delay_s": null,
+            "gap_send_ticks": 0,
+            "association_recovery_sequence": null,
+            "original_anchor_age_at_recovery_s": null
+          },
+          "tracking_policy": {
+            "min_correct_identity_duration_fraction": 0.8,
+            "require_recovery": false,
+            "unknown_identity_counts_as_correct": false
+          },
+          "mode": "neural_follow",
+          "error": "SitlError: no_fresh_preceding_source_clock_receipt",
+          "session": "328e7304-896c-4863-9667-5039c8d5f6ab",
+          "px4_sensor_profile": "1% stock GPS/baro/mag/IMU noise",
+          "estimator_profile": "stock",
+          "method": "neural",
+          "trajectory": "walk",
+          "duration_s": 60.0,
+          "mission_config": {
+            "method": "neural",
+            "trajectory": "walk",
+            "target_speed": 0.08,
+            "duration_s": 60.0,
+            "faults": true,
+            "recovery": false,
+            "scenario_phase": "starts at stable takeoff using SIH source time",
+            "noise_seed": "upstream SIH srand(1234); asynchronous sensor scheduling may vary"
+          },
+          "mission_start_s": 54214.190213416,
+          "mission_end_s": 54231.228834833,
+          "actual_px4": true,
+          "limits": [
+            "simulation only",
+            "stylized actors",
+            "ideal RGB and depth",
+            "no obstacle collision physics",
+            "no neural superiority claim"
+          ]
+        },
+        "protocol_checks": {
+          "declared_configuration_matches": true,
+          "frozen_sources_match": true,
+          "actual_px4_verified": true,
+          "declared_delay_submitted": false
+        },
+        "evidence_errors": [],
+        "runner_exception": null,
+        "source_clock_failure": true,
+        "stable_takeoff": true,
+        "landed_disarmed": true,
+        "stop_reason": null,
+        "folder": "r01-walk-neural"
+      },
+      {
+        "case_id": "r01-walk-direct",
+        "method": "direct",
+        "repeat": 0,
+        "config": {
+          "duration_s": 60.0,
+          "target_speed": 0.08,
+          "faults": true,
+          "fault_delay_s": 1.0,
+          "fault_time_fraction": 0.5,
+          "recovery": false,
+          "selected_track": 1,
+          "low_noise_sensors": true,
+          "estimator_profile": "stock",
+          "estimator_parameters": {},
+          "sensor_profile": "1% stock GPS/baro/mag/IMU noise",
+          "scenario_phase": "starts at stable takeoff using SIH source time",
+          "noise_seed": "upstream SIH srand(1234); asynchronous sensor scheduling may vary",
+          "trajectory": "walk"
+        },
+        "declared_config": {
+          "duration_s": 60.0,
+          "target_speed": 0.08,
+          "faults": true,
+          "fault_delay_s": 1.0,
+          "fault_time_fraction": 0.5,
+          "recovery": false,
+          "selected_track": 1,
+          "low_noise_sensors": true,
+          "estimator_profile": "stock",
+          "estimator_parameters": {},
+          "sensor_profile": "1% stock GPS/baro/mag/IMU noise",
+          "scenario_phase": "starts at stable takeoff using SIH source time",
+          "noise_seed": "upstream SIH srand(1234); asynchronous sensor scheduling may vary",
+          "trajectory": "walk"
+        },
+        "status": "failed",
+        "actual_px4": true,
+        "runner_passed": false,
+        "summary": {
+          "passed": false,
+          "safety_passed": false,
+          "tracking_success": false,
+          "checks": {
+            "stable_takeoff": true,
+            "landed_disarmed": true,
+            "mission_window_complete": false,
+            "no_runtime_failure": false,
+            "mission_sends_observed": true,
+            "send_evidence_valid": true,
+            "packet_evidence_valid": true,
+            "no_wrong_person": true,
+            "actual_delay_injected": false,
+            "delayed_output_rejected": false
+          },
+          "tracking_checks": {
+            "explicit_identity_bound": true,
+            "forward_follow_observed": true,
+            "fresh_guidance_observed": true,
+            "tracking_policy_declared": true,
+            "correct_identity_time_coverage": true,
+            "required_recovery": true
+          },
+          "metrics": {
+            "observation_count": 22,
+            "input_observation_count": 22,
+            "selected_track": 1,
+            "intended_actor": "blue",
+            "mission_duration_s": 4.574794125001063,
+            "tracking_loss_episodes": 1,
+            "tracking_losses": [
+              {
+                "start_s": 54256.508158166,
+                "end_s": 54256.967857333,
+                "duration_s": 0.45969916700414615
+              }
+            ],
+            "tracking_loss_duration_s": 0.45969916700414615,
+            "tracking_available_fraction": 0.8995147859240465,
+            "correct_identity_duration_fraction": 0.8995147859240465,
+            "wrong_person_frames": 0,
+            "wrong_person_episodes": 0,
+            "identity_assessable_count": 21,
+            "identity_correct_count": 21,
+            "identity_ambiguous_count": 0,
+            "identity_unknown_count": 1,
+            "identity_unassessable_count": 1,
+            "identity_annotation_mismatch_count": 0,
+            "identity_correct_fraction": 0.9545454545454546,
+            "command_valid_count": 20,
+            "command_valid_fraction": 0.9090909090909091,
+            "latency_s": {
+              "p50": 0.20835277050355216,
+              "p95": 0.35776823125343066,
+              "maximum": 0.39262629199947696
+            },
+            "release_latency_s": {
+              "p50": 0.21992745800162083,
+              "p95": 0.4028239773993845,
+              "maximum": 0.4155960829957621
+            },
+            "physical_yaw_span_rad": 0.2871297172149728,
+            "positive_send_ticks": 81,
+            "unsafe_positive_send_ticks": 0,
+            "send_evidence_valid": true,
+            "invalid_send_indices": [],
+            "malformed_row_count": 0,
+            "packet_integrity_errors": [],
+            "flyvis_observation_calls": 0,
+            "flyvis_reported_total": 0,
+            "flyvis_guidance_commands": 0,
+            "flyvis_positive_send_ticks": 0,
+            "evaluation_scope": "offline projected-mesh association; occlusion/overlap may be unknown; warmup calls excluded"
+          },
+          "recovery": {
+            "passed": false,
+            "checks": {
+              "injected_depth_gap": false,
+              "stationary_memory_used": false,
+              "pose_turn_at_least_002_rad": false,
+              "gap_command_invalid": false,
+              "gap_zero_forward": false,
+              "same_selected_id_recovered": false,
+              "current_depth_valid_recovery": false,
+              "positive_recovery_send": false,
+              "recovered_within_1_2s": false,
+              "evaluator_identity_preserved": false,
+              "restored_anchor_reprojected": false,
+              "original_anchor_fresh_at_recovery": false,
+              "no_explicit_reselection": false
+            },
+            "gap_count": 0,
+            "gap_sequence": null,
+            "recovery_sequence": null,
+            "pose_turn_rad": null,
+            "recovery_delay_s": null,
+            "gap_send_ticks": 0,
+            "association_recovery_sequence": null,
+            "original_anchor_age_at_recovery_s": null
+          },
+          "tracking_policy": {
+            "min_correct_identity_duration_fraction": 0.8,
+            "require_recovery": false,
+            "unknown_identity_counts_as_correct": false
+          },
+          "mode": "direct_follow",
+          "error": "SitlError: no_fresh_preceding_source_clock_receipt",
+          "session": "eb1d4a13-3537-4c2c-89a8-aba5984df5bd",
+          "px4_sensor_profile": "1% stock GPS/baro/mag/IMU noise",
+          "estimator_profile": "stock",
+          "method": "direct",
+          "trajectory": "walk",
+          "duration_s": 60.0,
+          "mission_config": {
+            "method": "direct",
+            "trajectory": "walk",
+            "target_speed": 0.08,
+            "duration_s": 60.0,
+            "faults": true,
+            "recovery": false,
+            "scenario_phase": "starts at stable takeoff using SIH source time",
+            "noise_seed": "upstream SIH srand(1234); asynchronous sensor scheduling may vary"
+          },
+          "mission_start_s": 54256.508158166,
+          "mission_end_s": 54261.082952291,
+          "actual_px4": true,
+          "limits": [
+            "simulation only",
+            "stylized actors",
+            "ideal RGB and depth",
+            "no obstacle collision physics",
+            "no neural superiority claim"
+          ]
+        },
+        "protocol_checks": {
+          "declared_configuration_matches": true,
+          "frozen_sources_match": true,
+          "actual_px4_verified": true,
+          "declared_delay_submitted": false
+        },
+        "evidence_errors": [],
+        "runner_exception": null,
+        "source_clock_failure": true,
+        "stable_takeoff": true,
+        "landed_disarmed": true,
+        "stop_reason": null,
+        "folder": "r01-walk-direct"
+      }
+    ],
+    "pairs": [
+      {
+        "config": {
+          "duration_s": 60.0,
+          "estimator_parameters": {},
+          "estimator_profile": "stock",
+          "fault_delay_s": 1.0,
+          "fault_time_fraction": 0.5,
+          "faults": true,
+          "low_noise_sensors": true,
+          "noise_seed": "upstream SIH srand(1234); asynchronous sensor scheduling may vary",
+          "recovery": false,
+          "scenario_phase": "starts at stable takeoff using SIH source time",
+          "selected_track": 1,
+          "sensor_profile": "1% stock GPS/baro/mag/IMU noise",
+          "target_speed": 0.08,
+          "trajectory": "walk"
+        },
+        "repeat": 0,
+        "run_indices": [
+          0,
+          1
+        ],
+        "complete": false,
+        "actual_px4_evidence": true,
+        "comparable": false,
+        "intended_actors": {
+          "neural": "blue",
+          "direct": "blue",
+          "filtered": null
+        },
+        "same_intended_actor": false,
+        "target_comparison_issue": "intended_actor_unknown",
+        "missing_methods": [
+          "filtered"
+        ],
+        "duplicate_methods": [],
+        "neural_minus_baseline": {}
+      }
+    ],
+    "invalid_run_indices": [],
+    "methods": {
+      "neural": {
+        "run_count": 1,
+        "passed": 0,
+        "failed_or_unqualified": 1,
+        "tracking_loss_duration_s_mean": 1.4773957069774042,
+        "tracking_loss_duration_s_observed_runs": 1,
+        "command_valid_fraction_mean": 0.9666666666666667,
+        "command_valid_fraction_observed_runs": 1
+      },
+      "direct": {
+        "run_count": 1,
+        "passed": 0,
+        "failed_or_unqualified": 1,
+        "tracking_loss_duration_s_mean": 0.45969916700414615,
+        "tracking_loss_duration_s_observed_runs": 1,
+        "command_valid_fraction_mean": 0.9090909090909091,
+        "command_valid_fraction_observed_runs": 1
+      },
+      "filtered": {
+        "run_count": 0,
+        "passed": 0,
+        "failed_or_unqualified": 0,
+        "tracking_loss_duration_s_mean": null,
+        "tracking_loss_duration_s_observed_runs": 0,
+        "command_valid_fraction_mean": null,
+        "command_valid_fraction_observed_runs": 0
+      }
+    },
+    "superiority_established": false,
+    "superiority_claim": null,
+    "interpretation": "Descriptive paired configurations and repeats; failed runs retained. Paired deltas require the same uniquely bound evaluator actor. Closed-loop images differ by controller. No automatic statistical or causal superiority claim."
+  }
+}

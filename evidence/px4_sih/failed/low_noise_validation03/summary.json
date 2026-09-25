@@ -1,0 +1,33 @@
+{
+  "passed": false,
+  "checks": {
+    "stable_takeoff": true,
+    "landed_disarmed": true,
+    "fresh_neural_commands": false,
+    "depth_approved_forward_commands": false,
+    "translated_at_least_30cm": false,
+    "selected_depth_reduced_20cm": false,
+    "advancing_at_stall": false,
+    "actual_worker_stall": false,
+    "delayed_output_rejected": false,
+    "stale_command_expired": false,
+    "stale_hold_slowdown": false
+  },
+  "fresh_neural_commands": 3,
+  "advancing_ticks": 4,
+  "follow_displacement_m": 0.07018431197140908,
+  "selected_depth_reduction_m": -0.06954121589660645,
+  "hold_ticks": 0,
+  "mode": "neural_follow",
+  "error": "SitlError: Following milestones not reached before stall-window deadline",
+  "session": "6c53fd14-77c6-427f-971d-b9206c54f5ff",
+  "px4_sensor_profile": "1% stock GPS/baro/mag/IMU noise",
+  "actual_px4": true,
+  "limits": [
+    "simulation only",
+    "stylized stationary actors",
+    "ideal RGB and depth",
+    "no obstacle collision physics",
+    "no neural superiority claim"
+  ]
+}

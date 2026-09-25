@@ -1,0 +1,156 @@
+{
+  "created_utc": "2026-09-25T11:53:02.893608+00:00",
+  "software_tests": {
+    "command": "FLIGHT_RENDER_TESTS=1 python -B -m unittest discover -s tests -v",
+    "tests": 966,
+    "passed": true,
+    "duration_s": 89.835,
+    "log_sha256": "381da20544f58427759c216feec9701bf61cba5c979d74d51ff86f5a2b2ca7f2",
+    "scope": "Unit, mocked transport, native MuJoCo rendering/physics and loopback HTTP; not equivalent to PX4 flight acceptance"
+  },
+  "frozen_batch": {
+    "verified": true,
+    "declared_cases": 18,
+    "attempted_cases": 2,
+    "passed_cases": 0,
+    "failed_cases": 2,
+    "skipped_cases": 16,
+    "actual_px4_cases": 2,
+    "completed_all_declared_cases": false,
+    "finished": true,
+    "passed": false,
+    "missing_cases": [],
+    "skipped_case_ids": [
+      "r01-walk-filtered",
+      "r01-crossing-neural",
+      "r01-crossing-direct",
+      "r01-crossing-filtered",
+      "r01-occlusion-neural",
+      "r01-occlusion-direct",
+      "r01-occlusion-filtered",
+      "r02-walk-filtered",
+      "r02-walk-direct",
+      "r02-walk-neural",
+      "r02-crossing-filtered",
+      "r02-crossing-direct",
+      "r02-crossing-neural",
+      "r02-occlusion-filtered",
+      "r02-occlusion-direct",
+      "r02-occlusion-neural"
+    ],
+    "verified_runs": [
+      {
+        "case_id": "r01-walk-neural",
+        "verified": true,
+        "passed": false,
+        "actual_px4_receipt_verified": true,
+        "benchmark_verified": true,
+        "source_count": 83,
+        "observations": 60,
+        "control_ticks": 593,
+        "px4_sensor_profile": "1% stock GPS/baro/mag/IMU noise",
+        "comparison_only_source_change": true,
+        "mission_policy_compatibility_checked": true,
+        "score_recomputed": true,
+        "scope": "Saved source/receipt consistency and current reviewed gate recomputation; not physics replay, binary execution attestation, or hardware validation"
+      },
+      {
+        "case_id": "r01-walk-direct",
+        "verified": true,
+        "passed": false,
+        "actual_px4_receipt_verified": true,
+        "benchmark_verified": true,
+        "source_count": 83,
+        "observations": 22,
+        "control_ticks": 152,
+        "px4_sensor_profile": "1% stock GPS/baro/mag/IMU noise",
+        "comparison_only_source_change": true,
+        "mission_policy_compatibility_checked": true,
+        "score_recomputed": true,
+        "scope": "Saved source/receipt consistency and current reviewed gate recomputation; not physics replay, binary execution attestation, or hardware validation"
+      }
+    ],
+    "scope": "Saved source/receipt consistency and current reviewed gate recomputation; not physics replay, binary execution attestation, or hardware validation"
+  },
+  "final_recovery": {
+    "verified": true,
+    "passed": false,
+    "actual_px4_receipt_verified": true,
+    "benchmark_verified": true,
+    "source_count": 83,
+    "observations": 8,
+    "control_ticks": 114,
+    "px4_sensor_profile": "1% stock GPS/baro/mag/IMU noise",
+    "comparison_only_source_change": true,
+    "mission_policy_compatibility_checked": true,
+    "score_recomputed": true,
+    "scope": "Saved source/receipt consistency and current reviewed gate recomputation; not physics replay, binary execution attestation, or hardware validation"
+  },
+  "studio_latest": {
+    "verified": true,
+    "passed": false,
+    "actual_px4_receipt_verified": true,
+    "benchmark_verified": false,
+    "evaluation_scope": "operator_demonstration",
+    "source_count": 83,
+    "comparison_only_source_change": null,
+    "mission_policy_compatibility_checked": false,
+    "score_recomputed": false,
+    "scope": "Saved source/receipt consistency and current reviewed gate recomputation; not physics replay, binary execution attestation, or hardware validation; operator score is descriptive and unsupported as a benchmark"
+  },
+  "preserved_original": {
+    "verified": true,
+    "sources": 81,
+    "observations": 14,
+    "control_ticks": 343,
+    "advancing_ticks": 78,
+    "px4_sensor_profile": "1% stock GPS/baro/mag/IMU noise",
+    "checks": {
+      "stable_takeoff": true,
+      "landed_disarmed": true,
+      "fresh_neural_commands": true,
+      "depth_approved_forward_commands": true,
+      "translated_at_least_30cm": true,
+      "selected_depth_reduced_20cm": true,
+      "advancing_at_stall": true,
+      "actual_worker_stall": true,
+      "delayed_output_rejected": true,
+      "stale_command_expired": true,
+      "stale_hold_slowdown": true
+    },
+    "scope": "artifact consistency and gate recomputation; not physics replay"
+  },
+  "retrospective": {
+    "input_hashes_match": true,
+    "policy_hash_matches": true,
+    "original_summary_unchanged": true,
+    "all_strict_recovery_checks_pass": true,
+    "scope": "Separate later audit of the original development run, not current-runtime flight qualification"
+  },
+  "review": {
+    "independent_source_review": true,
+    "independent_export_hash_review": true,
+    "all_skipped_cases_preserved": true,
+    "publication_exclusions": [
+      "dependencies",
+      "build cache",
+      "model weights",
+      "native binaries",
+      "raw neural arrays",
+      "video files"
+    ]
+  },
+  "source_sha256": {
+    "experiments/px4_follow.py": "e8cc83ee920000efdee093b33567dd1c4c61d33e77cdf63972cce19fc933094f",
+    "experiments/px4_evaluation.py": "5862c9c8baeac0e0a77aa5fb60a875d1aa497ccd09178c3d9cf8fee286967d5c",
+    "scripts/run_px4_missions.py": "5764f4581d1910b67b8dd08248b7a06f93740659e4b9d95a7dc2437afbb22411",
+    "scripts/verify_px4_missions.py": "08373ded0dd5f20571a220c47c03ac9ac190a06bd52d483ce3c01186a63137b8"
+  },
+  "limitations": [
+    "normal-noise hover reliability unresolved",
+    "source-clock freshness aborts in final recovery, Studio and comparison",
+    "only two of eighteen planned cases attempted",
+    "no accepted browser selection or complete operator flight",
+    "no neural superiority or hardware claim"
+  ]
+}

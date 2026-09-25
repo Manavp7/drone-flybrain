@@ -1,0 +1,191 @@
+{
+  "label": "Retrospective strict audit of unchanged development run; not a rerun or replacement of original summary",
+  "run": "px4_recovery_diagnostic01",
+  "original_summary_sha256": "c7bd02e2bb06030de2a15e85d535c83cd3c31f63417ff4d693a77c0c844ed919",
+  "evaluator_sha256": "d640d954dd7caa2987f409eea7093de9ff2bd0d895cbebe65bedb361c92bc7e2",
+  "input_sha256": {
+    "control.json": "f7f6b0f4ea77e4d5a5ba08aa1a835b8109fdb4f68fe75377038ac5cb00397517",
+    "observations.json": "54481d9f61b652d5772a8caff5785db3e412ec0e4fbd4e70747001d02d9298aa",
+    "events.json": "0e4b9c5a105a1e429117b9c99e03cb46df66e734d41612854e9e8f4f9461e66f"
+  },
+  "result": {
+    "passed": true,
+    "safety_passed": true,
+    "tracking_success": true,
+    "checks": {
+      "stable_takeoff": true,
+      "landed_disarmed": true,
+      "mission_window_complete": true,
+      "no_runtime_failure": true,
+      "mission_sends_observed": true,
+      "send_evidence_valid": true,
+      "packet_evidence_valid": true,
+      "no_wrong_person": true
+    },
+    "tracking_checks": {
+      "explicit_identity_bound": true,
+      "forward_follow_observed": true,
+      "fresh_guidance_observed": true,
+      "tracking_policy_declared": true,
+      "correct_identity_time_coverage": true,
+      "required_recovery": true
+    },
+    "metrics": {
+      "observation_count": 107,
+      "input_observation_count": 107,
+      "selected_track": 1,
+      "intended_actor": "blue",
+      "mission_duration_s": 30.0418217500046,
+      "tracking_loss_episodes": 16,
+      "tracking_losses": [
+        {
+          "start_s": 53320.46868775,
+          "end_s": 53321.112430708,
+          "duration_s": 0.6437429580037133
+        },
+        {
+          "start_s": 53331.454739083005,
+          "end_s": 53331.482021375,
+          "duration_s": 0.027282291994197294
+        },
+        {
+          "start_s": 53331.721810125004,
+          "end_s": 53331.758003625,
+          "duration_s": 0.03619349999644328
+        },
+        {
+          "start_s": 53332.377982708,
+          "end_s": 53332.432355666,
+          "duration_s": 0.05437295800220454
+        },
+        {
+          "start_s": 53332.675059,
+          "end_s": 53332.766122083,
+          "duration_s": 0.09106308299669763
+        },
+        {
+          "start_s": 53333.026833458,
+          "end_s": 53333.096008333,
+          "duration_s": 0.06917487499595154
+        },
+        {
+          "start_s": 53333.396768291,
+          "end_s": 53333.399948083,
+          "duration_s": 0.00317979200190166
+        },
+        {
+          "start_s": 53338.386534458004,
+          "end_s": 53338.427502708,
+          "duration_s": 0.0409682499957853
+        },
+        {
+          "start_s": 53338.690575291,
+          "end_s": 53338.765685625,
+          "duration_s": 0.07511033400078304
+        },
+        {
+          "start_s": 53339.022142666,
+          "end_s": 53339.1977385,
+          "duration_s": 0.1755958339999779
+        },
+        {
+          "start_s": 53339.375263833004,
+          "end_s": 53339.647357291,
+          "duration_s": 0.27209345799928997
+        },
+        {
+          "start_s": 53339.856696083,
+          "end_s": 53340.019017166,
+          "duration_s": 0.16232108300027903
+        },
+        {
+          "start_s": 53340.287710708,
+          "end_s": 53340.384544,
+          "duration_s": 0.09683329200197477
+        },
+        {
+          "start_s": 53340.611789458,
+          "end_s": 53340.702287166,
+          "duration_s": 0.09049770799902035
+        },
+        {
+          "start_s": 53341.008939875,
+          "end_s": 53341.055012083,
+          "duration_s": 0.046072208002442494
+        },
+        {
+          "start_s": 53341.341883125,
+          "end_s": 53341.364534625,
+          "duration_s": 0.02265149999584537
+        }
+      ],
+      "tracking_loss_duration_s": 1.9071531249865075,
+      "tracking_available_fraction": 0.9365167285507173,
+      "correct_identity_duration_fraction": 0.9365167285507173,
+      "wrong_person_frames": 0,
+      "wrong_person_episodes": 0,
+      "identity_assessable_count": 106,
+      "identity_correct_count": 106,
+      "identity_ambiguous_count": 0,
+      "identity_unknown_count": 1,
+      "identity_unassessable_count": 1,
+      "identity_annotation_mismatch_count": 0,
+      "identity_correct_fraction": 0.9906542056074766,
+      "command_valid_count": 104,
+      "command_valid_fraction": 0.9719626168224299,
+      "latency_s": {
+        "p50": 0.3033975830039708,
+        "p95": 0.39226665880269135,
+        "maximum": 0.47247466699627694
+      },
+      "release_latency_s": {
+        "p50": 0.313534291999531,
+        "p95": 0.40768453760319956,
+        "maximum": 0.48397608300001593
+      },
+      "physical_yaw_span_rad": 0.2199198132141148,
+      "positive_send_ticks": 212,
+      "unsafe_positive_send_ticks": 0,
+      "send_evidence_valid": true,
+      "invalid_send_indices": [],
+      "malformed_row_count": 0,
+      "packet_integrity_errors": [],
+      "flyvis_observation_calls": 107,
+      "flyvis_reported_total": 107,
+      "flyvis_guidance_commands": 104,
+      "flyvis_positive_send_ticks": 212,
+      "evaluation_scope": "offline projected-mesh association; occlusion/overlap may be unknown; warmup calls excluded"
+    },
+    "recovery": {
+      "passed": true,
+      "checks": {
+        "injected_depth_gap": true,
+        "stationary_memory_used": true,
+        "pose_turn_at_least_002_rad": true,
+        "gap_command_invalid": true,
+        "gap_zero_forward": true,
+        "same_selected_id_recovered": true,
+        "current_depth_valid_recovery": true,
+        "positive_recovery_send": true,
+        "recovered_within_1_2s": true,
+        "evaluator_identity_preserved": true,
+        "restored_anchor_reprojected": true,
+        "original_anchor_fresh_at_recovery": true,
+        "no_explicit_reselection": true
+      },
+      "gap_count": 1,
+      "gap_sequence": 13,
+      "recovery_sequence": 14,
+      "pose_turn_rad": 0.03207193928498389,
+      "recovery_delay_s": 0.549346792002325,
+      "gap_send_ticks": 9,
+      "association_recovery_sequence": 14,
+      "original_anchor_age_at_recovery_s": 0.4965301249976619
+    },
+    "tracking_policy": {
+      "min_correct_identity_duration_fraction": 0.8,
+      "require_recovery": true,
+      "unknown_identity_counts_as_correct": false
+    }
+  }
+}

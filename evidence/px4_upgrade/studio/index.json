@@ -1,0 +1,8 @@
+{
+  "runs": [
+    "run-20260925T112855-c61dbff5",
+    "run-20260925T113649-4864a259",
+    "run-20260925T114228-4f6a2b19"
+  ],
+  "scope": "Three actual browser launches; live previews observed, all aborted on clock freshness before selection; latest complete runtime snapshot included"
+}

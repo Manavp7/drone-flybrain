@@ -1,0 +1,361 @@
+[
+  {
+    "event": "vision_ready",
+    "elapsed_s": 0.7648190830004751,
+    "model": null
+  },
+  {
+    "event": "owned_px4_verified",
+    "elapsed_s": 3.9499017909984104,
+    "pid": 32484,
+    "build": {
+      "px4_commit": "54f0455ffcd755534539a7cf33a09a20bf71d29d",
+      "profile": "px4_sitl_mantis",
+      "build_recipe_sha256": "f77697194e4d77c34cffcff069fcb6b18d601af7db34473157c33a7ed8d830b5",
+      "binary_sha256": "747a5141cdb8e09a975794b7979d762d975aef30c679b2a5edc731d2e03461b4",
+      "startup_tree_sha256": "1a267e74fc845051b74e790333c9bd78194c8fd6f8531f1b3fc4844a97744d25",
+      "overlay_sha256": "0448befccd6be884dd02075647ed8dd7968660363d56a9312bcaa7ecea1de3fd",
+      "truth_header_sha256": "526426b4cb6bc38a20076a84e33855e0595157b51914dff054d5f52ada2f7fba",
+      "timestamp_patch": "msg.time_usec = math::min(math::min(att.timestamp_sample, gpos.timestamp_sample), math::min(lpos.timestamp_sample, angular_velocity.timestamp_sample));",
+      "sensor_noise_patches": {
+        "src/modules/simulation/sensor_gps_sim/SensorGpsSim.cpp": {
+          "original_sha256": "c5ac246e2b4fa0073e2efab153145f3f8f0af28c336df7b200816978da451287",
+          "patched_sha256": "13412ac041835a35ca9e1ee6af9593e4f3956affb39eef48ed89ff3d7f456fe4"
+        },
+        "src/modules/simulation/sensor_baro_sim/SensorBaroSim.cpp": {
+          "original_sha256": "b818d54c968bcfc810291e9d594affb7ef7c10290fcdecd3338ebd46507af1d5",
+          "patched_sha256": "56aa5838c4a35ef1b70446c538bf9054d7590c392e8953efdbbd1d5d21c0786a"
+        },
+        "src/modules/simulation/sensor_mag_sim/SensorMagSim.cpp": {
+          "original_sha256": "edf78345a7edbcb649b60b2c92f4919f7f5c9e4330551f2fe88660d2cc6a2053",
+          "patched_sha256": "04cd268c6ff4b9762f54dfb3ee797424785c5aac63600bf20223be8db0fe3731"
+        },
+        "src/modules/simulation/simulator_sih/sih.cpp": {
+          "original_sha256": "aed62f325014cf284e861b4f3bb20e36f58e94af493143208232855dc5a5951b",
+          "patched_sha256": "6ccbd097b88a988f2d77e52207fc7ea40e830899f1afb6cb04978cd87a082857"
+        }
+      },
+      "sensor_mode_switch": "MANTIS_SIH_LOW_NOISE_SENSORS=1 gives 1% noise; absent means stock noise",
+      "gps_accuracy_switch": "MANTIS_SIH_CALIBRATED_GPS reports the actual stock SIH noise (eph .2m, epv .5m); value1 uses velocity .158m/s, value2 uses .11m/s accounting for EKF vertical x1.5. All samples are unchanged",
+      "submodules": [
+        "-f47ce7b5fbbb3aa43d33d2be1f6cd3746b13d5bf Tools/simulation/flightgear/flightgear_bridge",
+        "-70683dc759cbd3ebccfa78429b564f8b1fb5d149 Tools/simulation/gazebo-classic/sitl_gazebo-classic",
+        "-e05f4312d3f28aa621157610584a4870406cb6d3 Tools/simulation/gz",
+        "-66b764ada522893c05224950aa6268c809f8e48a Tools/simulation/jmavsim/jMAVSim",
+        "-68de2cc63ded9a0d6641d45e9eb3ed2b43454cba Tools/simulation/jsbsim/jsbsim_bridge",
+        "-85151aaf6ba8b24ce82b387e088452c63f7e2096 boards/modalai/voxl2/libfc-sensor-api",
+        "-e37940d8535f603a16b8f6f21c21edaf584218aa platforms/nuttx/NuttX/apps",
+        "-886acbbdb4f061e5c0ce1a76afbcfa7cb7df9849 platforms/nuttx/NuttX/nuttx",
+        "-c488af4e8807de80739aa48efd2ea51614dd8195 src/drivers/actuators/vertiq_io/iq-module-communication-cpp",
+        "-36a01e428b110ff84c8babe5b65667b5e3037d5e src/drivers/cyphal/legacy_data_types",
+        "-5c69d451ab0787a81dcb615692d707f2a286f5e5 src/drivers/cyphal/libcanard",
+        "-d0bd6516dac8ff61287fe49a9f2c75e7d4dc1b8e src/drivers/cyphal/public_regulated_data_types",
+        " 4cea5de87ce7e2a52e5289bd3639fd8eb770eafa src/drivers/gps/devices (4cea5de)",
+        "-993be80a62ec957c01fb41115b83663959a49f46 src/drivers/uavcan/libdronecan/dsdl",
+        "-19fdf2e5b383243ccdb1094edae0603cf11469e8 src/drivers/uavcan/libdronecan/libuavcan/dsdl_compiler/pydronecan",
+        "-314887ca403c2fb0a0316add22672102936ed36c src/lib/cdrstream/cyclonedds",
+        "-7790c70717e09c003711f6f65015666c223fc283 src/lib/cdrstream/rosidl",
+        "-673f5ce29015a9bba3c96792920a10601b5b0718 src/lib/crypto/libtomcrypt",
+        "-fd73d7630b9d3ed5a79d613ff680a549e9780de7 src/lib/crypto/libtommath",
+        "-baca5d31259c598540e4d1284bc8d8f793abf83a src/lib/crypto/monocypher",
+        " 9ef591c447fe0386d698bf6fb9a6d27e43988ee4 src/lib/events/libevents (9ef591c)",
+        " 052e6de72f67f1777198bce98f3de62f7f3c16a0 src/lib/heatshrink/heatshrink (heads/main)",
+        " 5bfd76d80281f6027134e854aafe6cb3dbfbe9e1 src/modules/mavlink/mavlink (5bfd76d)",
+        " 4960d4d20dcf9fc2981785355567fc5773416bc9 src/modules/mavlink/mavlink/pymavlink (4960d4d)",
+        "-711aef423edd1820347b866d1e4164832df35d04 src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client",
+        "-f093aa7955bb24dfa3e626de084583711e3bac5c src/modules/zenoh/zenoh-pico"
+      ]
+    },
+    "px4_sensor_profile": "1% stock GPS/baro/mag/IMU noise"
+  },
+  {
+    "event": "armed_offboard",
+    "elapsed_s": 7.102235540995025
+  },
+  {
+    "event": "takeoff_progress",
+    "elapsed_s": 7.102397499998915,
+    "sample": {
+      "elapsed_s": 4.620900290319696e-05,
+      "position_ned": [
+        0.0017137525137513876,
+        0.0019673448987305164,
+        0.065185546875
+      ],
+      "target_ned": [
+        0.0034145773388445377,
+        0.0011217915453016758,
+        -1.023095703125
+      ],
+      "velocity_ned": [
+        -0.0005528017645701766,
+        -0.0021212154533714056,
+        0.004376660101115704
+      ],
+      "truth_altitude_m": 489.399,
+      "truth_velocity_ned": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "truth_lat_lon": [
+        47.3977432,
+        8.5455942
+      ],
+      "source_time_s": 4.864,
+      "stable": false
+    }
+  },
+  {
+    "event": "takeoff_progress",
+    "elapsed_s": 12.210214040998835,
+    "sample": {
+      "elapsed_s": 5.107867917002295,
+      "position_ned": [
+        0.00779559463262558,
+        0.0044227177277207375,
+        -0.674560546875
+      ],
+      "target_ned": [
+        0.0034145773388445377,
+        0.0011217915453016758,
+        -1.023095703125
+      ],
+      "velocity_ned": [
+        -0.0015294859185814857,
+        -0.002313215285539627,
+        -0.18559902906417847
+      ],
+      "truth_altitude_m": 490.142,
+      "truth_velocity_ned": [
+        0.0,
+        0.0,
+        -0.18
+      ],
+      "truth_lat_lon": [
+        47.3977432,
+        8.5455942
+      ],
+      "source_time_s": 9.424,
+      "stable": false
+    }
+  },
+  {
+    "event": "stable_takeoff",
+    "elapsed_s": 15.355397790997813,
+    "position_ned": [
+      0.007339303847402334,
+      0.0060636866837739944,
+      -0.952880859375
+    ]
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 15.717333790998964,
+    "valid": false,
+    "reason": "selected_person_unavailable",
+    "capture_age_s": 0.4155960829957621
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 15.831242583000858,
+    "valid": true,
+    "reason": "direct_bearing_and_registered_depth",
+    "capture_age_s": 0.14326879200234544
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 15.943041833001189,
+    "valid": true,
+    "reason": "direct_bearing_and_registered_depth",
+    "capture_age_s": 0.1425231250032084
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 16.115723582995997,
+    "valid": true,
+    "reason": "direct_bearing_and_registered_depth",
+    "capture_age_s": 0.20266412499768194
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 16.28952654099703,
+    "valid": true,
+    "reason": "direct_bearing_and_registered_depth",
+    "capture_age_s": 0.2054498750003404
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 16.42208233299607,
+    "valid": true,
+    "reason": "direct_bearing_and_registered_depth",
+    "capture_age_s": 0.18838045899610734
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 16.56474737499957,
+    "valid": false,
+    "reason": "target_depth_unavailable",
+    "capture_age_s": 0.19894129099702695
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 16.710241249995306,
+    "valid": true,
+    "reason": "direct_bearing_and_registered_depth",
+    "capture_age_s": 0.20599304200004553
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 16.886945999998716,
+    "valid": true,
+    "reason": "direct_bearing_and_registered_depth",
+    "capture_age_s": 0.20666816599987214
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 17.05332404100045,
+    "valid": true,
+    "reason": "direct_bearing_and_registered_depth",
+    "capture_age_s": 0.19639133300370304
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 17.21570499999507,
+    "valid": true,
+    "reason": "direct_bearing_and_registered_depth",
+    "capture_age_s": 0.1906903749986668
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 17.377311124997505,
+    "valid": true,
+    "reason": "direct_bearing_and_registered_depth",
+    "capture_age_s": 0.21693483300623484
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 17.576147207997565,
+    "valid": true,
+    "reason": "direct_bearing_and_registered_depth",
+    "capture_age_s": 0.25384720799775096
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 17.92513633299677,
+    "valid": true,
+    "reason": "direct_bearing_and_registered_depth",
+    "capture_age_s": 0.40853216699906625
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 18.158384415997716,
+    "valid": true,
+    "reason": "direct_bearing_and_registered_depth",
+    "capture_age_s": 0.29436837500543334
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 18.3577166249961,
+    "valid": true,
+    "reason": "direct_bearing_and_registered_depth",
+    "capture_age_s": 0.27745712499745423
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 18.55644300000131,
+    "valid": true,
+    "reason": "direct_bearing_and_registered_depth",
+    "capture_age_s": 0.2298475839997991
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 18.75738870799978,
+    "valid": true,
+    "reason": "direct_bearing_and_registered_depth",
+    "capture_age_s": 0.2633417089964496
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 18.94923679099884,
+    "valid": true,
+    "reason": "direct_bearing_and_registered_depth",
+    "capture_age_s": 0.22292008299700683
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 19.154610833000334,
+    "valid": true,
+    "reason": "direct_bearing_and_registered_depth",
+    "capture_age_s": 0.2607385829978739
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 19.349765332997777,
+    "valid": true,
+    "reason": "direct_bearing_and_registered_depth",
+    "capture_age_s": 0.22649879100208636
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 19.54260437499761,
+    "valid": true,
+    "reason": "direct_bearing_and_registered_depth",
+    "capture_age_s": 0.24900416700256756
+  },
+  {
+    "event": "failure",
+    "elapsed_s": 19.928017833000922,
+    "error": "SitlError: no_fresh_preceding_source_clock_receipt"
+  },
+  {
+    "event": "failure_clock_diagnostics",
+    "elapsed_s": 19.930227958000614,
+    "source_times": {
+      "attitude": 16.144,
+      "truth": 16.144,
+      "position": 16.136
+    },
+    "age_upper_bounds_s": {
+      "attitude": 0.19842954100022325,
+      "truth": 0.19842954100022325,
+      "position": 0.24633449999964796
+    },
+    "pending_sync": 0,
+    "clock_reset": false,
+    "recent_sync": [
+      [
+        16.084,
+        54260.807136041
+      ],
+      [
+        16.112,
+        54260.836393916
+      ],
+      [
+        16.14,
+        54260.884298875
+      ],
+      [
+        16.144,
+        54260.939991
+      ],
+      [
+        16.152,
+        54261.079609916
+      ]
+    ],
+    "status": [
+      "Armed by external command\t",
+      "Takeoff detected\t"
+    ]
+  },
+  {
+    "event": "land_requested",
+    "elapsed_s": 19.986581207995187
+  },
+  {
+    "event": "landed_disarmed",
+    "elapsed_s": 30.81703254099557
+  }
+]

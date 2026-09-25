@@ -1,0 +1,37 @@
+{
+  "completed_utc": "2026-09-25T10:55:25.045555+00:00",
+  "actual_px4_run": "px4_sih_low_noise_validation04",
+  "actual_flight_gates_passed": 11,
+  "final_native_regression": {
+    "tests": 843,
+    "passed": true,
+    "seconds": 62.359,
+    "command": "FLIGHT_RENDER_TESTS=1 python -B -m unittest discover -s tests -v"
+  },
+  "focused_postflight_regression": {
+    "tests": 36,
+    "passed": true
+  },
+  "current_runtime_sha256": {
+    "experiments/px4_camera.py": "6ebdde93483d3284f8ee3a5abab1f6926b75afdfae7c9c442b4e88cbc6fd0efe",
+    "experiments/px4_follow.py": "7b47bf7fcadcbffeab17b653b05276e449ee51f6c9e79180a9945ded5718783a",
+    "experiments/px4_recording.py": "85b83c8c498acb8e16df68f892409b67d383d46212bfba42ad128d7dadbf8d61",
+    "flybrain_sim/px4_sih.py": "5e254884dc216c965ac1ed7bac7f3a6cffc781ae956ed0bc02599d682d2fd011",
+    "scripts/build_px4_sih.py": "0d05af3b60196bbf1b823680eaf7c05a47cb6289dc86613e618503579610e06b",
+    "scripts/verify_px4_sih.py": "2b51e305e7901eee935c093b026543e51991523e95023ac410641ae8bf4feb93",
+    "tests/test_px4_sih.py": "55560bb3c0a54baa4092a72ac2cf8ef126e7940247a4743dcec4add69a0c44a5"
+  },
+  "postflight_delta": "Only AsyncRecorder error-receipt propagation differs from the frozen flight runtime; negative unit regression and final native suite passed.",
+  "media_validation": "Both H264 videos fully decoded by ffmpeg -xerror; one overview frame visually inspected.",
+  "independent_reviews": [
+    "source and control authority review",
+    "raw receipt and source hash recomputation",
+    "sensor patch and recording cleanup review"
+  ],
+  "limits": [
+    "1% stock GPS/baro/mag/IMU noise; stock-noise hover unresolved",
+    "ideal RGB/depth, stationary stylized actors, no obstacle contact dynamics",
+    "one-gap retention branch used zero times in actual passing trial; focused test coverage only",
+    "one controlled passing run; no broad reliability, hardware or neural-superiority claim"
+  ]
+}

@@ -1,0 +1,734 @@
+[
+  {
+    "event": "vision_ready",
+    "elapsed_s": 14.744424125005025,
+    "model": {
+      "name": "Mantis shape-diverse neural readout",
+      "readout_sha256": "ea57f5b38d467f632a9b14e7403b6e1f8288dd86f5da5e47d5356a29fb573663",
+      "source_run": "mantis_calibration01",
+      "validation": {
+        "passed": true,
+        "gates": {
+          "horizontal_rmse_improved": true,
+          "other_axes_not_materially_worse": true,
+          "coverage_preserved": true,
+          "complete_neural_evidence": true,
+          "no_phase_grossly_regresses": true
+        },
+        "results": {
+          "heldout_grid": {
+            "observations": 480,
+            "neural_evidence_count": 480,
+            "methods": {
+              "original": {
+                "count": 480,
+                "rmse": [
+                  0.03173299488482807,
+                  0.020055542651072428,
+                  0.09432211391189849
+                ],
+                "mean_absolute": [
+                  0.024008985600020436,
+                  0.012749801070648771,
+                  0.07961849491705592
+                ],
+                "maximum_absolute": [
+                  0.1456574279612404,
+                  0.11195195128088463,
+                  0.1845280887015019
+                ],
+                "bias": [
+                  -0.007699617998291346,
+                  0.0003156740423881077,
+                  0.05072914163855989
+                ],
+                "available_count": 418,
+                "coverage": 0.8708333333333333
+              },
+              "calibrated": {
+                "count": 480,
+                "rmse": [
+                  0.025187244145947585,
+                  0.019511694568151754,
+                  0.02742767472050002
+                ],
+                "mean_absolute": [
+                  0.015881464734838032,
+                  0.01296387108050772,
+                  0.019573308398515017
+                ],
+                "maximum_absolute": [
+                  0.15560042156674703,
+                  0.11172457277803395,
+                  0.11462395473601994
+                ],
+                "bias": [
+                  0.00010586382126717876,
+                  -0.0007289667974416366,
+                  -0.001348688916196282
+                ],
+                "available_count": 480,
+                "coverage": 1.0
+              }
+            },
+            "rmse_change_fraction": [
+              0.2062758577511412,
+              0.027117096374931204,
+              0.7092126800071633
+            ]
+          },
+          "heldout_motion": {
+            "observations": 64,
+            "neural_evidence_count": 64,
+            "methods": {
+              "original": {
+                "count": 64,
+                "rmse": [
+                  0.015771301579927146,
+                  0.006301477362745381,
+                  0.08936517466550646
+                ],
+                "mean_absolute": [
+                  0.012417075236856392,
+                  0.005675565554461585,
+                  0.0784471273984308
+                ],
+                "maximum_absolute": [
+                  0.03801614480489285,
+                  0.01168562104484644,
+                  0.15832527420664133
+                ],
+                "bias": [
+                  -0.008260908706540407,
+                  0.00036177023933387165,
+                  0.04814771039019483
+                ],
+                "available_count": 58,
+                "coverage": 0.90625
+              },
+              "calibrated": {
+                "count": 64,
+                "rmse": [
+                  0.013963068676111641,
+                  0.005316493280391986,
+                  0.009409073386124928
+                ],
+                "mean_absolute": [
+                  0.012545675282677589,
+                  0.00470378246208431,
+                  0.007452869901974218
+                ],
+                "maximum_absolute": [
+                  0.023287783031465115,
+                  0.008869777315844207,
+                  0.02061989498282296
+                ],
+                "bias": [
+                  -0.0008422984972880289,
+                  0.0012324109067636956,
+                  -0.0029039530193014293
+                ],
+                "available_count": 64,
+                "coverage": 1.0
+              }
+            },
+            "rmse_change_fraction": [
+              0.1146533718001389,
+              0.15631002472160982,
+              0.8947120797184915
+            ]
+          },
+          "combined": {
+            "observations": 544,
+            "neural_evidence_count": 544,
+            "methods": {
+              "original": {
+                "count": 544,
+                "rmse": [
+                  0.030294837817355546,
+                  0.01896248478899877,
+                  0.09375254866437756
+                ],
+                "mean_absolute": [
+                  0.022645231439648198,
+                  0.011917538068744396,
+                  0.07948068697368826
+                ],
+                "maximum_absolute": [
+                  0.1456574279612404,
+                  0.11195195128088463,
+                  0.1845280887015019
+                ],
+                "bias": [
+                  -0.007765652199261821,
+                  0.000321097124381727,
+                  0.050425443844634606
+                ],
+                "available_count": 476,
+                "coverage": 0.875
+              },
+              "calibrated": {
+                "count": 544,
+                "rmse": [
+                  0.024139171958995446,
+                  0.018418538575566204,
+                  0.025965159272259106
+                ],
+                "mean_absolute": [
+                  0.015489018916936803,
+                  0.01199209594892849,
+                  0.01814737445774551
+                ],
+                "maximum_absolute": [
+                  0.15560042156674703,
+                  0.11172457277803395,
+                  0.11462395473601994
+                ],
+                "bias": [
+                  -5.684686798139734e-06,
+                  -0.0004982164792998329,
+                  -0.0015316611636204168
+                ],
+                "available_count": 544,
+                "coverage": 1.0
+              }
+            },
+            "rmse_change_fraction": [
+              0.2031919066697757,
+              0.028685386935584534,
+              0.7230458303036524
+            ]
+          }
+        },
+        "thresholds": {
+          "minimum_horizontal_rmse_reduction_fraction": 0.1,
+          "maximum_other_axis_rmse_multiplier": 1.25,
+          "maximum_other_axis_rmse_addition": 0.002,
+          "maximum_per_phase_axis_rmse_multiplier": 1.25,
+          "maximum_per_phase_axis_rmse_addition": 0.003,
+          "minimum_new_coverage_relative_to_original": 1.0,
+          "minimum_neural_evidence_fraction": 1.0
+        },
+        "units": "Normalized center coordinates x/y; height as a fraction of391pixels",
+        "error_denominator": "Every predeclared held-out observation, no selective abstention",
+        "direct_geometry_is_exact_box_reconstruction_oracle": true,
+        "neural_superiority_over_geometry_or_filter_evaluated": false,
+        "physical_flight_evaluated": false,
+        "completed_utc": "2026-09-14T06:17:53.589912+00:00",
+        "attempt": 1,
+        "original_readout_sha256": "0b69cf817f881cb1cd9064f50cb7deb32a22edb3c53ee06dad78245f0c4a898d",
+        "calibrated_readout_sha256": "ea57f5b38d467f632a9b14e7403b6e1f8288dd86f5da5e47d5356a29fb573663",
+        "observations": 1283,
+        "neural_steps": 6415
+      },
+      "fit_frozen": {
+        "frozen_utc": "2026-09-14T06:16:52.086251+00:00",
+        "trained_phase_names": [
+          "train_grid",
+          "train_motion"
+        ],
+        "ridge": 0.0001,
+        "training_observations": 739,
+        "training_artifact_hashes": {
+          "train_grid": "a6f6a6f11371353c09bac9ff5d2c1db869aafdca3f75062c029adab7201850c5",
+          "train_motion": "224abdc059ad622217bc58893825f501c5c77e0fcdf0cb1002017f6ca5fac76d"
+        },
+        "candidate_readout_sha256": "ea57f5b38d467f632a9b14e7403b6e1f8288dd86f5da5e47d5356a29fb573663",
+        "heldout_inference_started": false,
+        "prediction_inputs": [
+          "mean_x",
+          "mean_y",
+          "std_x",
+          "std_y",
+          "cov_xy",
+          "log1p_mass",
+          "mean_evidence",
+          "peak_evidence"
+        ]
+      },
+      "definition_sha256": "4b926d72190eb226a2966d4d913b659cb9dfdab22e64db05db5c8ddd47ecb62d",
+      "model_manifest_sha256": "86004101adc92e65bff8ba1e583fc9fd2551a7eec2560e601497e756af8e1594",
+      "prediction_inputs": "Eight actual neural features only; no target geometry or evaluator truth",
+      "training_scope": "Synthetic rectangle geometry; no recorded actor flight or benchmark data",
+      "no_advantage_over_conventional_methods_claimed": true
+    }
+  },
+  {
+    "event": "owned_px4_verified",
+    "elapsed_s": 17.235494542001106,
+    "pid": 80094,
+    "build": {
+      "px4_commit": "54f0455ffcd755534539a7cf33a09a20bf71d29d",
+      "profile": "px4_sitl_mantis",
+      "build_recipe_sha256": "f77697194e4d77c34cffcff069fcb6b18d601af7db34473157c33a7ed8d830b5",
+      "binary_sha256": "747a5141cdb8e09a975794b7979d762d975aef30c679b2a5edc731d2e03461b4",
+      "startup_tree_sha256": "1a267e74fc845051b74e790333c9bd78194c8fd6f8531f1b3fc4844a97744d25",
+      "overlay_sha256": "0448befccd6be884dd02075647ed8dd7968660363d56a9312bcaa7ecea1de3fd",
+      "truth_header_sha256": "526426b4cb6bc38a20076a84e33855e0595157b51914dff054d5f52ada2f7fba",
+      "timestamp_patch": "msg.time_usec = math::min(math::min(att.timestamp_sample, gpos.timestamp_sample), math::min(lpos.timestamp_sample, angular_velocity.timestamp_sample));",
+      "sensor_noise_patches": {
+        "src/modules/simulation/sensor_gps_sim/SensorGpsSim.cpp": {
+          "original_sha256": "c5ac246e2b4fa0073e2efab153145f3f8f0af28c336df7b200816978da451287",
+          "patched_sha256": "13412ac041835a35ca9e1ee6af9593e4f3956affb39eef48ed89ff3d7f456fe4"
+        },
+        "src/modules/simulation/sensor_baro_sim/SensorBaroSim.cpp": {
+          "original_sha256": "b818d54c968bcfc810291e9d594affb7ef7c10290fcdecd3338ebd46507af1d5",
+          "patched_sha256": "56aa5838c4a35ef1b70446c538bf9054d7590c392e8953efdbbd1d5d21c0786a"
+        },
+        "src/modules/simulation/sensor_mag_sim/SensorMagSim.cpp": {
+          "original_sha256": "edf78345a7edbcb649b60b2c92f4919f7f5c9e4330551f2fe88660d2cc6a2053",
+          "patched_sha256": "04cd268c6ff4b9762f54dfb3ee797424785c5aac63600bf20223be8db0fe3731"
+        },
+        "src/modules/simulation/simulator_sih/sih.cpp": {
+          "original_sha256": "aed62f325014cf284e861b4f3bb20e36f58e94af493143208232855dc5a5951b",
+          "patched_sha256": "6ccbd097b88a988f2d77e52207fc7ea40e830899f1afb6cb04978cd87a082857"
+        }
+      },
+      "sensor_mode_switch": "MANTIS_SIH_LOW_NOISE_SENSORS=1 gives 1% noise; absent means stock noise",
+      "gps_accuracy_switch": "MANTIS_SIH_CALIBRATED_GPS reports the actual stock SIH noise (eph .2m, epv .5m); value1 uses velocity .158m/s, value2 uses .11m/s accounting for EKF vertical x1.5. All samples are unchanged",
+      "submodules": [
+        "-f47ce7b5fbbb3aa43d33d2be1f6cd3746b13d5bf Tools/simulation/flightgear/flightgear_bridge",
+        "-70683dc759cbd3ebccfa78429b564f8b1fb5d149 Tools/simulation/gazebo-classic/sitl_gazebo-classic",
+        "-e05f4312d3f28aa621157610584a4870406cb6d3 Tools/simulation/gz",
+        "-66b764ada522893c05224950aa6268c809f8e48a Tools/simulation/jmavsim/jMAVSim",
+        "-68de2cc63ded9a0d6641d45e9eb3ed2b43454cba Tools/simulation/jsbsim/jsbsim_bridge",
+        "-85151aaf6ba8b24ce82b387e088452c63f7e2096 boards/modalai/voxl2/libfc-sensor-api",
+        "-e37940d8535f603a16b8f6f21c21edaf584218aa platforms/nuttx/NuttX/apps",
+        "-886acbbdb4f061e5c0ce1a76afbcfa7cb7df9849 platforms/nuttx/NuttX/nuttx",
+        "-c488af4e8807de80739aa48efd2ea51614dd8195 src/drivers/actuators/vertiq_io/iq-module-communication-cpp",
+        "-36a01e428b110ff84c8babe5b65667b5e3037d5e src/drivers/cyphal/legacy_data_types",
+        "-5c69d451ab0787a81dcb615692d707f2a286f5e5 src/drivers/cyphal/libcanard",
+        "-d0bd6516dac8ff61287fe49a9f2c75e7d4dc1b8e src/drivers/cyphal/public_regulated_data_types",
+        " 4cea5de87ce7e2a52e5289bd3639fd8eb770eafa src/drivers/gps/devices (4cea5de)",
+        "-993be80a62ec957c01fb41115b83663959a49f46 src/drivers/uavcan/libdronecan/dsdl",
+        "-19fdf2e5b383243ccdb1094edae0603cf11469e8 src/drivers/uavcan/libdronecan/libuavcan/dsdl_compiler/pydronecan",
+        "-314887ca403c2fb0a0316add22672102936ed36c src/lib/cdrstream/cyclonedds",
+        "-7790c70717e09c003711f6f65015666c223fc283 src/lib/cdrstream/rosidl",
+        "-673f5ce29015a9bba3c96792920a10601b5b0718 src/lib/crypto/libtomcrypt",
+        "-fd73d7630b9d3ed5a79d613ff680a549e9780de7 src/lib/crypto/libtommath",
+        "-baca5d31259c598540e4d1284bc8d8f793abf83a src/lib/crypto/monocypher",
+        " 9ef591c447fe0386d698bf6fb9a6d27e43988ee4 src/lib/events/libevents (9ef591c)",
+        " 052e6de72f67f1777198bce98f3de62f7f3c16a0 src/lib/heatshrink/heatshrink (heads/main)",
+        " 5bfd76d80281f6027134e854aafe6cb3dbfbe9e1 src/modules/mavlink/mavlink (5bfd76d)",
+        " 4960d4d20dcf9fc2981785355567fc5773416bc9 src/modules/mavlink/mavlink/pymavlink (4960d4d)",
+        "-711aef423edd1820347b866d1e4164832df35d04 src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client",
+        "-f093aa7955bb24dfa3e626de084583711e3bac5c src/modules/zenoh/zenoh-pico"
+      ]
+    },
+    "px4_sensor_profile": "1% stock GPS/baro/mag/IMU noise"
+  },
+  {
+    "event": "waiting_for_estimator",
+    "elapsed_s": 17.76955066699884,
+    "reason": "estimator_unhealthy",
+    "status": []
+  },
+  {
+    "event": "armed_offboard",
+    "elapsed_s": 21.89466820799862
+  },
+  {
+    "event": "takeoff_progress",
+    "elapsed_s": 21.895792250004888,
+    "sample": {
+      "elapsed_s": 0.0007298749987967312,
+      "position_ned": [
+        0.0007293811067938805,
+        -0.0017938726814463735,
+        0.003021240234375
+      ],
+      "target_ned": [
+        0.0030878239776939154,
+        0.00036527455085888505,
+        -1.099267578125
+      ],
+      "velocity_ned": [
+        -0.00020146393217146397,
+        -0.0022025012876838446,
+        0.00027606080402620137
+      ],
+      "truth_altitude_m": 489.399,
+      "truth_velocity_ned": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "truth_lat_lon": [
+        47.3977432,
+        8.5455942
+      ],
+      "source_time_s": 5.32,
+      "stable": false
+    }
+  },
+  {
+    "event": "takeoff_progress",
+    "elapsed_s": 26.90230391699879,
+    "sample": {
+      "elapsed_s": 5.007359583003563,
+      "position_ned": [
+        0.0067076548002660275,
+        0.0013467163080349565,
+        -0.50628662109375
+      ],
+      "target_ned": [
+        0.0030878239776939154,
+        0.00036527455085888505,
+        -1.099267578125
+      ],
+      "velocity_ned": [
+        -0.00020652350212913007,
+        -0.000800920941401273,
+        -0.2795565724372864
+      ],
+      "truth_altitude_m": 489.726,
+      "truth_velocity_ned": [
+        0.0,
+        0.0,
+        -0.01
+      ],
+      "truth_lat_lon": [
+        47.3977432,
+        8.5455942
+      ],
+      "source_time_s": 9.32,
+      "stable": false
+    }
+  },
+  {
+    "event": "takeoff_progress",
+    "elapsed_s": 31.92595941699983,
+    "sample": {
+      "elapsed_s": 10.031019624999317,
+      "position_ned": [
+        0.006340732332319021,
+        0.0025558662600815296,
+        -1.0377197265625
+      ],
+      "target_ned": [
+        0.0030878239776939154,
+        0.00036527455085888505,
+        -1.099267578125
+      ],
+      "velocity_ned": [
+        -0.0022773968521505594,
+        -0.0016334286192432046,
+        -0.040928829461336136
+      ],
+      "truth_altitude_m": 490.448,
+      "truth_velocity_ned": [
+        0.0,
+        0.0,
+        -0.14
+      ],
+      "truth_lat_lon": [
+        47.3977432,
+        8.5455942
+      ],
+      "source_time_s": 13.44,
+      "stable": true
+    }
+  },
+  {
+    "event": "stable_takeoff",
+    "elapsed_s": 32.35201429200242,
+    "position_ned": [
+      0.005923121236264706,
+      0.0019643036648631096,
+      -1.0679931640625
+    ]
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 32.717293375004374,
+    "valid": false,
+    "reason": "selected_person_unavailable",
+    "capture_age_s": 0.4022061669966206
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 33.03313083299872,
+    "valid": false,
+    "reason": "selected_person_unavailable",
+    "capture_age_s": 0.3737304999958724
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 33.250967167005,
+    "valid": false,
+    "reason": "selected_person_unavailable",
+    "capture_age_s": 0.275826541997958
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 33.507819124999514,
+    "valid": false,
+    "reason": "selected_person_unavailable",
+    "capture_age_s": 0.3155833330019959
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 33.83426991700253,
+    "valid": false,
+    "reason": "selected_person_unavailable",
+    "capture_age_s": 0.3532652499998221
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 34.139825875005045,
+    "valid": false,
+    "reason": "selected_person_unavailable",
+    "capture_age_s": 0.37507975000335136
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 34.39321245800238,
+    "valid": false,
+    "reason": "selected_person_unavailable",
+    "capture_age_s": 0.28351120900333626
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 34.64482695799961,
+    "valid": false,
+    "reason": "selected_person_unavailable",
+    "capture_age_s": 0.2801542919987696
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 34.91062170800433,
+    "valid": false,
+    "reason": "selected_person_unavailable",
+    "capture_age_s": 0.31886245799978497
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 35.255150375000085,
+    "valid": false,
+    "reason": "selected_person_unavailable",
+    "capture_age_s": 0.4124305000004824
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 35.60718120800448,
+    "valid": false,
+    "reason": "selected_person_unavailable",
+    "capture_age_s": 0.408011625004292
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 36.016066083000624,
+    "valid": false,
+    "reason": "selected_person_unavailable",
+    "capture_age_s": 0.4368298329936806
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 36.414510708003945,
+    "valid": false,
+    "reason": "selected_person_unavailable",
+    "capture_age_s": 0.4578125839980203
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 36.76562833299977,
+    "valid": false,
+    "reason": "selected_person_unavailable",
+    "capture_age_s": 0.37915862500085495
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 37.07603820800432,
+    "valid": false,
+    "reason": "selected_person_unavailable",
+    "capture_age_s": 0.33897566700034076
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 37.31685204200039,
+    "valid": false,
+    "reason": "selected_person_unavailable",
+    "capture_age_s": 0.29770720899978187
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 37.54739812500338,
+    "valid": false,
+    "reason": "selected_person_unavailable",
+    "capture_age_s": 0.26480804099992383
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 37.78199383299943,
+    "valid": false,
+    "reason": "selected_person_unavailable",
+    "capture_age_s": 0.29395412499434315
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 38.03908420800144,
+    "valid": false,
+    "reason": "selected_person_unavailable",
+    "capture_age_s": 0.2851516669979901
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 38.32873379200464,
+    "valid": false,
+    "reason": "selected_person_unavailable",
+    "capture_age_s": 0.3213473329960834
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 38.68493870800012,
+    "valid": false,
+    "reason": "selected_person_unavailable",
+    "capture_age_s": 0.3832552499952726
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 39.01272362500458,
+    "valid": false,
+    "reason": "selected_person_unavailable",
+    "capture_age_s": 0.3863095830020029
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 39.302519374999974,
+    "valid": false,
+    "reason": "selected_person_unavailable",
+    "capture_age_s": 0.34386962500138907
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 39.649381125003856,
+    "valid": false,
+    "reason": "selected_person_unavailable",
+    "capture_age_s": 0.3768686249968596
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 40.04064908299915,
+    "valid": false,
+    "reason": "selected_person_unavailable",
+    "capture_age_s": 0.4485140000033425
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 40.387720999999146,
+    "valid": false,
+    "reason": "selected_person_unavailable",
+    "capture_age_s": 0.3769659169993247
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 40.81934425000509,
+    "valid": false,
+    "reason": "selected_person_unavailable",
+    "capture_age_s": 0.4866332500023418
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 41.16806187500333,
+    "valid": false,
+    "reason": "selected_person_unavailable",
+    "capture_age_s": 0.37664804099767935
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 41.51085970800341,
+    "valid": false,
+    "reason": "selected_person_unavailable",
+    "capture_age_s": 0.3716455000030692
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 41.85645162500441,
+    "valid": false,
+    "reason": "selected_person_unavailable",
+    "capture_age_s": 0.37655800000356976
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 42.20454312500078,
+    "valid": false,
+    "reason": "selected_person_unavailable",
+    "capture_age_s": 0.4051362079990213
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 42.492242167005315,
+    "valid": false,
+    "reason": "selected_person_unavailable",
+    "capture_age_s": 0.3449860830005491
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 42.805417167000996,
+    "valid": false,
+    "reason": "selected_person_unavailable",
+    "capture_age_s": 0.36803079200035427
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 43.08926262499881,
+    "valid": false,
+    "reason": "selected_person_unavailable",
+    "capture_age_s": 0.33894975000293925
+  },
+  {
+    "event": "failure",
+    "elapsed_s": 43.534929833003844,
+    "error": "SitlError: no_fresh_preceding_source_clock_receipt"
+  },
+  {
+    "event": "failure_clock_diagnostics",
+    "elapsed_s": 43.535148292001395,
+    "source_times": {
+      "attitude": 22.824,
+      "truth": 22.796,
+      "position": 22.82
+    },
+    "age_upper_bounds_s": {
+      "attitude": 0.2847217910020845,
+      "truth": 0.2847217910020845,
+      "position": 0.2847217910020845
+    },
+    "pending_sync": 0,
+    "clock_reset": false,
+    "recent_sync": [
+      [
+        22.7,
+        53560.049701708
+      ],
+      [
+        22.72,
+        53560.07606175
+      ],
+      [
+        22.744,
+        53560.101600958
+      ],
+      [
+        22.764,
+        53560.127379875
+      ],
+      [
+        22.828,
+        53560.40895725
+      ]
+    ],
+    "status": [
+      "Armed by external command\t",
+      "Takeoff detected\t"
+    ]
+  },
+  {
+    "event": "land_requested",
+    "elapsed_s": 43.59571004200552
+  },
+  {
+    "event": "landed_disarmed",
+    "elapsed_s": 55.14542595799867
+  }
+]

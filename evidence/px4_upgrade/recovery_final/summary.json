@@ -1,0 +1,153 @@
+{
+  "passed": false,
+  "safety_passed": false,
+  "tracking_success": false,
+  "checks": {
+    "stable_takeoff": true,
+    "landed_disarmed": true,
+    "mission_window_complete": false,
+    "no_runtime_failure": false,
+    "mission_sends_observed": true,
+    "send_evidence_valid": true,
+    "packet_evidence_valid": true,
+    "no_wrong_person": true
+  },
+  "tracking_checks": {
+    "explicit_identity_bound": true,
+    "forward_follow_observed": true,
+    "fresh_guidance_observed": true,
+    "tracking_policy_declared": true,
+    "correct_identity_time_coverage": false,
+    "required_recovery": false
+  },
+  "metrics": {
+    "observation_count": 8,
+    "input_observation_count": 8,
+    "selected_track": 1,
+    "intended_actor": "orange",
+    "mission_duration_s": 3.5605174170050304,
+    "tracking_loss_episodes": 5,
+    "tracking_losses": [
+      {
+        "start_s": 53974.969483541,
+        "end_s": 53975.47680875,
+        "duration_s": 0.5073252090005553
+      },
+      {
+        "start_s": 53976.3180365,
+        "end_s": 53976.40808375,
+        "duration_s": 0.09004724999977043
+      },
+      {
+        "start_s": 53976.707004458,
+        "end_s": 53976.766668041,
+        "duration_s": 0.05966358299338026
+      },
+      {
+        "start_s": 53977.018893291,
+        "end_s": 53977.227802166,
+        "duration_s": 0.2089088749999064
+      },
+      {
+        "start_s": 53977.391821916004,
+        "end_s": 53978.530000958,
+        "duration_s": 1.138179041998228
+      }
+    ],
+    "tracking_loss_duration_s": 2.0041239589918405,
+    "tracking_available_fraction": 0.43712564094753625,
+    "correct_identity_duration_fraction": 0.43712564094753625,
+    "wrong_person_frames": 0,
+    "wrong_person_episodes": 0,
+    "identity_assessable_count": 7,
+    "identity_correct_count": 7,
+    "identity_ambiguous_count": 0,
+    "identity_unknown_count": 1,
+    "identity_unassessable_count": 1,
+    "identity_annotation_mismatch_count": 0,
+    "identity_correct_fraction": 0.875,
+    "command_valid_count": 6,
+    "command_valid_fraction": 0.75,
+    "latency_s": {
+      "p50": 0.37350714599961066,
+      "p95": 0.6235115562511053,
+      "maximum": 0.6975668750019395
+    },
+    "release_latency_s": {
+      "p50": 0.38661435449830606,
+      "p95": 0.633447935650838,
+      "maximum": 0.7097358750033891
+    },
+    "physical_yaw_span_rad": 0.22595045116276735,
+    "positive_send_ticks": 28,
+    "unsafe_positive_send_ticks": 0,
+    "send_evidence_valid": true,
+    "invalid_send_indices": [],
+    "malformed_row_count": 0,
+    "packet_integrity_errors": [],
+    "flyvis_observation_calls": 8,
+    "flyvis_reported_total": 8,
+    "flyvis_guidance_commands": 6,
+    "flyvis_positive_send_ticks": 28,
+    "evaluation_scope": "offline projected-mesh association; occlusion/overlap may be unknown; warmup calls excluded"
+  },
+  "recovery": {
+    "passed": false,
+    "checks": {
+      "injected_depth_gap": false,
+      "stationary_memory_used": false,
+      "pose_turn_at_least_002_rad": false,
+      "gap_command_invalid": false,
+      "gap_zero_forward": false,
+      "same_selected_id_recovered": false,
+      "current_depth_valid_recovery": false,
+      "positive_recovery_send": false,
+      "recovered_within_1_2s": false,
+      "evaluator_identity_preserved": false,
+      "restored_anchor_reprojected": false,
+      "original_anchor_fresh_at_recovery": false,
+      "no_explicit_reselection": false
+    },
+    "gap_count": 0,
+    "gap_sequence": null,
+    "recovery_sequence": null,
+    "pose_turn_rad": null,
+    "recovery_delay_s": null,
+    "gap_send_ticks": 0,
+    "association_recovery_sequence": null,
+    "original_anchor_age_at_recovery_s": null
+  },
+  "tracking_policy": {
+    "min_correct_identity_duration_fraction": 0.8,
+    "require_recovery": true,
+    "unknown_identity_counts_as_correct": false
+  },
+  "mode": "neural_follow",
+  "error": "SitlError: no_fresh_preceding_source_clock_receipt",
+  "session": "32e18023-d3d8-4320-9543-e72d9a677eba",
+  "px4_sensor_profile": "1% stock GPS/baro/mag/IMU noise",
+  "estimator_profile": "stock",
+  "method": "neural",
+  "trajectory": "stationary",
+  "duration_s": 30.0,
+  "mission_config": {
+    "method": "neural",
+    "trajectory": "stationary",
+    "target_speed": 0.0,
+    "duration_s": 30.0,
+    "faults": false,
+    "recovery": true,
+    "scenario_phase": "starts at stable takeoff using SIH source time",
+    "noise_seed": "upstream SIH srand(1234); asynchronous sensor scheduling may vary"
+  },
+  "mission_start_s": 53974.969483541,
+  "mission_end_s": 53978.530000958,
+  "actual_px4": true,
+  "limits": [
+    "simulation only",
+    "stylized actors",
+    "ideal RGB and depth",
+    "no obstacle collision physics",
+    "no neural superiority claim"
+  ]
+}

@@ -1,0 +1,882 @@
+[
+  {
+    "event": "vision_ready",
+    "elapsed_s": 21.99783404199843,
+    "model": {
+      "name": "Mantis shape-diverse neural readout",
+      "readout_sha256": "ea57f5b38d467f632a9b14e7403b6e1f8288dd86f5da5e47d5356a29fb573663",
+      "source_run": "mantis_calibration01",
+      "validation": {
+        "passed": true,
+        "gates": {
+          "horizontal_rmse_improved": true,
+          "other_axes_not_materially_worse": true,
+          "coverage_preserved": true,
+          "complete_neural_evidence": true,
+          "no_phase_grossly_regresses": true
+        },
+        "results": {
+          "heldout_grid": {
+            "observations": 480,
+            "neural_evidence_count": 480,
+            "methods": {
+              "original": {
+                "count": 480,
+                "rmse": [
+                  0.03173299488482807,
+                  0.020055542651072428,
+                  0.09432211391189849
+                ],
+                "mean_absolute": [
+                  0.024008985600020436,
+                  0.012749801070648771,
+                  0.07961849491705592
+                ],
+                "maximum_absolute": [
+                  0.1456574279612404,
+                  0.11195195128088463,
+                  0.1845280887015019
+                ],
+                "bias": [
+                  -0.007699617998291346,
+                  0.0003156740423881077,
+                  0.05072914163855989
+                ],
+                "available_count": 418,
+                "coverage": 0.8708333333333333
+              },
+              "calibrated": {
+                "count": 480,
+                "rmse": [
+                  0.025187244145947585,
+                  0.019511694568151754,
+                  0.02742767472050002
+                ],
+                "mean_absolute": [
+                  0.015881464734838032,
+                  0.01296387108050772,
+                  0.019573308398515017
+                ],
+                "maximum_absolute": [
+                  0.15560042156674703,
+                  0.11172457277803395,
+                  0.11462395473601994
+                ],
+                "bias": [
+                  0.00010586382126717876,
+                  -0.0007289667974416366,
+                  -0.001348688916196282
+                ],
+                "available_count": 480,
+                "coverage": 1.0
+              }
+            },
+            "rmse_change_fraction": [
+              0.2062758577511412,
+              0.027117096374931204,
+              0.7092126800071633
+            ]
+          },
+          "heldout_motion": {
+            "observations": 64,
+            "neural_evidence_count": 64,
+            "methods": {
+              "original": {
+                "count": 64,
+                "rmse": [
+                  0.015771301579927146,
+                  0.006301477362745381,
+                  0.08936517466550646
+                ],
+                "mean_absolute": [
+                  0.012417075236856392,
+                  0.005675565554461585,
+                  0.0784471273984308
+                ],
+                "maximum_absolute": [
+                  0.03801614480489285,
+                  0.01168562104484644,
+                  0.15832527420664133
+                ],
+                "bias": [
+                  -0.008260908706540407,
+                  0.00036177023933387165,
+                  0.04814771039019483
+                ],
+                "available_count": 58,
+                "coverage": 0.90625
+              },
+              "calibrated": {
+                "count": 64,
+                "rmse": [
+                  0.013963068676111641,
+                  0.005316493280391986,
+                  0.009409073386124928
+                ],
+                "mean_absolute": [
+                  0.012545675282677589,
+                  0.00470378246208431,
+                  0.007452869901974218
+                ],
+                "maximum_absolute": [
+                  0.023287783031465115,
+                  0.008869777315844207,
+                  0.02061989498282296
+                ],
+                "bias": [
+                  -0.0008422984972880289,
+                  0.0012324109067636956,
+                  -0.0029039530193014293
+                ],
+                "available_count": 64,
+                "coverage": 1.0
+              }
+            },
+            "rmse_change_fraction": [
+              0.1146533718001389,
+              0.15631002472160982,
+              0.8947120797184915
+            ]
+          },
+          "combined": {
+            "observations": 544,
+            "neural_evidence_count": 544,
+            "methods": {
+              "original": {
+                "count": 544,
+                "rmse": [
+                  0.030294837817355546,
+                  0.01896248478899877,
+                  0.09375254866437756
+                ],
+                "mean_absolute": [
+                  0.022645231439648198,
+                  0.011917538068744396,
+                  0.07948068697368826
+                ],
+                "maximum_absolute": [
+                  0.1456574279612404,
+                  0.11195195128088463,
+                  0.1845280887015019
+                ],
+                "bias": [
+                  -0.007765652199261821,
+                  0.000321097124381727,
+                  0.050425443844634606
+                ],
+                "available_count": 476,
+                "coverage": 0.875
+              },
+              "calibrated": {
+                "count": 544,
+                "rmse": [
+                  0.024139171958995446,
+                  0.018418538575566204,
+                  0.025965159272259106
+                ],
+                "mean_absolute": [
+                  0.015489018916936803,
+                  0.01199209594892849,
+                  0.01814737445774551
+                ],
+                "maximum_absolute": [
+                  0.15560042156674703,
+                  0.11172457277803395,
+                  0.11462395473601994
+                ],
+                "bias": [
+                  -5.684686798139734e-06,
+                  -0.0004982164792998329,
+                  -0.0015316611636204168
+                ],
+                "available_count": 544,
+                "coverage": 1.0
+              }
+            },
+            "rmse_change_fraction": [
+              0.2031919066697757,
+              0.028685386935584534,
+              0.7230458303036524
+            ]
+          }
+        },
+        "thresholds": {
+          "minimum_horizontal_rmse_reduction_fraction": 0.1,
+          "maximum_other_axis_rmse_multiplier": 1.25,
+          "maximum_other_axis_rmse_addition": 0.002,
+          "maximum_per_phase_axis_rmse_multiplier": 1.25,
+          "maximum_per_phase_axis_rmse_addition": 0.003,
+          "minimum_new_coverage_relative_to_original": 1.0,
+          "minimum_neural_evidence_fraction": 1.0
+        },
+        "units": "Normalized center coordinates x/y; height as a fraction of391pixels",
+        "error_denominator": "Every predeclared held-out observation, no selective abstention",
+        "direct_geometry_is_exact_box_reconstruction_oracle": true,
+        "neural_superiority_over_geometry_or_filter_evaluated": false,
+        "physical_flight_evaluated": false,
+        "completed_utc": "2026-09-14T06:17:53.589912+00:00",
+        "attempt": 1,
+        "original_readout_sha256": "0b69cf817f881cb1cd9064f50cb7deb32a22edb3c53ee06dad78245f0c4a898d",
+        "calibrated_readout_sha256": "ea57f5b38d467f632a9b14e7403b6e1f8288dd86f5da5e47d5356a29fb573663",
+        "observations": 1283,
+        "neural_steps": 6415
+      },
+      "fit_frozen": {
+        "frozen_utc": "2026-09-14T06:16:52.086251+00:00",
+        "trained_phase_names": [
+          "train_grid",
+          "train_motion"
+        ],
+        "ridge": 0.0001,
+        "training_observations": 739,
+        "training_artifact_hashes": {
+          "train_grid": "a6f6a6f11371353c09bac9ff5d2c1db869aafdca3f75062c029adab7201850c5",
+          "train_motion": "224abdc059ad622217bc58893825f501c5c77e0fcdf0cb1002017f6ca5fac76d"
+        },
+        "candidate_readout_sha256": "ea57f5b38d467f632a9b14e7403b6e1f8288dd86f5da5e47d5356a29fb573663",
+        "heldout_inference_started": false,
+        "prediction_inputs": [
+          "mean_x",
+          "mean_y",
+          "std_x",
+          "std_y",
+          "cov_xy",
+          "log1p_mass",
+          "mean_evidence",
+          "peak_evidence"
+        ]
+      },
+      "definition_sha256": "4b926d72190eb226a2966d4d913b659cb9dfdab22e64db05db5c8ddd47ecb62d",
+      "model_manifest_sha256": "86004101adc92e65bff8ba1e583fc9fd2551a7eec2560e601497e756af8e1594",
+      "prediction_inputs": "Eight actual neural features only; no target geometry or evaluator truth",
+      "training_scope": "Synthetic rectangle geometry; no recorded actor flight or benchmark data",
+      "no_advantage_over_conventional_methods_claimed": true
+    }
+  },
+  {
+    "event": "owned_px4_verified",
+    "elapsed_s": 24.834030334001,
+    "pid": 29376,
+    "build": {
+      "px4_commit": "54f0455ffcd755534539a7cf33a09a20bf71d29d",
+      "profile": "px4_sitl_mantis",
+      "build_recipe_sha256": "f77697194e4d77c34cffcff069fcb6b18d601af7db34473157c33a7ed8d830b5",
+      "binary_sha256": "747a5141cdb8e09a975794b7979d762d975aef30c679b2a5edc731d2e03461b4",
+      "startup_tree_sha256": "1a267e74fc845051b74e790333c9bd78194c8fd6f8531f1b3fc4844a97744d25",
+      "overlay_sha256": "0448befccd6be884dd02075647ed8dd7968660363d56a9312bcaa7ecea1de3fd",
+      "truth_header_sha256": "526426b4cb6bc38a20076a84e33855e0595157b51914dff054d5f52ada2f7fba",
+      "timestamp_patch": "msg.time_usec = math::min(math::min(att.timestamp_sample, gpos.timestamp_sample), math::min(lpos.timestamp_sample, angular_velocity.timestamp_sample));",
+      "sensor_noise_patches": {
+        "src/modules/simulation/sensor_gps_sim/SensorGpsSim.cpp": {
+          "original_sha256": "c5ac246e2b4fa0073e2efab153145f3f8f0af28c336df7b200816978da451287",
+          "patched_sha256": "13412ac041835a35ca9e1ee6af9593e4f3956affb39eef48ed89ff3d7f456fe4"
+        },
+        "src/modules/simulation/sensor_baro_sim/SensorBaroSim.cpp": {
+          "original_sha256": "b818d54c968bcfc810291e9d594affb7ef7c10290fcdecd3338ebd46507af1d5",
+          "patched_sha256": "56aa5838c4a35ef1b70446c538bf9054d7590c392e8953efdbbd1d5d21c0786a"
+        },
+        "src/modules/simulation/sensor_mag_sim/SensorMagSim.cpp": {
+          "original_sha256": "edf78345a7edbcb649b60b2c92f4919f7f5c9e4330551f2fe88660d2cc6a2053",
+          "patched_sha256": "04cd268c6ff4b9762f54dfb3ee797424785c5aac63600bf20223be8db0fe3731"
+        },
+        "src/modules/simulation/simulator_sih/sih.cpp": {
+          "original_sha256": "aed62f325014cf284e861b4f3bb20e36f58e94af493143208232855dc5a5951b",
+          "patched_sha256": "6ccbd097b88a988f2d77e52207fc7ea40e830899f1afb6cb04978cd87a082857"
+        }
+      },
+      "sensor_mode_switch": "MANTIS_SIH_LOW_NOISE_SENSORS=1 gives 1% noise; absent means stock noise",
+      "gps_accuracy_switch": "MANTIS_SIH_CALIBRATED_GPS reports the actual stock SIH noise (eph .2m, epv .5m); value1 uses velocity .158m/s, value2 uses .11m/s accounting for EKF vertical x1.5. All samples are unchanged",
+      "submodules": [
+        "-f47ce7b5fbbb3aa43d33d2be1f6cd3746b13d5bf Tools/simulation/flightgear/flightgear_bridge",
+        "-70683dc759cbd3ebccfa78429b564f8b1fb5d149 Tools/simulation/gazebo-classic/sitl_gazebo-classic",
+        "-e05f4312d3f28aa621157610584a4870406cb6d3 Tools/simulation/gz",
+        "-66b764ada522893c05224950aa6268c809f8e48a Tools/simulation/jmavsim/jMAVSim",
+        "-68de2cc63ded9a0d6641d45e9eb3ed2b43454cba Tools/simulation/jsbsim/jsbsim_bridge",
+        "-85151aaf6ba8b24ce82b387e088452c63f7e2096 boards/modalai/voxl2/libfc-sensor-api",
+        "-e37940d8535f603a16b8f6f21c21edaf584218aa platforms/nuttx/NuttX/apps",
+        "-886acbbdb4f061e5c0ce1a76afbcfa7cb7df9849 platforms/nuttx/NuttX/nuttx",
+        "-c488af4e8807de80739aa48efd2ea51614dd8195 src/drivers/actuators/vertiq_io/iq-module-communication-cpp",
+        "-36a01e428b110ff84c8babe5b65667b5e3037d5e src/drivers/cyphal/legacy_data_types",
+        "-5c69d451ab0787a81dcb615692d707f2a286f5e5 src/drivers/cyphal/libcanard",
+        "-d0bd6516dac8ff61287fe49a9f2c75e7d4dc1b8e src/drivers/cyphal/public_regulated_data_types",
+        " 4cea5de87ce7e2a52e5289bd3639fd8eb770eafa src/drivers/gps/devices (4cea5de)",
+        "-993be80a62ec957c01fb41115b83663959a49f46 src/drivers/uavcan/libdronecan/dsdl",
+        "-19fdf2e5b383243ccdb1094edae0603cf11469e8 src/drivers/uavcan/libdronecan/libuavcan/dsdl_compiler/pydronecan",
+        "-314887ca403c2fb0a0316add22672102936ed36c src/lib/cdrstream/cyclonedds",
+        "-7790c70717e09c003711f6f65015666c223fc283 src/lib/cdrstream/rosidl",
+        "-673f5ce29015a9bba3c96792920a10601b5b0718 src/lib/crypto/libtomcrypt",
+        "-fd73d7630b9d3ed5a79d613ff680a549e9780de7 src/lib/crypto/libtommath",
+        "-baca5d31259c598540e4d1284bc8d8f793abf83a src/lib/crypto/monocypher",
+        " 9ef591c447fe0386d698bf6fb9a6d27e43988ee4 src/lib/events/libevents (9ef591c)",
+        " 052e6de72f67f1777198bce98f3de62f7f3c16a0 src/lib/heatshrink/heatshrink (heads/main)",
+        " 5bfd76d80281f6027134e854aafe6cb3dbfbe9e1 src/modules/mavlink/mavlink (5bfd76d)",
+        " 4960d4d20dcf9fc2981785355567fc5773416bc9 src/modules/mavlink/mavlink/pymavlink (4960d4d)",
+        "-711aef423edd1820347b866d1e4164832df35d04 src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client",
+        "-f093aa7955bb24dfa3e626de084583711e3bac5c src/modules/zenoh/zenoh-pico"
+      ]
+    },
+    "px4_sensor_profile": "1% stock GPS/baro/mag/IMU noise"
+  },
+  {
+    "event": "waiting_for_estimator",
+    "elapsed_s": 25.315476584000862,
+    "reason": "estimator_unhealthy",
+    "status": []
+  },
+  {
+    "event": "armed_offboard",
+    "elapsed_s": 29.05734154200036
+  },
+  {
+    "event": "takeoff_progress",
+    "elapsed_s": 29.057547208998585,
+    "sample": {
+      "elapsed_s": 5.07079967064783e-05,
+      "position_ned": [
+        0.0004809935635421425,
+        -0.00046407151967287064,
+        0.000457763671875
+      ],
+      "target_ned": [
+        0.004968398250639439,
+        -0.0007777507998980582,
+        -1.100091552734375
+      ],
+      "velocity_ned": [
+        -2.60939614236122e-05,
+        -0.001970800803974271,
+        0.0003323415876366198
+      ],
+      "truth_altitude_m": 489.399,
+      "truth_velocity_ned": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "truth_lat_lon": [
+        47.3977432,
+        8.5455942
+      ],
+      "source_time_s": 5.444,
+      "stable": false
+    }
+  },
+  {
+    "event": "takeoff_progress",
+    "elapsed_s": 34.16427220899641,
+    "sample": {
+      "elapsed_s": 5.106794082996203,
+      "position_ned": [
+        0.009264634922146797,
+        0.002965071238577366,
+        -0.679412841796875
+      ],
+      "target_ned": [
+        0.004968398250639439,
+        -0.0007777507998980582,
+        -1.100091552734375
+      ],
+      "velocity_ned": [
+        -0.0014919103123247623,
+        -0.0027183357160538435,
+        -0.22605274617671967
+      ],
+      "truth_altitude_m": 490.093,
+      "truth_velocity_ned": [
+        0.0,
+        0.0,
+        -0.23
+      ],
+      "truth_lat_lon": [
+        47.397743299999995,
+        8.5455942
+      ],
+      "source_time_s": 10.004,
+      "stable": false
+    }
+  },
+  {
+    "event": "stable_takeoff",
+    "elapsed_s": 37.65861079200113,
+    "position_ned": [
+      0.007361388299614191,
+      0.003598127281293273,
+      -1.029449462890625
+    ]
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 38.001293875000556,
+    "valid": false,
+    "reason": "selected_person_unavailable",
+    "capture_age_s": 0.39825554200069746
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 38.19218316699698,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.24933608299761545
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 38.35470670899667,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.1934865000002901
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 38.550969958996575,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.22597795799811138
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 38.86236716699932,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.34129966700129444
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 39.106997625000076,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.27446337500441587
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 39.389836333997664,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.3372323749936186
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 39.65851808399748,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.32574791600200115
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 39.95720216699556,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.32579770799929975
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 40.26405491699552,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.3625988329949905
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 40.61334654199891,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.4056689999997616
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 40.978116833997774,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.3945607080022455
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 41.40060749999975,
+    "valid": false,
+    "reason": "target_depth_unavailable",
+    "capture_age_s": 0.45456129199737916
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 41.72000324999681,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.34985195800254587
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 41.99925608399644,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.3092659580070176
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 42.300161792001745,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.3274468750023516
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 42.561939166997035,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.29035995800222736
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 42.86872570899868,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.3601037920016097
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 43.11064445899683,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.29867279199970653
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 43.375658208999084,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.2940252080006758
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 43.646118124997884,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.2975507919982192
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 43.92566112500208,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.3328512090010918
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 44.2302187499954,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.33187720899877604
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 44.524251124996226,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.3236620829993626
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 44.96279399999912,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.4686005409967038
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 45.29652499999793,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.36473025000304915
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 45.650729000000865,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.41826187500555534
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 45.959636209001474,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.367788625000685
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 46.26789433399972,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.3644634170050267
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 46.61063391700009,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.37372166700515663
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 46.92664249999507,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.34771295900281984
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 47.18042387499736,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.28425941599562066
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 47.426191624996136,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.30102058299962664
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 47.654942249995656,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.25756866699521197
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 47.909616999997525,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.2855699169958825
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 48.10959533399728,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.2298868340003537
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 48.36171800000011,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.28328350000083447
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 48.62106954200135,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.3206353749992559
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 48.871168749996286,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.30624258299940266
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 49.103383333997044,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.2621486249990994
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 49.35378708400094,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.3086198750024778
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 49.628658417001134,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.3053801249989192
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 49.87984216699988,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.27959474999806844
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 50.09970112500014,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.25099924999813084
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 50.378198375001375,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.33398275000217836
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 50.62299833400175,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.30327241699706065
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 50.87625587499497,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.2844305420003366
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 51.097552833998634,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.2505354169989005
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 51.327201667001646,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.25875237499712966
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 51.58259391699539,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.28713116599828936
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 51.85988112499763,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.3343887500013807
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 52.115002541999274,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.30859620900446316
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 52.33622412499972,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.2827364159966237
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 52.584113459000946,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.3061361250001937
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 52.810675959000946,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.2821402080007829
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 53.05002641699684,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.2706919999982347
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 53.32673987499584,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.3316948330029845
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 53.63683862499602,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.368000624999695
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 53.95363391700084,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.3735108330001822
+  },
+  {
+    "event": "vision_result",
+    "elapsed_s": 54.234748999995645,
+    "valid": true,
+    "reason": "neural_bearing_and_registered_depth",
+    "capture_age_s": 0.33847795800102176
+  },
+  {
+    "event": "failure",
+    "elapsed_s": 54.68422020899743,
+    "error": "SitlError: no_fresh_preceding_source_clock_receipt"
+  },
+  {
+    "event": "failure_clock_diagnostics",
+    "elapsed_s": 54.69721320900135,
+    "source_times": {
+      "attitude": 28.12,
+      "truth": 28.208,
+      "position": 28.132
+    },
+    "age_upper_bounds_s": {
+      "attitude": 0.2667405840038555,
+      "truth": 0.23838275000161957,
+      "position": 0.2667405840038555
+    },
+    "pending_sync": 0,
+    "clock_reset": false,
+    "recent_sync": [
+      [
+        28.032,
+        54230.878650916
+      ],
+      [
+        28.056,
+        54230.905041791
+      ],
+      [
+        28.08,
+        54230.932110416
+      ],
+      [
+        28.108,
+        54230.961778166
+      ],
+      [
+        28.132,
+        54230.990136
+      ]
+    ],
+    "status": [
+      "Armed by external command\t",
+      "Takeoff detected\t"
+    ]
+  },
+  {
+    "event": "land_requested",
+    "elapsed_s": 54.76142254199658
+  },
+  {
+    "event": "landed_disarmed",
+    "elapsed_s": 63.93343529199774
+  }
+]

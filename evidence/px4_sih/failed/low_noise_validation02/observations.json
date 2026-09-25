@@ -1,0 +1,2818 @@
+[
+  {
+    "packet": {
+      "kind": "result",
+      "session": "2bfa7320-ca9b-4f0d-bd6f-4fa3e2a031bb",
+      "sequence": 0,
+      "capture_time_s": 50175.965964666,
+      "completed_s": 50176.688729833,
+      "candidate": {
+        "valid": false,
+        "reason": "target_lost",
+        "heading_world_rad": null,
+        "surface_optical_z_m": null,
+        "decoded": null,
+        "cue_input": null,
+        "capture_time_s": 50175.965964666,
+        "track_id": null
+      },
+      "observation": {
+        "valid": false,
+        "reason": "selection_required",
+        "track_id": null,
+        "bbox_xyxy": null,
+        "center_normalized": null,
+        "height_fraction": null,
+        "area_fraction": null,
+        "depth_m": null,
+        "control_authority": false
+      },
+      "detections": {
+        "schema_version": 1,
+        "sequence": 0,
+        "stream_id": "2bfa7320-ca9b-4f0d-bd6f-4fa3e2a031bb",
+        "clock_domain": "host_monotonic_source_lower_bound",
+        "frame_id": "px4_sih_front_optical",
+        "capture_time_s": 50175.965964666,
+        "received_monotonic_s": 50176.050831208,
+        "status": "ok",
+        "inference_executed": true,
+        "control_authority": false,
+        "detections": [
+          {
+            "track_id": 1,
+            "class_id": 0,
+            "label": "person",
+            "confidence": 0.8683553368988015,
+            "bbox_xyxy": [
+              134.54381368898987,
+              153.67313374247686,
+              162.47802807546017,
+              251.0747374936824
+            ],
+            "surface_measurement": {
+              "surface_optical_z_m": 5.4233245849609375,
+              "surface_range_m": 5.498151662607182,
+              "surface_xyz_optical_m": [
+                -0.8929427565265639,
+                -0.09707168461143957,
+                5.4233245849609375
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 0.11123199462890643,
+              "foreground_support_fraction": 0.815,
+              "foreground_component_coherence": 1.0,
+              "foreground_pixel_count": 489,
+              "sampled_pixels": 600,
+              "roi_xyxy": [
+                141,
+                171,
+                156,
+                211
+              ],
+              "sampling_step_px": 1,
+              "meaning": "coherent_visible_foreground_in_torso_box_not_identity_or_object_extent",
+              "reason": "supported_coherent_visible_foreground",
+              "frame_id": "primary_optical",
+              "capture_time_s": 50175.965964666,
+              "depth_time_s": 50175.965964666
+            },
+            "original_central_box_surface": {
+              "surface_optical_z_m": 5.4291603565216064,
+              "surface_range_m": 5.506211139538284,
+              "surface_xyz_optical_m": [
+                -0.932193577110501,
+                0.13643186405192473,
+                5.4291603565216064
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 6.242834854125977,
+              "sampling_step_px": 1,
+              "meaning": "central_box_visible_surface_only",
+              "frame_id": "px4_sih_front_optical"
+            }
+          },
+          {
+            "track_id": 2,
+            "class_id": 0,
+            "label": "person",
+            "confidence": 0.6734727827283393,
+            "bbox_xyxy": [
+              229.90842594565592,
+              165.2354064067954,
+              261.36535700452526,
+              259.3528630424019
+            ],
+            "surface_measurement": {
+              "surface_optical_z_m": 4.523422956466675,
+              "surface_range_m": 4.595976042897636,
+              "surface_xyz_optical_m": [
+                0.7934927844909323,
+                0.08106315971229958,
+                4.523422956466675
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 0.3070520401000971,
+              "foreground_support_fraction": 0.848297213622291,
+              "foreground_component_coherence": 1.0,
+              "foreground_pixel_count": 548,
+              "sampled_pixels": 646,
+              "roi_xyxy": [
+                237,
+                182,
+                254,
+                220
+              ],
+              "sampling_step_px": 1,
+              "meaning": "coherent_visible_foreground_in_torso_box_not_identity_or_object_extent",
+              "reason": "supported_coherent_visible_foreground",
+              "frame_id": "primary_optical",
+              "capture_time_s": 50175.965964666,
+              "depth_time_s": 50175.965964666
+            },
+            "original_central_box_surface": {
+              "surface_optical_z_m": 4.531485080718994,
+              "surface_range_m": 4.619863979778045,
+              "surface_xyz_optical_m": [
+                0.8598122729281114,
+                0.27664660727149337,
+                4.531485080718994
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 6.238218498229994,
+              "sampling_step_px": 1,
+              "meaning": "central_box_visible_surface_only",
+              "frame_id": "px4_sih_front_optical"
+            }
+          }
+        ],
+        "depth_advisory": {
+          "state": "no_near_surface_in_sampled_region",
+          "p10_optical_z_m": 3.063506078720093,
+          "threshold_m": 3.0,
+          "valid_depth_fraction": 1.0,
+          "region_fraction_xyxy": [
+            0.2,
+            0.2,
+            0.8,
+            0.8
+          ],
+          "sampling_step_px": 2,
+          "flight_corridor_clear": null,
+          "control_authority": false
+        },
+        "processing_ms": 305.0588339974638,
+        "age_at_start_s": 0.08517637500335695,
+        "age_at_finish_s": 0.39023520900082076,
+        "detection_count": 2,
+        "tracked_detection_count": 2,
+        "tracking_memory": {
+          "preserved_after_deadline": false,
+          "restored_track_count": 0,
+          "observation_timestamps_renewed": false,
+          "control_authority": false
+        }
+      },
+      "selection": {
+        "track_id": null,
+        "reason": "selection_required",
+        "held": false,
+        "sequence": 0,
+        "capture_time_s": 50175.965964666,
+        "selection_required": true,
+        "people": [
+          {
+            "track_id": 1,
+            "bbox_xyxy": [
+              134.54381368898987,
+              153.67313374247686,
+              162.47802807546017,
+              251.0747374936824
+            ],
+            "confidence": 0.8683553368988015,
+            "selectable": true
+          },
+          {
+            "track_id": 2,
+            "bbox_xyxy": [
+              229.90842594565592,
+              165.2354064067954,
+              261.36535700452526,
+              259.3528630424019
+            ],
+            "confidence": 0.6734727827283393,
+            "selectable": true
+          }
+        ],
+        "appearance_similarity": null,
+        "appearance_metric": "soft_upper_body_colour_bhattacharyya",
+        "recovery_pending": false,
+        "identity_limit": "temporary visual track; clothing is not identity"
+      },
+      "neural_features": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "neural_valid": false,
+      "neural_elapsed_s": 0.32247395900049014
+    },
+    "command": {
+      "sequence": 0,
+      "capture_time_s": 50175.965964666,
+      "issued_at_s": 50176.692268916,
+      "valid_until_s": 50176.865964666,
+      "forward_speed": 0.0,
+      "yaw_target": 9.809819795292957e-06,
+      "reason": "stale_perception_result",
+      "valid": false,
+      "estimate": {
+        "valid": false,
+        "reason": "selected_person_unavailable",
+        "heading_world_rad": null,
+        "surface_optical_z_m": null,
+        "decoded": null,
+        "cue_input": null,
+        "capture_time_s": 50175.965964666,
+        "track_id": null
+      }
+    }
+  },
+  {
+    "packet": {
+      "kind": "result",
+      "session": "2bfa7320-ca9b-4f0d-bd6f-4fa3e2a031bb",
+      "sequence": 1,
+      "capture_time_s": 50176.634440333,
+      "completed_s": 50177.086570875,
+      "candidate": {
+        "valid": false,
+        "reason": "target_lost",
+        "heading_world_rad": null,
+        "surface_optical_z_m": null,
+        "decoded": null,
+        "cue_input": null,
+        "capture_time_s": 50176.634440333,
+        "track_id": null
+      },
+      "observation": {
+        "valid": false,
+        "reason": "selection_required",
+        "track_id": null,
+        "bbox_xyxy": null,
+        "center_normalized": null,
+        "height_fraction": null,
+        "area_fraction": null,
+        "depth_m": null,
+        "control_authority": false
+      },
+      "detections": {
+        "schema_version": 1,
+        "sequence": 1,
+        "stream_id": "2bfa7320-ca9b-4f0d-bd6f-4fa3e2a031bb",
+        "clock_domain": "host_monotonic_source_lower_bound",
+        "frame_id": "px4_sih_front_optical",
+        "capture_time_s": 50176.634440333,
+        "received_monotonic_s": 50176.732801708,
+        "status": "ok",
+        "inference_executed": true,
+        "control_authority": false,
+        "detections": [
+          {
+            "track_id": 2,
+            "class_id": 0,
+            "label": "person",
+            "confidence": 0.8973383935510526,
+            "bbox_xyxy": [
+              227.12187856064506,
+              144.60834807544964,
+              267.7662356028637,
+              257.27922882554606
+            ],
+            "surface_measurement": {
+              "surface_optical_z_m": 4.502239942550659,
+              "surface_range_m": 4.578291873026278,
+              "surface_xyz_optical_m": [
+                0.7932030261319756,
+                -0.12885472630194164,
+                4.502239942550659
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 0.1562488079071045,
+              "foreground_support_fraction": 0.7453416149068323,
+              "foreground_component_coherence": 1.0,
+              "foreground_pixel_count": 720,
+              "sampled_pixels": 966,
+              "roi_xyxy": [
+                237,
+                164,
+                258,
+                210
+              ],
+              "sampling_step_px": 1,
+              "meaning": "coherent_visible_foreground_in_torso_box_not_identity_or_object_extent",
+              "reason": "supported_coherent_visible_foreground",
+              "frame_id": "primary_optical",
+              "capture_time_s": 50176.634440333,
+              "depth_time_s": 50176.634440333
+            },
+            "original_central_box_surface": {
+              "surface_optical_z_m": 4.5220513343811035,
+              "surface_range_m": 4.597605609500736,
+              "surface_xyz_optical_m": [
+                0.854534277347059,
+                0.11338807963493358,
+                4.5220513343811035
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 7.177271175384522,
+              "sampling_step_px": 1,
+              "meaning": "central_box_visible_surface_only",
+              "frame_id": "px4_sih_front_optical"
+            }
+          },
+          {
+            "track_id": 1,
+            "class_id": 0,
+            "label": "person",
+            "confidence": 0.8487537035769641,
+            "bbox_xyxy": [
+              136.9145067039091,
+              163.37007464705056,
+              164.0035775507225,
+              246.1507162279074
+            ],
+            "surface_measurement": {
+              "surface_optical_z_m": 5.417549133300781,
+              "surface_range_m": 5.490525833079384,
+              "surface_xyz_optical_m": [
+                -0.873404303202721,
+                -0.019496144718072962,
+                5.417549133300781
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 0.0779025077819826,
+              "foreground_support_fraction": 0.9294117647058824,
+              "foreground_component_coherence": 1.0,
+              "foreground_pixel_count": 474,
+              "sampled_pixels": 510,
+              "roi_xyxy": [
+                143,
+                178,
+                158,
+                212
+              ],
+              "sampling_step_px": 1,
+              "meaning": "coherent_visible_foreground_in_torso_box_not_identity_or_object_extent",
+              "reason": "supported_coherent_visible_foreground",
+              "frame_id": "primary_optical",
+              "capture_time_s": 50176.634440333,
+              "depth_time_s": 50176.634440333
+            },
+            "original_central_box_surface": {
+              "surface_optical_z_m": 5.429383277893066,
+              "surface_range_m": 5.505621109788532,
+              "surface_xyz_optical_m": [
+                -0.8952014294458146,
+                0.18483917345205209,
+                5.429383277893066
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 6.247518014907837,
+              "sampling_step_px": 1,
+              "meaning": "central_box_visible_surface_only",
+              "frame_id": "px4_sih_front_optical"
+            }
+          },
+          {
+            "track_id": 3,
+            "class_id": 29,
+            "label": "frisbee",
+            "confidence": 0.6166878846129009,
+            "bbox_xyxy": [
+              131.3814360425877,
+              152.78368249006087,
+              154.18100354581233,
+              175.6111610791078
+            ],
+            "surface_measurement": {
+              "surface_optical_z_m": 5.266039609909058,
+              "surface_range_m": 5.391657282598793,
+              "surface_xyz_optical_m": [
+                -0.9901985219143691,
+                -0.5941139246956957,
+                5.266039609909058
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 0.012363004684448065,
+              "sampling_step_px": 1,
+              "meaning": "central_box_visible_surface_only",
+              "frame_id": "px4_sih_front_optical"
+            }
+          }
+        ],
+        "depth_advisory": {
+          "state": "no_near_surface_in_sampled_region",
+          "p10_optical_z_m": 3.2317333698272703,
+          "threshold_m": 3.0,
+          "valid_depth_fraction": 1.0,
+          "region_fraction_xyxy": [
+            0.2,
+            0.2,
+            0.8,
+            0.8
+          ],
+          "sampling_step_px": 2,
+          "flight_corridor_clear": null,
+          "control_authority": false
+        },
+        "processing_ms": 208.09354099765187,
+        "age_at_start_s": 0.09851391700067325,
+        "age_at_finish_s": 0.3066074579983251,
+        "detection_count": 3,
+        "tracked_detection_count": 3,
+        "tracking_memory": {
+          "preserved_after_deadline": false,
+          "restored_track_count": 0,
+          "observation_timestamps_renewed": false,
+          "control_authority": false
+        }
+      },
+      "selection": {
+        "track_id": 1,
+        "reason": "selected_waiting_for_next_frame",
+        "held": false,
+        "sequence": 1,
+        "capture_time_s": 50176.634440333,
+        "selection_required": false,
+        "people": [
+          {
+            "track_id": 2,
+            "bbox_xyxy": [
+              227.12187856064506,
+              144.60834807544964,
+              267.7662356028637,
+              257.27922882554606
+            ],
+            "confidence": 0.8973383935510526,
+            "selectable": true
+          },
+          {
+            "track_id": 1,
+            "bbox_xyxy": [
+              136.9145067039091,
+              163.37007464705056,
+              164.0035775507225,
+              246.1507162279074
+            ],
+            "confidence": 0.8487537035769641,
+            "selectable": true
+          }
+        ],
+        "appearance_similarity": null,
+        "appearance_metric": "soft_upper_body_colour_bhattacharyya",
+        "recovery_pending": false,
+        "identity_limit": "temporary visual track; clothing is not identity"
+      },
+      "neural_features": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "neural_valid": false,
+      "neural_elapsed_s": 0.13912020799762104
+    },
+    "command": {
+      "sequence": 1,
+      "capture_time_s": 50176.634440333,
+      "issued_at_s": 50177.091901833,
+      "valid_until_s": 50177.534440333,
+      "forward_speed": 0.0,
+      "yaw_target": -1.4627276179623668e-05,
+      "reason": "selected_person_unavailable",
+      "valid": false,
+      "estimate": {
+        "valid": false,
+        "reason": "selected_person_unavailable",
+        "heading_world_rad": null,
+        "surface_optical_z_m": null,
+        "decoded": null,
+        "cue_input": null,
+        "capture_time_s": 50176.634440333,
+        "track_id": null
+      }
+    }
+  },
+  {
+    "packet": {
+      "kind": "result",
+      "session": "2bfa7320-ca9b-4f0d-bd6f-4fa3e2a031bb",
+      "sequence": 2,
+      "capture_time_s": 50177.026634,
+      "completed_s": 50177.454667791,
+      "candidate": {
+        "valid": true,
+        "reason": "neural_bearing_and_registered_depth",
+        "heading_world_rad": 0.1722697447575358,
+        "surface_optical_z_m": 5.419711112976074,
+        "decoded": [
+          -0.2510562319237099,
+          0.06958367173659187,
+          0.20597862824158364
+        ],
+        "cue_input": [
+          -0.23584837179917562,
+          0.061456909546485194,
+          0.24404084630390205
+        ],
+        "capture_time_s": 50177.026634,
+        "track_id": 1
+      },
+      "observation": {
+        "valid": true,
+        "reason": "observed",
+        "track_id": 1,
+        "bbox_xyxy": [
+          135.66950305299756,
+          159.804840363925,
+          163.11378357352476,
+          255.2248112687507
+        ],
+        "center_normalized": [
+          -0.23584837179917562,
+          0.061456909546485194
+        ],
+        "height_fraction": 0.24404084630390205,
+        "area_fraction": 0.01712922108550167,
+        "confidence": 0.8737271906413469,
+        "sequence": 2,
+        "capture_time_s": 50177.026634,
+        "age_s": 0.2965272500005085,
+        "depth_m": null,
+        "control_authority": false,
+        "appearance_similarity": 0.9961923649181565
+      },
+      "detections": {
+        "schema_version": 1,
+        "sequence": 2,
+        "stream_id": "2bfa7320-ca9b-4f0d-bd6f-4fa3e2a031bb",
+        "clock_domain": "host_monotonic_source_lower_bound",
+        "frame_id": "px4_sih_front_optical",
+        "capture_time_s": 50177.026634,
+        "received_monotonic_s": 50177.136059166,
+        "status": "ok",
+        "inference_executed": true,
+        "control_authority": false,
+        "detections": [
+          {
+            "track_id": 1,
+            "class_id": 0,
+            "label": "person",
+            "confidence": 0.8737271906413469,
+            "bbox_xyxy": [
+              135.66950305299756,
+              159.804840363925,
+              163.11378357352476,
+              255.2248112687507
+            ],
+            "surface_measurement": {
+              "surface_optical_z_m": 5.419711112976074,
+              "surface_range_m": 5.492456727147778,
+              "surface_xyz_optical_m": [
+                -0.890321484526991,
+                0.0,
+                5.419711112976074
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 0.15860939025878906,
+              "foreground_support_fraction": 0.865,
+              "foreground_component_coherence": 1.0,
+              "foreground_pixel_count": 519,
+              "sampled_pixels": 600,
+              "roi_xyxy": [
+                142,
+                176,
+                157,
+                216
+              ],
+              "sampling_step_px": 1,
+              "meaning": "coherent_visible_foreground_in_torso_box_not_identity_or_object_extent",
+              "reason": "supported_coherent_visible_foreground",
+              "frame_id": "primary_optical",
+              "capture_time_s": 50177.026634,
+              "depth_time_s": 50177.026634
+            },
+            "original_central_box_surface": {
+              "surface_optical_z_m": 5.422766923904419,
+              "surface_range_m": 5.505091403911912,
+              "surface_xyz_optical_m": [
+                -0.9305005497390968,
+                0.25236291240197056,
+                5.422766923904419
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 5.665031862258912,
+              "sampling_step_px": 1,
+              "meaning": "central_box_visible_surface_only",
+              "frame_id": "px4_sih_front_optical"
+            }
+          },
+          {
+            "track_id": 2,
+            "class_id": 0,
+            "label": "person",
+            "confidence": 0.871328842893579,
+            "bbox_xyxy": [
+              221.24946458000164,
+              161.33878814592805,
+              268.1704209224101,
+              267.3301682346959
+            ],
+            "surface_measurement": {
+              "surface_optical_z_m": 4.521471977233887,
+              "surface_range_m": 4.598872363458839,
+              "surface_xyz_optical_m": [
+                0.7891859919813228,
+                0.04852097887391842,
+                4.521471977233887
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 0.10920329093933123,
+              "foreground_support_fraction": 0.7144186046511628,
+              "foreground_component_coherence": 1.0,
+              "foreground_pixel_count": 768,
+              "sampled_pixels": 1075,
+              "roi_xyxy": [
+                232,
+                180,
+                257,
+                223
+              ],
+              "sampling_step_px": 1,
+              "meaning": "coherent_visible_foreground_in_torso_box_not_identity_or_object_extent",
+              "reason": "supported_coherent_visible_foreground",
+              "frame_id": "primary_optical",
+              "capture_time_s": 50177.026634,
+              "depth_time_s": 50177.026634
+            },
+            "original_central_box_surface": {
+              "surface_optical_z_m": 4.54226541519165,
+              "surface_range_m": 4.623783297041408,
+              "surface_xyz_optical_m": [
+                0.8473910021978824,
+                0.3571039023865145,
+                4.54226541519165
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 7.144033527374267,
+              "sampling_step_px": 1,
+              "meaning": "central_box_visible_surface_only",
+              "frame_id": "px4_sih_front_optical"
+            }
+          }
+        ],
+        "depth_advisory": {
+          "state": "no_near_surface_in_sampled_region",
+          "p10_optical_z_m": 3.327596569061279,
+          "threshold_m": 3.0,
+          "valid_depth_fraction": 1.0,
+          "region_fraction_xyxy": [
+            0.2,
+            0.2,
+            0.8,
+            0.8
+          ],
+          "sampling_step_px": 2,
+          "flight_corridor_clear": null,
+          "control_authority": false
+        },
+        "processing_ms": 186.90404199878685,
+        "age_at_start_s": 0.10958470799960196,
+        "age_at_finish_s": 0.2964887499983888,
+        "detection_count": 2,
+        "tracked_detection_count": 2,
+        "tracking_memory": {
+          "preserved_after_deadline": false,
+          "restored_track_count": 0,
+          "observation_timestamps_renewed": false,
+          "control_authority": false
+        }
+      },
+      "selection": {
+        "track_id": 1,
+        "reason": "observed",
+        "held": false,
+        "sequence": 2,
+        "capture_time_s": 50177.026634,
+        "selection_required": false,
+        "people": [
+          {
+            "track_id": 1,
+            "bbox_xyxy": [
+              135.66950305299756,
+              159.804840363925,
+              163.11378357352476,
+              255.2248112687507
+            ],
+            "confidence": 0.8737271906413469,
+            "selectable": true
+          },
+          {
+            "track_id": 2,
+            "bbox_xyxy": [
+              221.24946458000164,
+              161.33878814592805,
+              268.1704209224101,
+              267.3301682346959
+            ],
+            "confidence": 0.871328842893579,
+            "selectable": true
+          }
+        ],
+        "appearance_similarity": 0.9961923649181565,
+        "appearance_metric": "soft_upper_body_colour_bhattacharyya",
+        "recovery_pending": false,
+        "identity_limit": "temporary visual track; clothing is not identity"
+      },
+      "neural_features": [
+        -0.23496098030927512,
+        0.0608385108290947,
+        0.07184370559177462,
+        0.14832286824296295,
+        2.5120463722098034e-05,
+        2.4767871339239895,
+        0.015870393450430214,
+        0.6426601409912109
+      ],
+      "neural_valid": true,
+      "neural_elapsed_s": 0.12506712500180583
+    },
+    "command": {
+      "sequence": 2,
+      "capture_time_s": 50177.026634,
+      "issued_at_s": 50177.456080041,
+      "valid_until_s": 50177.926634,
+      "forward_speed": 0.0,
+      "yaw_target": 0.1722697447575358,
+      "reason": "neural_bearing_and_registered_depth",
+      "valid": true,
+      "estimate": {
+        "valid": true,
+        "reason": "neural_bearing_and_registered_depth",
+        "heading_world_rad": 0.1722697447575358,
+        "surface_optical_z_m": 5.419711112976074,
+        "decoded": [
+          -0.2510562319237099,
+          0.06958367173659187,
+          0.20597862824158364
+        ],
+        "cue_input": [
+          -0.23584837179917562,
+          0.061456909546485194,
+          0.24404084630390205
+        ],
+        "capture_time_s": 50177.026634,
+        "track_id": 1
+      }
+    }
+  },
+  {
+    "packet": {
+      "kind": "result",
+      "session": "2bfa7320-ca9b-4f0d-bd6f-4fa3e2a031bb",
+      "sequence": 3,
+      "capture_time_s": 50177.422755541,
+      "completed_s": 50177.829720208,
+      "candidate": {
+        "valid": true,
+        "reason": "neural_bearing_and_registered_depth",
+        "heading_world_rad": 0.1762991536090762,
+        "surface_optical_z_m": 5.425597190856934,
+        "decoded": [
+          -0.25703967314709114,
+          0.04859412537143903,
+          0.2221324093595512
+        ],
+        "cue_input": [
+          -0.24552066509540282,
+          0.04334719822956945,
+          0.24504868809661262
+        ],
+        "capture_time_s": 50177.422755541,
+        "track_id": 1
+      },
+      "observation": {
+        "valid": true,
+        "reason": "observed",
+        "track_id": 1,
+        "bbox_xyxy": [
+          130.46209126122523,
+          156.06735873099308,
+          164.53932868647232,
+          251.8813957767686
+        ],
+        "center_normalized": [
+          -0.24552066509540282,
+          0.04334719822956945
+        ],
+        "height_fraction": 0.24504868809661262,
+        "area_fraction": 0.021356988043513013,
+        "confidence": 0.8787665173574197,
+        "sequence": 3,
+        "capture_time_s": 50177.422755541,
+        "age_s": 0.29443008399539394,
+        "depth_m": null,
+        "control_authority": false,
+        "appearance_similarity": 0.9957212044018233
+      },
+      "detections": {
+        "schema_version": 1,
+        "sequence": 3,
+        "stream_id": "2bfa7320-ca9b-4f0d-bd6f-4fa3e2a031bb",
+        "clock_domain": "host_monotonic_source_lower_bound",
+        "frame_id": "px4_sih_front_optical",
+        "capture_time_s": 50177.422755541,
+        "received_monotonic_s": 50177.508025916,
+        "status": "ok",
+        "inference_executed": true,
+        "control_authority": false,
+        "detections": [
+          {
+            "track_id": 1,
+            "class_id": 0,
+            "label": "person",
+            "confidence": 0.8787665173574197,
+            "bbox_xyxy": [
+              130.46209126122523,
+              156.06735873099308,
+              164.53932868647232,
+              251.8813957767686
+            ],
+            "surface_measurement": {
+              "surface_optical_z_m": 5.425597190856934,
+              "surface_range_m": 5.50121190925209,
+              "surface_xyz_optical_m": [
+                -0.8934093313154347,
+                -0.05820771972300032,
+                5.425597190856934
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 0.12406682968139648,
+              "foreground_support_fraction": 0.7300944669365722,
+              "foreground_component_coherence": 1.0,
+              "foreground_pixel_count": 541,
+              "sampled_pixels": 741,
+              "roi_xyxy": [
+                138,
+                173,
+                157,
+                212
+              ],
+              "sampling_step_px": 1,
+              "meaning": "coherent_visible_foreground_in_torso_box_not_identity_or_object_extent",
+              "reason": "supported_coherent_visible_foreground",
+              "frame_id": "primary_optical",
+              "capture_time_s": 50177.422755541,
+              "depth_time_s": 50177.422755541
+            },
+            "original_central_box_surface": {
+              "surface_optical_z_m": 5.436378479003906,
+              "surface_range_m": 5.516146180982119,
+              "surface_xyz_optical_m": [
+                -0.9495773067519432,
+                0.19455773669855497,
+                5.436378479003906
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 6.239399719238281,
+              "sampling_step_px": 1,
+              "meaning": "central_box_visible_surface_only",
+              "frame_id": "px4_sih_front_optical"
+            }
+          },
+          {
+            "track_id": 2,
+            "class_id": 0,
+            "label": "person",
+            "confidence": 0.8755467155527441,
+            "bbox_xyxy": [
+              224.60465764276384,
+              152.459864991268,
+              262.72242121319084,
+              262.68734991659824
+            ],
+            "surface_measurement": {
+              "surface_optical_z_m": 4.526479482650757,
+              "surface_range_m": 4.600065698272559,
+              "surface_xyz_optical_m": [
+                0.7918358371907949,
+                -0.016329571097991026,
+                4.526479482650757
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 0.07842803001403809,
+              "foreground_support_fraction": 0.8177777777777778,
+              "foreground_component_coherence": 1.0,
+              "foreground_pixel_count": 736,
+              "sampled_pixels": 900,
+              "roi_xyxy": [
+                234,
+                172,
+                254,
+                217
+              ],
+              "sampling_step_px": 1,
+              "meaning": "coherent_visible_foreground_in_torso_box_not_identity_or_object_extent",
+              "reason": "supported_coherent_visible_foreground",
+              "frame_id": "primary_optical",
+              "capture_time_s": 50177.422755541,
+              "depth_time_s": 50177.422755541
+            },
+            "original_central_box_surface": {
+              "surface_optical_z_m": 4.532734394073486,
+              "surface_range_m": 4.608593410692327,
+              "surface_xyz_optical_m": [
+                0.794420094924318,
+                0.21068096859128604,
+                4.532734394073486
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 5.1317956924438475,
+              "sampling_step_px": 1,
+              "meaning": "central_box_visible_surface_only",
+              "frame_id": "px4_sih_front_optical"
+            }
+          }
+        ],
+        "depth_advisory": {
+          "state": "no_near_surface_in_sampled_region",
+          "p10_optical_z_m": 3.4215651035308836,
+          "threshold_m": 3.0,
+          "valid_depth_fraction": 1.0,
+          "region_fraction_xyxy": [
+            0.2,
+            0.2,
+            0.8,
+            0.8
+          ],
+          "sampling_step_px": 2,
+          "flight_corridor_clear": null,
+          "control_authority": false
+        },
+        "processing_ms": 209.04270799655933,
+        "age_at_start_s": 0.08536020899919095,
+        "age_at_finish_s": 0.2944029169957503,
+        "detection_count": 2,
+        "tracked_detection_count": 2,
+        "tracking_memory": {
+          "preserved_after_deadline": false,
+          "restored_track_count": 0,
+          "observation_timestamps_renewed": false,
+          "control_authority": false
+        }
+      },
+      "selection": {
+        "track_id": 1,
+        "reason": "observed",
+        "held": false,
+        "sequence": 3,
+        "capture_time_s": 50177.422755541,
+        "selection_required": false,
+        "people": [
+          {
+            "track_id": 1,
+            "bbox_xyxy": [
+              130.46209126122523,
+              156.06735873099308,
+              164.53932868647232,
+              251.8813957767686
+            ],
+            "confidence": 0.8787665173574197,
+            "selectable": true
+          },
+          {
+            "track_id": 2,
+            "bbox_xyxy": [
+              224.60465764276384,
+              152.459864991268,
+              262.72242121319084,
+              262.68734991659824
+            ],
+            "confidence": 0.8755467155527441,
+            "selectable": true
+          }
+        ],
+        "appearance_similarity": 0.9957212044018233,
+        "appearance_metric": "soft_upper_body_colour_bhattacharyya",
+        "recovery_pending": false,
+        "identity_limit": "temporary visual track; clothing is not identity"
+      },
+      "neural_features": [
+        -0.2452026918971358,
+        0.04585302109618738,
+        0.07991291823985458,
+        0.1477256390773296,
+        0.00011023680062812813,
+        2.724803575777603,
+        0.020747332593759594,
+        0.7330189943313599
+      ],
+      "neural_valid": true,
+      "neural_elapsed_s": 0.10716791700542672
+    },
+    "command": {
+      "sequence": 3,
+      "capture_time_s": 50177.422755541,
+      "issued_at_s": 50177.842252708,
+      "valid_until_s": 50178.322755541005,
+      "forward_speed": 0.0,
+      "yaw_target": 0.1762991536090762,
+      "reason": "neural_bearing_and_registered_depth",
+      "valid": true,
+      "estimate": {
+        "valid": true,
+        "reason": "neural_bearing_and_registered_depth",
+        "heading_world_rad": 0.1762991536090762,
+        "surface_optical_z_m": 5.425597190856934,
+        "decoded": [
+          -0.25703967314709114,
+          0.04859412537143903,
+          0.2221324093595512
+        ],
+        "cue_input": [
+          -0.24552066509540282,
+          0.04334719822956945,
+          0.24504868809661262
+        ],
+        "capture_time_s": 50177.422755541,
+        "track_id": 1
+      }
+    }
+  },
+  {
+    "packet": {
+      "kind": "result",
+      "session": "2bfa7320-ca9b-4f0d-bd6f-4fa3e2a031bb",
+      "sequence": 4,
+      "capture_time_s": 50177.790409708,
+      "completed_s": 50178.210977125,
+      "candidate": {
+        "valid": true,
+        "reason": "neural_bearing_and_registered_depth",
+        "heading_world_rad": 0.1825211563252132,
+        "surface_optical_z_m": 5.436488151550293,
+        "decoded": [
+          -0.24025040536050163,
+          0.06727369882789701,
+          0.2182251710644905
+        ],
+        "cue_input": [
+          -0.22647341627341055,
+          0.06599223613738991,
+          0.24483494894015395
+        ],
+        "capture_time_s": 50177.790409708,
+        "track_id": 1
+      },
+      "observation": {
+        "valid": true,
+        "reason": "observed",
+        "track_id": 1,
+        "bbox_xyxy": [
+          136.46356767857898,
+          160.53624964705963,
+          165.98532655851747,
+          256.2667146826598
+        ],
+        "center_normalized": [
+          -0.22647341627341055,
+          0.06599223613738991
+        ],
+        "height_fraction": 0.24483494894015395,
+        "area_fraction": 0.018485826925814006,
+        "confidence": 0.8683272377914832,
+        "sequence": 4,
+        "capture_time_s": 50177.790409708,
+        "age_s": 0.27701895799691556,
+        "depth_m": null,
+        "control_authority": false,
+        "appearance_similarity": 0.9958538041607106
+      },
+      "detections": {
+        "schema_version": 1,
+        "sequence": 4,
+        "stream_id": "2bfa7320-ca9b-4f0d-bd6f-4fa3e2a031bb",
+        "clock_domain": "host_monotonic_source_lower_bound",
+        "frame_id": "px4_sih_front_optical",
+        "capture_time_s": 50177.790409708,
+        "received_monotonic_s": 50177.885227916,
+        "status": "ok",
+        "inference_executed": true,
+        "control_authority": false,
+        "detections": [
+          {
+            "track_id": 1,
+            "class_id": 0,
+            "label": "person",
+            "confidence": 0.8683272377914832,
+            "bbox_xyxy": [
+              136.46356767857898,
+              160.53624964705963,
+              165.98532655851747,
+              256.2667146826598
+            ],
+            "surface_measurement": {
+              "surface_optical_z_m": 5.436488151550293,
+              "surface_range_m": 5.50071217575617,
+              "surface_xyz_optical_m": [
+                -0.8210988568592426,
+                0.019463155004136264,
+                5.436488151550293
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 0.11307229995727575,
+              "foreground_support_fraction": 0.734375,
+              "foreground_component_coherence": 1.0,
+              "foreground_pixel_count": 470,
+              "sampled_pixels": 640,
+              "roi_xyxy": [
+                143,
+                177,
+                159,
+                217
+              ],
+              "sampling_step_px": 1,
+              "meaning": "coherent_visible_foreground_in_torso_box_not_identity_or_object_extent",
+              "reason": "supported_coherent_visible_foreground",
+              "frame_id": "primary_optical",
+              "capture_time_s": 50177.790409708,
+              "depth_time_s": 50177.790409708
+            },
+            "original_central_box_surface": {
+              "surface_optical_z_m": 5.444007396697998,
+              "surface_range_m": 5.514988138293689,
+              "surface_xyz_optical_m": [
+                -0.8756525701826444,
+                0.29287018739613907,
+                5.444007396697998
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 6.256480026245117,
+              "sampling_step_px": 1,
+              "meaning": "central_box_visible_surface_only",
+              "frame_id": "px4_sih_front_optical"
+            }
+          },
+          {
+            "track_id": 2,
+            "class_id": 0,
+            "label": "person",
+            "confidence": 0.8269132085443509,
+            "bbox_xyxy": [
+              233.68078620563048,
+              170.67334570993023,
+              266.0944647519318,
+              265.2261196033943
+            ],
+            "surface_measurement": {
+              "surface_optical_z_m": 4.513585805892944,
+              "surface_range_m": 4.602267046827643,
+              "surface_xyz_optical_m": [
+                0.8565173499964757,
+                0.17785152968857737,
+                4.513585805892944
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 0.04937744140625,
+              "foreground_support_fraction": 0.8868778280542986,
+              "foreground_component_coherence": 1.0,
+              "foreground_pixel_count": 588,
+              "sampled_pixels": 663,
+              "roi_xyxy": [
+                241,
+                187,
+                258,
+                226
+              ],
+              "sampling_step_px": 1,
+              "meaning": "coherent_visible_foreground_in_torso_box_not_identity_or_object_extent",
+              "reason": "supported_coherent_visible_foreground",
+              "frame_id": "primary_optical",
+              "capture_time_s": 50177.790409708,
+              "depth_time_s": 50177.790409708
+            },
+            "original_central_box_surface": {
+              "surface_optical_z_m": 4.522011041641235,
+              "surface_range_m": 4.619659331403859,
+              "surface_xyz_optical_m": [
+                0.9219453254221088,
+                0.3874902716410751,
+                4.522011041641235
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 5.362846326828003,
+              "sampling_step_px": 1,
+              "meaning": "central_box_visible_surface_only",
+              "frame_id": "px4_sih_front_optical"
+            }
+          },
+          {
+            "track_id": 4,
+            "class_id": 29,
+            "label": "frisbee",
+            "confidence": 0.674814973459199,
+            "bbox_xyxy": [
+              238.68359551789442,
+              152.93113084097854,
+              267.88280080793214,
+              180.21181971791307
+            ],
+            "surface_measurement": {
+              "surface_optical_z_m": 4.421767711639404,
+              "surface_range_m": 4.539308830382145,
+              "surface_xyz_optical_m": [
+                0.9185524034083279,
+                -0.4513284055225235,
+                4.421767711639404
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 0.04080343246459961,
+              "sampling_step_px": 1,
+              "meaning": "central_box_visible_surface_only",
+              "frame_id": "px4_sih_front_optical"
+            }
+          }
+        ],
+        "depth_advisory": {
+          "state": "no_near_surface_in_sampled_region",
+          "p10_optical_z_m": 3.4991661071777345,
+          "threshold_m": 3.0,
+          "valid_depth_fraction": 1.0,
+          "region_fraction_xyxy": [
+            0.2,
+            0.2,
+            0.8,
+            0.8
+          ],
+          "sampling_step_px": 2,
+          "flight_corridor_clear": null,
+          "control_authority": false
+        },
+        "processing_ms": 182.09358300373424,
+        "age_at_start_s": 0.09489312499499647,
+        "age_at_finish_s": 0.2769867079987307,
+        "detection_count": 3,
+        "tracked_detection_count": 3,
+        "tracking_memory": {
+          "preserved_after_deadline": false,
+          "restored_track_count": 0,
+          "observation_timestamps_renewed": false,
+          "control_authority": false
+        }
+      },
+      "selection": {
+        "track_id": 1,
+        "reason": "observed",
+        "held": false,
+        "sequence": 4,
+        "capture_time_s": 50177.790409708,
+        "selection_required": false,
+        "people": [
+          {
+            "track_id": 1,
+            "bbox_xyxy": [
+              136.46356767857898,
+              160.53624964705963,
+              165.98532655851747,
+              256.2667146826598
+            ],
+            "confidence": 0.8683272377914832,
+            "selectable": true
+          },
+          {
+            "track_id": 2,
+            "bbox_xyxy": [
+              233.68078620563048,
+              170.67334570993023,
+              266.0944647519318,
+              265.2261196033943
+            ],
+            "confidence": 0.8269132085443509,
+            "selectable": true
+          }
+        ],
+        "appearance_similarity": 0.9958538041607106,
+        "appearance_metric": "soft_upper_body_colour_bhattacharyya",
+        "recovery_pending": false,
+        "identity_limit": "temporary visual track; clothing is not identity"
+      },
+      "neural_features": [
+        -0.22936072981126993,
+        0.06242487355072731,
+        0.08374448494178294,
+        0.15155670541752964,
+        0.00029582224781701463,
+        2.630869817522394,
+        0.018756685298603176,
+        0.7217684984207153
+      ],
+      "neural_valid": true,
+      "neural_elapsed_s": 0.13674462500057416
+    },
+    "command": {
+      "sequence": 4,
+      "capture_time_s": 50177.790409708,
+      "issued_at_s": 50178.228672541,
+      "valid_until_s": 50178.690409708004,
+      "forward_speed": 0.45,
+      "yaw_target": 0.1825211563252132,
+      "reason": "neural_bearing_and_registered_depth",
+      "valid": true,
+      "estimate": {
+        "valid": true,
+        "reason": "neural_bearing_and_registered_depth",
+        "heading_world_rad": 0.1825211563252132,
+        "surface_optical_z_m": 5.436488151550293,
+        "decoded": [
+          -0.24025040536050163,
+          0.06727369882789701,
+          0.2182251710644905
+        ],
+        "cue_input": [
+          -0.22647341627341055,
+          0.06599223613738991,
+          0.24483494894015395
+        ],
+        "capture_time_s": 50177.790409708,
+        "track_id": 1
+      }
+    }
+  },
+  {
+    "packet": {
+      "kind": "result",
+      "session": "2bfa7320-ca9b-4f0d-bd6f-4fa3e2a031bb",
+      "sequence": 5,
+      "capture_time_s": 50178.198632208,
+      "completed_s": 50178.602286083,
+      "candidate": {
+        "valid": true,
+        "reason": "neural_bearing_and_registered_depth",
+        "heading_world_rad": 0.16656086519215108,
+        "surface_optical_z_m": 5.487972736358643,
+        "decoded": [
+          -0.07479543503929661,
+          0.07771341902299758,
+          0.21012147541614173
+        ],
+        "cue_input": [
+          -0.04929709434509277,
+          0.07268841450030972,
+          0.24692853145964774
+        ],
+        "capture_time_s": 50178.198632208,
+        "track_id": 1
+      },
+      "observation": {
+        "valid": true,
+        "reason": "observed",
+        "track_id": 1,
+        "bbox_xyxy": [
+          168.72121771246486,
+          161.4360571344494,
+          203.00361839860383,
+          257.9851129351717
+        ],
+        "center_normalized": [
+          -0.04929709434509277,
+          0.07268841450030972
+        ],
+        "height_fraction": 0.24692853145964774,
+        "area_fraction": 0.02165039093692971,
+        "confidence": 0.8692050548595915,
+        "sequence": 5,
+        "capture_time_s": 50178.198632208,
+        "age_s": 0.2520237080025254,
+        "depth_m": null,
+        "control_authority": false,
+        "appearance_similarity": 0.9952278764109663
+      },
+      "detections": {
+        "schema_version": 1,
+        "sequence": 5,
+        "stream_id": "2bfa7320-ca9b-4f0d-bd6f-4fa3e2a031bb",
+        "clock_domain": "host_monotonic_source_lower_bound",
+        "frame_id": "px4_sih_front_optical",
+        "capture_time_s": 50178.198632208,
+        "received_monotonic_s": 50178.273700625,
+        "status": "ok",
+        "inference_executed": true,
+        "control_authority": false,
+        "detections": [
+          {
+            "track_id": 1,
+            "class_id": 0,
+            "label": "person",
+            "confidence": 0.8692050548595915,
+            "bbox_xyxy": [
+              168.72121771246486,
+              161.4360571344494,
+              203.00361839860383,
+              257.9851129351717
+            ],
+            "surface_measurement": {
+              "surface_optical_z_m": 5.487972736358643,
+              "surface_range_m": 5.49958809436993,
+              "surface_xyz_optical_m": [
+                -0.2161591482807108,
+                0.040272377095747255,
+                5.487972736358643
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 0.19584918022155762,
+              "foreground_support_fraction": 0.7583333333333333,
+              "foreground_component_coherence": 1.0,
+              "foreground_pixel_count": 546,
+              "sampled_pixels": 720,
+              "roi_xyxy": [
+                177,
+                178,
+                195,
+                218
+              ],
+              "sampling_step_px": 1,
+              "meaning": "coherent_visible_foreground_in_torso_box_not_identity_or_object_extent",
+              "reason": "supported_coherent_visible_foreground",
+              "frame_id": "primary_optical",
+              "capture_time_s": 50178.198632208,
+              "depth_time_s": 50178.198632208
+            },
+            "original_central_box_surface": {
+              "surface_optical_z_m": 5.497463941574097,
+              "surface_range_m": 5.512278138659389,
+              "surface_xyz_optical_m": [
+                -0.19712713100027673,
+                0.3341880966772967,
+                5.497463941574097
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 6.270464134216309,
+              "sampling_step_px": 1,
+              "meaning": "central_box_visible_surface_only",
+              "frame_id": "px4_sih_front_optical"
+            }
+          },
+          {
+            "track_id": 2,
+            "class_id": 0,
+            "label": "person",
+            "confidence": 0.8534321126986235,
+            "bbox_xyxy": [
+              262.7128088640239,
+              157.24899175877854,
+              297.8110424664398,
+              274.5273367040422
+            ],
+            "surface_measurement": {
+              "surface_optical_z_m": 4.401033401489258,
+              "surface_range_m": 4.603532377442118,
+              "surface_xyz_optical_m": [
+                1.324558190209554,
+                0.09656768567215358,
+                4.401033401489258
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 0.11444015502929616,
+              "foreground_support_fraction": 0.875,
+              "foreground_component_coherence": 1.0,
+              "foreground_pixel_count": 798,
+              "sampled_pixels": 912,
+              "roi_xyxy": [
+                271,
+                178,
+                290,
+                226
+              ],
+              "sampling_step_px": 1,
+              "meaning": "coherent_visible_foreground_in_torso_box_not_identity_or_object_extent",
+              "reason": "supported_coherent_visible_foreground",
+              "frame_id": "primary_optical",
+              "capture_time_s": 50178.198632208,
+              "depth_time_s": 50178.198632208
+            },
+            "original_central_box_surface": {
+              "surface_optical_z_m": 4.407164096832275,
+              "surface_range_m": 4.624442239974606,
+              "surface_xyz_optical_m": [
+                1.3707819781349062,
+                0.3468051785620744,
+                4.407164096832275
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 4.154849290847778,
+              "sampling_step_px": 1,
+              "meaning": "central_box_visible_surface_only",
+              "frame_id": "px4_sih_front_optical"
+            }
+          }
+        ],
+        "depth_advisory": {
+          "state": "no_near_surface_in_sampled_region",
+          "p10_optical_z_m": 3.5804672718048094,
+          "threshold_m": 3.0,
+          "valid_depth_fraction": 1.0,
+          "region_fraction_xyxy": [
+            0.2,
+            0.2,
+            0.8,
+            0.8
+          ],
+          "sampling_step_px": 2,
+          "flight_corridor_clear": null,
+          "control_authority": false
+        },
+        "processing_ms": 176.84541599737713,
+        "age_at_start_s": 0.07515154200518737,
+        "age_at_finish_s": 0.2519969580025645,
+        "detection_count": 2,
+        "tracked_detection_count": 2,
+        "tracking_memory": {
+          "preserved_after_deadline": false,
+          "restored_track_count": 0,
+          "observation_timestamps_renewed": false,
+          "control_authority": false
+        }
+      },
+      "selection": {
+        "track_id": 1,
+        "reason": "observed",
+        "held": false,
+        "sequence": 5,
+        "capture_time_s": 50178.198632208,
+        "selection_required": false,
+        "people": [
+          {
+            "track_id": 1,
+            "bbox_xyxy": [
+              168.72121771246486,
+              161.4360571344494,
+              203.00361839860383,
+              257.9851129351717
+            ],
+            "confidence": 0.8692050548595915,
+            "selectable": true
+          },
+          {
+            "track_id": 2,
+            "bbox_xyxy": [
+              262.7128088640239,
+              157.24899175877854,
+              297.8110424664398,
+              274.5273367040422
+            ],
+            "confidence": 0.8534321126986235,
+            "selectable": true
+          }
+        ],
+        "appearance_similarity": 0.9952278764109663,
+        "appearance_metric": "soft_upper_body_colour_bhattacharyya",
+        "recovery_pending": false,
+        "identity_limit": "temporary visual track; clothing is not identity"
+      },
+      "neural_features": [
+        -0.0679103091564224,
+        0.0704370711442553,
+        0.10147863942846932,
+        0.1505629711981426,
+        0.00038870323611416013,
+        2.7523835939367953,
+        0.021368212574954637,
+        0.6416915655136108
+      ],
+      "neural_valid": true,
+      "neural_elapsed_s": 0.14699354199547088
+    },
+    "command": {
+      "sequence": 5,
+      "capture_time_s": 50178.198632208,
+      "issued_at_s": 50178.616188958,
+      "valid_until_s": 50179.098632208,
+      "forward_speed": 0.45,
+      "yaw_target": 0.16656086519215108,
+      "reason": "neural_bearing_and_registered_depth",
+      "valid": true,
+      "estimate": {
+        "valid": true,
+        "reason": "neural_bearing_and_registered_depth",
+        "heading_world_rad": 0.16656086519215108,
+        "surface_optical_z_m": 5.487972736358643,
+        "decoded": [
+          -0.07479543503929661,
+          0.07771341902299758,
+          0.21012147541614173
+        ],
+        "cue_input": [
+          -0.04929709434509277,
+          0.07268841450030972,
+          0.24692853145964774
+        ],
+        "capture_time_s": 50178.198632208,
+        "track_id": 1
+      }
+    }
+  },
+  {
+    "packet": {
+      "kind": "result",
+      "session": "2bfa7320-ca9b-4f0d-bd6f-4fa3e2a031bb",
+      "sequence": 6,
+      "capture_time_s": 50178.587735625,
+      "completed_s": 50178.961663791,
+      "candidate": {
+        "valid": true,
+        "reason": "neural_bearing_and_registered_depth",
+        "heading_world_rad": 0.16913217818164109,
+        "surface_optical_z_m": 5.450451850891113,
+        "decoded": [
+          0.0481117562402904,
+          -0.03132792812442948,
+          0.2011197623401923
+        ],
+        "cue_input": [
+          0.07751257602985073,
+          -0.05544959581815301,
+          0.23649288552101433
+        ],
+        "capture_time_s": 50178.587735625,
+        "track_id": 1
+      },
+      "observation": {
+        "valid": true,
+        "reason": "observed",
+        "track_id": 1,
+        "bbox_xyxy": [
+          196.87347109112144,
+          138.4252448981928,
+          224.43394613655022,
+          230.8939631369094
+        ],
+        "center_normalized": [
+          0.07751257602985073,
+          -0.05544959581815301
+        ],
+        "height_fraction": 0.23649288552101433,
+        "area_fraction": 0.01666970912998302,
+        "confidence": 0.8746262949125025,
+        "sequence": 6,
+        "capture_time_s": 50178.587735625,
+        "age_s": 0.2487290409990237,
+        "depth_m": null,
+        "control_authority": false,
+        "appearance_similarity": 0.9964170764852943
+      },
+      "detections": {
+        "schema_version": 1,
+        "sequence": 6,
+        "stream_id": "2bfa7320-ca9b-4f0d-bd6f-4fa3e2a031bb",
+        "clock_domain": "host_monotonic_source_lower_bound",
+        "frame_id": "px4_sih_front_optical",
+        "capture_time_s": 50178.587735625,
+        "received_monotonic_s": 50178.657444291,
+        "status": "ok",
+        "inference_executed": true,
+        "control_authority": false,
+        "detections": [
+          {
+            "track_id": 2,
+            "class_id": 0,
+            "label": "person",
+            "confidence": 0.9221507807870175,
+            "bbox_xyxy": [
+              291.7884504556791,
+              126.0974684236129,
+              338.0284426496444,
+              246.2648371487868
+            ],
+            "surface_measurement": {
+              "surface_optical_z_m": 4.208062648773193,
+              "surface_range_m": 4.580543644377717,
+              "surface_xyz_optical_m": [
+                1.749138722169587,
+                -0.35066795614750107,
+                4.208062648773193
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 0.17546615600585902,
+              "foreground_support_fraction": 0.7287414965986394,
+              "foreground_component_coherence": 1.0,
+              "foreground_pixel_count": 857,
+              "sampled_pixels": 1176,
+              "roi_xyxy": [
+                303,
+                147,
+                327,
+                196
+              ],
+              "sampling_step_px": 1,
+              "meaning": "coherent_visible_foreground_in_torso_box_not_identity_or_object_extent",
+              "reason": "supported_coherent_visible_foreground",
+              "frame_id": "primary_optical",
+              "capture_time_s": 50178.587735625,
+              "depth_time_s": 50178.587735625
+            },
+            "original_central_box_surface": {
+              "surface_optical_z_m": 4.2544519901275635,
+              "surface_range_m": 4.611044947604111,
+              "surface_xyz_optical_m": [
+                1.8280184142044344,
+                -0.18227243144374494,
+                4.2544519901275635
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 6.722125434875488,
+              "sampling_step_px": 1,
+              "meaning": "central_box_visible_surface_only",
+              "frame_id": "px4_sih_front_optical"
+            }
+          },
+          {
+            "track_id": 1,
+            "class_id": 0,
+            "label": "person",
+            "confidence": 0.8746262949125025,
+            "bbox_xyxy": [
+              196.87347109112144,
+              138.4252448981928,
+              224.43394613655022,
+              230.8939631369094
+            ],
+            "surface_measurement": {
+              "surface_optical_z_m": 5.450451850891113,
+              "surface_range_m": 5.477166439143238,
+              "surface_xyz_optical_m": [
+                0.27465657768889934,
+                -0.40930294445657905,
+                5.450451850891113
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 0.14654049873352104,
+              "foreground_support_fraction": 0.8596491228070176,
+              "foreground_component_coherence": 1.0,
+              "foreground_pixel_count": 490,
+              "sampled_pixels": 570,
+              "roi_xyxy": [
+                203,
+                155,
+                218,
+                193
+              ],
+              "sampling_step_px": 1,
+              "meaning": "coherent_visible_foreground_in_torso_box_not_identity_or_object_extent",
+              "reason": "supported_coherent_visible_foreground",
+              "frame_id": "primary_optical",
+              "capture_time_s": 50178.587735625,
+              "depth_time_s": 50178.587735625
+            },
+            "original_central_box_surface": {
+              "surface_optical_z_m": 5.47707462310791,
+              "surface_range_m": 5.490070509390716,
+              "surface_xyz_optical_m": [
+                0.33051209571186413,
+                -0.21547579419022223,
+                5.47707462310791
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 6.282116651535034,
+              "sampling_step_px": 1,
+              "meaning": "central_box_visible_surface_only",
+              "frame_id": "px4_sih_front_optical"
+            }
+          }
+        ],
+        "depth_advisory": {
+          "state": "near_surface",
+          "p10_optical_z_m": 2.9318430423736572,
+          "threshold_m": 3.0,
+          "valid_depth_fraction": 1.0,
+          "region_fraction_xyxy": [
+            0.2,
+            0.2,
+            0.8,
+            0.8
+          ],
+          "sampling_step_px": 2,
+          "flight_corridor_clear": null,
+          "control_authority": false
+        },
+        "processing_ms": 178.9159580002888,
+        "age_at_start_s": 0.06978075000370154,
+        "age_at_finish_s": 0.24869670800399035,
+        "detection_count": 2,
+        "tracked_detection_count": 2,
+        "tracking_memory": {
+          "preserved_after_deadline": false,
+          "restored_track_count": 0,
+          "observation_timestamps_renewed": false,
+          "control_authority": false
+        }
+      },
+      "selection": {
+        "track_id": 1,
+        "reason": "observed",
+        "held": false,
+        "sequence": 6,
+        "capture_time_s": 50178.587735625,
+        "selection_required": false,
+        "people": [
+          {
+            "track_id": 2,
+            "bbox_xyxy": [
+              291.7884504556791,
+              126.0974684236129,
+              338.0284426496444,
+              246.2648371487868
+            ],
+            "confidence": 0.9221507807870175,
+            "selectable": true
+          },
+          {
+            "track_id": 1,
+            "bbox_xyxy": [
+              196.87347109112144,
+              138.4252448981928,
+              224.43394613655022,
+              230.8939631369094
+            ],
+            "confidence": 0.8746262949125025,
+            "selectable": true
+          }
+        ],
+        "appearance_similarity": 0.9964170764852943,
+        "appearance_metric": "soft_upper_body_colour_bhattacharyya",
+        "recovery_pending": false,
+        "identity_limit": "temporary visual track; clothing is not identity"
+      },
+      "neural_features": [
+        0.04845195273145013,
+        -0.03574829657876548,
+        0.10969314249079055,
+        0.15502802902208065,
+        -0.0026649820568947504,
+        2.586789814536226,
+        0.017885078856344654,
+        0.645422101020813
+      ],
+      "neural_valid": true,
+      "neural_elapsed_s": 0.12040658300247742
+    },
+    "command": {
+      "sequence": 6,
+      "capture_time_s": 50178.587735625,
+      "issued_at_s": 50178.971176791,
+      "valid_until_s": 50179.487735625,
+      "forward_speed": 0.45,
+      "yaw_target": 0.16913217818164109,
+      "reason": "neural_bearing_and_registered_depth",
+      "valid": true,
+      "estimate": {
+        "valid": true,
+        "reason": "neural_bearing_and_registered_depth",
+        "heading_world_rad": 0.16913217818164109,
+        "surface_optical_z_m": 5.450451850891113,
+        "decoded": [
+          0.0481117562402904,
+          -0.03132792812442948,
+          0.2011197623401923
+        ],
+        "cue_input": [
+          0.07751257602985073,
+          -0.05544959581815301,
+          0.23649288552101433
+        ],
+        "capture_time_s": 50178.587735625,
+        "track_id": 1
+      }
+    }
+  },
+  {
+    "packet": {
+      "kind": "result",
+      "session": "2bfa7320-ca9b-4f0d-bd6f-4fa3e2a031bb",
+      "sequence": 7,
+      "capture_time_s": 50178.939637583,
+      "completed_s": 50179.382963083,
+      "candidate": {
+        "valid": false,
+        "reason": "outside_neural_training_envelope",
+        "heading_world_rad": null,
+        "surface_optical_z_m": null,
+        "decoded": null,
+        "cue_input": [
+          0.1039818066817062,
+          0.07961252675606634,
+          0.21260461874327147
+        ],
+        "capture_time_s": 50178.939637583,
+        "track_id": 1
+      },
+      "observation": {
+        "valid": true,
+        "reason": "observed",
+        "track_id": 1,
+        "bbox_xyxy": [
+          203.25941467511615,
+          169.50004601650141,
+          228.397471737431,
+          252.62845194512056
+        ],
+        "center_normalized": [
+          0.1039818066817062,
+          0.07961252675606634
+        ],
+        "height_fraction": 0.21260461874327147,
+        "area_fraction": 0.013668713651355635,
+        "confidence": 0.8647112626562219,
+        "sequence": 7,
+        "capture_time_s": 50178.939637583,
+        "age_s": 0.25466891700489214,
+        "depth_m": null,
+        "control_authority": false,
+        "appearance_similarity": 0.9986741982917442
+      },
+      "detections": {
+        "schema_version": 1,
+        "sequence": 7,
+        "stream_id": "2bfa7320-ca9b-4f0d-bd6f-4fa3e2a031bb",
+        "clock_domain": "host_monotonic_source_lower_bound",
+        "frame_id": "px4_sih_front_optical",
+        "capture_time_s": 50178.939637583,
+        "received_monotonic_s": 50179.014846708,
+        "status": "ok",
+        "inference_executed": true,
+        "control_authority": false,
+        "detections": [
+          {
+            "track_id": 2,
+            "class_id": 0,
+            "label": "person",
+            "confidence": 0.9110988068268533,
+            "bbox_xyxy": [
+              293.4258195611714,
+              151.10132393278016,
+              347.37698137387684,
+              275.72337806416976
+            ],
+            "surface_measurement": {
+              "surface_optical_z_m": 4.154544353485107,
+              "surface_range_m": 4.550353220135438,
+              "surface_xyz_optical_m": [
+                1.820423264598368,
+                0.028916774974306208,
+                4.154544353485107
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 0.19028854370117188,
+              "foreground_support_fraction": 0.7359943977591037,
+              "foreground_component_coherence": 1.0,
+              "foreground_pixel_count": 1051,
+              "sampled_pixels": 1428,
+              "roi_xyxy": [
+                306,
+                173,
+                334,
+                224
+              ],
+              "sampling_step_px": 1,
+              "meaning": "coherent_visible_foreground_in_torso_box_not_identity_or_object_extent",
+              "reason": "supported_coherent_visible_foreground",
+              "frame_id": "primary_optical",
+              "capture_time_s": 50178.939637583,
+              "depth_time_s": 50178.939637583
+            },
+            "original_central_box_surface": {
+              "surface_optical_z_m": 4.185379505157471,
+              "surface_range_m": 4.57780881816592,
+              "surface_xyz_optical_m": [
+                1.8875299632849778,
+                0.32736036844506833,
+                4.185379505157471
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 6.585263442993164,
+              "sampling_step_px": 1,
+              "meaning": "central_box_visible_surface_only",
+              "frame_id": "px4_sih_front_optical"
+            }
+          },
+          {
+            "track_id": 1,
+            "class_id": 0,
+            "label": "person",
+            "confidence": 0.8647112626562219,
+            "bbox_xyxy": [
+              203.25941467511615,
+              169.50004601650141,
+              228.397471737431,
+              252.62845194512056
+            ],
+            "surface_measurement": {
+              "surface_optical_z_m": 5.4176177978515625,
+              "surface_range_m": 5.43851571273054,
+              "surface_xyz_optical_m": [
+                0.4042180932199229,
+                0.07830403591530108,
+                5.4176177978515625
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 0.09355735778808594,
+              "foreground_support_fraction": 0.9264705882352942,
+              "foreground_component_coherence": 1.0,
+              "foreground_pixel_count": 441,
+              "sampled_pixels": 476,
+              "roi_xyxy": [
+                209,
+                184,
+                223,
+                218
+              ],
+              "sampling_step_px": 1,
+              "meaning": "coherent_visible_foreground_in_torso_box_not_identity_or_object_extent",
+              "reason": "supported_coherent_visible_foreground",
+              "frame_id": "primary_optical",
+              "capture_time_s": 50178.939637583,
+              "depth_time_s": 50178.939637583
+            },
+            "original_central_box_surface": {
+              "surface_optical_z_m": 5.436523199081421,
+              "surface_range_m": 5.457008136000042,
+              "surface_xyz_optical_m": [
+                0.4063230031430376,
+                0.3105653394931023,
+                5.436523199081421
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 4.583958339691161,
+              "sampling_step_px": 1,
+              "meaning": "central_box_visible_surface_only",
+              "frame_id": "px4_sih_front_optical"
+            }
+          }
+        ],
+        "depth_advisory": {
+          "state": "no_near_surface_in_sampled_region",
+          "p10_optical_z_m": 3.5036603927612306,
+          "threshold_m": 3.0,
+          "valid_depth_fraction": 1.0,
+          "region_fraction_xyxy": [
+            0.2,
+            0.2,
+            0.8,
+            0.8
+          ],
+          "sampling_step_px": 2,
+          "flight_corridor_clear": null,
+          "control_authority": false
+        },
+        "processing_ms": 179.34400000376627,
+        "age_at_start_s": 0.07529808300023433,
+        "age_at_finish_s": 0.2546420830040006,
+        "detection_count": 2,
+        "tracked_detection_count": 2,
+        "tracking_memory": {
+          "preserved_after_deadline": false,
+          "restored_track_count": 0,
+          "observation_timestamps_renewed": false,
+          "control_authority": false
+        }
+      },
+      "selection": {
+        "track_id": 1,
+        "reason": "observed",
+        "held": false,
+        "sequence": 7,
+        "capture_time_s": 50178.939637583,
+        "selection_required": false,
+        "people": [
+          {
+            "track_id": 2,
+            "bbox_xyxy": [
+              293.4258195611714,
+              151.10132393278016,
+              347.37698137387684,
+              275.72337806416976
+            ],
+            "confidence": 0.9110988068268533,
+            "selectable": true
+          },
+          {
+            "track_id": 1,
+            "bbox_xyxy": [
+              203.25941467511615,
+              169.50004601650141,
+              228.397471737431,
+              252.62845194512056
+            ],
+            "confidence": 0.8647112626562219,
+            "selectable": true
+          }
+        ],
+        "appearance_similarity": 0.9986741982917442,
+        "appearance_metric": "soft_upper_body_colour_bhattacharyya",
+        "recovery_pending": false,
+        "identity_limit": "temporary visual track; clothing is not identity"
+      },
+      "neural_features": [
+        0.09411426728789163,
+        0.059891668328195924,
+        0.08862254548027824,
+        0.14756090418888143,
+        0.00018794021896046946,
+        2.392884227924346,
+        0.014476006381549862,
+        0.7137540578842163
+      ],
+      "neural_valid": true,
+      "neural_elapsed_s": 0.18322600000101374
+    },
+    "command": {
+      "sequence": 7,
+      "capture_time_s": 50178.939637583,
+      "issued_at_s": 50179.389378958,
+      "valid_until_s": 50179.839637583,
+      "forward_speed": 0.0,
+      "yaw_target": 0.19341871108439862,
+      "reason": "outside_neural_training_envelope",
+      "valid": false,
+      "estimate": {
+        "valid": false,
+        "reason": "outside_neural_training_envelope",
+        "heading_world_rad": null,
+        "surface_optical_z_m": null,
+        "decoded": null,
+        "cue_input": [
+          0.1039818066817062,
+          0.07961252675606634,
+          0.21260461874327147
+        ],
+        "capture_time_s": 50178.939637583,
+        "track_id": 1
+      }
+    }
+  },
+  {
+    "packet": {
+      "kind": "result",
+      "session": "2bfa7320-ca9b-4f0d-bd6f-4fa3e2a031bb",
+      "sequence": 8,
+      "capture_time_s": 50179.38844725,
+      "completed_s": 50179.744334041,
+      "candidate": {
+        "valid": true,
+        "reason": "neural_bearing_and_registered_depth",
+        "heading_world_rad": 0.1495230378834599,
+        "surface_optical_z_m": 5.344601154327393,
+        "decoded": [
+          0.055646676417608974,
+          0.030465117752592454,
+          0.23158020261879358
+        ],
+        "cue_input": [
+          0.0451315641403196,
+          0.024774844829852816,
+          0.2530053437794369
+        ],
+        "capture_time_s": 50179.38844725,
+        "track_id": 1
+      },
+      "observation": {
+        "valid": true,
+        "reason": "observed",
+        "track_id": 1,
+        "bbox_xyxy": [
+          187.5655472113072,
+          150.88093745535627,
+          221.0808943675578,
+          249.8060268731161
+        ],
+        "center_normalized": [
+          0.0451315641403196,
+          0.024774844829852816
+        ],
+        "height_fraction": 0.2530053437794369,
+        "area_fraction": 0.02168685915384745,
+        "confidence": 0.8744738859813879,
+        "sequence": 8,
+        "capture_time_s": 50179.38844725,
+        "age_s": 0.23255895799957216,
+        "depth_m": null,
+        "control_authority": false,
+        "appearance_similarity": 0.9955079010151281
+      },
+      "detections": {
+        "schema_version": 1,
+        "sequence": 8,
+        "stream_id": "2bfa7320-ca9b-4f0d-bd6f-4fa3e2a031bb",
+        "clock_domain": "host_monotonic_source_lower_bound",
+        "frame_id": "px4_sih_front_optical",
+        "capture_time_s": 50179.38844725,
+        "received_monotonic_s": 50179.461501208,
+        "status": "ok",
+        "inference_executed": true,
+        "control_authority": false,
+        "detections": [
+          {
+            "track_id": 2,
+            "class_id": 0,
+            "label": "person",
+            "confidence": 0.8918670508285693,
+            "bbox_xyxy": [
+              284.26768787853416,
+              143.46094864206256,
+              331.39418120034037,
+              267.01814660142804
+            ],
+            "surface_measurement": {
+              "surface_optical_z_m": 4.142728328704834,
+              "surface_range_m": 4.478203080401921,
+              "surface_xyz_optical_m": [
+                1.6775709547678492,
+                -0.07481564670925718,
+                4.142728328704834
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 0.09789981842040962,
+              "foreground_support_fraction": 0.7949346405228758,
+              "foreground_component_coherence": 1.0,
+              "foreground_pixel_count": 973,
+              "sampled_pixels": 1224,
+              "roi_xyxy": [
+                296,
+                165,
+                320,
+                216
+              ],
+              "sampling_step_px": 1,
+              "meaning": "coherent_visible_foreground_in_torso_box_not_identity_or_object_extent",
+              "reason": "supported_coherent_visible_foreground",
+              "frame_id": "primary_optical",
+              "capture_time_s": 50179.38844725,
+              "depth_time_s": 50179.38844725
+            },
+            "original_central_box_surface": {
+              "surface_optical_z_m": 4.1550421714782715,
+              "surface_range_m": 4.4919020329371815,
+              "surface_xyz_optical_m": [
+                1.6923363063641235,
+                0.16320525547794046,
+                4.1550421714782715
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 4.434138917922974,
+              "sampling_step_px": 1,
+              "meaning": "central_box_visible_surface_only",
+              "frame_id": "px4_sih_front_optical"
+            }
+          },
+          {
+            "track_id": 1,
+            "class_id": 0,
+            "label": "person",
+            "confidence": 0.8744738859813879,
+            "bbox_xyxy": [
+              187.5655472113072,
+              150.88093745535627,
+              221.0808943675578,
+              249.8060268731161
+            ],
+            "surface_measurement": {
+              "surface_optical_z_m": 5.344601154327393,
+              "surface_range_m": 5.352893842741837,
+              "surface_xyz_optical_m": [
+                0.19168238933581336,
+                -0.13383964602245466,
+                5.344601154327393
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 0.16803197860717756,
+              "foreground_support_fraction": 0.7493224932249323,
+              "foreground_component_coherence": 1.0,
+              "foreground_pixel_count": 553,
+              "sampled_pixels": 738,
+              "roi_xyxy": [
+                195,
+                168,
+                213,
+                209
+              ],
+              "sampling_step_px": 1,
+              "meaning": "coherent_visible_foreground_in_torso_box_not_identity_or_object_extent",
+              "reason": "supported_coherent_visible_foreground",
+              "frame_id": "primary_optical",
+              "capture_time_s": 50179.38844725,
+              "depth_time_s": 50179.38844725
+            },
+            "original_central_box_surface": {
+              "surface_optical_z_m": 5.36210823059082,
+              "surface_range_m": 5.3684221559691085,
+              "surface_xyz_optical_m": [
+                0.17650488193158495,
+                0.11501292786570329,
+                5.36210823059082
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 6.3796111106872555,
+              "sampling_step_px": 1,
+              "meaning": "central_box_visible_surface_only",
+              "frame_id": "px4_sih_front_optical"
+            }
+          }
+        ],
+        "depth_advisory": {
+          "state": "no_near_surface_in_sampled_region",
+          "p10_optical_z_m": 3.407393980026245,
+          "threshold_m": 3.0,
+          "valid_depth_fraction": 1.0,
+          "region_fraction_xyxy": [
+            0.2,
+            0.2,
+            0.8,
+            0.8
+          ],
+          "sampling_step_px": 2,
+          "flight_corridor_clear": null,
+          "control_authority": false
+        },
+        "processing_ms": 159.38070799893467,
+        "age_at_start_s": 0.07314812500408152,
+        "age_at_finish_s": 0.2325288330030162,
+        "detection_count": 2,
+        "tracked_detection_count": 2,
+        "tracking_memory": {
+          "preserved_after_deadline": false,
+          "restored_track_count": 0,
+          "observation_timestamps_renewed": false,
+          "control_authority": false
+        }
+      },
+      "selection": {
+        "track_id": 1,
+        "reason": "observed",
+        "held": false,
+        "sequence": 8,
+        "capture_time_s": 50179.38844725,
+        "selection_required": false,
+        "people": [
+          {
+            "track_id": 2,
+            "bbox_xyxy": [
+              284.26768787853416,
+              143.46094864206256,
+              331.39418120034037,
+              267.01814660142804
+            ],
+            "confidence": 0.8918670508285693,
+            "selectable": true
+          },
+          {
+            "track_id": 1,
+            "bbox_xyxy": [
+              187.5655472113072,
+              150.88093745535627,
+              221.0808943675578,
+              249.8060268731161
+            ],
+            "confidence": 0.8744738859813879,
+            "selectable": true
+          }
+        ],
+        "appearance_similarity": 0.9955079010151281,
+        "appearance_metric": "soft_upper_body_colour_bhattacharyya",
+        "recovery_pending": false,
+        "identity_limit": "temporary visual track; clothing is not identity"
+      },
+      "neural_features": [
+        0.05327258192839469,
+        0.027398785044247757,
+        0.08179906656773694,
+        0.15413712990403428,
+        0.00046837152223087186,
+        2.751160004751879,
+        0.02134030267834837,
+        0.7301627397537231
+      ],
+      "neural_valid": true,
+      "neural_elapsed_s": 0.11774866600171663
+    },
+    "command": {
+      "sequence": 8,
+      "capture_time_s": 50179.38844725,
+      "issued_at_s": 50179.754595625,
+      "valid_until_s": 50180.28844725,
+      "forward_speed": 0.45,
+      "yaw_target": 0.1495230378834599,
+      "reason": "neural_bearing_and_registered_depth",
+      "valid": true,
+      "estimate": {
+        "valid": true,
+        "reason": "neural_bearing_and_registered_depth",
+        "heading_world_rad": 0.1495230378834599,
+        "surface_optical_z_m": 5.344601154327393,
+        "decoded": [
+          0.055646676417608974,
+          0.030465117752592454,
+          0.23158020261879358
+        ],
+        "cue_input": [
+          0.0451315641403196,
+          0.024774844829852816,
+          0.2530053437794369
+        ],
+        "capture_time_s": 50179.38844725,
+        "track_id": 1
+      }
+    }
+  },
+  {
+    "packet": {
+      "kind": "result",
+      "session": "2bfa7320-ca9b-4f0d-bd6f-4fa3e2a031bb",
+      "sequence": 9,
+      "capture_time_s": 50179.75335925,
+      "completed_s": 50180.284757791,
+      "candidate": {
+        "valid": true,
+        "reason": "neural_bearing_and_registered_depth",
+        "heading_world_rad": 0.15652159669416554,
+        "surface_optical_z_m": 5.266636848449707,
+        "decoded": [
+          0.009991004946826244,
+          0.14446153580330048,
+          0.2347138825670543
+        ],
+        "cue_input": [
+          0.006846118431824699,
+          0.1511840178416326,
+          0.252419219365684
+        ],
+        "capture_time_s": 50179.75335925,
+        "track_id": 1
+      },
+      "observation": {
+        "valid": true,
+        "reason": "observed",
+        "track_id": 1,
+        "bbox_xyxy": [
+          181.9183597510586,
+          175.70851810204792,
+          211.7584725557849,
+          274.40443287403036
+        ],
+        "center_normalized": [
+          0.006846118431824699,
+          0.1511840178416326
+        ],
+        "height_fraction": 0.252419219365684,
+        "area_fraction": 0.01926398460346026,
+        "confidence": 0.8777023774639758,
+        "sequence": 9,
+        "capture_time_s": 50179.75335925,
+        "age_s": 0.33584616600273876,
+        "depth_m": null,
+        "control_authority": false,
+        "appearance_similarity": 0.9958710470510639
+      },
+      "detections": {
+        "schema_version": 1,
+        "sequence": 9,
+        "stream_id": "2bfa7320-ca9b-4f0d-bd6f-4fa3e2a031bb",
+        "clock_domain": "host_monotonic_source_lower_bound",
+        "frame_id": "px4_sih_front_optical",
+        "capture_time_s": 50179.75335925,
+        "received_monotonic_s": 50179.859954833,
+        "status": "ok",
+        "inference_executed": true,
+        "control_authority": false,
+        "detections": [
+          {
+            "track_id": 2,
+            "class_id": 0,
+            "label": "person",
+            "confidence": 0.8786038069170843,
+            "bbox_xyxy": [
+              285.28386359609135,
+              169.16071167244033,
+              327.2030019794056,
+              297.7442738517005
+            ],
+            "surface_measurement": {
+              "surface_optical_z_m": 4.1004252433776855,
+              "surface_range_m": 4.41818401087434,
+              "surface_xyz_optical_m": [
+                1.5846181452012078,
+                0.32348594331225733,
+                4.1004252433776855
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 0.04858956336975062,
+              "foreground_support_fraction": 0.715034965034965,
+              "foreground_component_coherence": 1.0,
+              "foreground_pixel_count": 818,
+              "sampled_pixels": 1144,
+              "roi_xyxy": [
+                295,
+                192,
+                317,
+                244
+              ],
+              "sampling_step_px": 1,
+              "meaning": "coherent_visible_foreground_in_torso_box_not_identity_or_object_extent",
+              "reason": "supported_coherent_visible_foreground",
+              "frame_id": "primary_optical",
+              "capture_time_s": 50179.75335925,
+              "depth_time_s": 50179.75335925
+            },
+            "original_central_box_surface": {
+              "surface_optical_z_m": 4.10600733757019,
+              "surface_range_m": 4.4438070687552305,
+              "surface_xyz_optical_m": [
+                1.644282284837817,
+                0.6462827651194343,
+                4.10600733757019
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 6.739133882522583,
+              "sampling_step_px": 1,
+              "meaning": "central_box_visible_surface_only",
+              "frame_id": "px4_sih_front_optical"
+            }
+          },
+          {
+            "track_id": 1,
+            "class_id": 0,
+            "label": "person",
+            "confidence": 0.8777023774639758,
+            "bbox_xyxy": [
+              181.9183597510586,
+              175.70851810204792,
+              211.7584725557849,
+              274.40443287403036
+            ],
+            "surface_measurement": {
+              "surface_optical_z_m": 5.266636848449707,
+              "surface_range_m": 5.288358593293333,
+              "surface_xyz_optical_m": [
+                0.05657097716030132,
+                0.3213163374116885,
+                5.266636848449707
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 0.10378284454345632,
+              "foreground_support_fraction": 0.778125,
+              "foreground_component_coherence": 1.0,
+              "foreground_pixel_count": 498,
+              "sampled_pixels": 640,
+              "roi_xyxy": [
+                189,
+                193,
+                205,
+                233
+              ],
+              "sampling_step_px": 1,
+              "meaning": "coherent_visible_foreground_in_torso_box_not_identity_or_object_extent",
+              "reason": "supported_coherent_visible_foreground",
+              "frame_id": "primary_optical",
+              "capture_time_s": 50179.75335925,
+              "depth_time_s": 50179.75335925
+            },
+            "original_central_box_surface": {
+              "surface_optical_z_m": 5.275546550750732,
+              "surface_range_m": 5.303015125410955,
+              "surface_xyz_optical_m": [
+                0.01888426933736064,
+                0.6239390307494168,
+                5.275546550750732
+              ],
+              "valid_depth_fraction": 1.0,
+              "depth_spread_p90_p10_m": 6.327217054367066,
+              "sampling_step_px": 1,
+              "meaning": "central_box_visible_surface_only",
+              "frame_id": "px4_sih_front_optical"
+            }
+          }
+        ],
+        "depth_advisory": {
+          "state": "no_near_surface_in_sampled_region",
+          "p10_optical_z_m": 4.1160078048706055,
+          "threshold_m": 3.0,
+          "valid_depth_fraction": 1.0,
+          "region_fraction_xyxy": [
+            0.2,
+            0.2,
+            0.8,
+            0.8
+          ],
+          "sampling_step_px": 2,
+          "flight_corridor_clear": null,
+          "control_authority": false
+        },
+        "processing_ms": 229.14829200453823,
+        "age_at_start_s": 0.10666670800128486,
+        "age_at_finish_s": 0.3358150000058231,
+        "detection_count": 2,
+        "tracked_detection_count": 2,
+        "tracking_memory": {
+          "preserved_after_deadline": false,
+          "restored_track_count": 0,
+          "observation_timestamps_renewed": false,
+          "control_authority": false
+        }
+      },
+      "selection": {
+        "track_id": 1,
+        "reason": "observed",
+        "held": false,
+        "sequence": 9,
+        "capture_time_s": 50179.75335925,
+        "selection_required": false,
+        "people": [
+          {
+            "track_id": 2,
+            "bbox_xyxy": [
+              285.28386359609135,
+              169.16071167244033,
+              327.2030019794056,
+              297.7442738517005
+            ],
+            "confidence": 0.8786038069170843,
+            "selectable": true
+          },
+          {
+            "track_id": 1,
+            "bbox_xyxy": [
+              181.9183597510586,
+              175.70851810204792,
+              211.7584725557849,
+              274.40443287403036
+            ],
+            "confidence": 0.8777023774639758,
+            "selectable": true
+          }
+        ],
+        "appearance_similarity": 0.9958710470510639,
+        "appearance_metric": "soft_upper_body_colour_bhattacharyya",
+        "recovery_pending": false,
+        "identity_limit": "temporary visual track; clothing is not identity"
+      },
+      "neural_features": [
+        0.009154943690491496,
+        0.13453705421718332,
+        0.08231178624481161,
+        0.16083006107010395,
+        -0.00024271176669855854,
+        2.6819765203233232,
+        0.019816520432717935,
+        0.7291401624679565
+      ],
+      "neural_valid": true,
+      "neural_elapsed_s": 0.18835045899322722
+    },
+    "command": {
+      "sequence": 9,
+      "capture_time_s": 50179.75335925,
+      "issued_at_s": 50180.286365125,
+      "valid_until_s": 50180.65335925,
+      "forward_speed": 0.45,
+      "yaw_target": 0.15652159669416554,
+      "reason": "neural_bearing_and_registered_depth",
+      "valid": true,
+      "estimate": {
+        "valid": true,
+        "reason": "neural_bearing_and_registered_depth",
+        "heading_world_rad": 0.15652159669416554,
+        "surface_optical_z_m": 5.266636848449707,
+        "decoded": [
+          0.009991004946826244,
+          0.14446153580330048,
+          0.2347138825670543
+        ],
+        "cue_input": [
+          0.006846118431824699,
+          0.1511840178416326,
+          0.252419219365684
+        ],
+        "capture_time_s": 50179.75335925,
+        "track_id": 1
+      }
+    }
+  },
+  {
+    "packet": {
+      "kind": "result",
+      "session": "2bfa7320-ca9b-4f0d-bd6f-4fa3e2a031bb",
+      "sequence": 10,
+      "capture_time_s": 50180.248312666,
+      "completed_s": 50184.739919125,
+      "candidate": {
+        "valid": false,
+        "reason": "target_lost",
+        "heading_world_rad": null,
+        "surface_optical_z_m": null,
+        "decoded": null,
+        "cue_input": null,
+        "capture_time_s": 50180.248312666,
+        "track_id": 1
+      },
+      "observation": {
+        "valid": false,
+        "reason": "stale_target_frame",
+        "track_id": 1,
+        "bbox_xyxy": null,
+        "center_normalized": null,
+        "height_fraction": null,
+        "area_fraction": null,
+        "depth_m": null,
+        "control_authority": false
+      },
+      "detections": {
+        "schema_version": 1,
+        "sequence": 10,
+        "stream_id": "2bfa7320-ca9b-4f0d-bd6f-4fa3e2a031bb",
+        "clock_domain": "host_monotonic_source_lower_bound",
+        "frame_id": "px4_sih_front_optical",
+        "capture_time_s": 50180.248312666,
+        "received_monotonic_s": 50184.337370083,
+        "status": "rejected",
+        "inference_executed": false,
+        "control_authority": false,
+        "detections": [],
+        "depth_advisory": {
+          "state": "unknown"
+        },
+        "processing_ms": 0.0,
+        "age_at_start_s": 4.089329916998395,
+        "reason": "stale_camera_frame",
+        "tracking_memory": {
+          "preserved_after_deadline": false,
+          "restored_track_count": 0,
+          "observation_timestamps_renewed": false,
+          "control_authority": false
+        }
+      },
+      "selection": {
+        "track_id": 1,
+        "reason": "stale_target_frame",
+        "held": true,
+        "sequence": 9,
+        "capture_time_s": 50179.75335925,
+        "selection_required": true,
+        "people": [],
+        "appearance_similarity": null,
+        "appearance_metric": "soft_upper_body_colour_bhattacharyya",
+        "recovery_pending": false,
+        "identity_limit": "temporary visual track; clothing is not identity"
+      },
+      "neural_features": [
+        0.011052843725329243,
+        0.13373576002617582,
+        0.1827382656018881,
+        0.2028048908792078,
+        0.002370281362454924,
+        1.0455527279521553,
+        0.002685546701478472,
+        0.07837319374084473
+      ],
+      "neural_valid": true,
+      "neural_elapsed_s": 0.4009832500014454
+    },
+    "command": {
+      "sequence": 10,
+      "capture_time_s": 50180.248312666,
+      "issued_at_s": 50184.747894708,
+      "valid_until_s": 50181.148312666,
+      "forward_speed": 0.0,
+      "yaw_target": 0.15414355199515717,
+      "reason": "stale_perception_result",
+      "valid": false,
+      "estimate": {
+        "valid": false,
+        "reason": "selected_person_unavailable",
+        "heading_world_rad": null,
+        "surface_optical_z_m": null,
+        "decoded": null,
+        "cue_input": null,
+        "capture_time_s": 50180.248312666,
+        "track_id": 1
+      }
+    }
+  }
+]

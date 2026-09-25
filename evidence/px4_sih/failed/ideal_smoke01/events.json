@@ -1,0 +1,180 @@
+[
+  {
+    "event": "owned_px4_verified",
+    "elapsed_s": 3.8172134580017882,
+    "pid": 48928,
+    "build": {
+      "px4_commit": "54f0455ffcd755534539a7cf33a09a20bf71d29d",
+      "profile": "px4_sitl_mantis",
+      "binary_sha256": "1d539583d37b6bd5fc8512ce5c29719eb6cf7ce3510c10bccbe02fe2c216a055",
+      "startup_tree_sha256": "1a267e74fc845051b74e790333c9bd78194c8fd6f8531f1b3fc4844a97744d25",
+      "overlay_sha256": "0448befccd6be884dd02075647ed8dd7968660363d56a9312bcaa7ecea1de3fd",
+      "truth_header_sha256": "526426b4cb6bc38a20076a84e33855e0595157b51914dff054d5f52ada2f7fba",
+      "timestamp_patch": "msg.time_usec = math::min(math::min(att.timestamp_sample, gpos.timestamp_sample), math::min(lpos.timestamp_sample, angular_velocity.timestamp_sample));",
+      "sensor_noise_patches": {
+        "src/modules/simulation/sensor_gps_sim/SensorGpsSim.cpp": {
+          "original_sha256": "c5ac246e2b4fa0073e2efab153145f3f8f0af28c336df7b200816978da451287",
+          "patched_sha256": "eb2b2498d0b1dc8e4e5047864b0771e5cfaf5f0abcdda0778a53078e217d335f"
+        },
+        "src/modules/simulation/sensor_baro_sim/SensorBaroSim.cpp": {
+          "original_sha256": "b818d54c968bcfc810291e9d594affb7ef7c10290fcdecd3338ebd46507af1d5",
+          "patched_sha256": "d7ef17fc84578d1f10c7b973c9c3d0167ec2737e3d1d2c92892af132fb1f5005"
+        },
+        "src/modules/simulation/sensor_mag_sim/SensorMagSim.cpp": {
+          "original_sha256": "edf78345a7edbcb649b60b2c92f4919f7f5c9e4330551f2fe88660d2cc6a2053",
+          "patched_sha256": "bdbdc90a71e7455bf8b10a415e345ed56ce2d1a3d7bcca2e9cddb75279434585"
+        },
+        "src/modules/simulation/simulator_sih/sih.cpp": {
+          "original_sha256": "aed62f325014cf284e861b4f3bb20e36f58e94af493143208232855dc5a5951b",
+          "patched_sha256": "0054b5ba69db318cf829e455d4da58e810801bfb3394d200d788b67203f07e75"
+        }
+      },
+      "sensor_mode_switch": "MANTIS_SIH_IDEAL_SENSORS=1; absent means stock noise",
+      "submodules": [
+        "-f47ce7b5fbbb3aa43d33d2be1f6cd3746b13d5bf Tools/simulation/flightgear/flightgear_bridge",
+        "-70683dc759cbd3ebccfa78429b564f8b1fb5d149 Tools/simulation/gazebo-classic/sitl_gazebo-classic",
+        "-e05f4312d3f28aa621157610584a4870406cb6d3 Tools/simulation/gz",
+        "-66b764ada522893c05224950aa6268c809f8e48a Tools/simulation/jmavsim/jMAVSim",
+        "-68de2cc63ded9a0d6641d45e9eb3ed2b43454cba Tools/simulation/jsbsim/jsbsim_bridge",
+        "-85151aaf6ba8b24ce82b387e088452c63f7e2096 boards/modalai/voxl2/libfc-sensor-api",
+        "-e37940d8535f603a16b8f6f21c21edaf584218aa platforms/nuttx/NuttX/apps",
+        "-886acbbdb4f061e5c0ce1a76afbcfa7cb7df9849 platforms/nuttx/NuttX/nuttx",
+        "-c488af4e8807de80739aa48efd2ea51614dd8195 src/drivers/actuators/vertiq_io/iq-module-communication-cpp",
+        "-36a01e428b110ff84c8babe5b65667b5e3037d5e src/drivers/cyphal/legacy_data_types",
+        "-5c69d451ab0787a81dcb615692d707f2a286f5e5 src/drivers/cyphal/libcanard",
+        "-d0bd6516dac8ff61287fe49a9f2c75e7d4dc1b8e src/drivers/cyphal/public_regulated_data_types",
+        " 4cea5de87ce7e2a52e5289bd3639fd8eb770eafa src/drivers/gps/devices (4cea5de)",
+        "-993be80a62ec957c01fb41115b83663959a49f46 src/drivers/uavcan/libdronecan/dsdl",
+        "-19fdf2e5b383243ccdb1094edae0603cf11469e8 src/drivers/uavcan/libdronecan/libuavcan/dsdl_compiler/pydronecan",
+        "-314887ca403c2fb0a0316add22672102936ed36c src/lib/cdrstream/cyclonedds",
+        "-7790c70717e09c003711f6f65015666c223fc283 src/lib/cdrstream/rosidl",
+        "-673f5ce29015a9bba3c96792920a10601b5b0718 src/lib/crypto/libtomcrypt",
+        "-fd73d7630b9d3ed5a79d613ff680a549e9780de7 src/lib/crypto/libtommath",
+        "-baca5d31259c598540e4d1284bc8d8f793abf83a src/lib/crypto/monocypher",
+        " 9ef591c447fe0386d698bf6fb9a6d27e43988ee4 src/lib/events/libevents (9ef591c)",
+        " 052e6de72f67f1777198bce98f3de62f7f3c16a0 src/lib/heatshrink/heatshrink (heads/main)",
+        " 5bfd76d80281f6027134e854aafe6cb3dbfbe9e1 src/modules/mavlink/mavlink (5bfd76d)",
+        " 4960d4d20dcf9fc2981785355567fc5773416bc9 src/modules/mavlink/mavlink/pymavlink (4960d4d)",
+        "-711aef423edd1820347b866d1e4164832df35d04 src/modules/uxrce_dds_client/Micro-XRCE-DDS-Client",
+        "-f093aa7955bb24dfa3e626de084583711e3bac5c src/modules/zenoh/zenoh-pico"
+      ]
+    },
+    "px4_sensor_profile": "ideal generated measurements"
+  },
+  {
+    "event": "waiting_for_estimator",
+    "elapsed_s": 4.3163211249993765,
+    "reason": "estimator_unhealthy",
+    "status": []
+  },
+  {
+    "event": "waiting_for_estimator",
+    "elapsed_s": 14.328467541999999,
+    "reason": "position_stale",
+    "status": [
+      "MAG #0 failed:  STALE!\t"
+    ]
+  },
+  {
+    "event": "waiting_for_estimator",
+    "elapsed_s": 24.3439908750006,
+    "reason": "position_stale",
+    "status": [
+      "MAG #0 failed:  STALE!\t"
+    ]
+  },
+  {
+    "event": "waiting_for_estimator",
+    "elapsed_s": 34.37031312500039,
+    "reason": "position_stale",
+    "status": [
+      "MAG #0 failed:  STALE!\t"
+    ]
+  },
+  {
+    "event": "waiting_for_estimator",
+    "elapsed_s": 44.391634125000564,
+    "reason": "position_stale",
+    "status": [
+      "MAG #0 failed:  STALE!\t"
+    ]
+  },
+  {
+    "event": "waiting_for_estimator",
+    "elapsed_s": 54.414808708002965,
+    "reason": "position_stale",
+    "status": [
+      "MAG #0 failed:  STALE!\t"
+    ]
+  },
+  {
+    "event": "waiting_for_estimator",
+    "elapsed_s": 64.43738254200434,
+    "reason": "position_stale",
+    "status": [
+      "MAG #0 failed:  STALE!\t"
+    ]
+  },
+  {
+    "event": "waiting_for_estimator",
+    "elapsed_s": 74.44521720800549,
+    "reason": "position_stale",
+    "status": [
+      "MAG #0 failed:  STALE!\t"
+    ]
+  },
+  {
+    "event": "waiting_for_estimator",
+    "elapsed_s": 84.45218308300537,
+    "reason": "position_stale",
+    "status": [
+      "MAG #0 failed:  STALE!\t"
+    ]
+  },
+  {
+    "event": "failure",
+    "elapsed_s": 94.33129558300425,
+    "error": "SitlError: PX4 estimator/truth not ready: position_stale"
+  },
+  {
+    "event": "failure_clock_diagnostics",
+    "elapsed_s": 94.3317085420058,
+    "source_times": {
+      "attitude": 0.0,
+      "truth": 81.864,
+      "position": 2.0
+    },
+    "age_upper_bounds_s": {
+      "attitude": null,
+      "truth": 0.06006666599569144,
+      "position": null
+    },
+    "pending_sync": 0,
+    "clock_reset": false,
+    "recent_sync": [
+      [
+        81.788,
+        49807.641037666
+      ],
+      [
+        81.816,
+        49807.672099791
+      ],
+      [
+        81.844,
+        49807.702685875
+      ],
+      [
+        81.872,
+        49807.733530416
+      ],
+      [
+        81.896,
+        49807.761789291
+      ]
+    ],
+    "status": [
+      "MAG #0 failed:  STALE!\t"
+    ]
+  }
+]
